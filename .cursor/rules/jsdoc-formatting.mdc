@@ -1,0 +1,114 @@
+---
+description: JSDoc formatting
+alwaysApply: true
+---
+
+All TypeScript types should be documented with JSDoc. With a similar level of detail as the example below and in a similar format.
+Ensure that the JSDoc comments contain links to the official OpenAPI specification version they represent, and to the correct section.
+
+Always prefer links to the official OpenAPI docs like https://spec.openapis.org/oas/v3.1.1.html over others.
+
+The JSDoc comments should be formatted as follows:
+- A title header for the type
+- A description of the type
+- A fields section laying out the fields of the type
+- A note section separating the fields and examples sections
+- An examples section providing thorough examples of the type, including the different variations of the type, especially if there are discriminated examples
+- property level comments for each field of the type that inlcude example values, with more detailed comments for the properties that are more complex.
+
+Ensure you Always:
+- use the `@key` tag to document the fields of the type.
+- use the `@see` tag to link to the official OpenAPI specification version they represent, and to the correct section.
+- use the `@example` tag to provide an example of the type.
+- use the `@note` tag to provide a note about the type.
+- use section headers ` * -----------------------------------------------------------------------------` to organize the JSDoc comments.
+
+The example below is for the Contact Object:
+
+/**
+ * -----------------------------------------------------------------------------
+ * Contact Object
+ * -----------------------------------------------------------------------------
+ *
+ * The Contact Object provides contact information for the exposed API.  
+ * It appears in the OpenAPI and Swagger specifications from v2.0 through v3.1.x.
+ *
+ * Specification Extensions (`x-*`) are always allowed.
+ *
+ *
+ * | Version | Reference |
+ * |---------|-----------|
+ * | 3.1.1   | {@link https://spec.openapis.org/oas/v3.1.1#contact-object | OpenAPI 3.1.1 Contact} |
+ * | 3.1.0   | {@link https://spec.openapis.org/oas/v3.1.0#contact-object | OpenAPI 3.1.0 Contact} |
+ * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#contact-object | OpenAPI 3.0.4 Contact} |
+ * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#contact-object | OpenAPI 3.0.3 Contact} |
+ * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#contact-object | OpenAPI 3.0.2 Contact} |
+ * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#contact-object | OpenAPI 3.0.1 Contact} |
+ * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#contact-object | OpenAPI 3.0.0 Contact} |
+ * | 2.0     | {@link https://spec.openapis.org/oas/v2.0#contact-object   | Swagger 2.0 Contact}   |
+ *
+ * -----------------------------------------------------------------------------
+ * Fields
+ * -----------------------------------------------------------------------------
+ *
+ *
+ * @key `name` - Optional The identifying name of the contact person/organization.
+ * @key `url` - Optional A URL pointing to the contact information.
+ * @key `email` - Optional The email address of the contact person/organization.
+ * @key `x-${string}` - Specification Extensions
+ *
+ * @note
+ * All fields are optional.
+ *
+ * -----------------------------------------------------------------------------
+ * Examples
+ * -----------------------------------------------------------------------------
+ *
+ * @example (full contact object):
+ * ```ts
+ * const contact: Contact = {
+ *   name: "API Support",
+ *   url: "http://www.acme.com/support",
+ *   email: "support@acme.com"
+ * };
+ * ```
+ *
+ * @example (just name + email):
+ * ```ts
+ * const contact: Contact = {
+ *   name: "Jane Doe",
+ *   email: "jane.doe@acme.com"
+ * };
+ * ```
+ *
+ * @example (with extension):
+ * ```ts
+ * const contact: Contact = {
+ *   name: "Internal API Team",
+ *   email: "api-team@acme.com",
+ *   "x-slack": "#api-support"
+ * };
+ * ```
+ */
+export type Contact = {
+  /**
+   * The identifying name of the contact person/organization.
+   */
+  name?: string;
+
+  /**
+   * The URL pointing to the contact information.  
+   * MUST be in the format of a URL.
+   *
+   * Example: `"http://www.acme.com/support"`
+   */
+  url?: string;
+
+  /**
+   * The email address of the contact person/organization.  
+   * MUST be in the format of an email address.
+   *
+   * Example: `"support@acme.com"`
+   */
+  email?: string;
+}

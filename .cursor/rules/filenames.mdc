@@ -1,0 +1,33 @@
+---
+description: File organization and Filename standards
+globs:
+alwaysApply: true
+---
+
+Please prefer simpler filenames
+
+For example, prefer string.ts over string-schema.ts
+
+All the top level keys for OpenAPI should have their own file, except for the OpenAPI key, which should be included in the root level specification file directly
+
+below is an example for OpenAPI format, but the same principles apply to Swagger 2.0
+The files for each spec should be as follows:
+- Info | info.ts
+- Servers | servers.ts
+- Paths | paths.ts
+- Components | components.ts
+- Security | security.ts
+- Tags | tags.ts
+
+Additional files should be created for the sub keys that require more detail:
+- ExternalDocs | externalDocs.ts not external-documentation.ts
+- Extensions | extensions.ts
+- References | references.ts
+- Callbacks | callbacks.ts
+- Webhooks | webhooks.ts
+- Parameters | parameters.ts
+- RequestBodies | requestBodies.ts
+- Responses | responses.ts
+- XML | xml.ts
+
+This philosophy should be applied to similar ideas and formats, and you should prioritize accurate, consistent, clean, descriptive, and detailed names, descriptions, patterns, and organization.

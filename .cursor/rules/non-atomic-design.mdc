@@ -1,0 +1,8 @@
+---
+description: Non-atomic design
+alwaysApply: true
+---
+
+When designing types, avoid using atomic types. Through the process of investigating the type signatures for OpenAPI I determind that some types are too different to encompass with a common base, and results in a much more complex type signature.
+
+The goal is for the types to be as easily consumable as possible, and be extremely detailed and specific to the OpenAPI specification version they represent.

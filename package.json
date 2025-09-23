@@ -1,0 +1,116 @@
+{
+  "name": "oas-types",
+  "version": "1.0.0",
+  "description": "Comprehensive TypeScript definitions for all OpenAPI specification versions (Swagger 2.0, OpenAPI 3.0.0, 3.1.0, 3.1.1)",
+  "main": "index.ts",
+  "module": "index.ts",
+  "type": "module",
+  "types": "index.ts",
+  "exports": {
+    ".": {
+      "types": "./index.ts",
+      "import": "./index.ts"
+    },
+    "./atoms": {
+      "types": "./src/atoms/index.ts",
+      "import": "./src/atoms/index.ts"
+    },
+    "./utils": {
+      "types": "./src/utils/index.ts",
+      "import": "./src/utils/index.ts"
+    },
+    "./common": {
+      "types": "./src/common.ts",
+      "import": "./src/common.ts"
+    },
+    "./2.0": {
+      "types": "./src/swagger-2.0/index.ts",
+      "import": "./src/swagger-2.0/index.ts"
+    },
+    "./3.0.0": {
+      "types": "./src/3.0.0/index.ts",
+      "import": "./src/3.0.0/index.ts"
+    },
+    "./3.0.1": {
+      "types": "./src/3.0.1/index.ts",
+      "import": "./src/3.0.1/index.ts"
+    },
+    "./3.0.2": {
+      "types": "./src/3.0.2/index.ts",
+      "import": "./src/3.0.2/index.ts"
+    },
+    "./3.0.3": {
+      "types": "./src/3.0.3/index.ts",
+      "import": "./src/3.0.3/index.ts"
+    },
+    "./3.0.4": {
+      "types": "./src/3.0.4/index.ts",
+      "import": "./src/3.0.4/index.ts"
+    },
+    "./3.1.0": {
+      "types": "./src/3.1.0/index.ts",
+      "import": "./src/3.1.0/index.ts"
+    },
+    "./3.1.1": {
+      "types": "./src/3.1.1/index.ts",
+      "import": "./src/3.1.1/index.ts"
+    },
+  },
+  "files": [
+    "src/",
+    "index.ts",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "openapi",
+    "swagger",
+    "typescript",
+    "types",
+    "definitions",
+    "api",
+    "specification",
+    "swagger-2.0",
+    "openapi-3.0.0",
+    "openapi-3.1.0",
+    "openapi-3.1.1",
+    "json-schema",
+    "rest",
+    "api-documentation"
+  ],
+  "author": "OpenAPI Types Contributors",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/openapi-types.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/openapi-types/issues"
+  },
+  "homepage": "https://github.com/your-username/openapi-types#readme",
+  "dependencies": {
+    "spdx-license-list": "^6.10.0"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "test": "bun test",
+    "test:watch": "bun test --watch",
+    "test:coverage": "bun test --coverage",
+    "test:common": "bun test tests/common.test.ts",
+    "test:open-enums": "bun test tests/open-enums.test.ts",
+    "test:swagger-2.0": "bun test tests/swagger-2.0.test.ts",
+    "test:openapi-3.0.0": "bun test tests/openapi-3.0.0.test.ts",
+    "test:integration": "bun test tests/integration.test.ts",
+    "type-check": "tsc --noEmit",
+    "build": "tsc",
+    "dev": "bun run --watch index.ts"
+  }
+}
