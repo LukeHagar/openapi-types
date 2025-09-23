@@ -1,15 +1,16 @@
 # OpenAPI Types
 
-Comprehensive TypeScript definitions for all OpenAPI specification versions with a layered, version-aware architecture.
+Comprehensive TypeScript definitions for all OpenAPI specification versions with detailed JSDoc documentation and version-specific implementations.
 
 ## 🏗️ Architecture
 
-This library follows a **layered, version-aware types library** approach where:
+This library provides **comprehensive TypeScript type definitions** for all OpenAPI specification versions with:
 
-- **`atoms/`** - Contains canonical atomic types (common building blocks across OpenAPI versions)
-- **`3.0.0/`, `3.1.0/`, etc.** - Version-specific folders that extend/adapt atomic types
-- **`utils/`** - Shared helper types and utilities
-- **`common.ts`** - Common types and enums used across versions
+- **Version-specific implementations** - Each OpenAPI version has its own dedicated folder with complete type definitions
+- **Modular organization** - Types are organized by OpenAPI object (e.g., `info.ts`, `paths.ts`, `schema.ts`)
+- **Comprehensive JSDoc** - Every type includes detailed documentation with links to official specifications
+- **Type safety** - Strict typing that follows OpenAPI specifications exactly
+- **Discriminated unions** - Advanced TypeScript patterns for schema definitions
 
 ## 📦 Installation
 
@@ -23,206 +24,329 @@ bun add oas-types
 
 ## 🚀 Usage
 
-### Import Atomic Types
-
-```typescript
-import { 
-  ContactObject, 
-  LicenseObject, 
-  InfoObject, 
-  ExternalDocumentationObject,
-  TagObject,
-  ReferenceObject,
-  ServerObject,
-  ServerVariableObject
-} from 'oas-types/atoms';
-```
-
 ### Import Version-Specific Types
 
 ```typescript
-// OpenAPI 3.0.0
-import { SchemaObject30 } from 'oas-types/3.0.0';
+// OpenAPI 3.1.x (latest)
+import { 
+  Specification, 
+  Info, 
+  Paths, 
+  Schema,
+  Components 
+} from 'oas-types/versions/3.1.x';
 
-// OpenAPI 3.1.0
-import { SchemaObject } from 'oas-types/3.1.0';
-
-// OpenAPI 3.1.1
-import { SchemaObject as SchemaObject311 } from 'oas-types/3.1.1';
+// OpenAPI 3.0.x
+import { 
+  Specification, 
+  Info, 
+  Paths, 
+  Schema,
+  Components 
+} from 'oas-types/versions/3.0.x';
 
 // Swagger 2.0
-import { SwaggerObject } from 'oas-types/2.0';
+import { 
+  Swagger, 
+  Info, 
+  Paths, 
+  Schema,
+  Definitions 
+} from 'oas-types/versions/2.0.0';
 ```
 
-### Import Utilities
+### Import Specific OpenAPI Objects
 
 ```typescript
-import { 
-  DeepPartial, 
-  DeepRequired, 
-  Merge, 
-  Versioned,
-  Brand,
-  Nominal 
-} from 'oas-types/utils';
+// Import specific objects from any version
+import { Info, Contact, License } from 'oas-types/versions/3.1.x/info';
+import { Paths, Operation, Parameter } from 'oas-types/versions/3.1.x/paths';
+import { Schema, StringSchema, ObjectSchema } from 'oas-types/versions/3.1.x/schema';
+import { SecurityScheme, OAuthFlows } from 'oas-types/versions/3.1.x/security';
 ```
 
-### Import Common Types
+### Import Schema Data Types (OpenAPI 3.1.x)
 
 ```typescript
+// Import specific schema types for OpenAPI 3.1.x
 import { 
-  HttpMethod,
-  HttpStatusCode,
-  MimeType,
-  JsonSchemaFormat
-} from 'oas-types/common';
+  StringSchema, 
+  NumberSchema, 
+  IntegerSchema, 
+  BooleanSchema,
+  ArraySchema, 
+  ObjectSchema,
+  CompositionSchema,
+  ReferenceSchema 
+} from 'oas-types/versions/3.1.x/data-types';
 ```
 
 ## 📁 Project Structure
 
 ```
 openapi-types/
-├── src/
-│   ├── atoms/                # Atomic building blocks (common across versions)
-│   │   ├── Contact.ts        # Contact Object
-│   │   ├── License.ts        # License Object
-│   │   ├── Info.ts           # Info Object
-│   │   ├── ExternalDocs.ts   # External Documentation Object
-│   │   ├── Tag.ts            # Tag Object
-│   │   ├── Reference.ts      # Reference Object
-│   │   ├── Server.ts         # Server Object
-│   │   ├── ServerVariable.ts # Server Variable Object
-│   │   └── index.ts          # Exports for all atoms
+├── versions/
+│   ├── 2.0.0/                    # Swagger 2.0 types
+│   │   ├── data-types/           # Schema data types
+│   │   ├── info.ts              # Info Object
+│   │   ├── paths.ts             # Paths and Operations
+│   │   ├── schema.ts            # Schema definitions
+│   │   ├── security.ts          # Security schemes
+│   │   ├── spec.ts              # Main Swagger object
+│   │   └── index.ts             # Version exports
 │   │
-│   ├── utils/                # Shared helpers for composing, deep partials, etc.
-│   │   └── index.ts
+│   ├── 3.0.x/                   # OpenAPI 3.0.x types
+│   │   ├── data-types/          # Schema data types
+│   │   ├── info.ts              # Info Object
+│   │   ├── paths.ts             # Paths and Operations
+│   │   ├── schema.ts            # Schema definitions
+│   │   ├── security.ts          # Security schemes
+│   │   ├── spec.ts              # Main OpenAPI object
+│   │   └── index.ts             # Version exports
 │   │
-│   ├── 3.0.0/                # Version-specific directory
-│   │   ├── index.ts          # Exports version 3.0.0 types
-│   │   └── schema.ts         # Version-specific overrides/augments
+│   ├── 3.1.x/                   # OpenAPI 3.1.x types
+│   │   ├── data-types/          # Individual schema types
+│   │   │   ├── string.ts        # String schema
+│   │   │   ├── number.ts        # Number schema
+│   │   │   ├── integer.ts       # Integer schema
+│   │   │   ├── boolean.ts       # Boolean schema
+│   │   │   ├── array.ts         # Array schema
+│   │   │   ├── object.ts        # Object schema
+│   │   │   ├── composition.ts   # Composition schemas
+│   │   │   ├── reference.ts     # Reference schema
+│   │   │   └── index.ts         # Data type exports
+│   │   ├── info.ts              # Info Object
+│   │   ├── paths.ts             # Paths and Operations
+│   │   ├── schema.ts            # Main Schema union type
+│   │   ├── security.ts          # Security schemes
+│   │   ├── spec.ts              # Main OpenAPI object
+│   │   └── index.ts             # Version exports
 │   │
-│   ├── 3.0.1/                # Same pattern, with differences from 3.0.0
-│   ├── 3.0.2/
-│   ├── 3.0.3/
-│   ├── 3.0.4/
-│   ├── 3.1.0/
-│   ├── 3.1.1/
-│   └── index.ts              # Public entrypoint (exports all versions + common)
+│   ├── License.ts               # SPDX license definitions
+│   └── SPDXLicenseList.ts       # Complete SPDX license list
 │
-└── package.json
+├── index.ts                     # Main entry point
+├── package.json
+└── README.md
 ```
 
 ## 🎯 Philosophy
 
-### Atomic Types (atoms/)
-These are the minimal, composable, strongly typed building blocks — the "vocabulary" of OpenAPI. Examples: `InfoObject`, `ExternalDocumentationObject`, `ContactObject`, `TagObject`, etc.
+### Version-Specific Implementations
+Each OpenAPI version has its own complete implementation that accurately reflects the specification for that version. This ensures:
+- **Type accuracy** - Types match the exact specification requirements
+- **Version compatibility** - No confusion between different OpenAPI versions
+- **Future-proofing** - Easy to add new versions without breaking existing ones
 
-### Composable Types (version folders)
-Each OpenAPI version folder builds on the atoms and makes modifications for that version. For example:
-- `SchemaObject` in **3.0.0** vs. **3.1.0** (3.1.0 aligns with JSON Schema 2020-12)
-- `CallbackObject` was introduced in **3.0.0** and remains consistent in later versions
+### Modular Organization
+Types are organized by OpenAPI object type, making it easy to:
+- Import only what you need
+- Understand the structure of OpenAPI specifications
+- Maintain and update specific object types
 
-### Strictness & Atomic Detail
-Each type follows the spec **literally and atomically** (no "loose" union types unless the spec requires it). For example:
-- Don't just say `string` for a field, define `type UrlString = string;` so it can be reused in multiple contexts
-
-### Version Awareness
-If something is unchanged between versions, **reexport from atoms/**. If something changes, **extend or override** in the version folder.
+### Comprehensive Documentation
+Every type includes:
+- **JSDoc comments** with detailed descriptions
+- **Links to official specifications** for each OpenAPI version
+- **Usage examples** showing practical implementations
+- **Property documentation** with example values and constraints
 
 ## 📋 Supported Versions
 
-- **Swagger 2.0** (OpenAPI Specification v2.0)
-- **OpenAPI 3.0.0** - Initial OpenAPI 3.0 release
-- **OpenAPI 3.0.1** - Bug fixes and clarifications
-- **OpenAPI 3.0.2** - Bug fixes and clarifications
-- **OpenAPI 3.0.3** - Bug fixes and clarifications
-- **OpenAPI 3.0.4** - Bug fixes and clarifications
-- **OpenAPI 3.1.0** - Major update with JSON Schema 2020-12 alignment
-- **OpenAPI 3.1.1** - Bug fixes and clarifications
+- **Swagger 2.0** (OpenAPI Specification v2.0) - Complete implementation
+- **OpenAPI 3.0.x** - Complete implementation with all 3.0.x variants
+- **OpenAPI 3.1.x** - Complete implementation with JSON Schema 2020-12 alignment
 
 ## 🔧 Examples
 
-### Basic Usage
+### Basic OpenAPI 3.1.x Usage
 
 ```typescript
-import { InfoObject, ContactObject, LicenseObject } from 'oas-types/atoms';
+import { Specification, Info, Paths, Schema } from 'oas-types/versions/3.1.x';
 
-const info: InfoObject = {
-  title: 'My API',
-  version: '1.0.0',
-  description: 'A sample API',
-  contact: {
-    name: 'API Support',
-    email: 'support@example.com',
-    url: 'https://example.com/support'
-  } as ContactObject,
-  license: {
-    name: 'MIT',
-    url: 'https://opensource.org/licenses/MIT'
-  } as LicenseObject
+const openApiSpec: Specification = {
+  openapi: "3.1.0",
+  info: {
+    title: "My API",
+    version: "1.0.0",
+    description: "A sample API",
+    contact: {
+      name: "API Support",
+      email: "support@example.com"
+    },
+    license: {
+      name: "MIT",
+      identifier: "MIT"
+    }
+  } as Info,
+  paths: {
+    "/users": {
+      get: {
+        summary: "List users",
+        responses: {
+          "200": {
+            description: "A list of users",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "array",
+                  items: { $ref: "#/components/schemas/User" }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  } as Paths
 };
 ```
 
-### Version-Specific Schema Usage
+### Schema Definitions (OpenAPI 3.1.x)
 
 ```typescript
-// OpenAPI 3.0.0 schema
-import { SchemaObject30 } from 'oas-types/3.0.0';
+import { 
+  StringSchema, 
+  ObjectSchema, 
+  ArraySchema,
+  Schema 
+} from 'oas-types/versions/3.1.x';
 
-const schema30: SchemaObject30 = {
-  type: 'object',
+// String schema with validation
+const nameSchema: StringSchema = {
+  type: "string",
+  minLength: 1,
+  maxLength: 100,
+  pattern: "^[a-zA-Z\\s]+$",
+  description: "User's full name"
+};
+
+// Object schema with properties
+const userSchema: ObjectSchema = {
+  type: "object",
   properties: {
-    name: { type: 'string' },
-    age: { type: 'integer', minimum: 0 }
+    id: { type: "integer" },
+    name: nameSchema,
+    email: { 
+      type: "string", 
+      format: "email" 
+    }
   },
-  required: ['name'],
-  nullable: true // 3.0.0 specific
+  required: ["id", "name", "email"],
+  description: "User object"
 };
 
-// OpenAPI 3.1.0 schema (JSON Schema 2020-12 aligned)
-import { SchemaObject } from 'oas-types/3.1.0';
-
-const schema31: SchemaObject = {
-  type: ['string', 'null'], // 3.1.0 uses union types instead of nullable
-  const: 'example', // 3.1.0 specific
-  pattern: '^[a-zA-Z]+$'
+// Array schema
+const usersSchema: ArraySchema = {
+  type: "array",
+  items: userSchema,
+  minItems: 1,
+  description: "Array of users"
 };
 ```
 
-### Using Utilities
+### Swagger 2.0 Usage
 
 ```typescript
-import { DeepPartial, Merge, Brand } from 'oas-types/utils';
-import { InfoObject } from 'oas-types/atoms';
+import { Swagger, Info, Paths } from 'oas-types/versions/2.0.0';
 
-// Deep partial for optional configuration
-type PartialConfig = DeepPartial<InfoObject>;
+const swaggerSpec: Swagger = {
+  swagger: "2.0",
+  info: {
+    title: "My API",
+    version: "1.0.0",
+    description: "A sample API"
+  } as Info,
+  paths: {
+    "/users": {
+      get: {
+        summary: "List users",
+        responses: {
+          "200": {
+            description: "A list of users",
+            schema: {
+              type: "array",
+              items: { $ref: "#/definitions/User" }
+            }
+          }
+        }
+      }
+    }
+  } as Paths,
+  definitions: {
+    User: {
+      type: "object",
+      properties: {
+        id: { type: "integer" },
+        name: { type: "string" }
+      },
+      required: ["id", "name"]
+    }
+  }
+};
+```
 
-// Merge types
-type ExtendedInfo = Merge<InfoObject, { 
-  customField: string 
-}>;
+### Security Schemes
 
-// Branded types for better type safety
-type UserId = Brand<string, 'UserId'>;
-type ProductId = Brand<string, 'ProductId'>;
+```typescript
+import { SecurityScheme, OAuthFlows } from 'oas-types/versions/3.1.x/security';
+
+const apiKeyAuth: SecurityScheme = {
+  type: "apiKey",
+  in: "header",
+  name: "X-API-Key",
+  description: "API key authentication"
+};
+
+const oauth2Auth: SecurityScheme = {
+  type: "oauth2",
+  flows: {
+    authorizationCode: {
+      authorizationUrl: "https://example.com/oauth/authorize",
+      tokenUrl: "https://example.com/oauth/token",
+      scopes: {
+        "read:users": "Read user information",
+        "write:users": "Modify user information"
+      }
+    }
+  } as OAuthFlows
+};
 ```
 
 ## 🧪 Type Safety Features
 
-- **Strict typing** - All types follow the OpenAPI specification exactly
+- **Strict typing** - All types follow OpenAPI specifications exactly
 - **Version awareness** - Type-safe version-specific features
-- **Atomic composition** - Build complex types from simple building blocks
-- **Utility types** - Comprehensive set of helper types for common patterns
+- **Discriminated unions** - Advanced schema type discrimination
+- **Comprehensive validation** - Property constraints and validation rules
 - **JSDoc documentation** - Complete documentation with spec links
 
 ## 📚 Documentation
 
 Each type includes comprehensive JSDoc documentation with:
-- Links to the official OpenAPI specification
-- Usage examples
-- Version compatibility notes
-- Type constraints and validation rules
+- **Official specification links** for each OpenAPI version
+- **Usage examples** with practical implementations
+- **Property documentation** with example values and constraints
+- **Version compatibility notes** where applicable
+- **Mutual exclusion rules** for conflicting properties
+
+## 🔗 Key Features
+
+### OpenAPI 3.1.x Specific Features
+- **JSON Schema 2020-12 alignment** - Full support for latest JSON Schema features
+- **Discriminated schema unions** - Type-safe schema type discrimination
+- **Composition schemas** - Support for `allOf`, `anyOf`, `oneOf`, `not`, `if`/`then`/`else`
+- **Enhanced validation** - Support for `const`, `examples`, and advanced validation keywords
+
+### OpenAPI 3.0.x Features
+- **Nullable schemas** - Support for `nullable` property
+- **Discriminator objects** - Support for schema discrimination
+- **Callback objects** - Support for webhook definitions
+
+### Swagger 2.0 Features
+- **Definitions object** - Support for schema definitions
+- **Security definitions** - Support for security schemes
+- **Response definitions** - Support for reusable response definitions
 
 ## 🤝 Contributing
 
@@ -241,3 +365,4 @@ MIT License - see LICENSE file for details.
 - [OpenAPI Specification](https://spec.openapis.org/)
 - [Swagger Specification](https://swagger.io/specification/)
 - [JSON Schema](https://json-schema.org/)
+- [SPDX License List](https://spdx.org/licenses/)
