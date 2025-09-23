@@ -34,7 +34,7 @@ import {
   Paths, 
   Schema,
   Components 
-} from 'oas-types/versions/3.1.x';
+} from 'oas-types/3.1.x';
 
 // OpenAPI 3.0.x
 import { 
@@ -43,7 +43,7 @@ import {
   Paths, 
   Schema,
   Components 
-} from 'oas-types/versions/3.0.x';
+} from 'oas-types/3.0.x';
 
 // Swagger 2.0
 import { 
@@ -52,17 +52,17 @@ import {
   Paths, 
   Schema,
   Definitions 
-} from 'oas-types/versions/2.0.0';
+} from 'oas-types/2.0.0';
 ```
 
 ### Import Specific OpenAPI Objects
 
 ```typescript
 // Import specific objects from any version
-import { Info, Contact, License } from 'oas-types/versions/3.1.x/info';
-import { Paths, Operation, Parameter } from 'oas-types/versions/3.1.x/paths';
-import { Schema, StringSchema, ObjectSchema } from 'oas-types/versions/3.1.x/schema';
-import { SecurityScheme, OAuthFlows } from 'oas-types/versions/3.1.x/security';
+import { Info, Contact, License } from 'oas-types/3.1.x/info';
+import { Paths, Operation, Parameter } from 'oas-types/3.1.x/paths';
+import { Schema, StringSchema, ObjectSchema } from 'oas-types/3.1.x/schema';
+import { SecurityScheme, OAuthFlows } from 'oas-types/3.1.x/security';
 ```
 
 ### Import Schema Data Types (OpenAPI 3.1.x)
@@ -70,15 +70,15 @@ import { SecurityScheme, OAuthFlows } from 'oas-types/versions/3.1.x/security';
 ```typescript
 // Import specific schema types for OpenAPI 3.1.x
 import { 
-  StringSchema, 
-  NumberSchema, 
-  IntegerSchema, 
-  BooleanSchema,
-  ArraySchema, 
-  ObjectSchema,
-  CompositionSchema,
-  ReferenceSchema 
-} from 'oas-types/versions/3.1.x/data-types';
+  String, 
+  Number, 
+  Integer, 
+  Boolean,
+  Array, 
+  Object,
+  Composition,
+  Reference 
+} from 'oas-types/3.1.x/data-types';
 ```
 
 ## 📁 Project Structure
@@ -162,7 +162,7 @@ Every type includes:
 ### Basic OpenAPI 3.1.x Usage
 
 ```typescript
-import { Specification, Info, Paths, Schema } from 'oas-types/versions/3.1.x';
+import { Specification, Info, Paths, Schema } from 'oas-types/3.1.x';
 
 const openApiSpec: Specification = {
   openapi: "3.1.0",
@@ -210,7 +210,7 @@ import {
   ObjectSchema, 
   ArraySchema,
   Schema 
-} from 'oas-types/versions/3.1.x';
+} from 'oas-types/3.1.x';
 
 // String schema with validation
 const nameSchema: StringSchema = {
@@ -248,7 +248,7 @@ const usersSchema: ArraySchema = {
 ### Swagger 2.0 Usage
 
 ```typescript
-import { Swagger, Info, Paths } from 'oas-types/versions/2.0.0';
+import { Swagger, Info, Paths } from 'oas-types/2.0.0';
 
 const swaggerSpec: Swagger = {
   swagger: "2.0",
@@ -289,7 +289,7 @@ const swaggerSpec: Swagger = {
 ### Security Schemes
 
 ```typescript
-import { SecurityScheme, OAuthFlows } from 'oas-types/versions/3.1.x/security';
+import { SecurityScheme, OAuthFlows } from 'oas-types/3.1.x/security';
 
 const apiKeyAuth: SecurityScheme = {
   type: "apiKey",

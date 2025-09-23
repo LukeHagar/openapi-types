@@ -28,17 +28,9 @@
  * @see {@link https://spec.openapis.org/oas/v3.1.1 OpenAPI 3.1.1 Specification}
  */
 
-// Atomic building blocks - core types shared across all versions
-export * from './versions/atoms';
-
-// Common utilities and shared types
-export * from './versions/common';
-
 // Version-specific exports
-export * as OpenAPI3_0_0 from './versions/3.0.x';
-export * as OpenAPI3_0_1 from './versions/3.0.1';
-export * as OpenAPI3_0_2 from './versions/3.0.2';
-export * as OpenAPI3_0_3 from './versions/3.0.3';
-export * as OpenAPI3_0_4 from './versions/3.0.4';
-export * as OpenAPI3_1_0 from './versions/3.1.0';
-export * as OpenAPI3_1_1 from './versions/3.1.1';
+export * as OpenAPI2 from './2.0.0';
+export * as OpenAPI3 from './3.0.x';
+export * as OpenAPI3_1 from './3.1.x';
+// export * as OpenAPI3_2 from './3.2.x';
+
