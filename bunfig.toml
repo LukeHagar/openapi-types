@@ -1,7 +1,3 @@
-[test]
-# Bun test configuration
-preload = ["./tests/setup.ts"]
-
 [install]
 # Install configuration
 cache = true

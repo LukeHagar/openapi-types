@@ -17,7 +17,7 @@ The JSDoc comments should be formatted as follows:
 - property level comments for each field of the type that inlcude example values, with more detailed comments for the properties that are more complex.
 
 Ensure you Always:
-- use the `@key` tag to document the fields of the type.
+- use the `@property` tag to document the fields of the type.
 - use the `@see` tag to link to the official OpenAPI specification version they represent, and to the correct section.
 - use the `@example` tag to provide an example of the type.
 - use the `@note` tag to provide a note about the type.
@@ -52,10 +52,10 @@ The example below is for the Contact Object:
  * -----------------------------------------------------------------------------
  *
  *
- * @key `name` - Optional The identifying name of the contact person/organization.
- * @key `url` - Optional A URL pointing to the contact information.
- * @key `email` - Optional The email address of the contact person/organization.
- * @key `x-${string}` - Specification Extensions
+ * @property `name` - Optional The identifying name of the contact person/organization.
+ * @property `url` - Optional A URL pointing to the contact information.
+ * @property `email` - Optional The email address of the contact person/organization.
+ * @property `x-${string}` - Specification Extensions
  *
  * @note
  * All fields are optional.
