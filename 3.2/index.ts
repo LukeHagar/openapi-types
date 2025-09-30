@@ -15,14 +15,14 @@
 export type { Components } from "./components";
 // Re-export data-types for convenience
 export type {
-	ArraySchema as DataTypeArraySchema,
-	BooleanSchema as DataTypeBooleanSchema,
-	CompositionSchema as DataTypeCompositionSchema,
-	IntegerSchema as DataTypeIntegerSchema,
-	NumberSchema as DataTypeNumberSchema,
-	ObjectSchema as DataTypeObjectSchema,
-	ReferenceSchema as DataTypeReferenceSchema,
-	StringSchema as DataTypeStringSchema,
+  ArraySchema,
+  BooleanSchema,
+  CompositionSchema,
+  IntegerSchema,
+  NumberSchema,
+  ObjectSchema,
+  ReferenceSchema,
+  StringSchema,
 } from "./data-types";
 // Core OpenAPI types
 export type { Extension } from "./extensions";
@@ -32,21 +32,10 @@ export type { ExternalDocumentation } from "./externalDocs";
 export type { Contact, Info, License } from "./info";
 export type { OAuthFlow, OAuthFlows } from "./oauth";
 // Path types
-export type { PathItemObject, Paths } from "./paths";
+export type { PathItem, Paths } from "./paths";
 export type { Reference } from "./references";
-// Schema types
-export type {
-	ArraySchema,
-	BooleanSchema,
-	CompositionSchema,
-	Discriminator,
-	IntegerSchema,
-	NumberSchema,
-	ObjectSchema,
-	ReferenceSchema,
-	Schema,
-	StringSchema,
-} from "./schema";
+// Schema type
+export type { Discriminator, Schema } from "./schema";
 // Security types
 export type { SecurityRequirement } from "./security";
 // Server types

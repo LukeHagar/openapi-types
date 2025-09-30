@@ -1,5 +1,5 @@
 import type { Extension } from "./extensions";
-import type { PathItemObject } from "./paths";
+import type { PathItem } from "./paths";
 import type { Reference } from "./references";
 
 /**
@@ -26,7 +26,7 @@ import type { Reference } from "./references";
  * -----
  *
  * @property `{webhookName}` - A unique string to refer to each webhook
- * @property `PathItemObject` - The Path Item Object describing the webhook request
+ * @property `PathItem` - The Path Item Object describing the webhook request
  * @property `Reference` - A reference to a Path Item Object
  * @property `x-${string}` - Specification Extensions
  *
@@ -128,4 +128,4 @@ import type { Reference } from "./references";
  * };
  * ```
  */
-export type Webhooks = Record<string, PathItemObject | Reference> & Extension;
+export type Webhooks = Record<string, PathItem | Reference> & Extension;

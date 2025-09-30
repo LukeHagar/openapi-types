@@ -54,39 +54,44 @@ export type { Contact, Info, License } from "./info";
  * @see {@link https://spec.openapis.org/oas/v3.1.1#callback-object | OpenAPI 3.1.1 Callback Object}
  */
 export type {
-	Callback,
-	Encoding,
-	Example,
-	Header,
-	Link,
-	MediaType,
-	Operation,
-	Parameter,
-	PathItemObject,
-	Paths,
-	RequestBody,
-	Response,
-	Responses,
+  Callback,
+  Encoding,
+  Example,
+  Header,
+  Link,
+  MediaType,
+  Operation,
+  Parameter,
+  PathItem,
+  Paths,
+  RequestBody,
+  Response,
 } from "./paths";
 export type { Reference } from "./references";
+
+/**
+ * Data type definitions.
+ *
+ * @see {@link https://spec.openapis.org/oas/v3.1.1#data-type-object | OpenAPI 3.1.1 Data Type Object}
+ */
+export type {
+  ArraySchema,
+  BooleanSchema,
+  CompositionSchema,
+  IntegerSchema,
+  NumberSchema,
+  ObjectSchema,
+  ReferenceSchema,
+  StringSchema,
+} from "./data-types";
+
 /**
  * Schema definition types based on JSON Schema Draft 2020-12.
  *
  * @see {@link https://spec.openapis.org/oas/v3.1.1#schema-object | OpenAPI 3.1.1 Schema Object}
  * @see {@link https://json-schema.org/draft/2020-12/json-schema-core.html | JSON Schema Draft 2020-12}
  */
-export type {
-	ArraySchema,
-	BooleanSchema,
-	CompositionSchema,
-	Discriminator,
-	IntegerSchema,
-	NumberSchema,
-	ObjectSchema,
-	ReferenceSchema,
-	Schema,
-	StringSchema,
-} from "./schema";
+export type { Discriminator, Schema } from "./schema";
 /**
  * Security scheme and authentication types.
  *
@@ -96,10 +101,10 @@ export type {
  * @see {@link https://spec.openapis.org/oas/v3.1.1#security-requirement-object | OpenAPI 3.1.1 Security Requirement Object}
  */
 export type {
-	OAuthFlow,
-	OAuthFlows,
-	SecurityRequirement,
-	SecurityScheme,
+  OAuthFlow,
+  OAuthFlows,
+  SecurityRequirement,
+  SecurityScheme,
 } from "./security";
 /**
  * Server configuration types.
@@ -114,6 +119,13 @@ export type { Server, ServerVariable } from "./servers";
  * @see {@link https://spec.openapis.org/oas/v3.1.1#oas-document | OpenAPI 3.1.1 OAS Document}
  */
 export type { Specification } from "./spec";
+
+/**
+ * Status code definitions.
+ *
+ * @see {@link https://spec.openapis.org/oas/v3.1.1#responses-object | OpenAPI 3.1.1 Responses Object}
+ */
+export type { ResponsesMap } from "./status";
 
 /**
  * Utility and metadata types.

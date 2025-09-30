@@ -1,5 +1,6 @@
 import type { Extension } from "../extensions";
 import type { Schema } from "../schema";
+import type { XML } from "../xml";
 
 /**
  * -----
@@ -32,6 +33,7 @@ import type { Schema } from "../schema";
  * @property `default` - Optional Default value
  * @property `title` - Optional Short title for the schema
  * @property `description` - Optional Description of the schema
+ * @property `xml` - Optional XML representation metadata
  * @property `x-${string}` - Specification Extensions
  *
  * @note
@@ -83,107 +85,116 @@ import type { Schema } from "../schema";
  * ```
  */
 export interface CompositionSchema extends Extension {
-	/**
-	 * An array of schemas that must all be satisfied.
-	 * The value must conform to all schemas in the array.
-	 *
-	 * Example: `[{ type: "object" }, { properties: { name: { type: "string" } } }]`
-	 */
-	allOf?: Schema[];
+  /**
+   * An array of schemas that must all be satisfied.
+   * The value must conform to all schemas in the array.
+   *
+   * Example: `[{ type: "object" }, { properties: { name: { type: "string" } } }]`
+   */
+  allOf?: Schema[];
 
-	/**
-	 * An array of schemas where at least one must be satisfied.
-	 * The value must conform to at least one schema in the array.
-	 *
-	 * Example: `[{ type: "string" }, { type: "number" }]`
-	 */
-	anyOf?: Schema[];
+  /**
+   * An array of schemas where at least one must be satisfied.
+   * The value must conform to at least one schema in the array.
+   *
+   * Example: `[{ type: "string" }, { type: "number" }]`
+   */
+  anyOf?: Schema[];
 
-	/**
-	 * An array of schemas where exactly one must be satisfied.
-	 * The value must conform to exactly one schema in the array.
-	 *
-	 * Example: `[{ type: "string" }, { type: "number" }]`
-	 */
-	oneOf?: Schema[];
+  /**
+   * An array of schemas where exactly one must be satisfied.
+   * The value must conform to exactly one schema in the array.
+   *
+   * Example: `[{ type: "string" }, { type: "number" }]`
+   */
+  oneOf?: Schema[];
 
-	/**
-	 * A schema that must not be satisfied.
-	 * The value must not conform to this schema.
-	 *
-	 * Example: `{ type: "string" }`
-	 */
-	not?: Schema;
+  /**
+   * A schema that must not be satisfied.
+   * The value must not conform to this schema.
+   *
+   * Example: `{ type: "string" }`
+   */
+  not?: Schema;
 
-	/**
-	 * A schema for conditional validation.
-	 * Used with `then` and `else` for conditional logic.
-	 *
-	 * Example: `{ type: "object", properties: { type: { const: "user" } } }`
-	 */
-	if?: Schema;
+  /**
+   * A schema for conditional validation.
+   * Used with `then` and `else` for conditional logic.
+   *
+   * Example: `{ type: "object", properties: { type: { const: "user" } } }`
+   */
+  if?: Schema;
 
-	/**
-	 * A schema to apply if the `if` condition is met.
-	 * The value must conform to this schema if the `if` schema is satisfied.
-	 *
-	 * Example: `{ type: "object", properties: { name: { type: "string" } } }`
-	 */
-	then?: Schema;
+  /**
+   * A schema to apply if the `if` condition is met.
+   * The value must conform to this schema if the `if` schema is satisfied.
+   *
+   * Example: `{ type: "object", properties: { name: { type: "string" } } }`
+   */
+  then?: Schema;
 
-	/**
-	 * A schema to apply if the `if` condition is not met.
-	 * The value must conform to this schema if the `if` schema is not satisfied.
-	 *
-	 * Example: `{ type: "object", properties: { id: { type: "string" } } }`
-	 */
-	else?: Schema;
+  /**
+   * A schema to apply if the `if` condition is not met.
+   * The value must conform to this schema if the `if` schema is not satisfied.
+   *
+   * Example: `{ type: "object", properties: { id: { type: "string" } } }`
+   */
+  else?: Schema;
 
-	/**
-	 * An array of allowed values.
-	 * The value must be one of the values in this array.
-	 *
-	 * Example: `["active", "inactive"]`
-	 */
-	enum?: unknown[];
+  /**
+   * An array of allowed values.
+   * The value must be one of the values in this array.
+   *
+   * Example: `["active", "inactive"]`
+   */
+  enum?: unknown[];
 
-	/**
-	 * A single allowed value.
-	 * The value must be exactly this value.
-	 *
-	 * Example: `"active"`
-	 */
-	const?: unknown;
+  /**
+   * A single allowed value.
+   * The value must be exactly this value.
+   *
+   * Example: `"active"`
+   */
+  const?: unknown;
 
-	/**
-	 * An array of example values.
-	 * These are for documentation purposes only.
-	 *
-	 * Example: `["example1", "example2"]`
-	 */
-	examples?: unknown[];
+  /**
+   * An array of example values.
+   * These are for documentation purposes only.
+   *
+   * Example: `["example1", "example2"]`
+   */
+  examples?: unknown[];
 
-	/**
-	 * The default value.
-	 * This value will be used if no value is provided.
-	 *
-	 * Example: `"default"`
-	 */
-	default?: unknown;
+  /**
+   * The default value.
+   * This value will be used if no value is provided.
+   *
+   * Example: `"default"`
+   */
+  default?: unknown;
 
-	/**
-	 * A short title for the schema.
-	 * This is for documentation purposes only.
-	 *
-	 * Example: `"Composed Schema"`
-	 */
-	title?: string;
+  /**
+   * A short title for the schema.
+   * This is for documentation purposes only.
+   *
+   * Example: `"Composed Schema"`
+   */
+  title?: string;
 
-	/**
-	 * A description of the schema.
-	 * CommonMark syntax MAY be used for rich text representation.
-	 *
-	 * Example: `"A schema composed of multiple schemas"`
-	 */
-	description?: string;
+  /**
+   * A description of the schema.
+   * CommonMark syntax MAY be used for rich text representation.
+   *
+   * Example: `"A schema composed of multiple schemas"`
+   */
+  description?: string;
+
+  /**
+   * XML representation metadata for the schema.
+   * Allows for fine-tuned XML model definitions using the modernized
+   * nodeType approach in OpenAPI 3.2.0.
+   *
+   * Example: `{ nodeType: "element", name: "composedSchema" }`
+   */
+  xml?: XML;
 }

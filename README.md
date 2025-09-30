@@ -22,6 +22,45 @@ yarn add oas-types
 bun add oas-types
 ```
 
+## 🏗️ Build Process
+
+This package includes a comprehensive build system that generates JSON schemas from the TypeScript definitions:
+
+### Quick Start
+
+```bash
+# Generate all schemas
+bun run build
+
+# Clean and rebuild
+bun run schemas:clean && bun run build
+```
+
+### Generated Schemas
+
+The build process creates JSON schemas for:
+
+- **Main specifications** - Complete OpenAPI document validation
+- **Component schemas** - Individual component validation
+- **TypeScript exports** - Easy importing and type safety
+
+### Usage
+
+```typescript
+// Import schemas for a specific version
+import { schemas } from 'oas-types/schemas/3.0';
+
+// Import all schemas
+import { allSchemas, getSchemasForVersion } from 'oas-types/schemas';
+
+// Use with JSON Schema validators
+import Ajv from 'ajv';
+const ajv = new Ajv();
+const validator = ajv.compile(schemas.specification);
+```
+
+For detailed build information, see [BUILD.md](./BUILD.md).
+
 ## 🚀 Usage
 
 ### Import Version-Specific Types
