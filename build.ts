@@ -291,7 +291,7 @@ async function generateIndexFiles(): Promise<void> {
       indexContent += `  ${component},\n`;
     }
 
-    indexContent += `} as const;\n\n// Type definitions for better TypeScript support\nexport type SchemaName = keyof typeof schemas;\n`;
+    indexContent += `} as const;\n\n`;
 
     writeFileSync(indexPath, indexContent);
     console.log(`✅ Generated index.ts for ${version}`);

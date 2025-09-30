@@ -29,5 +29,3 @@ export const schemas = {
   pathitem,
 } as const;
 
-// Type definitions for better TypeScript support
-export type SchemaName = keyof typeof schemas;

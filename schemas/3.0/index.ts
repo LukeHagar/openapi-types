@@ -44,5 +44,3 @@ export const schemas = {
   callback,
 } as const;
 
-// Type definitions for better TypeScript support
-export type SchemaName = keyof typeof schemas;
