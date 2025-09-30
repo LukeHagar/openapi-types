@@ -1,128 +1,128 @@
 {
-  "name": "oas-types",
-  "version": "1.0.1",
-  "description": "Comprehensive TypeScript definitions for all OpenAPI specification versions (Swagger 2.0, OpenAPI 3.0, 3.1, 3.2)",
-  "main": "index.ts",
-  "module": "index.ts",
-  "type": "module",
-  "types": "index.ts",
-  "author": {
-    "name": "Luke Hagar",
-    "email": "lukeslakemail@gmail.com",
-    "url": "https://lukehagar.com/"
-  },
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/lukehagar/openapi-types.git"
-  },
-  "bugs": {
-    "url": "https://github.com/lukehagar/openapi-types/issues"
-  },
-  "homepage": "https://github.com/lukehagar/openapi-types#readme",
-  "scripts": {
-    "test": "bun test",
-    "test:watch": "bun test --watch",
-    "test:coverage": "bun test --coverage",
-    "test:common": "bun test tests/common.test.ts",
-    "test:open-enums": "bun test tests/open-enums.test.ts",
-    "test:swagger-2.0": "bun test tests/swagger-2.0.test.ts",
-    "test:openapi-3.0.0": "bun test tests/openapi-3.0.0.test.ts",
-    "test:integration": "bun test tests/integration.test.ts",
-    "type-check": "tsc --noEmit",
-    "build": "bun run build.ts",
-    "build:schemas": "bun run build.ts",
-    "dev": "bun run --watch index.ts",
-    "lint": "biome check .",
-    "lint:fix": "biome check --write .",
-    "test:version": "node scripts/test-version-comparison.js",
-    "schemas:clean": "rm -rf schemas/",
-    "schemas:validate": "echo 'Schema validation not yet implemented'"
-  },
-  "dependencies": {
-    "ajv": "^8.17.1",
-    "rimraf": "^6.0.1",
-    "spdx-license-list": "^6.10.0"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "^2.2.4",
-    "@types/bun": "^1.2.23",
-    "ts-json-schema-generator": "^2.4.0",
-    "tsd": "^0.33.0",
-    "typescript": "^5.9.2"
-  },
-  "peerDependencies": {
-    "typescript": "^5.0.0"
-  },
-  "exports": {
-    ".": {
-      "types": "./index.ts",
-      "import": "./index.ts"
-    },
-    "./2.0": {
-      "types": "./2.0/index.ts",
-      "import": "./2.0/index.ts"
-    },
-    "./3.0": {
-      "types": "./3.0/index.ts",
-      "import": "./3.0/index.ts"
-    },
-    "./3.1": {
-      "types": "./3.1/index.ts",
-      "import": "./3.1/index.ts"
-    },
-    "./3.2": {
-      "types": "./3.2/index.ts",
-      "import": "./3.2/index.ts"
-    },
-    "./schemas": {
-      "types": "./schemas/index.ts",
-      "import": "./schemas/index.ts"
-    },
-    "./schemas/2.0": {
-      "types": "./schemas/2.0/index.ts",
-      "import": "./schemas/2.0/index.ts"
-    },
-    "./schemas/3.0": {
-      "types": "./schemas/3.0/index.ts",
-      "import": "./schemas/3.0/index.ts"
-    },
-    "./schemas/3.1": {
-      "types": "./schemas/3.1/index.ts",
-      "import": "./schemas/3.1/index.ts"
-    },
-    "./schemas/3.2": {
-      "types": "./schemas/3.2/index.ts",
-      "import": "./schemas/3.2/index.ts"
-    }
-  },
-  "files": [
-    "2.0/",
-    "3.0/",
-    "3.1/",
-    "3.2/",
-    "schemas/",
-    "License.ts",
-    "SPDXLicenseList.ts",
-    "MIGRATION.md",
-    "index.ts",
-    "README.md",
-    "LICENSE"
-  ],
-  "keywords": [
-    "openapi",
-    "swagger",
-    "typescript",
-    "types",
-    "definitions",
-    "api",
-    "specification",
-    "swagger-2.0",
-    "openapi-3.0",
-    "openapi-3.1",
-    "openapi-3.2",
-    "json-schema",
-    "rest",
-    "api-documentation"
-  ]
+	"name": "oas-types",
+	"version": "1.0.1",
+	"description": "Comprehensive TypeScript definitions for all OpenAPI specification versions (Swagger 2.0, OpenAPI 3.0, 3.1, 3.2)",
+	"main": "index.ts",
+	"module": "index.ts",
+	"type": "module",
+	"types": "index.ts",
+	"author": {
+		"name": "Luke Hagar",
+		"email": "lukeslakemail@gmail.com",
+		"url": "https://lukehagar.com/"
+	},
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/lukehagar/openapi-types.git"
+	},
+	"bugs": {
+		"url": "https://github.com/lukehagar/openapi-types/issues"
+	},
+	"homepage": "https://github.com/lukehagar/openapi-types#readme",
+	"scripts": {
+		"test": "bun test",
+		"test:watch": "bun test --watch",
+		"test:coverage": "bun test --coverage",
+		"test:common": "bun test tests/common.test.ts",
+		"test:open-enums": "bun test tests/open-enums.test.ts",
+		"test:swagger-2.0": "bun test tests/swagger-2.0.test.ts",
+		"test:openapi-3.0.0": "bun test tests/openapi-3.0.0.test.ts",
+		"test:integration": "bun test tests/integration.test.ts",
+		"type-check": "tsc --noEmit",
+		"build": "bun run build.ts",
+		"build:schemas": "bun run build.ts",
+		"dev": "bun run --watch index.ts",
+		"lint": "biome check .",
+		"lint:fix": "biome check --write .",
+		"test:version": "node scripts/test-version-comparison.js",
+		"schemas:clean": "rm -rf schemas/",
+		"schemas:validate": "echo 'Schema validation not yet implemented'"
+	},
+	"dependencies": {
+		"ajv": "^8.17.1",
+		"rimraf": "^6.0.1",
+		"spdx-license-list": "^6.10.0"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^2.2.4",
+		"@types/bun": "^1.2.23",
+		"ts-json-schema-generator": "^2.4.0",
+		"tsd": "^0.33.0",
+		"typescript": "^5.9.2"
+	},
+	"peerDependencies": {
+		"typescript": "^5.0.0"
+	},
+	"exports": {
+		".": {
+			"types": "./index.ts",
+			"import": "./index.ts"
+		},
+		"./2.0": {
+			"types": "./2.0/index.ts",
+			"import": "./2.0/index.ts"
+		},
+		"./3.0": {
+			"types": "./3.0/index.ts",
+			"import": "./3.0/index.ts"
+		},
+		"./3.1": {
+			"types": "./3.1/index.ts",
+			"import": "./3.1/index.ts"
+		},
+		"./3.2": {
+			"types": "./3.2/index.ts",
+			"import": "./3.2/index.ts"
+		},
+		"./schemas": {
+			"types": "./schemas/index.ts",
+			"import": "./schemas/index.ts"
+		},
+		"./schemas/2.0": {
+			"types": "./schemas/2.0/index.ts",
+			"import": "./schemas/2.0/index.ts"
+		},
+		"./schemas/3.0": {
+			"types": "./schemas/3.0/index.ts",
+			"import": "./schemas/3.0/index.ts"
+		},
+		"./schemas/3.1": {
+			"types": "./schemas/3.1/index.ts",
+			"import": "./schemas/3.1/index.ts"
+		},
+		"./schemas/3.2": {
+			"types": "./schemas/3.2/index.ts",
+			"import": "./schemas/3.2/index.ts"
+		}
+	},
+	"files": [
+		"2.0/",
+		"3.0/",
+		"3.1/",
+		"3.2/",
+		"schemas/",
+		"License.ts",
+		"SPDXLicenseList.ts",
+		"MIGRATION.md",
+		"index.ts",
+		"README.md",
+		"LICENSE"
+	],
+	"keywords": [
+		"openapi",
+		"swagger",
+		"typescript",
+		"types",
+		"definitions",
+		"api",
+		"specification",
+		"swagger-2.0",
+		"openapi-3.0",
+		"openapi-3.1",
+		"openapi-3.2",
+		"json-schema",
+		"rest",
+		"api-documentation"
+	]
 }

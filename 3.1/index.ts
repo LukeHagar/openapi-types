@@ -18,7 +18,21 @@
  * @see {@link https://spec.openapis.org/oas/v3.1.1#components-object | OpenAPI 3.1.1 Components Object}
  */
 export type { Components } from "./components";
-
+/**
+ * Data type definitions.
+ *
+ * @see {@link https://spec.openapis.org/oas/v3.1.1#data-type-object | OpenAPI 3.1.1 Data Type Object}
+ */
+export type {
+	ArraySchema,
+	BooleanSchema,
+	CompositionSchema,
+	IntegerSchema,
+	NumberSchema,
+	ObjectSchema,
+	ReferenceSchema,
+	StringSchema,
+} from "./data-types";
 /**
  * Core extension and reference types.
  *
@@ -27,7 +41,6 @@ export type { Components } from "./components";
  */
 export type { Extension } from "./extensions";
 export type { ExternalDocumentation } from "./externalDocs";
-
 /**
  * API information and metadata types.
  *
@@ -54,36 +67,20 @@ export type { Contact, Info, License } from "./info";
  * @see {@link https://spec.openapis.org/oas/v3.1.1#callback-object | OpenAPI 3.1.1 Callback Object}
  */
 export type {
-  Callback,
-  Encoding,
-  Example,
-  Header,
-  Link,
-  MediaType,
-  Operation,
-  Parameter,
-  PathItem,
-  Paths,
-  RequestBody,
-  Response,
+	Callback,
+	Encoding,
+	Example,
+	Header,
+	Link,
+	MediaType,
+	Operation,
+	Parameter,
+	PathItem,
+	Paths,
+	RequestBody,
+	Response,
 } from "./paths";
 export type { Reference } from "./references";
-
-/**
- * Data type definitions.
- *
- * @see {@link https://spec.openapis.org/oas/v3.1.1#data-type-object | OpenAPI 3.1.1 Data Type Object}
- */
-export type {
-  ArraySchema,
-  BooleanSchema,
-  CompositionSchema,
-  IntegerSchema,
-  NumberSchema,
-  ObjectSchema,
-  ReferenceSchema,
-  StringSchema,
-} from "./data-types";
 
 /**
  * Schema definition types based on JSON Schema Draft 2020-12.
@@ -101,10 +98,10 @@ export type { Discriminator, Schema } from "./schema";
  * @see {@link https://spec.openapis.org/oas/v3.1.1#security-requirement-object | OpenAPI 3.1.1 Security Requirement Object}
  */
 export type {
-  OAuthFlow,
-  OAuthFlows,
-  SecurityRequirement,
-  SecurityScheme,
+	OAuthFlow,
+	OAuthFlows,
+	SecurityRequirement,
+	SecurityScheme,
 } from "./security";
 /**
  * Server configuration types.

@@ -55,83 +55,83 @@ import type { ResponsesMap } from "./status";
  * ```
  */
 export type PathItem =
-  | ({
-      /**
-       * A definition of a GET operation on this path.
-       *
-       * @see {@link https://swagger.io/specification/v2/#path-item-object | Swagger 2.0 Specification - get}
-       *
-       * @example { summary: "Get users", responses: { "200": { description: "Success" } } }
-       */
-      get?: Operation;
+	| ({
+			/**
+			 * A definition of a GET operation on this path.
+			 *
+			 * @see {@link https://swagger.io/specification/v2/#path-item-object | Swagger 2.0 Specification - get}
+			 *
+			 * @example { summary: "Get users", responses: { "200": { description: "Success" } } }
+			 */
+			get?: Operation;
 
-      /**
-       * A definition of a PUT operation on this path.
-       *
-       * @see {@link https://swagger.io/specification/v2/#path-item-object | Swagger 2.0 Specification - put}
-       *
-       * @example { summary: "Update user", responses: { "200": { description: "Success" } } }
-       */
-      put?: Operation;
+			/**
+			 * A definition of a PUT operation on this path.
+			 *
+			 * @see {@link https://swagger.io/specification/v2/#path-item-object | Swagger 2.0 Specification - put}
+			 *
+			 * @example { summary: "Update user", responses: { "200": { description: "Success" } } }
+			 */
+			put?: Operation;
 
-      /**
-       * A definition of a POST operation on this path.
-       *
-       * @see {@link https://swagger.io/specification/v2/#path-item-object | Swagger 2.0 Specification - post}
-       *
-       * @example { summary: "Create user", responses: { "201": { description: "Created" } } }
-       */
-      post?: Operation;
+			/**
+			 * A definition of a POST operation on this path.
+			 *
+			 * @see {@link https://swagger.io/specification/v2/#path-item-object | Swagger 2.0 Specification - post}
+			 *
+			 * @example { summary: "Create user", responses: { "201": { description: "Created" } } }
+			 */
+			post?: Operation;
 
-      /**
-       * A definition of a DELETE operation on this path.
-       *
-       * @see {@link https://swagger.io/specification/v2/#path-item-object | Swagger 2.0 Specification - delete}
-       *
-       * @example { summary: "Delete user", responses: { "204": { description: "No Content" } } }
-       */
-      delete?: Operation;
+			/**
+			 * A definition of a DELETE operation on this path.
+			 *
+			 * @see {@link https://swagger.io/specification/v2/#path-item-object | Swagger 2.0 Specification - delete}
+			 *
+			 * @example { summary: "Delete user", responses: { "204": { description: "No Content" } } }
+			 */
+			delete?: Operation;
 
-      /**
-       * A definition of an OPTIONS operation on this path.
-       *
-       * @see {@link https://swagger.io/specification/v2/#path-item-object | Swagger 2.0 Specification - options}
-       *
-       * @example { summary: "Get options", responses: { "200": { description: "Options" } } }
-       */
-      options?: Operation;
+			/**
+			 * A definition of an OPTIONS operation on this path.
+			 *
+			 * @see {@link https://swagger.io/specification/v2/#path-item-object | Swagger 2.0 Specification - options}
+			 *
+			 * @example { summary: "Get options", responses: { "200": { description: "Options" } } }
+			 */
+			options?: Operation;
 
-      /**
-       * A definition of a HEAD operation on this path.
-       *
-       * @see {@link https://swagger.io/specification/v2/#path-item-object | Swagger 2.0 Specification - head}
-       *
-       * @example { summary: "Check if resource exists", responses: { "200": { description: "Exists" } } }
-       */
-      head?: Operation;
+			/**
+			 * A definition of a HEAD operation on this path.
+			 *
+			 * @see {@link https://swagger.io/specification/v2/#path-item-object | Swagger 2.0 Specification - head}
+			 *
+			 * @example { summary: "Check if resource exists", responses: { "200": { description: "Exists" } } }
+			 */
+			head?: Operation;
 
-      /**
-       * A definition of a PATCH operation on this path.
-       *
-       * @see {@link https://swagger.io/specification/v2/#path-item-object | Swagger 2.0 Specification - patch}
-       *
-       * @example { summary: "Partially update user", responses: { "200": { description: "Success" } } }
-       */
-      patch?: Operation;
+			/**
+			 * A definition of a PATCH operation on this path.
+			 *
+			 * @see {@link https://swagger.io/specification/v2/#path-item-object | Swagger 2.0 Specification - patch}
+			 *
+			 * @example { summary: "Partially update user", responses: { "200": { description: "Success" } } }
+			 */
+			patch?: Operation;
 
-      /**
-       * A list of parameters that are applicable for all the operations described
-       * under this path. These parameters can be overridden at the operation level,
-       * but cannot be removed there. The list MUST NOT include duplicated parameters.
-       * A unique parameter is defined by a combination of a name and location.
-       *
-       * @see {@link https://swagger.io/specification/v2/#path-item-object | Swagger 2.0 Specification - parameters}
-       *
-       * @example [{ name: "limit", in: "query", type: "integer" }]
-       */
-      parameters?: Array<Parameter | BaseReference>;
-    } & Extension)
-  | BaseReference;
+			/**
+			 * A list of parameters that are applicable for all the operations described
+			 * under this path. These parameters can be overridden at the operation level,
+			 * but cannot be removed there. The list MUST NOT include duplicated parameters.
+			 * A unique parameter is defined by a combination of a name and location.
+			 *
+			 * @see {@link https://swagger.io/specification/v2/#path-item-object | Swagger 2.0 Specification - parameters}
+			 *
+			 * @example [{ name: "limit", in: "query", type: "integer" }]
+			 */
+			parameters?: Array<Parameter | BaseReference>;
+	  } & Extension)
+	| BaseReference;
 
 /**
  * Operation Object
@@ -173,142 +173,142 @@ export type PathItem =
  * ```
  */
 export interface Operation extends Extension {
-  /**
-   * A list of tags for API documentation control. Tags can be used for logical
-   * grouping of operations by resources or any other qualifier.
-   *
-   * @see {@link https://swagger.io/specification/v2/#operation-object | Swagger 2.0 Specification - tags}
-   *
-   * @example ["users", "authentication"]
-   * @example ["pets"]
-   */
-  tags?: string[];
+	/**
+	 * A list of tags for API documentation control. Tags can be used for logical
+	 * grouping of operations by resources or any other qualifier.
+	 *
+	 * @see {@link https://swagger.io/specification/v2/#operation-object | Swagger 2.0 Specification - tags}
+	 *
+	 * @example ["users", "authentication"]
+	 * @example ["pets"]
+	 */
+	tags?: string[];
 
-  /**
-   * A short summary of what the operation does. For maximum readability in
-   * swagger-ui, this field SHOULD be less than 120 characters.
-   *
-   * @see {@link https://swagger.io/specification/v2/#operation-object | Swagger 2.0 Specification - summary}
-   *
-   * @example "Get user by ID"
-   * @example "Create a new pet"
-   */
-  summary?: string;
+	/**
+	 * A short summary of what the operation does. For maximum readability in
+	 * swagger-ui, this field SHOULD be less than 120 characters.
+	 *
+	 * @see {@link https://swagger.io/specification/v2/#operation-object | Swagger 2.0 Specification - summary}
+	 *
+	 * @example "Get user by ID"
+	 * @example "Create a new pet"
+	 */
+	summary?: string;
 
-  /**
-   * A verbose explanation of the operation behavior. GFM syntax can be used
-   * for rich text representation.
-   *
-   * @see {@link https://swagger.io/specification/v2/#operation-object | Swagger 2.0 Specification - description}
-   *
-   * @example "Retrieves a specific user by their unique identifier. Returns user details including name, email, and profile information."
-   */
-  description?: string;
+	/**
+	 * A verbose explanation of the operation behavior. GFM syntax can be used
+	 * for rich text representation.
+	 *
+	 * @see {@link https://swagger.io/specification/v2/#operation-object | Swagger 2.0 Specification - description}
+	 *
+	 * @example "Retrieves a specific user by their unique identifier. Returns user details including name, email, and profile information."
+	 */
+	description?: string;
 
-  /**
-   * Additional external documentation for this operation.
-   *
-   * @see {@link https://swagger.io/specification/v2/#operation-object | Swagger 2.0 Specification - externalDocs}
-   *
-   * @example { description: "Find out more about this operation", url: "https://example.com/docs" }
-   */
-  externalDocs?: ExternalDocumentation;
+	/**
+	 * Additional external documentation for this operation.
+	 *
+	 * @see {@link https://swagger.io/specification/v2/#operation-object | Swagger 2.0 Specification - externalDocs}
+	 *
+	 * @example { description: "Find out more about this operation", url: "https://example.com/docs" }
+	 */
+	externalDocs?: ExternalDocumentation;
 
-  /**
-   * Unique string used to identify the operation. The id MUST be unique among
-   * all operations described in the API. Tools and libraries MAY use the
-   * operationId to uniquely identify an operation, therefore, it is recommended
-   * to follow common programming naming conventions.
-   *
-   * @see {@link https://swagger.io/specification/v2/#operation-object | Swagger 2.0 Specification - operationId}
-   *
-   * @example "getUserById"
-   * @example "createPet"
-   */
-  operationId?: string;
+	/**
+	 * Unique string used to identify the operation. The id MUST be unique among
+	 * all operations described in the API. Tools and libraries MAY use the
+	 * operationId to uniquely identify an operation, therefore, it is recommended
+	 * to follow common programming naming conventions.
+	 *
+	 * @see {@link https://swagger.io/specification/v2/#operation-object | Swagger 2.0 Specification - operationId}
+	 *
+	 * @example "getUserById"
+	 * @example "createPet"
+	 */
+	operationId?: string;
 
-  /**
-   * A list of MIME types the operation can consume. This overrides the consumes
-   * definition at the Swagger Object level. An empty value MAY be used to clear
-   * the global definition. Value MUST be as described under Mime Types.
-   *
-   * @see {@link https://swagger.io/specification/v2/#operation-object | Swagger 2.0 Specification - consumes}
-   *
-   * @example ["application/json"]
-   * @example ["application/xml", "application/json"]
-   */
-  consumes?: string[];
+	/**
+	 * A list of MIME types the operation can consume. This overrides the consumes
+	 * definition at the Swagger Object level. An empty value MAY be used to clear
+	 * the global definition. Value MUST be as described under Mime Types.
+	 *
+	 * @see {@link https://swagger.io/specification/v2/#operation-object | Swagger 2.0 Specification - consumes}
+	 *
+	 * @example ["application/json"]
+	 * @example ["application/xml", "application/json"]
+	 */
+	consumes?: string[];
 
-  /**
-   * A list of MIME types the operation can produce. This overrides the produces
-   * definition at the Swagger Object level. An empty value MAY be used to clear
-   * the global definition. Value MUST be as described under Mime Types.
-   *
-   * @see {@link https://swagger.io/specification/v2/#operation-object | Swagger 2.0 Specification - produces}
-   *
-   * @example ["application/json"]
-   * @example ["application/xml", "application/json"]
-   */
-  produces?: string[];
+	/**
+	 * A list of MIME types the operation can produce. This overrides the produces
+	 * definition at the Swagger Object level. An empty value MAY be used to clear
+	 * the global definition. Value MUST be as described under Mime Types.
+	 *
+	 * @see {@link https://swagger.io/specification/v2/#operation-object | Swagger 2.0 Specification - produces}
+	 *
+	 * @example ["application/json"]
+	 * @example ["application/xml", "application/json"]
+	 */
+	produces?: string[];
 
-  /**
-   * A list of parameters that are applicable for this operation. If a parameter
-   * is already defined at the Path Item, the new definition will override it
-   * but can never remove it. The list MUST NOT include duplicated parameters.
-   * A unique parameter is defined by a combination of a name and location.
-   *
-   * @see {@link https://swagger.io/specification/v2/#operation-object | Swagger 2.0 Specification - parameters}
-   *
-   * @example [{ name: "id", in: "path", required: true, type: "string" }]
-   */
-  parameters?: Array<Parameter | BaseReference>;
+	/**
+	 * A list of parameters that are applicable for this operation. If a parameter
+	 * is already defined at the Path Item, the new definition will override it
+	 * but can never remove it. The list MUST NOT include duplicated parameters.
+	 * A unique parameter is defined by a combination of a name and location.
+	 *
+	 * @see {@link https://swagger.io/specification/v2/#operation-object | Swagger 2.0 Specification - parameters}
+	 *
+	 * @example [{ name: "id", in: "path", required: true, type: "string" }]
+	 */
+	parameters?: Array<Parameter | BaseReference>;
 
-  /**
-   * The list of possible responses as they are returned from executing this operation.
-   * This field MUST be present and MUST contain at least one response.
-   *
-   * @see {@link https://swagger.io/specification/v2/#operation-object | Swagger 2.0 Specification - responses}
-   *
-   * @example { "200": { description: "Success", schema: { type: "object" } } }
-   */
-  responses: ResponsesMap;
+	/**
+	 * The list of possible responses as they are returned from executing this operation.
+	 * This field MUST be present and MUST contain at least one response.
+	 *
+	 * @see {@link https://swagger.io/specification/v2/#operation-object | Swagger 2.0 Specification - responses}
+	 *
+	 * @example { "200": { description: "Success", schema: { type: "object" } } }
+	 */
+	responses: ResponsesMap;
 
-  /**
-   * The transfer protocol for the operation. Values MUST be from the list:
-   * "http", "https", "ws", "wss". The value overrides the Swagger Object
-   * schemes definition.
-   *
-   * @see {@link https://swagger.io/specification/v2/#operation-object | Swagger 2.0 Specification - schemes}
-   *
-   * @example ["https", "http"]
-   * @example ["wss"]
-   */
-  schemes?: Array<"http" | "https" | "ws" | "wss">;
+	/**
+	 * The transfer protocol for the operation. Values MUST be from the list:
+	 * "http", "https", "ws", "wss". The value overrides the Swagger Object
+	 * schemes definition.
+	 *
+	 * @see {@link https://swagger.io/specification/v2/#operation-object | Swagger 2.0 Specification - schemes}
+	 *
+	 * @example ["https", "http"]
+	 * @example ["wss"]
+	 */
+	schemes?: Array<"http" | "https" | "ws" | "wss">;
 
-  /**
-   * Declares this operation to be deprecated. Usage of the declared operation
-   * should be refrained. Default value is false.
-   *
-   * @see {@link https://swagger.io/specification/v2/#operation-object | Swagger 2.0 Specification - deprecated}
-   *
-   * @default false
-   * @example true
-   */
-  deprecated?: boolean;
+	/**
+	 * Declares this operation to be deprecated. Usage of the declared operation
+	 * should be refrained. Default value is false.
+	 *
+	 * @see {@link https://swagger.io/specification/v2/#operation-object | Swagger 2.0 Specification - deprecated}
+	 *
+	 * @default false
+	 * @example true
+	 */
+	deprecated?: boolean;
 
-  /**
-   * A declaration of which security schemes are applied for this operation.
-   * The list of values describes alternative security schemes that can be used
-   * (that is, there is a logical OR between the security requirements).
-   * This definition overrides any declared top-level security. To remove a
-   * top-level security declaration, an empty array can be used.
-   *
-   * @see {@link https://swagger.io/specification/v2/#operation-object | Swagger 2.0 Specification - security}
-   *
-   * @example [{ "api_key": [] }]
-   * @example [{ "oauth2": ["read", "write"] }]
-   */
-  security?: Array<Record<string, string[]>>;
+	/**
+	 * A declaration of which security schemes are applied for this operation.
+	 * The list of values describes alternative security schemes that can be used
+	 * (that is, there is a logical OR between the security requirements).
+	 * This definition overrides any declared top-level security. To remove a
+	 * top-level security declaration, an empty array can be used.
+	 *
+	 * @see {@link https://swagger.io/specification/v2/#operation-object | Swagger 2.0 Specification - security}
+	 *
+	 * @example [{ "api_key": [] }]
+	 * @example [{ "oauth2": ["read", "write"] }]
+	 */
+	security?: Array<Record<string, string[]>>;
 }
 
 /**
@@ -413,58 +413,58 @@ export interface Operation extends Extension {
  * ```
  */
 export interface BodyParameter extends Extension {
-  /**
-   * The name of the parameter. For body parameters, this is used for documentation
-   * purposes only and has no effect on the parameter itself.
-   *
-   * @see {@link https://swagger.io/specification/v2/#parameter-object | Swagger 2.0 Specification - name}
-   *
-   * @example "user"
-   * @example "data"
-   * @example "payload"
-   */
-  name: string;
+	/**
+	 * The name of the parameter. For body parameters, this is used for documentation
+	 * purposes only and has no effect on the parameter itself.
+	 *
+	 * @see {@link https://swagger.io/specification/v2/#parameter-object | Swagger 2.0 Specification - name}
+	 *
+	 * @example "user"
+	 * @example "data"
+	 * @example "payload"
+	 */
+	name: string;
 
-  /**
-   * The location of the parameter. Must be "body" for body parameters.
-   *
-   * @see {@link https://swagger.io/specification/v2/#parameter-object | Swagger 2.0 Specification - in}
-   *
-   * @example "body"
-   */
-  in: "body";
+	/**
+	 * The location of the parameter. Must be "body" for body parameters.
+	 *
+	 * @see {@link https://swagger.io/specification/v2/#parameter-object | Swagger 2.0 Specification - in}
+	 *
+	 * @example "body"
+	 */
+	in: "body";
 
-  /**
-   * A brief description of the parameter. This could contain examples of use.
-   * GFM syntax can be used for rich text representation.
-   *
-   * @see {@link https://swagger.io/specification/v2/#parameter-object | Swagger 2.0 Specification - description}
-   *
-   * @example "User object to create"
-   * @example "Request payload containing the data to process"
-   */
-  description?: string;
+	/**
+	 * A brief description of the parameter. This could contain examples of use.
+	 * GFM syntax can be used for rich text representation.
+	 *
+	 * @see {@link https://swagger.io/specification/v2/#parameter-object | Swagger 2.0 Specification - description}
+	 *
+	 * @example "User object to create"
+	 * @example "Request payload containing the data to process"
+	 */
+	description?: string;
 
-  /**
-   * Determines whether this parameter is mandatory. Default value is false.
-   *
-   * @see {@link https://swagger.io/specification/v2/#parameter-object | Swagger 2.0 Specification - required}
-   *
-   * @default false
-   * @example true
-   */
-  required?: boolean;
+	/**
+	 * Determines whether this parameter is mandatory. Default value is false.
+	 *
+	 * @see {@link https://swagger.io/specification/v2/#parameter-object | Swagger 2.0 Specification - required}
+	 *
+	 * @default false
+	 * @example true
+	 */
+	required?: boolean;
 
-  /**
-   * The schema defining the type used for the body parameter. This property is
-   * required for body parameters.
-   *
-   * @see {@link https://swagger.io/specification/v2/#parameter-object | Swagger 2.0 Specification - schema}
-   *
-   * @example { $ref: "#/definitions/User" }
-   * @example { type: "object", properties: { name: { type: "string" } } }
-   */
-  schema: Schema;
+	/**
+	 * The schema defining the type used for the body parameter. This property is
+	 * required for body parameters.
+	 *
+	 * @see {@link https://swagger.io/specification/v2/#parameter-object | Swagger 2.0 Specification - schema}
+	 *
+	 * @example { $ref: "#/definitions/User" }
+	 * @example { type: "object", properties: { name: { type: "string" } } }
+	 */
+	schema: Schema;
 }
 
 /**
@@ -566,208 +566,208 @@ export interface BodyParameter extends Extension {
  * ```
  */
 export interface NonBodyParameter extends Extension {
-  /**
-   * The name of the parameter. Parameter names are case sensitive.
-   * - If in is "path", the name field MUST correspond to the associated path segment from the path field in the Paths Object
-   * - For all other cases, the name corresponds to the parameter name used by the in property
-   *
-   * @see {@link https://swagger.io/specification/v2/#parameter-object | Swagger 2.0 Specification - name}
-   *
-   * @example "id"
-   * @example "limit"
-   * @example "user"
-   */
-  name: string;
+	/**
+	 * The name of the parameter. Parameter names are case sensitive.
+	 * - If in is "path", the name field MUST correspond to the associated path segment from the path field in the Paths Object
+	 * - For all other cases, the name corresponds to the parameter name used by the in property
+	 *
+	 * @see {@link https://swagger.io/specification/v2/#parameter-object | Swagger 2.0 Specification - name}
+	 *
+	 * @example "id"
+	 * @example "limit"
+	 * @example "user"
+	 */
+	name: string;
 
-  /**
-   * The location of the parameter. Possible values are "query", "header", "path", or "formData".
-   *
-   * - **query**: Parameters that are appended to the URL. For example, in `/users?role=admin`, the role query parameter has the value admin.
-   * - **header**: Custom headers that are expected as part of the request. Note that RFC7230 states header names are case insensitive.
-   * - **path**: Used together with Path Templating, where the parameter value is actually part of the operation's URL. This does not include the host or base path of the API.
-   * - **formData**: Used to describe the payload of an HTTP request when either application/x-www-form-urlencoded or multipart/form-data is used as the content type of the request.
-   *
-   * @see {@link https://swagger.io/specification/v2/#parameter-object | Swagger 2.0 Specification - in}
-   *
-   * @example "query"
-   * @example "path"
-   * @example "header"
-   * @example "formData"
-   */
-  in: "query" | "header" | "path" | "formData";
+	/**
+	 * The location of the parameter. Possible values are "query", "header", "path", or "formData".
+	 *
+	 * - **query**: Parameters that are appended to the URL. For example, in `/users?role=admin`, the role query parameter has the value admin.
+	 * - **header**: Custom headers that are expected as part of the request. Note that RFC7230 states header names are case insensitive.
+	 * - **path**: Used together with Path Templating, where the parameter value is actually part of the operation's URL. This does not include the host or base path of the API.
+	 * - **formData**: Used to describe the payload of an HTTP request when either application/x-www-form-urlencoded or multipart/form-data is used as the content type of the request.
+	 *
+	 * @see {@link https://swagger.io/specification/v2/#parameter-object | Swagger 2.0 Specification - in}
+	 *
+	 * @example "query"
+	 * @example "path"
+	 * @example "header"
+	 * @example "formData"
+	 */
+	in: "query" | "header" | "path" | "formData";
 
-  /**
-   * A brief description of the parameter. This could contain examples of use.
-   * GFM syntax can be used for rich text representation.
-   *
-   * @see {@link https://swagger.io/specification/v2/#parameter-object | Swagger 2.0 Specification - description}
-   *
-   * @example "The user ID"
-   * @example "Maximum number of items to return (default: 10)"
-   */
-  description?: string;
+	/**
+	 * A brief description of the parameter. This could contain examples of use.
+	 * GFM syntax can be used for rich text representation.
+	 *
+	 * @see {@link https://swagger.io/specification/v2/#parameter-object | Swagger 2.0 Specification - description}
+	 *
+	 * @example "The user ID"
+	 * @example "Maximum number of items to return (default: 10)"
+	 */
+	description?: string;
 
-  /**
-   * Determines whether this parameter is mandatory. If the parameter is in "path",
-   * this property is required and its value MUST be true. Otherwise, the property
-   * MAY be included and its default value is false.
-   *
-   * @see {@link https://swagger.io/specification/v2/#parameter-object | Swagger 2.0 Specification - required}
-   *
-   * @default false
-   * @example true
-   */
-  required?: boolean;
+	/**
+	 * Determines whether this parameter is mandatory. If the parameter is in "path",
+	 * this property is required and its value MUST be true. Otherwise, the property
+	 * MAY be included and its default value is false.
+	 *
+	 * @see {@link https://swagger.io/specification/v2/#parameter-object | Swagger 2.0 Specification - required}
+	 *
+	 * @default false
+	 * @example true
+	 */
+	required?: boolean;
 
-  /**
-   * The type of the parameter. Since the parameter is not located at the request body,
-   * it is limited to simple types (that is, not an object). The value MUST be one of
-   * "string", "number", "integer", "boolean", "array" or "file". If type is "file",
-   * the consumes MUST be either "multipart/form-data", "application/x-www-form-urlencoded"
-   * or both and the parameter MUST be in "formData".
-   *
-   * @see {@link https://swagger.io/specification/v2/#parameter-object | Swagger 2.0 Specification - type}
-   *
-   * @example "string"
-   * @example "integer"
-   * @example "array"
-   * @example "file"
-   */
-  type: "string" | "number" | "integer" | "boolean" | "array" | "file";
+	/**
+	 * The type of the parameter. Since the parameter is not located at the request body,
+	 * it is limited to simple types (that is, not an object). The value MUST be one of
+	 * "string", "number", "integer", "boolean", "array" or "file". If type is "file",
+	 * the consumes MUST be either "multipart/form-data", "application/x-www-form-urlencoded"
+	 * or both and the parameter MUST be in "formData".
+	 *
+	 * @see {@link https://swagger.io/specification/v2/#parameter-object | Swagger 2.0 Specification - type}
+	 *
+	 * @example "string"
+	 * @example "integer"
+	 * @example "array"
+	 * @example "file"
+	 */
+	type: "string" | "number" | "integer" | "boolean" | "array" | "file";
 
-  /**
-   * The extending format for the previously mentioned type. See Data Type Formats
-   * for further details.
-   *
-   * @example "int32"
-   * @example "date"
-   * @example "email"
-   */
-  format?: string;
+	/**
+	 * The extending format for the previously mentioned type. See Data Type Formats
+	 * for further details.
+	 *
+	 * @example "int32"
+	 * @example "date"
+	 * @example "email"
+	 */
+	format?: string;
 
-  /**
-   * Sets the ability to pass empty-valued parameters. This is valid only for either
-   * query or formData parameters and allows you to send a parameter with a name only
-   * or an empty value. Default value is false.
-   *
-   * @default false
-   * @example true
-   */
-  allowEmptyValue?: boolean;
+	/**
+	 * Sets the ability to pass empty-valued parameters. This is valid only for either
+	 * query or formData parameters and allows you to send a parameter with a name only
+	 * or an empty value. Default value is false.
+	 *
+	 * @default false
+	 * @example true
+	 */
+	allowEmptyValue?: boolean;
 
-  /**
-   * Required if type is "array". Describes the type of items in the array.
-   *
-   * @example { type: "string" }
-   * @example { type: "integer", format: "int32" }
-   */
-  items?: Items;
+	/**
+	 * Required if type is "array". Describes the type of items in the array.
+	 *
+	 * @example { type: "string" }
+	 * @example { type: "integer", format: "int32" }
+	 */
+	items?: Items;
 
-  /**
-   * Determines the format of the array if type array is used. Possible values are:
-   * - csv: comma separated values foo,bar
-   * - ssv: space separated values foo bar
-   * - tsv: tab separated values foo\tbar
-   * - pipes: pipe separated values foo|bar
-   * - multi: corresponds to multiple parameter instances instead of multiple values for a single instance foo=bar&foo=baz
-   *
-   * @default "csv"
-   * @example "multi"
-   */
-  collectionFormat?: "csv" | "ssv" | "tsv" | "pipes" | "multi";
+	/**
+	 * Determines the format of the array if type array is used. Possible values are:
+	 * - csv: comma separated values foo,bar
+	 * - ssv: space separated values foo bar
+	 * - tsv: tab separated values foo\tbar
+	 * - pipes: pipe separated values foo|bar
+	 * - multi: corresponds to multiple parameter instances instead of multiple values for a single instance foo=bar&foo=baz
+	 *
+	 * @default "csv"
+	 * @example "multi"
+	 */
+	collectionFormat?: "csv" | "ssv" | "tsv" | "pipes" | "multi";
 
-  /**
-   * Declares the value of the parameter that the server will use if none is provided.
-   * This value MUST conform to the defined type for this parameter.
-   *
-   * @example "defaultValue"
-   * @example 10
-   */
-  default?: unknown;
+	/**
+	 * Declares the value of the parameter that the server will use if none is provided.
+	 * This value MUST conform to the defined type for this parameter.
+	 *
+	 * @example "defaultValue"
+	 * @example 10
+	 */
+	default?: unknown;
 
-  /**
-   * See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.1.2
-   *
-   * @example 100
-   */
-  maximum?: number;
+	/**
+	 * See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.1.2
+	 *
+	 * @example 100
+	 */
+	maximum?: number;
 
-  /**
-   * See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.1.2
-   *
-   * @example false
-   */
-  exclusiveMaximum?: boolean;
+	/**
+	 * See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.1.2
+	 *
+	 * @example false
+	 */
+	exclusiveMaximum?: boolean;
 
-  /**
-   * See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.1.3
-   *
-   * @example 0
-   */
-  minimum?: number;
+	/**
+	 * See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.1.3
+	 *
+	 * @example 0
+	 */
+	minimum?: number;
 
-  /**
-   * See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.1.3
-   *
-   * @example false
-   */
-  exclusiveMinimum?: boolean;
+	/**
+	 * See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.1.3
+	 *
+	 * @example false
+	 */
+	exclusiveMinimum?: boolean;
 
-  /**
-   * See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.2.1
-   *
-   * @example 100
-   */
-  maxLength?: number;
+	/**
+	 * See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.2.1
+	 *
+	 * @example 100
+	 */
+	maxLength?: number;
 
-  /**
-   * See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.2.2
-   *
-   * @example 1
-   */
-  minLength?: number;
+	/**
+	 * See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.2.2
+	 *
+	 * @example 1
+	 */
+	minLength?: number;
 
-  /**
-   * See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.2.3
-   *
-   * @example "^[a-zA-Z0-9]+$"
-   */
-  pattern?: string;
+	/**
+	 * See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.2.3
+	 *
+	 * @example "^[a-zA-Z0-9]+$"
+	 */
+	pattern?: string;
 
-  /**
-   * See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.3.2
-   *
-   * @example 10
-   */
-  maxItems?: number;
+	/**
+	 * See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.3.2
+	 *
+	 * @example 10
+	 */
+	maxItems?: number;
 
-  /**
-   * See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.3.3
-   *
-   * @example 1
-   */
-  minItems?: number;
+	/**
+	 * See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.3.3
+	 *
+	 * @example 1
+	 */
+	minItems?: number;
 
-  /**
-   * See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.3.4
-   *
-   * @example true
-   */
-  uniqueItems?: boolean;
+	/**
+	 * See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.3.4
+	 *
+	 * @example true
+	 */
+	uniqueItems?: boolean;
 
-  /**
-   * See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.5.1
-   *
-   * @example ["option1", "option2", "option3"]
-   */
-  enum?: unknown[];
+	/**
+	 * See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.5.1
+	 *
+	 * @example ["option1", "option2", "option3"]
+	 */
+	enum?: unknown[];
 
-  /**
-   * See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.1.1
-   *
-   * @example 2
-   */
-  multipleOf?: number;
+	/**
+	 * See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.1.1
+	 *
+	 * @example 2
+	 */
+	multipleOf?: number;
 }
 
 /**
@@ -818,138 +818,138 @@ export type Paths = Record<string, PathItem>;
  * ```
  */
 export interface Items extends Extension {
-  /**
-   * The internal type of the array. The value MUST be one of "string", "number",
-   * "integer", "boolean", or "array". Files and models are not allowed.
-   *
-   * @example "string"
-   * @example "integer"
-   * @example "array"
-   */
-  type: string;
+	/**
+	 * The internal type of the array. The value MUST be one of "string", "number",
+	 * "integer", "boolean", or "array". Files and models are not allowed.
+	 *
+	 * @example "string"
+	 * @example "integer"
+	 * @example "array"
+	 */
+	type: string;
 
-  /**
-   * The extending format for the previously mentioned type. See Data Type Formats
-   * for further details.
-   *
-   * @example "int32"
-   * @example "date"
-   * @example "email"
-   */
-  format?: string;
+	/**
+	 * The extending format for the previously mentioned type. See Data Type Formats
+	 * for further details.
+	 *
+	 * @example "int32"
+	 * @example "date"
+	 * @example "email"
+	 */
+	format?: string;
 
-  /**
-   * Required if type is "array". Describes the type of items in the array.
-   *
-   * @example { type: "string" }
-   * @example { type: "integer", format: "int32" }
-   */
-  items?: Items;
+	/**
+	 * Required if type is "array". Describes the type of items in the array.
+	 *
+	 * @example { type: "string" }
+	 * @example { type: "integer", format: "int32" }
+	 */
+	items?: Items;
 
-  /**
-   * Determines the format of the array if type array is used. Possible values are:
-   * - csv: comma separated values foo,bar
-   * - ssv: space separated values foo bar
-   * - tsv: tab separated values foo\tbar
-   * - pipes: pipe separated values foo|bar
-   *
-   * @default "csv"
-   * @example "multi"
-   */
-  collectionFormat?: "csv" | "ssv" | "tsv" | "pipes";
+	/**
+	 * Determines the format of the array if type array is used. Possible values are:
+	 * - csv: comma separated values foo,bar
+	 * - ssv: space separated values foo bar
+	 * - tsv: tab separated values foo\tbar
+	 * - pipes: pipe separated values foo|bar
+	 *
+	 * @default "csv"
+	 * @example "multi"
+	 */
+	collectionFormat?: "csv" | "ssv" | "tsv" | "pipes";
 
-  /**
-   * Declares the value of the item that the server will use if none is provided.
-   * This value MUST conform to the defined type for the data type.
-   *
-   * @example "defaultValue"
-   * @example 10
-   */
-  default?: unknown;
+	/**
+	 * Declares the value of the item that the server will use if none is provided.
+	 * This value MUST conform to the defined type for the data type.
+	 *
+	 * @example "defaultValue"
+	 * @example 10
+	 */
+	default?: unknown;
 
-  /**
-   * See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.1.2
-   *
-   * @example 100
-   */
-  maximum?: number;
+	/**
+	 * See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.1.2
+	 *
+	 * @example 100
+	 */
+	maximum?: number;
 
-  /**
-   * See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.1.2
-   *
-   * @example false
-   */
-  exclusiveMaximum?: boolean;
+	/**
+	 * See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.1.2
+	 *
+	 * @example false
+	 */
+	exclusiveMaximum?: boolean;
 
-  /**
-   * See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.1.3
-   *
-   * @example 0
-   */
-  minimum?: number;
+	/**
+	 * See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.1.3
+	 *
+	 * @example 0
+	 */
+	minimum?: number;
 
-  /**
-   * See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.1.3
-   *
-   * @example false
-   */
-  exclusiveMinimum?: boolean;
+	/**
+	 * See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.1.3
+	 *
+	 * @example false
+	 */
+	exclusiveMinimum?: boolean;
 
-  /**
-   * See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.2.1
-   *
-   * @example 100
-   */
-  maxLength?: number;
+	/**
+	 * See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.2.1
+	 *
+	 * @example 100
+	 */
+	maxLength?: number;
 
-  /**
-   * See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.2.2
-   *
-   * @example 1
-   */
-  minLength?: number;
+	/**
+	 * See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.2.2
+	 *
+	 * @example 1
+	 */
+	minLength?: number;
 
-  /**
-   * See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.2.3
-   *
-   * @example "^[a-zA-Z0-9]+$"
-   */
-  pattern?: string;
+	/**
+	 * See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.2.3
+	 *
+	 * @example "^[a-zA-Z0-9]+$"
+	 */
+	pattern?: string;
 
-  /**
-   * See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.3.2
-   *
-   * @example 10
-   */
-  maxItems?: number;
+	/**
+	 * See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.3.2
+	 *
+	 * @example 10
+	 */
+	maxItems?: number;
 
-  /**
-   * See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.3.3
-   *
-   * @example 1
-   */
-  minItems?: number;
+	/**
+	 * See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.3.3
+	 *
+	 * @example 1
+	 */
+	minItems?: number;
 
-  /**
-   * See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.3.4
-   *
-   * @example true
-   */
-  uniqueItems?: boolean;
+	/**
+	 * See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.3.4
+	 *
+	 * @example true
+	 */
+	uniqueItems?: boolean;
 
-  /**
-   * See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.5.1
-   *
-   * @example ["option1", "option2", "option3"]
-   */
-  enum?: unknown[];
+	/**
+	 * See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.5.1
+	 *
+	 * @example ["option1", "option2", "option3"]
+	 */
+	enum?: unknown[];
 
-  /**
-   * See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.1.1
-   *
-   * @example 2
-   */
-  multipleOf?: number;
+	/**
+	 * See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.1.1
+	 *
+	 * @example 2
+	 */
+	multipleOf?: number;
 }
 
 /**
@@ -1016,44 +1016,44 @@ export interface Items extends Extension {
  * ```
  */
 export interface Response extends Extension {
-  /**
-   * A short description of the response.
-   * GitHub Flavored Markdown syntax can be used for rich text representation.
-   *
-   * See [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/#GitHub-flavored-markdown) for more information about the syntax.
-   * This field is required.
-   *
-   * @example "User successfully retrieved"
-   * @example "Bad request - invalid input parameters"
-   * @example "Internal server error"
-   */
-  description: string;
+	/**
+	 * A short description of the response.
+	 * GitHub Flavored Markdown syntax can be used for rich text representation.
+	 *
+	 * See [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/#GitHub-flavored-markdown) for more information about the syntax.
+	 * This field is required.
+	 *
+	 * @example "User successfully retrieved"
+	 * @example "Bad request - invalid input parameters"
+	 * @example "Internal server error"
+	 */
+	description: string;
 
-  /**
-   * A definition of the response structure. It can be a primitive, an array or an object.
-   * If this field does not exist, it means no content is returned as part of the response.
-   * As an extension to the Schema Object, its root type value may also be "file".
-   * This SHOULD be accompanied by a relevant produces mime-type.
-   *
-   * @example { $ref: "#/definitions/User" }
-   * @example { type: "array", items: { $ref: "#/definitions/User" } }
-   * @example { type: "string" }
-   */
-  schema?: Schema;
+	/**
+	 * A definition of the response structure. It can be a primitive, an array or an object.
+	 * If this field does not exist, it means no content is returned as part of the response.
+	 * As an extension to the Schema Object, its root type value may also be "file".
+	 * This SHOULD be accompanied by a relevant produces mime-type.
+	 *
+	 * @example { $ref: "#/definitions/User" }
+	 * @example { type: "array", items: { $ref: "#/definitions/User" } }
+	 * @example { type: "string" }
+	 */
+	schema?: Schema;
 
-  /**
-   * A list of headers that are sent with the response.
-   *
-   * @example { "X-RateLimit-Limit": { type: "integer", description: "Rate limit" } }
-   */
-  headers?: Record<string, Header>;
+	/**
+	 * A list of headers that are sent with the response.
+	 *
+	 * @example { "X-RateLimit-Limit": { type: "integer", description: "Rate limit" } }
+	 */
+	headers?: Record<string, Header>;
 
-  /**
-   * An example of the response message.
-   *
-   * @example { "application/json": { id: 1, name: "John Doe" } }
-   */
-  examples?: Examples;
+	/**
+	 * An example of the response message.
+	 *
+	 * @example { "application/json": { id: 1, name: "John Doe" } }
+	 */
+	examples?: Examples;
 }
 
 /**
@@ -1074,147 +1074,147 @@ export interface Response extends Extension {
  * ```
  */
 export interface Header extends Extension {
-  /**
-   * A brief description of the header. GFM syntax can be used for rich text representation.
-   *
-   * @example "Rate limit for the current period"
-   * @example "Content type of the response"
-   */
-  description?: string;
+	/**
+	 * A brief description of the header. GFM syntax can be used for rich text representation.
+	 *
+	 * @example "Rate limit for the current period"
+	 * @example "Content type of the response"
+	 */
+	description?: string;
 
-  /**
-   * The type of the object. The value MUST be one of "string", "number", "integer",
-   * "boolean", or "array".
-   * This field is required.
-   *
-   * @example "string"
-   * @example "integer"
-   * @example "array"
-   */
-  type: string;
+	/**
+	 * The type of the object. The value MUST be one of "string", "number", "integer",
+	 * "boolean", or "array".
+	 * This field is required.
+	 *
+	 * @example "string"
+	 * @example "integer"
+	 * @example "array"
+	 */
+	type: string;
 
-  /**
-   * The extending format for the previously mentioned type. See Data Type Formats
-   * for further details.
-   *
-   * @example "int32"
-   * @example "date"
-   * @example "email"
-   */
-  format?: string;
+	/**
+	 * The extending format for the previously mentioned type. See Data Type Formats
+	 * for further details.
+	 *
+	 * @example "int32"
+	 * @example "date"
+	 * @example "email"
+	 */
+	format?: string;
 
-  /**
-   * Required if type is "array". Describes the type of items in the array.
-   *
-   * @example { type: "string" }
-   * @example { type: "integer", format: "int32" }
-   */
-  items?: Items;
+	/**
+	 * Required if type is "array". Describes the type of items in the array.
+	 *
+	 * @example { type: "string" }
+	 * @example { type: "integer", format: "int32" }
+	 */
+	items?: Items;
 
-  /**
-   * Determines the format of the array if type array is used. Possible values are:
-   * - csv: comma separated values foo,bar
-   * - ssv: space separated values foo bar
-   * - tsv: tab separated values foo\tbar
-   * - pipes: pipe separated values foo|bar
-   *
-   * @default "csv"
-   * @example "multi"
-   */
-  collectionFormat?: "csv" | "ssv" | "tsv" | "pipes";
+	/**
+	 * Determines the format of the array if type array is used. Possible values are:
+	 * - csv: comma separated values foo,bar
+	 * - ssv: space separated values foo bar
+	 * - tsv: tab separated values foo\tbar
+	 * - pipes: pipe separated values foo|bar
+	 *
+	 * @default "csv"
+	 * @example "multi"
+	 */
+	collectionFormat?: "csv" | "ssv" | "tsv" | "pipes";
 
-  /**
-   * Declares the value of the header that the server will use if none is provided.
-   * This value MUST conform to the defined type for the header.
-   *
-   * @example "defaultValue"
-   * @example 10
-   */
-  default?: unknown;
+	/**
+	 * Declares the value of the header that the server will use if none is provided.
+	 * This value MUST conform to the defined type for the header.
+	 *
+	 * @example "defaultValue"
+	 * @example 10
+	 */
+	default?: unknown;
 
-  /**
-   * See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.1.2
-   *
-   * @example 100
-   */
-  maximum?: number;
+	/**
+	 * See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.1.2
+	 *
+	 * @example 100
+	 */
+	maximum?: number;
 
-  /**
-   * See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.1.2
-   *
-   * @example false
-   */
-  exclusiveMaximum?: boolean;
+	/**
+	 * See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.1.2
+	 *
+	 * @example false
+	 */
+	exclusiveMaximum?: boolean;
 
-  /**
-   * See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.1.3
-   *
-   * @example 0
-   */
-  minimum?: number;
+	/**
+	 * See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.1.3
+	 *
+	 * @example 0
+	 */
+	minimum?: number;
 
-  /**
-   * See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.1.3
-   *
-   * @example false
-   */
-  exclusiveMinimum?: boolean;
+	/**
+	 * See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.1.3
+	 *
+	 * @example false
+	 */
+	exclusiveMinimum?: boolean;
 
-  /**
-   * See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.2.1
-   *
-   * @example 100
-   */
-  maxLength?: number;
+	/**
+	 * See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.2.1
+	 *
+	 * @example 100
+	 */
+	maxLength?: number;
 
-  /**
-   * See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.2.2
-   *
-   * @example 1
-   */
-  minLength?: number;
+	/**
+	 * See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.2.2
+	 *
+	 * @example 1
+	 */
+	minLength?: number;
 
-  /**
-   * See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.2.3
-   *
-   * @example "^[a-zA-Z0-9]+$"
-   */
-  pattern?: string;
+	/**
+	 * See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.2.3
+	 *
+	 * @example "^[a-zA-Z0-9]+$"
+	 */
+	pattern?: string;
 
-  /**
-   * See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.3.2
-   *
-   * @example 10
-   */
-  maxItems?: number;
+	/**
+	 * See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.3.2
+	 *
+	 * @example 10
+	 */
+	maxItems?: number;
 
-  /**
-   * See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.3.3
-   *
-   * @example 1
-   */
-  minItems?: number;
+	/**
+	 * See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.3.3
+	 *
+	 * @example 1
+	 */
+	minItems?: number;
 
-  /**
-   * See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.3.4
-   *
-   * @example true
-   */
-  uniqueItems?: boolean;
+	/**
+	 * See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.3.4
+	 *
+	 * @example true
+	 */
+	uniqueItems?: boolean;
 
-  /**
-   * See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.5.1
-   *
-   * @example ["option1", "option2", "option3"]
-   */
-  enum?: unknown[];
+	/**
+	 * See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.5.1
+	 *
+	 * @example ["option1", "option2", "option3"]
+	 */
+	enum?: unknown[];
 
-  /**
-   * See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.1.1
-   *
-   * @example 2
-   */
-  multipleOf?: number;
+	/**
+	 * See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.1.1
+	 *
+	 * @example 2
+	 */
+	multipleOf?: number;
 }
 
 export type Parameter = BodyParameter | NonBodyParameter;

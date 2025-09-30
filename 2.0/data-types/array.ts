@@ -1,6 +1,6 @@
 import type { Extension } from "../extensions";
-import type { XMLObject } from "../xml";
 import type { Schema } from "../schema";
+import type { XMLObject } from "../xml";
 
 /**
  * -----
@@ -107,64 +107,64 @@ import type { Schema } from "../schema";
  * ```
  */
 export interface ArraySchema extends Extension {
-  /**
-   * The type of the schema. Must be "array" for array schemas.
-   *
-   * This property is required and must be set to "array" to indicate
-   * that this schema represents an ordered collection of items.
-   *
-   * @example "array"
-   */
-  type: "array";
+	/**
+	 * The type of the schema. Must be "array" for array schemas.
+	 *
+	 * This property is required and must be set to "array" to indicate
+	 * that this schema represents an ordered collection of items.
+	 *
+	 * @example "array"
+	 */
+	type: "array";
 
-  /**
-   * Required if type is "array". Describes the type of items in the array.
-   *
-   * The definition is the same as the one from JSON Schema, but references
-   * the Swagger Schema Object definition instead. This allows for complex
-   * nested structures and references to other schema definitions.
-   *
-   * @example { type: "string" }
-   * @example { $ref: "#/definitions/User" }
-   * @example { type: "object", properties: { name: { type: "string" } } }
-   */
-  items: Schema; // Forward declaration to avoid circular imports
+	/**
+	 * Required if type is "array". Describes the type of items in the array.
+	 *
+	 * The definition is the same as the one from JSON Schema, but references
+	 * the Swagger Schema Object definition instead. This allows for complex
+	 * nested structures and references to other schema definitions.
+	 *
+	 * @example { type: "string" }
+	 * @example { $ref: "#/definitions/User" }
+	 * @example { type: "object", properties: { name: { type: "string" } } }
+	 */
+	items: Schema; // Forward declaration to avoid circular imports
 
-  /**
-   * An array is valid against "maxItems" if its length is less than or equal to this value.
-   *
-   * @see {@link https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.3.2 | JSON Schema Validation - maxItems}
-   *
-   * @example 10
-   * @example 100
-   */
-  maxItems?: number;
+	/**
+	 * An array is valid against "maxItems" if its length is less than or equal to this value.
+	 *
+	 * @see {@link https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.3.2 | JSON Schema Validation - maxItems}
+	 *
+	 * @example 10
+	 * @example 100
+	 */
+	maxItems?: number;
 
-  /**
-   * An array is valid against "minItems" if its length is greater than or equal to this value.
-   *
-   * @see {@link https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.3.3 | JSON Schema Validation - minItems}
-   *
-   * @example 1
-   * @example 2
-   */
-  minItems?: number;
+	/**
+	 * An array is valid against "minItems" if its length is greater than or equal to this value.
+	 *
+	 * @see {@link https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.3.3 | JSON Schema Validation - minItems}
+	 *
+	 * @example 1
+	 * @example 2
+	 */
+	minItems?: number;
 
-  /**
-   * An array is valid against "uniqueItems" if all its elements are unique.
-   *
-   * @see {@link https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.3.4 | JSON Schema Validation - uniqueItems}
-   *
-   * @example true
-   * @example false
-   */
-  uniqueItems?: boolean;
+	/**
+	 * An array is valid against "uniqueItems" if all its elements are unique.
+	 *
+	 * @see {@link https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.3.4 | JSON Schema Validation - uniqueItems}
+	 *
+	 * @example true
+	 * @example false
+	 */
+	uniqueItems?: boolean;
 
-  /**
-   * XML representation metadata for the schema.
-   * Allows for fine-tuned XML model definitions.
-   *
-   * @example { name: "users", wrapped: true }
-   */
-  xml?: XMLObject;
+	/**
+	 * XML representation metadata for the schema.
+	 * Allows for fine-tuned XML model definitions.
+	 *
+	 * @example { name: "users", wrapped: true }
+	 */
+	xml?: XMLObject;
 }

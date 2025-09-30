@@ -7,10 +7,10 @@
  * and performs the complete build process for the package.
  */
 
-import { resolve } from "path";
-import { createGenerator } from "ts-json-schema-generator";
-import { writeFileSync, mkdirSync, existsSync, readdirSync } from "fs";
+import { existsSync, mkdirSync, readdirSync, writeFileSync } from "node:fs";
+import { resolve } from "node:path";
 import { rimrafSync } from "rimraf";
+import { createGenerator } from "ts-json-schema-generator";
 
 // Configuration for schema generation
 const generatorConfig = {
@@ -38,12 +38,6 @@ interface BuildResult {
   success: boolean;
   error?: string;
   outputPath?: string;
-}
-
-interface SchemaInfo {
-  name: string;
-  path: string;
-  schema: any;
 }
 
 const schemasToGenerate = {
@@ -124,7 +118,7 @@ async function generateAllSchemasForVersion(
       );
       const schema = generator.createSchema(); // No type parameter = all types
 
-      if (schema && schema.definitions) {
+      if (schema?.definitions) {
         const definitions = schema.definitions;
         const definitionNames = Object.keys(definitions);
 
@@ -215,7 +209,7 @@ async function generateAllSchemasForVersion(
     }
   } catch (error) {
     console.error(`❌ Failed to process version ${version}:`, error);
-    // @ts-ignore
+    // @ts-expect-error
     console.log(error.diagnostic);
     results.push({
       version,
@@ -265,8 +259,6 @@ async function generateIndexFiles(): Promise<void> {
         .map((file) => file.replace(".json", ""));
 
       for (const component of componentFiles) {
-        const componentName =
-          component.charAt(0).toUpperCase() + component.slice(1);
         indexContent += `export { default as ${component} } from "./components/${component}.json";\n`;
       }
     }

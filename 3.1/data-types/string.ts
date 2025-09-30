@@ -84,121 +84,121 @@ import type { XML } from "../xml";
  * ```
  */
 export interface StringSchema extends Extension {
-  /**
-   * The type identifier for string schemas.
-   * Must be "string".
-   */
-  type: "string";
+	/**
+	 * The type identifier for string schemas.
+	 * Must be "string".
+	 */
+	type: "string";
 
-  /**
-   * The format of the string.
-   * See OpenAPI 3.1.x Data Type Formats for further details.
-   *
-   * Example: `"email"`, `"date-time"`, `"uuid"`
-   */
-  format?: string;
+	/**
+	 * The format of the string.
+	 * See OpenAPI 3.1.x Data Type Formats for further details.
+	 *
+	 * Example: `"email"`, `"date-time"`, `"uuid"`
+	 */
+	format?: string;
 
-  /**
-   * The maximum length of the string.
-   * Must be a non-negative integer.
-   *
-   * Example: `255`
-   */
-  maxLength?: number;
+	/**
+	 * The maximum length of the string.
+	 * Must be a non-negative integer.
+	 *
+	 * Example: `255`
+	 */
+	maxLength?: number;
 
-  /**
-   * The minimum length of the string.
-   * Must be a non-negative integer.
-   *
-   * Example: `1`
-   */
-  minLength?: number;
+	/**
+	 * The minimum length of the string.
+	 * Must be a non-negative integer.
+	 *
+	 * Example: `1`
+	 */
+	minLength?: number;
 
-  /**
-   * A regular expression pattern that the string must match.
-   * Should be a valid ECMA 262 regular expression.
-   *
-   * Example: `"^[A-Za-z0-9]+$"`
-   */
-  pattern?: string;
+	/**
+	 * A regular expression pattern that the string must match.
+	 * Should be a valid ECMA 262 regular expression.
+	 *
+	 * Example: `"^[A-Za-z0-9]+$"`
+	 */
+	pattern?: string;
 
-  /**
-   * An array of allowed values for the string.
-   * The value must be one of the values in this array.
-   *
-   * Example: `["active", "inactive", "pending"]`
-   */
-  enum?: string[];
+	/**
+	 * An array of allowed values for the string.
+	 * The value must be one of the values in this array.
+	 *
+	 * Example: `["active", "inactive", "pending"]`
+	 */
+	enum?: string[];
 
-  /**
-   * A single allowed value for the string.
-   * The value must be exactly this value.
-   *
-   * Example: `"active"`
-   */
-  const?: string;
+	/**
+	 * A single allowed value for the string.
+	 * The value must be exactly this value.
+	 *
+	 * Example: `"active"`
+	 */
+	const?: string;
 
-  /**
-   * An example value for the string.
-   * This is for documentation purposes only.
-   *
-   * Example: `"example@email.com"`
-   */
-  example?: string;
+	/**
+	 * An example value for the string.
+	 * This is for documentation purposes only.
+	 *
+	 * Example: `"example@email.com"`
+	 */
+	example?: string;
 
-  /**
-   * An array of example values for the string.
-   * These are for documentation purposes only.
-   *
-   * Example: `["example@email.com", "test@domain.com"]`
-   */
-  examples?: string[];
+	/**
+	 * An array of example values for the string.
+	 * These are for documentation purposes only.
+	 *
+	 * Example: `["example@email.com", "test@domain.com"]`
+	 */
+	examples?: string[];
 
-  /**
-   * The default value for the string.
-   * This value will be used if no value is provided.
-   *
-   * Example: `"default"`
-   */
-  default?: string;
+	/**
+	 * The default value for the string.
+	 * This value will be used if no value is provided.
+	 *
+	 * Example: `"default"`
+	 */
+	default?: string;
 
-  /**
-   * A short title for the schema.
-   * This is for documentation purposes only.
-   *
-   * Example: `"User Email"`
-   */
-  title?: string;
+	/**
+	 * A short title for the schema.
+	 * This is for documentation purposes only.
+	 *
+	 * Example: `"User Email"`
+	 */
+	title?: string;
 
-  /**
-   * A description of the schema.
-   * CommonMark syntax MAY be used for rich text representation.
-   *
-   * Example: `"The email address of the user"`
-   */
-  description?: string;
+	/**
+	 * A description of the schema.
+	 * CommonMark syntax MAY be used for rich text representation.
+	 *
+	 * Example: `"The email address of the user"`
+	 */
+	description?: string;
 
-  /**
-   * The media type of the content. This is used to specify the media type
-   * of the content when the string represents encoded content.
-   *
-   * Example: `"image/png"`, `"application/json"`
-   */
-  contentMediaType?: string;
+	/**
+	 * The media type of the content. This is used to specify the media type
+	 * of the content when the string represents encoded content.
+	 *
+	 * Example: `"image/png"`, `"application/json"`
+	 */
+	contentMediaType?: string;
 
-  /**
-   * The encoding of the content. This is used to specify how the content
-   * is encoded when the string represents encoded content.
-   *
-   * Example: `"base64"`, `"base64url"`, `"quoted-printable"`
-   */
-  contentEncoding?: string;
+	/**
+	 * The encoding of the content. This is used to specify how the content
+	 * is encoded when the string represents encoded content.
+	 *
+	 * Example: `"base64"`, `"base64url"`, `"quoted-printable"`
+	 */
+	contentEncoding?: string;
 
-  /**
-   * XML representation metadata for the schema.
-   * Allows for fine-tuned XML model definitions.
-   *
-   * Example: `{ name: "userName", attribute: false }`
-   */
-  xml?: XML;
+	/**
+	 * XML representation metadata for the schema.
+	 * Allows for fine-tuned XML model definitions.
+	 *
+	 * Example: `{ name: "userName", attribute: false }`
+	 */
+	xml?: XML;
 }

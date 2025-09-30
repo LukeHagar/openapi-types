@@ -66,73 +66,73 @@ import type { XML } from "../xml";
  * ```
  */
 export interface BooleanSchema extends Extension {
-  /**
-   * The type identifier for boolean schemas.
-   * Must be "boolean".
-   */
-  type: "boolean";
+	/**
+	 * The type identifier for boolean schemas.
+	 * Must be "boolean".
+	 */
+	type: "boolean";
 
-  /**
-   * An array of allowed values for the boolean.
-   * The value must be one of the values in this array.
-   *
-   * Example: `[true, false]`
-   */
-  enum?: boolean[];
+	/**
+	 * An array of allowed values for the boolean.
+	 * The value must be one of the values in this array.
+	 *
+	 * Example: `[true, false]`
+	 */
+	enum?: boolean[];
 
-  /**
-   * A single allowed value for the boolean.
-   * The value must be exactly this value.
-   *
-   * Example: `true`
-   */
-  const?: boolean;
+	/**
+	 * A single allowed value for the boolean.
+	 * The value must be exactly this value.
+	 *
+	 * Example: `true`
+	 */
+	const?: boolean;
 
-  /**
-   * An example value for the boolean.
-   * This is for documentation purposes only.
-   *
-   * Example: `true`
-   */
-  example?: boolean;
+	/**
+	 * An example value for the boolean.
+	 * This is for documentation purposes only.
+	 *
+	 * Example: `true`
+	 */
+	example?: boolean;
 
-  /**
-   * An array of example values for the boolean.
-   * These are for documentation purposes only.
-   *
-   * Example: `[true, false]`
-   */
-  examples?: boolean[];
+	/**
+	 * An array of example values for the boolean.
+	 * These are for documentation purposes only.
+	 *
+	 * Example: `[true, false]`
+	 */
+	examples?: boolean[];
 
-  /**
-   * The default value for the boolean.
-   * This value will be used if no value is provided.
-   *
-   * Example: `false`
-   */
-  default?: boolean;
+	/**
+	 * The default value for the boolean.
+	 * This value will be used if no value is provided.
+	 *
+	 * Example: `false`
+	 */
+	default?: boolean;
 
-  /**
-   * A short title for the schema.
-   * This is for documentation purposes only.
-   *
-   * Example: `"Is Active"`
-   */
-  title?: string;
+	/**
+	 * A short title for the schema.
+	 * This is for documentation purposes only.
+	 *
+	 * Example: `"Is Active"`
+	 */
+	title?: string;
 
-  /**
-   * A description of the schema.
-   * CommonMark syntax MAY be used for rich text representation.
-   *
-   * Example: `"Whether the user is active"`
-   */
-  description?: string;
+	/**
+	 * A description of the schema.
+	 * CommonMark syntax MAY be used for rich text representation.
+	 *
+	 * Example: `"Whether the user is active"`
+	 */
+	description?: string;
 
-  /**
-   * XML representation metadata for the schema.
-   * Allows for fine-tuned XML model definitions.
-   *
-   * Example: `{ name: "isActive", attribute: false }`
-   */
-  xml?: XML;
+	/**
+	 * XML representation metadata for the schema.
+	 * Allows for fine-tuned XML model definitions.
+	 *
+	 * Example: `{ name: "isActive", attribute: false }`
+	 */
+	xml?: XML;
 }

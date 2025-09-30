@@ -83,137 +83,137 @@ import type { XML } from "../xml";
  * ```
  */
 export interface ArraySchema extends Extension {
-  /**
-   * The type identifier for array schemas.
-   * Must be "array".
-   */
-  type: "array";
+	/**
+	 * The type identifier for array schemas.
+	 * Must be "array".
+	 */
+	type: "array";
 
-  /**
-   * The schema for array items.
-   * All items in the array must conform to this schema.
-   *
-   * Example: `{ type: "string" }`
-   */
-  items?: unknown;
+	/**
+	 * The schema for array items.
+	 * All items in the array must conform to this schema.
+	 *
+	 * Example: `{ type: "string" }`
+	 */
+	items?: unknown;
 
-  /**
-   * The schema for array items at specific positions.
-   * Items at position i must conform to the schema at index i.
-   *
-   * Example: `[{ type: "string" }, { type: "number" }]`
-   */
-  prefixItems?: unknown[];
+	/**
+	 * The schema for array items at specific positions.
+	 * Items at position i must conform to the schema at index i.
+	 *
+	 * Example: `[{ type: "string" }, { type: "number" }]`
+	 */
+	prefixItems?: unknown[];
 
-  /**
-   * The schema that the array must contain at least one item matching.
-   * At least one item in the array must conform to this schema.
-   *
-   * Example: `{ type: "string", enum: ["admin"] }`
-   */
-  contains?: unknown;
+	/**
+	 * The schema that the array must contain at least one item matching.
+	 * At least one item in the array must conform to this schema.
+	 *
+	 * Example: `{ type: "string", enum: ["admin"] }`
+	 */
+	contains?: unknown;
 
-  /**
-   * The minimum number of items that must match the contains schema.
-   * Must be a non-negative integer.
-   *
-   * Example: `1`
-   */
-  minContains?: number;
+	/**
+	 * The minimum number of items that must match the contains schema.
+	 * Must be a non-negative integer.
+	 *
+	 * Example: `1`
+	 */
+	minContains?: number;
 
-  /**
-   * The maximum number of items that must match the contains schema.
-   * Must be a non-negative integer.
-   *
-   * Example: `5`
-   */
-  maxContains?: number;
+	/**
+	 * The maximum number of items that must match the contains schema.
+	 * Must be a non-negative integer.
+	 *
+	 * Example: `5`
+	 */
+	maxContains?: number;
 
-  /**
-   * The minimum number of items in the array.
-   * Must be a non-negative integer.
-   *
-   * Example: `1`
-   */
-  minItems?: number;
+	/**
+	 * The minimum number of items in the array.
+	 * Must be a non-negative integer.
+	 *
+	 * Example: `1`
+	 */
+	minItems?: number;
 
-  /**
-   * The maximum number of items in the array.
-   * Must be a non-negative integer.
-   *
-   * Example: `10`
-   */
-  maxItems?: number;
+	/**
+	 * The maximum number of items in the array.
+	 * Must be a non-negative integer.
+	 *
+	 * Example: `10`
+	 */
+	maxItems?: number;
 
-  /**
-   * Whether array items must be unique.
-   * If true, all items in the array must be unique.
-   *
-   * Example: `true`
-   */
-  uniqueItems?: boolean;
+	/**
+	 * Whether array items must be unique.
+	 * If true, all items in the array must be unique.
+	 *
+	 * Example: `true`
+	 */
+	uniqueItems?: boolean;
 
-  /**
-   * An array of allowed values for the array.
-   * The value must be one of the values in this array.
-   *
-   * Example: `[["a", "b"], ["c", "d"]]`
-   */
-  enum?: unknown[];
+	/**
+	 * An array of allowed values for the array.
+	 * The value must be one of the values in this array.
+	 *
+	 * Example: `[["a", "b"], ["c", "d"]]`
+	 */
+	enum?: unknown[];
 
-  /**
-   * A single allowed value for the array.
-   * The value must be exactly this value.
-   *
-   * Example: `["a", "b"]`
-   */
-  const?: unknown;
+	/**
+	 * A single allowed value for the array.
+	 * The value must be exactly this value.
+	 *
+	 * Example: `["a", "b"]`
+	 */
+	const?: unknown;
 
-  /**
-   * An example value for the array.
-   * This is for documentation purposes only.
-   *
-   * Example: `["a", "b"]`
-   */
-  example?: unknown[];
+	/**
+	 * An example value for the array.
+	 * This is for documentation purposes only.
+	 *
+	 * Example: `["a", "b"]`
+	 */
+	example?: unknown[];
 
-  /**
-   * An array of example values for the array.
-   * These are for documentation purposes only.
-   *
-   * Example: `[["a", "b"], ["c", "d"]]`
-   */
-  examples?: unknown[][];
+	/**
+	 * An array of example values for the array.
+	 * These are for documentation purposes only.
+	 *
+	 * Example: `[["a", "b"], ["c", "d"]]`
+	 */
+	examples?: unknown[][];
 
-  /**
-   * The default value for the array.
-   * This value will be used if no value is provided.
-   *
-   * Example: `[]`
-   */
-  default?: unknown[];
+	/**
+	 * The default value for the array.
+	 * This value will be used if no value is provided.
+	 *
+	 * Example: `[]`
+	 */
+	default?: unknown[];
 
-  /**
-   * A short title for the schema.
-   * This is for documentation purposes only.
-   *
-   * Example: `"User Tags"`
-   */
-  title?: string;
+	/**
+	 * A short title for the schema.
+	 * This is for documentation purposes only.
+	 *
+	 * Example: `"User Tags"`
+	 */
+	title?: string;
 
-  /**
-   * A description of the schema.
-   * CommonMark syntax MAY be used for rich text representation.
-   *
-   * Example: `"Array of user tags"`
-   */
-  description?: string;
+	/**
+	 * A description of the schema.
+	 * CommonMark syntax MAY be used for rich text representation.
+	 *
+	 * Example: `"Array of user tags"`
+	 */
+	description?: string;
 
-  /**
-   * XML representation metadata for the schema.
-   * Allows for fine-tuned XML model definitions.
-   *
-   * Example: `{ name: "users", wrapped: true }`
-   */
-  xml?: XML;
+	/**
+	 * XML representation metadata for the schema.
+	 * Allows for fine-tuned XML model definitions.
+	 *
+	 * Example: `{ name: "users", wrapped: true }`
+	 */
+	xml?: XML;
 }

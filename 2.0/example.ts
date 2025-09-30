@@ -59,17 +59,17 @@ import type { Extension } from "./extensions";
  * ```
  */
 export interface Examples extends Extension {
-  /**
-   * The name of the property MUST be one of the Operation produces values
-   * (either implicit or inherited). The value SHOULD be an example of what
-   * such a response would look like.
-   *
-   * The property name corresponds to a MIME type that the operation can produce.
-   * The value should be a realistic example of the response data in that format.
-   *
-   * @example { "application/json": { name: "Puma", type: "Dog" } }
-   * @example { "application/xml": "<pet><name>Puma</name></pet>" }
-   * @example { "text/plain": "Success" }
-   */
-  [mimeType: string]: unknown;
+	/**
+	 * The name of the property MUST be one of the Operation produces values
+	 * (either implicit or inherited). The value SHOULD be an example of what
+	 * such a response would look like.
+	 *
+	 * The property name corresponds to a MIME type that the operation can produce.
+	 * The value should be a realistic example of the response data in that format.
+	 *
+	 * @example { "application/json": { name: "Puma", type: "Dog" } }
+	 * @example { "application/xml": "<pet><name>Puma</name></pet>" }
+	 * @example { "text/plain": "Success" }
+	 */
+	[mimeType: string]: unknown;
 }
