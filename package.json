@@ -1,6 +1,6 @@
 {
   "name": "oas-types",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Comprehensive TypeScript definitions for all OpenAPI specification versions (Swagger 2.0, OpenAPI 3.0, 3.1, 3.2)",
   "main": "index.ts",
   "module": "index.ts",
