@@ -14,7 +14,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/lukehagar/openapi-types.git"
+    "url": "https://github.com/lukehagar/openapi-types"
   },
   "bugs": {
     "url": "https://github.com/lukehagar/openapi-types/issues"
