@@ -1,0 +1,160 @@
+name: Release
+
+on:
+  workflow_run:
+    workflows: ["Test"] # Must match the Test workflow name exactly
+    types: [completed]
+    branches: [main]
+
+permissions:
+  contents: write # Needed to create tags/releases
+  packages: write # If you also publish GitHub Packages
+  id-token: write # Optional (for OIDC to cloud registries)
+
+jobs:
+  publish-and-release:
+    # Only proceed if:
+    # 1) CI concluded successfully
+    # 2) The run was triggered by a push (not a PR)
+    # 3) The branch is main
+    # 4) The run belongs to this repository (not a fork)
+    if: >
+      github.event.workflow_run.conclusion == 'success' &&
+      github.event.workflow_run.event == 'push' &&
+      github.event.workflow_run.head_branch == 'main' &&
+      github.event.workflow_run.head_repository.full_name == github.repository
+
+    runs-on: ubuntu-latest
+
+    steps:
+      # Check out the exact commit that passed CI
+      - name: Checkout the successful commit
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_sha }}
+
+      - name: Use Node 20
+        uses: actions/setup-node@v5
+        with:
+          node-version: latest
+          registry-url: https://registry.npmjs.org
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+
+      - name: Install
+        run: bun install --frozen-lockfile
+
+      # Optional: Re-run build to ensure publish artifacts exist
+      - name: Build
+        run: bun run build
+
+      # Read current version from package.json
+      - name: Read current version
+        id: current-version
+        shell: bash
+        run: |
+          ver=$(node -p "require('./package.json').version")
+          echo "version=$ver" >> "$GITHUB_OUTPUT"
+
+      # Check if version was already bumped
+      - name: Check if version was bumped
+        id: version-check
+        shell: bash
+        run: |
+          # Get the latest GitHub release version using jq for reliable JSON parsing
+          LATEST_RELEASE=$(curl -s "https://api.github.com/repos/${{ github.repository }}/releases/latest" | jq -r '.tag_name // empty' 2>/dev/null || echo "")
+          CURRENT_VERSION="${{ steps.current-version.outputs.version }}"
+
+          echo "Latest release: $LATEST_RELEASE"
+          echo "Current version: $CURRENT_VERSION"
+
+          # Remove 'v' prefix from release tag for comparison
+          if [ -n "$LATEST_RELEASE" ] && [ "$LATEST_RELEASE" != "null" ]; then
+            LATEST_VERSION=$(echo "$LATEST_RELEASE" | sed 's/^v//')
+          else
+            LATEST_VERSION="0.0.0"
+          fi
+
+          if [ "$LATEST_VERSION" != "$CURRENT_VERSION" ]; then
+            echo "Version was already bumped from $LATEST_VERSION to $CURRENT_VERSION"
+            echo "bumped=false" >> "$GITHUB_OUTPUT"
+            echo "final_version=$CURRENT_VERSION" >> "$GITHUB_OUTPUT"
+          else
+            echo "No version bump detected, will auto-patch bump"
+            echo "bumped=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      # Auto-patch bump version if no version change was made
+      - name: Auto-patch bump version
+        if: steps.version-check.outputs.bumped == 'true'
+        id: bump-version
+        shell: bash
+        run: |
+          npm version patch --no-git-tag-version
+          NEW_VERSION=$(node -p "require('./package.json').version")
+          echo "version=$NEW_VERSION" >> "$GITHUB_OUTPUT"
+          echo "Auto-bumped version to $NEW_VERSION"
+
+      # Set final version
+      - name: Set final version
+        id: final-version
+        shell: bash
+        run: |
+          if [ "${{ steps.version-check.outputs.bumped }}" = "true" ]; then
+            echo "version=${{ steps.bump-version.outputs.version }}" >> "$GITHUB_OUTPUT"
+          else
+            echo "version=${{ steps.current-version.outputs.version }}" >> "$GITHUB_OUTPUT"
+          fi
+
+      # Commit version bump if auto-bumped
+      - name: Commit auto-bumped version
+        if: steps.version-check.outputs.bumped == 'true'
+        shell: bash
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add package.json
+          git commit -m "chore: auto-bump version to ${{ steps.bump-version.outputs.version }}"
+          git push origin HEAD:main
+
+      # Create a git tag like v1.2.3 if it doesn't already exist
+      - name: Create tag if missing
+        shell: bash
+        run: |
+          TAG="v${{ steps.final-version.outputs.version }}"
+
+          # Check if tag exists locally
+          if git rev-parse "$TAG" >/dev/null 2>&1; then
+            echo "Tag $TAG already exists locally."
+            # Try to push it anyway (in case it's not on remote)
+            if git push origin "$TAG" 2>/dev/null; then
+              echo "Successfully pushed existing tag $TAG to remote."
+            else
+              echo "Tag $TAG already exists on remote as well."
+            fi
+          else
+            echo "Creating new tag $TAG"
+            git tag "$TAG" ${{ github.event.workflow_run.head_sha }}
+            if git push origin "$TAG" 2>/dev/null; then
+              echo "Successfully created and pushed tag $TAG"
+            else
+              echo "Tag $TAG already exists on remote, skipping push."
+            fi
+          fi
+
+      # Publish to npm (requires NPM_TOKEN in repo secrets)
+      - name: Publish to npm
+        run: npm publish --provenance --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      # Create a GitHub Release for the tag
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ steps.final-version.outputs.version }}
+          name: v${{ steps.final-version.outputs.version }}
+          generate_release_notes: true
