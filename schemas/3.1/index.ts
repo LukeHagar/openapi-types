@@ -46,4 +46,3 @@ export const schemas = {
   callback,
   pathitem,
 } as const;
-

@@ -43,5 +43,5 @@
  * ```
  */
 export type Extension = {
-	[K in `x-${string}`]: unknown;
+  [K in `x-${string}`]: unknown;
 };

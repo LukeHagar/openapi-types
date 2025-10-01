@@ -1,12 +1,12 @@
 import type {
-	ArraySchema,
-	BooleanSchema,
-	CompositionSchema,
-	IntegerSchema,
-	NumberSchema,
-	ObjectSchema,
-	ReferenceSchema,
-	StringSchema,
+  ArraySchema,
+  BooleanSchema,
+  CompositionSchema,
+  IntegerSchema,
+  NumberSchema,
+  ObjectSchema,
+  ReferenceSchema,
+  StringSchema,
 } from "./data-types";
 // Discriminator will be defined below to avoid circular reference
 
@@ -97,14 +97,14 @@ import type {
  * ```
  */
 export type Schema =
-	| ReferenceSchema
-	| StringSchema
-	| NumberSchema
-	| IntegerSchema
-	| BooleanSchema
-	| ArraySchema
-	| ObjectSchema
-	| CompositionSchema;
+  | ReferenceSchema
+  | StringSchema
+  | NumberSchema
+  | IntegerSchema
+  | BooleanSchema
+  | ArraySchema
+  | ObjectSchema
+  | CompositionSchema;
 
 /**
  * -----
@@ -160,40 +160,40 @@ export type Schema =
  * ```
  */
 export interface Discriminator {
-	/**
-	 * The name of the property in the schema that is used as a discriminator.
-	 * *
-	 * | Version | Reference |
-	 * |---|-----|
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#discriminator-object  | OpenAPI 3.0.4 Discriminator Object - propertyName} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#discriminator-object  | OpenAPI 3.0.3 Discriminator Object - propertyName} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#discriminator-object  | OpenAPI 3.0.2 Discriminator Object - propertyName} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#discriminator-object  | OpenAPI 3.0.1 Discriminator Object - propertyName} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#discriminator-object  | OpenAPI 3.0.0 Discriminator Object - propertyName} |
-	 * @property `propertyName` - Required The name of the property in the schema that is used as a discriminator
-	 *
-	 * @example "petType"
-	 * @example "type"
-	 * @example "kind"
-	 */
-	propertyName: string;
+  /**
+   * The name of the property in the schema that is used as a discriminator.
+   * *
+   * | Version | Reference |
+   * |---|-----|
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#discriminator-object  | OpenAPI 3.0.4 Discriminator Object - propertyName} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#discriminator-object  | OpenAPI 3.0.3 Discriminator Object - propertyName} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#discriminator-object  | OpenAPI 3.0.2 Discriminator Object - propertyName} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#discriminator-object  | OpenAPI 3.0.1 Discriminator Object - propertyName} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#discriminator-object  | OpenAPI 3.0.0 Discriminator Object - propertyName} |
+   * @property `propertyName` - Required The name of the property in the schema that is used as a discriminator
+   *
+   * @example "petType"
+   * @example "type"
+   * @example "kind"
+   */
+  propertyName: string;
 
-	/**
-	 * An object to hold mappings between payload values and schema names or references.
-	 * *
-	 * | Version | Reference |
-	 * |---|-----|
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#discriminator-object  | OpenAPI 3.0.4 Discriminator Object - mapping} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#discriminator-object  | OpenAPI 3.0.3 Discriminator Object - mapping} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#discriminator-object  | OpenAPI 3.0.2 Discriminator Object - mapping} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#discriminator-object  | OpenAPI 3.0.1 Discriminator Object - mapping} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#discriminator-object  | OpenAPI 3.0.0 Discriminator Object - mapping} |
-	 * @property `mapping` - Optional An object to hold mappings between payload values and schema names or references
-	 *
-	 * @example { "dog": "Dog", "cat": "Cat" }
-	 * @example { "admin": "AdminUser", "user": "RegularUser" }
-	 */
-	mapping?: Record<string, string>;
+  /**
+   * An object to hold mappings between payload values and schema names or references.
+   * *
+   * | Version | Reference |
+   * |---|-----|
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#discriminator-object  | OpenAPI 3.0.4 Discriminator Object - mapping} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#discriminator-object  | OpenAPI 3.0.3 Discriminator Object - mapping} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#discriminator-object  | OpenAPI 3.0.2 Discriminator Object - mapping} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#discriminator-object  | OpenAPI 3.0.1 Discriminator Object - mapping} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#discriminator-object  | OpenAPI 3.0.0 Discriminator Object - mapping} |
+   * @property `mapping` - Optional An object to hold mappings between payload values and schema names or references
+   *
+   * @example { "dog": "Dog", "cat": "Cat" }
+   * @example { "admin": "AdminUser", "user": "RegularUser" }
+   */
+  mapping?: Record<string, string>;
 }
 
 /**

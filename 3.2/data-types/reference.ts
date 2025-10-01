@@ -52,19 +52,19 @@ import type { Extension } from "../extensions";
  * ```
  */
 export interface ReferenceSchema extends Extension {
-	/**
-	 * A reference to a schema. This MUST be in the form of a URI.
-	 * When present, no other properties except `description` and extensions are allowed.
-	 *
-	 * Example: `"#/components/schemas/User"`
-	 */
-	$ref: string;
+  /**
+   * A reference to a schema. This MUST be in the form of a URI.
+   * When present, no other properties except `description` and extensions are allowed.
+   *
+   * Example: `"#/components/schemas/User"`
+   */
+  $ref: string;
 
-	/**
-	 * A description of the referenced schema.
-	 * CommonMark syntax MAY be used for rich text representation.
-	 *
-	 * Example: `"Reference to a user schema"`
-	 */
-	description?: string;
+  /**
+   * A description of the referenced schema.
+   * CommonMark syntax MAY be used for rich text representation.
+   *
+   * Example: `"Reference to a user schema"`
+   */
+  description?: string;
 }

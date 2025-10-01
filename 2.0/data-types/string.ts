@@ -92,143 +92,143 @@ import type { XMLObject } from "../xml";
  * ```
  */
 export interface StringSchema extends Extension {
-	/**
-	 * The type of the schema. Must be "string" for string schemas.
-	 *
-	 * This property is required and must be set to "string" to indicate
-	 * that this schema represents string data.
-	 *
-	 * @see {@link https://swagger.io/specification/v2/#data-types | Swagger 2.0 Specification - type}
-	 *
-	 * @example "string"
-	 */
-	type: "string";
+  /**
+   * The type of the schema. Must be "string" for string schemas.
+   *
+   * This property is required and must be set to "string" to indicate
+   * that this schema represents string data.
+   *
+   * @see {@link https://swagger.io/specification/v2/#data-types | Swagger 2.0 Specification - type}
+   *
+   * @example "string"
+   */
+  type: "string";
 
-	/**
-	 * The extending format for the previously mentioned type.
-	 * See Swagger 2.0 Data Type Formats for further details.
-	 *
-	 * Formats provide additional semantic information about the data type,
-	 * enabling more precise validation and better tooling support. Swagger 2.0
-	 * defines several standard formats, but custom formats are also allowed.
-	 *
-	 * @see {@link https://swagger.io/specification/v2/#dataTypeFormat | Swagger 2.0 Data Type Formats}
-	 *
-	 * @example "int32"
-	 * @example "date"
-	 * @example "email"
-	 * @example "uuid"
-	 */
-	format?: string;
+  /**
+   * The extending format for the previously mentioned type.
+   * See Swagger 2.0 Data Type Formats for further details.
+   *
+   * Formats provide additional semantic information about the data type,
+   * enabling more precise validation and better tooling support. Swagger 2.0
+   * defines several standard formats, but custom formats are also allowed.
+   *
+   * @see {@link https://swagger.io/specification/v2/#dataTypeFormat | Swagger 2.0 Data Type Formats}
+   *
+   * @example "int32"
+   * @example "date"
+   * @example "email"
+   * @example "uuid"
+   */
+  format?: string;
 
-	/**
-	 * A short description of the schema. GFM syntax can be used for rich text representation.
-	 *
-	 * This description should provide clear information about what the schema
-	 * represents and how it should be used. It's commonly displayed in API
-	 * documentation and code generation tools.
-	 *
-	 * @see {@link https://swagger.io/specification/v2/#schema-object | Swagger 2.0 Specification - description}
-	 *
-	 * @example "A user object containing basic information"
-	 * @example "Email address in RFC 5322 format"
-	 */
-	description?: string;
+  /**
+   * A short description of the schema. GFM syntax can be used for rich text representation.
+   *
+   * This description should provide clear information about what the schema
+   * represents and how it should be used. It's commonly displayed in API
+   * documentation and code generation tools.
+   *
+   * @see {@link https://swagger.io/specification/v2/#schema-object | Swagger 2.0 Specification - description}
+   *
+   * @example "A user object containing basic information"
+   * @example "Email address in RFC 5322 format"
+   */
+  description?: string;
 
-	/**
-	 * A short title for the schema.
-	 *
-	 * The title provides a human-readable name for the schema, often used
-	 * in documentation and UI displays. It should be concise but descriptive.
-	 *
-	 * @see {@link https://swagger.io/specification/v2/#schema-object | Swagger 2.0 Specification - title}
-	 *
-	 * @example "User"
-	 * @example "Pet"
-	 * @example "Order"
-	 */
-	title?: string;
+  /**
+   * A short title for the schema.
+   *
+   * The title provides a human-readable name for the schema, often used
+   * in documentation and UI displays. It should be concise but descriptive.
+   *
+   * @see {@link https://swagger.io/specification/v2/#schema-object | Swagger 2.0 Specification - title}
+   *
+   * @example "User"
+   * @example "Pet"
+   * @example "Order"
+   */
+  title?: string;
 
-	/**
-	 * Declares the value of the schema that the server will use if none is provided.
-	 * Unlike JSON Schema, the value MUST conform to the defined type for the Schema Object.
-	 *
-	 * This is a Swagger 2.0 specific requirement that differs from JSON Schema.
-	 * The default value must be valid according to the schema's type and constraints.
-	 *
-	 * @see {@link https://swagger.io/specification/v2/#schema-object | Swagger 2.0 Specification - default}
-	 *
-	 * @example "defaultValue"
-	 * @example 10
-	 * @example { name: "John", age: 30 }
-	 * @example ["item1", "item2"]
-	 */
-	default?: unknown;
+  /**
+   * Declares the value of the schema that the server will use if none is provided.
+   * Unlike JSON Schema, the value MUST conform to the defined type for the Schema Object.
+   *
+   * This is a Swagger 2.0 specific requirement that differs from JSON Schema.
+   * The default value must be valid according to the schema's type and constraints.
+   *
+   * @see {@link https://swagger.io/specification/v2/#schema-object | Swagger 2.0 Specification - default}
+   *
+   * @example "defaultValue"
+   * @example 10
+   * @example { name: "John", age: 30 }
+   * @example ["item1", "item2"]
+   */
+  default?: unknown;
 
-	/**
-	 * An instance validates successfully against this keyword if its value is equal to one of the elements in this keyword's array value.
-	 *
-	 * @see {@link https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.5.1 | JSON Schema Validation - enum}
-	 *
-	 * @example ["option1", "option2", "option3"]
-	 * @example ["red", "green", "blue"]
-	 * @example [1, 2, 3, 4, 5]
-	 */
-	enum?: unknown[];
+  /**
+   * An instance validates successfully against this keyword if its value is equal to one of the elements in this keyword's array value.
+   *
+   * @see {@link https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.5.1 | JSON Schema Validation - enum}
+   *
+   * @example ["option1", "option2", "option3"]
+   * @example ["red", "green", "blue"]
+   * @example [1, 2, 3, 4, 5]
+   */
+  enum?: unknown[];
 
-	/**
-	 * A free-form property to include an example of an instance for this schema.
-	 *
-	 * Examples help developers understand how to use the schema and what kind
-	 * of data is expected. They are commonly used by documentation generators
-	 * and API testing tools.
-	 *
-	 * @see {@link https://swagger.io/specification/v2/#schema-object | Swagger 2.0 Specification - example}
-	 *
-	 * @example { name: "Puma", id: 1 }
-	 * @example "example string value"
-	 * @example 42
-	 * @example ["item1", "item2"]
-	 */
-	example?: unknown;
+  /**
+   * A free-form property to include an example of an instance for this schema.
+   *
+   * Examples help developers understand how to use the schema and what kind
+   * of data is expected. They are commonly used by documentation generators
+   * and API testing tools.
+   *
+   * @see {@link https://swagger.io/specification/v2/#schema-object | Swagger 2.0 Specification - example}
+   *
+   * @example { name: "Puma", id: 1 }
+   * @example "example string value"
+   * @example 42
+   * @example ["item1", "item2"]
+   */
+  example?: unknown;
 
-	/**
-	 * A string is valid against "maxLength" if its length is less than or equal to this value.
-	 *
-	 * @see {@link https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.2.1 | JSON Schema Validation - maxLength}
-	 *
-	 * @example 100
-	 * @example 255
-	 */
-	maxLength?: number;
+  /**
+   * A string is valid against "maxLength" if its length is less than or equal to this value.
+   *
+   * @see {@link https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.2.1 | JSON Schema Validation - maxLength}
+   *
+   * @example 100
+   * @example 255
+   */
+  maxLength?: number;
 
-	/**
-	 * A string is valid against "minLength" if its length is greater than or equal to this value.
-	 *
-	 * @see {@link https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.2.2 | JSON Schema Validation - minLength}
-	 *
-	 * @example 1
-	 * @example 8
-	 */
-	minLength?: number;
+  /**
+   * A string is valid against "minLength" if its length is greater than or equal to this value.
+   *
+   * @see {@link https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.2.2 | JSON Schema Validation - minLength}
+   *
+   * @example 1
+   * @example 8
+   */
+  minLength?: number;
 
-	/**
-	 * A string is valid against "pattern" if the regular expression matches the string successfully.
-	 * The regular expression syntax follows ECMA 262.
-	 *
-	 * @see {@link https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.2.3 | JSON Schema Validation - pattern}
-	 * @see {@link https://www.ecma-international.org/ecma-262/5.1/#sec-15.10 | ECMA 262 Regular Expression Syntax}
-	 *
-	 * @example "^[a-zA-Z0-9]+$"
-	 * @example "^\\d{4}-\\d{2}-\\d{2}$"
-	 */
-	pattern?: string;
+  /**
+   * A string is valid against "pattern" if the regular expression matches the string successfully.
+   * The regular expression syntax follows ECMA 262.
+   *
+   * @see {@link https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.2.3 | JSON Schema Validation - pattern}
+   * @see {@link https://www.ecma-international.org/ecma-262/5.1/#sec-15.10 | ECMA 262 Regular Expression Syntax}
+   *
+   * @example "^[a-zA-Z0-9]+$"
+   * @example "^\\d{4}-\\d{2}-\\d{2}$"
+   */
+  pattern?: string;
 
-	/**
-	 * XML representation metadata for the schema.
-	 * Allows for fine-tuned XML model definitions.
-	 *
-	 * @example { name: "userName", attribute: false }
-	 */
-	xml?: XMLObject;
+  /**
+   * XML representation metadata for the schema.
+   * Allows for fine-tuned XML model definitions.
+   *
+   * @example { name: "userName", attribute: false }
+   */
+  xml?: XMLObject;
 }

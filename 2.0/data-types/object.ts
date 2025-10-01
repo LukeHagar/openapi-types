@@ -118,98 +118,98 @@ import type { XMLObject } from "../xml";
  * ```
  */
 export interface ObjectSchema extends Extension {
-	/**
-	 * The type of the schema. Must be "object" for object schemas.
-	 *
-	 * This property is required and must be set to "object" to indicate
-	 * that this schema represents structured data with named properties.
-	 *
-	 * @example "object"
-	 */
-	type?: "object";
+  /**
+   * The type of the schema. Must be "object" for object schemas.
+   *
+   * This property is required and must be set to "object" to indicate
+   * that this schema represents structured data with named properties.
+   *
+   * @example "object"
+   */
+  type?: "object";
 
-	/**
-	 * The properties of the object. The definition is the same as the one from
-	 * JSON Schema, but references the Swagger Schema Object definition instead.
-	 *
-	 * Each property name maps to a schema definition that describes the type
-	 * and validation rules for that property. Properties can be of any type
-	 * supported by Swagger schemas, including primitives, objects, arrays,
-	 * and references.
-	 *
-	 * @example { name: { type: "string" }, age: { type: "integer" } }
-	 * @example { address: { $ref: "#/definitions/Address" } }
-	 */
-	properties?: Record<string, Schema>; // Forward declaration to avoid circular imports
+  /**
+   * The properties of the object. The definition is the same as the one from
+   * JSON Schema, but references the Swagger Schema Object definition instead.
+   *
+   * Each property name maps to a schema definition that describes the type
+   * and validation rules for that property. Properties can be of any type
+   * supported by Swagger schemas, including primitives, objects, arrays,
+   * and references.
+   *
+   * @example { name: { type: "string" }, age: { type: "integer" } }
+   * @example { address: { $ref: "#/definitions/Address" } }
+   */
+  properties?: Record<string, Schema>; // Forward declaration to avoid circular imports
 
-	/**
-	 * A list of required properties. Properties marked as required being true
-	 * MUST be present in the object.
-	 *
-	 * This array contains the names of properties that must be present in
-	 * any valid instance of this object schema. Properties not listed here
-	 * are considered optional.
-	 *
-	 * @example ["name", "email"]
-	 * @example ["id", "type", "createdAt"]
-	 */
-	required?: string[];
+  /**
+   * A list of required properties. Properties marked as required being true
+   * MUST be present in the object.
+   *
+   * This array contains the names of properties that must be present in
+   * any valid instance of this object schema. Properties not listed here
+   * are considered optional.
+   *
+   * @example ["name", "email"]
+   * @example ["id", "type", "createdAt"]
+   */
+  required?: string[];
 
-	/**
-	 * Additional properties for the object. Can be a boolean or a schema.
-	 * The definition is the same as the one from JSON Schema, but references
-	 * the Swagger Schema Object definition instead.
-	 *
-	 * - If true, additional properties of any type are allowed
-	 * - If false, no additional properties are allowed
-	 * - If a schema, additional properties must conform to that schema
-	 *
-	 * @example true
-	 * @example false
-	 * @example { type: "string" }
-	 * @example { $ref: "#/definitions/AdditionalProperty" }
-	 */
-	additionalProperties?: boolean | Schema; // Forward declaration to avoid circular imports
+  /**
+   * Additional properties for the object. Can be a boolean or a schema.
+   * The definition is the same as the one from JSON Schema, but references
+   * the Swagger Schema Object definition instead.
+   *
+   * - If true, additional properties of any type are allowed
+   * - If false, no additional properties are allowed
+   * - If a schema, additional properties must conform to that schema
+   *
+   * @example true
+   * @example false
+   * @example { type: "string" }
+   * @example { $ref: "#/definitions/AdditionalProperty" }
+   */
+  additionalProperties?: boolean | Schema; // Forward declaration to avoid circular imports
 
-	/**
-	 * An array of schemas that this schema must validate against.
-	 * All schemas in the array must be valid for the object to be valid.
-	 * The definition is the same as the one from JSON Schema, but references
-	 * the Swagger Schema Object definition instead.
-	 *
-	 * This enables schema composition and inheritance patterns, allowing
-	 * objects to extend or combine multiple base schemas.
-	 *
-	 * @example [{ $ref: "#/definitions/BaseUser" }, { type: "object", properties: { ... } }]
-	 * @example [{ $ref: "#/definitions/Identifiable" }, { $ref: "#/definitions/Timestamped" }]
-	 */
-	allOf?: Schema[]; // Forward declaration to avoid circular imports
+  /**
+   * An array of schemas that this schema must validate against.
+   * All schemas in the array must be valid for the object to be valid.
+   * The definition is the same as the one from JSON Schema, but references
+   * the Swagger Schema Object definition instead.
+   *
+   * This enables schema composition and inheritance patterns, allowing
+   * objects to extend or combine multiple base schemas.
+   *
+   * @example [{ $ref: "#/definitions/BaseUser" }, { type: "object", properties: { ... } }]
+   * @example [{ $ref: "#/definitions/Identifiable" }, { $ref: "#/definitions/Timestamped" }]
+   */
+  allOf?: Schema[]; // Forward declaration to avoid circular imports
 
-	/**
-	 * An object is valid against "maxProperties" if its number of properties is less than or equal to this value.
-	 *
-	 * @see {@link https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.4.1 | JSON Schema Validation - maxProperties}
-	 *
-	 * @example 10
-	 * @example 50
-	 */
-	maxProperties?: number;
+  /**
+   * An object is valid against "maxProperties" if its number of properties is less than or equal to this value.
+   *
+   * @see {@link https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.4.1 | JSON Schema Validation - maxProperties}
+   *
+   * @example 10
+   * @example 50
+   */
+  maxProperties?: number;
 
-	/**
-	 * An object is valid against "minProperties" if its number of properties is greater than or equal to this value.
-	 *
-	 * @see {@link https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.4.2 | JSON Schema Validation - minProperties}
-	 *
-	 * @example 1
-	 * @example 2
-	 */
-	minProperties?: number;
+  /**
+   * An object is valid against "minProperties" if its number of properties is greater than or equal to this value.
+   *
+   * @see {@link https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.4.2 | JSON Schema Validation - minProperties}
+   *
+   * @example 1
+   * @example 2
+   */
+  minProperties?: number;
 
-	/**
-	 * XML representation metadata for the schema.
-	 * Allows for fine-tuned XML model definitions.
-	 *
-	 * @example { name: "user", attribute: false }
-	 */
-	xml?: XMLObject;
+  /**
+   * XML representation metadata for the schema.
+   * Allows for fine-tuned XML model definitions.
+   *
+   * @example { name: "user", attribute: false }
+   */
+  xml?: XMLObject;
 }

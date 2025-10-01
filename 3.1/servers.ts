@@ -57,34 +57,34 @@ import type { Extension } from "./extensions";
  * ```
  */
 export interface Server extends Extension {
-	/**
-	 * A URL to the target host. This URL supports Server Variables and MAY be relative,
-	 * to indicate that the host location is relative to the location where the OpenAPI
-	 * document is being served. Variable substitutions will be made when a variable
-	 * is named in `{brackets}`.
-	 *
-	 * @example "https://api.example.com/v1"
-	 * @example "https://{username}.gigantic-server.com:{port}/{basePath}"
-	 * @example "/v1"
-	 */
-	url: string;
+  /**
+   * A URL to the target host. This URL supports Server Variables and MAY be relative,
+   * to indicate that the host location is relative to the location where the OpenAPI
+   * document is being served. Variable substitutions will be made when a variable
+   * is named in `{brackets}`.
+   *
+   * @example "https://api.example.com/v1"
+   * @example "https://{username}.gigantic-server.com:{port}/{basePath}"
+   * @example "/v1"
+   */
+  url: string;
 
-	/**
-	 * An optional string describing the host designated by the URL. CommonMark syntax
-	 * MAY be used for rich text representation.
-	 *
-	 * @example "The production API server"
-	 * @example "The staging API server"
-	 */
-	description?: string;
+  /**
+   * An optional string describing the host designated by the URL. CommonMark syntax
+   * MAY be used for rich text representation.
+   *
+   * @example "The production API server"
+   * @example "The staging API server"
+   */
+  description?: string;
 
-	/**
-	 * A map between a variable name and its value. The value is used for substitution
-	 * in the server's URL template.
-	 *
-	 * @example { username: { default: "demo" }, port: { default: "8443" } }
-	 */
-	variables?: Record<string, ServerVariable>;
+  /**
+   * A map between a variable name and its value. The value is used for substitution
+   * in the server's URL template.
+   *
+   * @example { username: { default: "demo" }, port: { default: "8443" } }
+   */
+  variables?: Record<string, ServerVariable>;
 }
 
 /**
@@ -132,33 +132,33 @@ export interface Server extends Extension {
  * ```
  */
 export interface ServerVariable extends Extension {
-	/**
-	 * An enumeration of string values to be used if the substitution options are
-	 * from a limited set. The array SHOULD NOT be empty.
-	 *
-	 * @example ["8443", "443"]
-	 * @example ["v1", "v2", "v3"]
-	 */
-	enum?: string[];
+  /**
+   * An enumeration of string values to be used if the substitution options are
+   * from a limited set. The array SHOULD NOT be empty.
+   *
+   * @example ["8443", "443"]
+   * @example ["v1", "v2", "v3"]
+   */
+  enum?: string[];
 
-	/**
-	 * The default value to use for substitution, which SHALL be sent if an alternate
-	 * value is not supplied. Note this behavior is different than the Schema Object's
-	 * treatment of default values, because in those cases parameter values are optional.
-	 * If the enum is defined, the value SHOULD exist in the enum's values.
-	 *
-	 * @example "demo"
-	 * @example "8443"
-	 * @example "v1"
-	 */
-	default: string;
+  /**
+   * The default value to use for substitution, which SHALL be sent if an alternate
+   * value is not supplied. Note this behavior is different than the Schema Object's
+   * treatment of default values, because in those cases parameter values are optional.
+   * If the enum is defined, the value SHOULD exist in the enum's values.
+   *
+   * @example "demo"
+   * @example "8443"
+   * @example "v1"
+   */
+  default: string;
 
-	/**
-	 * An optional description for the server variable. CommonMark syntax MAY be used
-	 * for rich text representation.
-	 *
-	 * @example "this value is assigned by the service provider"
-	 * @example "The port number"
-	 */
-	description?: string;
+  /**
+   * An optional description for the server variable. CommonMark syntax MAY be used
+   * for rich text representation.
+   *
+   * @example "this value is assigned by the service provider"
+   * @example "The port number"
+   */
+  description?: string;
 }

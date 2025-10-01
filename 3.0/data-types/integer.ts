@@ -87,139 +87,139 @@ import type { XML } from "../xml";
  * ```
  */
 export interface IntegerSchema extends Extension {
-	/**
-	 * The type of the schema. Must be "integer" for integer schemas.
-	 *
-	 * @example "integer"
-	 */
-	type: "integer";
+  /**
+   * The type of the schema. Must be "integer" for integer schemas.
+   *
+   * @example "integer"
+   */
+  type: "integer";
 
-	/**
-	 * The extending format for the integer type. See OpenAPI 3.0.x Data Type Formats for details.
-	 *
-	 * @example "int32"
-	 * @example "int64"
-	 */
-	format?: string;
+  /**
+   * The extending format for the integer type. See OpenAPI 3.0.x Data Type Formats for details.
+   *
+   * @example "int32"
+   * @example "int64"
+   */
+  format?: string;
 
-	/**
-	 * A short title for the schema.
-	 *
-	 * @example "User ID"
-	 * @example "Age"
-	 */
-	title?: string;
+  /**
+   * A short title for the schema.
+   *
+   * @example "User ID"
+   * @example "Age"
+   */
+  title?: string;
 
-	/**
-	 * A short description of the schema. CommonMark syntax MAY be used for rich text representation.
-	 *
-	 * @example "The user's unique identifier"
-	 * @example "Age in years"
-	 */
-	description?: string;
+  /**
+   * A short description of the schema. CommonMark syntax MAY be used for rich text representation.
+   *
+   * @example "The user's unique identifier"
+   * @example "Age in years"
+   */
+  description?: string;
 
-	/**
-	 * The default value for the schema.
-	 *
-	 * @example 0
-	 * @example 1
-	 */
-	default?: number;
+  /**
+   * The default value for the schema.
+   *
+   * @example 0
+   * @example 1
+   */
+  default?: number;
 
-	/**
-	 * Example value for the schema.
-	 *
-	 * @example 42
-	 * @example 100
-	 */
-	example?: number;
+  /**
+   * Example value for the schema.
+   *
+   * @example 42
+   * @example 100
+   */
+  example?: number;
 
-	/**
-	 * Enumeration of valid integer values.
-	 *
-	 * @example [1, 2, 3, 4, 5]
-	 * @example [0, 1, 2]
-	 */
-	enum?: number[];
+  /**
+   * Enumeration of valid integer values.
+   *
+   * @example [1, 2, 3, 4, 5]
+   * @example [0, 1, 2]
+   */
+  enum?: number[];
 
-	/**
-	 * Whether the property is read-only. Default value is false.
-	 *
-	 * @default false
-	 * @example true
-	 */
-	readOnly?: boolean;
+  /**
+   * Whether the property is read-only. Default value is false.
+   *
+   * @default false
+   * @example true
+   */
+  readOnly?: boolean;
 
-	/**
-	 * Whether the property is write-only. Default value is false.
-	 *
-	 * @default false
-	 * @example true
-	 */
-	writeOnly?: boolean;
+  /**
+   * Whether the property is write-only. Default value is false.
+   *
+   * @default false
+   * @example true
+   */
+  writeOnly?: boolean;
 
-	/**
-	 * XML representation metadata for the schema.
-	 *
-	 * @example { name: "userId", attribute: true }
-	 */
-	xml?: XML;
+  /**
+   * XML representation metadata for the schema.
+   *
+   * @example { name: "userId", attribute: true }
+   */
+  xml?: XML;
 
-	/**
-	 * Additional external documentation for the schema.
-	 *
-	 * @example { description: "Find out more about this field", url: "https://example.com/docs" }
-	 */
-	externalDocs?: ExternalDocumentation;
+  /**
+   * Additional external documentation for the schema.
+   *
+   * @example { description: "Find out more about this field", url: "https://example.com/docs" }
+   */
+  externalDocs?: ExternalDocumentation;
 
-	/**
-	 * Whether the schema is deprecated. Default value is false.
-	 *
-	 * @default false
-	 * @example true
-	 */
-	deprecated?: boolean;
+  /**
+   * Whether the schema is deprecated. Default value is false.
+   *
+   * @default false
+   * @example true
+   */
+  deprecated?: boolean;
 
-	// Integer-specific validation constraints
-	/**
-	 * A number is valid against "multipleOf" if the result of the division
-	 * of the instance by this keyword's value is an integer.
-	 *
-	 * @example 1
-	 * @example 2
-	 * @example 5
-	 */
-	multipleOf?: number;
+  // Integer-specific validation constraints
+  /**
+   * A number is valid against "multipleOf" if the result of the division
+   * of the instance by this keyword's value is an integer.
+   *
+   * @example 1
+   * @example 2
+   * @example 5
+   */
+  multipleOf?: number;
 
-	/**
-	 * A number is valid against "maximum" if it is less than or equal to this value.
-	 *
-	 * @example 100
-	 * @example 2147483647
-	 */
-	maximum?: number;
+  /**
+   * A number is valid against "maximum" if it is less than or equal to this value.
+   *
+   * @example 100
+   * @example 2147483647
+   */
+  maximum?: number;
 
-	/**
-	 * A number is valid against "exclusiveMaximum" if it is strictly less than this value.
-	 *
-	 * @example 100
-	 * @example 1000
-	 */
-	exclusiveMaximum?: number;
+  /**
+   * A number is valid against "exclusiveMaximum" if it is strictly less than this value.
+   *
+   * @example 100
+   * @example 1000
+   */
+  exclusiveMaximum?: number;
 
-	/**
-	 * A number is valid against "minimum" if it is greater than or equal to this value.
-	 *
-	 * @example 0
-	 * @example 1
-	 */
-	minimum?: number;
+  /**
+   * A number is valid against "minimum" if it is greater than or equal to this value.
+   *
+   * @example 0
+   * @example 1
+   */
+  minimum?: number;
 
-	/**
-	 * A number is valid against "exclusiveMinimum" if it is strictly greater than this value.
-	 *
-	 * @example 0
-	 * @example -1
-	 */
-	exclusiveMinimum?: number;
+  /**
+   * A number is valid against "exclusiveMinimum" if it is strictly greater than this value.
+   *
+   * @example 0
+   * @example -1
+   */
+  exclusiveMinimum?: number;
 }

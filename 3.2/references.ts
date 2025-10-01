@@ -54,31 +54,31 @@
  * ```
  */
 export interface Reference {
-	/**
-	 * The reference string. This field is required and must be a valid JSON Reference.
-	 * It can reference internal components using `#/` or external resources using URLs.
-	 *
-	 * @example "#/components/schemas/User"
-	 * @example "#/components/responses/NotFound"
-	 * @example "https://example.com/schemas/User.json"
-	 */
-	$ref: string;
+  /**
+   * The reference string. This field is required and must be a valid JSON Reference.
+   * It can reference internal components using `#/` or external resources using URLs.
+   *
+   * @example "#/components/schemas/User"
+   * @example "#/components/responses/NotFound"
+   * @example "https://example.com/schemas/User.json"
+   */
+  $ref: string;
 
-	/**
-	 * A description of the referenced object. This can be used to provide
-	 * additional context about what the referenced object represents.
-	 *
-	 * @example "A user object containing user information"
-	 * @example "Standard error response for not found resources"
-	 */
-	description?: string;
+  /**
+   * A description of the referenced object. This can be used to provide
+   * additional context about what the referenced object represents.
+   *
+   * @example "A user object containing user information"
+   * @example "Standard error response for not found resources"
+   */
+  description?: string;
 
-	/**
-	 * A short summary of the referenced object. This can be used to provide
-	 * a brief overview of what the referenced object represents.
-	 *
-	 * @example "User schema"
-	 * @example "Not found response"
-	 */
-	summary?: string;
+  /**
+   * A short summary of the referenced object. This can be used to provide
+   * a brief overview of what the referenced object represents.
+   *
+   * @example "User schema"
+   * @example "Not found response"
+   */
+  summary?: string;
 }

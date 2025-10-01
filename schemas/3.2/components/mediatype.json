@@ -76,11 +76,7 @@
   "additionalProperties": {
     "description": "Specification Extensions allow adding custom properties to OpenAPI objects. All extension properties must start with `x-` and can contain any valid JSON value.",
     "markdownDescription": "Specification Extensions allow adding custom properties to OpenAPI objects.\nAll extension properties must start with `x-` and can contain any valid JSON value.",
-    "examples": [
-      "x-custom-property",
-      "x-internal-id",
-      "x-codegen-settings"
-    ]
+    "examples": ["x-custom-property", "x-internal-id", "x-codegen-settings"]
   },
   "description": "----- Media Type Object\n-----\n\nEach Media Type Object provides schema and examples for the media type identified by its key.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#media-type-object OpenAPI 3.2.0 Media Type Object }  |\n\n----- Fields\n-----",
   "markdownDescription": "-----\nMedia Type Object\n-----\n\nEach Media Type Object provides schema and examples for the media type identified by its key.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#media-type-object OpenAPI 3.2.0 Media Type Object }  |\n\n-----\nFields\n-----",
@@ -92,9 +88,7 @@
           "type": "string",
           "description": "This string MUST be the version number of the OpenAPI Specification that the OpenAPI document uses. The `openapi` field SHOULD be used by tooling to interpret the OpenAPI document. This is not related to the API `info.version` string. This field is required.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#openapi-object OpenAPI 3.2.0 OpenAPI Object - openapi }  |",
           "markdownDescription": "This string MUST be the version number of the OpenAPI Specification that the\nOpenAPI document uses. The `openapi` field SHOULD be used by tooling to interpret\nthe OpenAPI document. This is not related to the API `info.version` string.\nThis field is required.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#openapi-object OpenAPI 3.2.0 OpenAPI Object - openapi }  |",
-          "examples": [
-            "3.2.0"
-          ]
+          "examples": ["3.2.0"]
         },
         "info": {
           "$ref": "#/definitions/Info",
@@ -111,9 +105,7 @@
           "type": "string",
           "description": "The default value for the `$schema` keyword within Schema Objects contained within this OAS document. This MUST be in the form of a URI.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#openapi-object OpenAPI 3.2.0 OpenAPI Object - jsonSchemaDialect }  |",
           "markdownDescription": "The default value for the `$schema` keyword within Schema Objects contained\nwithin this OAS document. This MUST be in the form of a URI.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#openapi-object OpenAPI 3.2.0 OpenAPI Object - jsonSchemaDialect }  |",
-          "examples": [
-            "https://json-schema.org/draft/2020-12/schema"
-          ]
+          "examples": ["https://json-schema.org/draft/2020-12/schema"]
         },
         "servers": {
           "type": "array",
@@ -228,18 +220,11 @@
           ]
         }
       },
-      "required": [
-        "openapi",
-        "info"
-      ],
+      "required": ["openapi", "info"],
       "additionalProperties": {
         "description": "Specification Extensions allow adding custom properties to OpenAPI objects. All extension properties must start with `x-` and can contain any valid JSON value.",
         "markdownDescription": "Specification Extensions allow adding custom properties to OpenAPI objects.\nAll extension properties must start with `x-` and can contain any valid JSON value.",
-        "examples": [
-          "x-custom-property",
-          "x-internal-id",
-          "x-codegen-settings"
-        ]
+        "examples": ["x-custom-property", "x-internal-id", "x-codegen-settings"]
       },
       "description": "----- OpenAPI Specification\n-----\n\nThis is the root object of the OpenAPI document. It contains all the information needed to describe an API, including metadata, servers, paths, components, and more.\n\nThe OpenAPI Specification (OAS) defines a standard, language-agnostic interface to RESTful APIs which allows both humans and computers to discover and understand the capabilities of the service without access to source code, documentation, or through network traffic inspection.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#openapi-object OpenAPI 3.2.0 OpenAPI Object }  |\n\n----- Fields\n-----",
       "markdownDescription": "-----\nOpenAPI Specification\n-----\n\nThis is the root object of the OpenAPI document. It contains all the information\nneeded to describe an API, including metadata, servers, paths, components, and more.\n\nThe OpenAPI Specification (OAS) defines a standard, language-agnostic interface\nto RESTful APIs which allows both humans and computers to discover and understand\nthe capabilities of the service without access to source code, documentation, or\nthrough network traffic inspection.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#openapi-object OpenAPI 3.2.0 OpenAPI Object }  |\n\n-----\nFields\n-----"
@@ -251,33 +236,25 @@
           "type": "string",
           "description": "The title of the API. This field is required and should be descriptive of the API.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#info-object OpenAPI 3.2.0 Info Object - title }  |",
           "markdownDescription": "The title of the API.\nThis field is required and should be descriptive of the API.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#info-object OpenAPI 3.2.0 Info Object - title }  |",
-          "examples": [
-            "Pet Store API"
-          ]
+          "examples": ["Pet Store API"]
         },
         "summary": {
           "type": "string",
           "description": "A short summary of the API. This should be a brief description of what the API does.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#info-object OpenAPI 3.2.0 Info Object - summary }  |",
           "markdownDescription": "A short summary of the API.\nThis should be a brief description of what the API does.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#info-object OpenAPI 3.2.0 Info Object - summary }  |",
-          "examples": [
-            "A sample API that uses a petstore as an example"
-          ]
+          "examples": ["A sample API that uses a petstore as an example"]
         },
         "description": {
           "type": "string",
           "description": "A description of the API. CommonMark syntax MAY be used for rich text representation.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#info-object OpenAPI 3.2.0 Info Object - description }  |",
           "markdownDescription": "A description of the API.\nCommonMark syntax MAY be used for rich text representation.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#info-object OpenAPI 3.2.0 Info Object - description }  |",
-          "examples": [
-            "This is a sample server Petstore server."
-          ]
+          "examples": ["This is a sample server Petstore server."]
         },
         "termsOfService": {
           "type": "string",
           "description": "A URL to the Terms of Service for the API. This MUST be in the format of a URL.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#info-object OpenAPI 3.2.0 Info Object - termsOfService }  |",
           "markdownDescription": "A URL to the Terms of Service for the API.\nThis MUST be in the format of a URL.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#info-object OpenAPI 3.2.0 Info Object - termsOfService }  |",
-          "examples": [
-            "http://example.com/terms/"
-          ]
+          "examples": ["http://example.com/terms/"]
         },
         "contact": {
           "$ref": "#/definitions/Contact",
@@ -305,23 +282,14 @@
           "type": "string",
           "description": "The version of the OpenAPI document. This field is required and should follow semantic versioning.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#info-object OpenAPI 3.2.0 Info Object - version }  |",
           "markdownDescription": "The version of the OpenAPI document.\nThis field is required and should follow semantic versioning.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#info-object OpenAPI 3.2.0 Info Object - version }  |",
-          "examples": [
-            "1.0.0"
-          ]
+          "examples": ["1.0.0"]
         }
       },
-      "required": [
-        "title",
-        "version"
-      ],
+      "required": ["title", "version"],
       "additionalProperties": {
         "description": "Specification Extensions allow adding custom properties to OpenAPI objects. All extension properties must start with `x-` and can contain any valid JSON value.",
         "markdownDescription": "Specification Extensions allow adding custom properties to OpenAPI objects.\nAll extension properties must start with `x-` and can contain any valid JSON value.",
-        "examples": [
-          "x-custom-property",
-          "x-internal-id",
-          "x-codegen-settings"
-        ]
+        "examples": ["x-custom-property", "x-internal-id", "x-codegen-settings"]
       },
       "description": "----- Info Object\n-----\n\nThe object provides metadata about the API. The metadata MAY be used by tooling as required. The object may be extended with Specification Extensions.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#info-object OpenAPI 3.2.0 Info Object }  |\n\n----- Fields\n-----",
       "markdownDescription": "-----\nInfo Object\n-----\n\nThe object provides metadata about the API. The metadata MAY be used by tooling\nas required. The object may be extended with Specification Extensions.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#info-object OpenAPI 3.2.0 Info Object }  |\n\n-----\nFields\n-----"
@@ -333,38 +301,25 @@
           "type": "string",
           "description": "The identifying name of the contact person/organization.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#contact-object OpenAPI 3.2.0 Contact Object - name }  |",
           "markdownDescription": "The identifying name of the contact person/organization.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#contact-object OpenAPI 3.2.0 Contact Object - name }  |",
-          "examples": [
-            "API Support",
-            "John Doe"
-          ]
+          "examples": ["API Support", "John Doe"]
         },
         "url": {
           "type": "string",
           "description": "The URL pointing to the contact information. MUST be in the format of a URL.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#contact-object OpenAPI 3.2.0 Contact Object - url }  |",
           "markdownDescription": "The URL pointing to the contact information.\nMUST be in the format of a URL.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#contact-object OpenAPI 3.2.0 Contact Object - url }  |",
-          "examples": [
-            "http://www.acme.com/support",
-            "https://example.com/contact"
-          ]
+          "examples": ["http://www.acme.com/support", "https://example.com/contact"]
         },
         "email": {
           "type": "string",
           "description": "The email address of the contact person/organization. MUST be in the format of an email address.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#contact-object OpenAPI 3.2.0 Contact Object - email }  |",
           "markdownDescription": "The email address of the contact person/organization.\nMUST be in the format of an email address.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#contact-object OpenAPI 3.2.0 Contact Object - email }  |",
-          "examples": [
-            "support@acme.com",
-            "contact@example.com"
-          ]
+          "examples": ["support@acme.com", "contact@example.com"]
         }
       },
       "additionalProperties": {
         "description": "Specification Extensions allow adding custom properties to OpenAPI objects. All extension properties must start with `x-` and can contain any valid JSON value.",
         "markdownDescription": "Specification Extensions allow adding custom properties to OpenAPI objects.\nAll extension properties must start with `x-` and can contain any valid JSON value.",
-        "examples": [
-          "x-custom-property",
-          "x-internal-id",
-          "x-codegen-settings"
-        ]
+        "examples": ["x-custom-property", "x-internal-id", "x-codegen-settings"]
       },
       "description": "----- Contact Object\n-----\n\nThe Contact Object provides contact information for the exposed API. It appears in the OpenAPI and Swagger specifications from v2.0 through v3.2.x.\n\nSpecification Extensions (`x-*`) are always allowed.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#contact-object OpenAPI 3.2.0 Contact }  |\n\n----- Fields\n-----",
       "markdownDescription": "-----\nContact Object\n-----\n\nThe Contact Object provides contact information for the exposed API.\nIt appears in the OpenAPI and Swagger specifications from v2.0 through v3.2.x.\n\nSpecification Extensions (`x-*`) are always allowed.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#contact-object OpenAPI 3.2.0 Contact }  |\n\n-----\nFields\n-----"
@@ -376,11 +331,7 @@
           "type": "string",
           "description": "The license name used for the API. This field is required.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#license-object OpenAPI 3.2.0 License Object - name }  |",
           "markdownDescription": "The license name used for the API.\nThis field is required.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#license-object OpenAPI 3.2.0 License Object - name }  |",
-          "examples": [
-            "Apache 2.0",
-            "MIT",
-            "Proprietary License"
-          ]
+          "examples": ["Apache 2.0", "MIT", "Proprietary License"]
         },
         "url": {
           "type": "string",
@@ -393,17 +344,11 @@
           ]
         }
       },
-      "required": [
-        "name"
-      ],
+      "required": ["name"],
       "additionalProperties": {
         "description": "Specification Extensions allow adding custom properties to OpenAPI objects. All extension properties must start with `x-` and can contain any valid JSON value.",
         "markdownDescription": "Specification Extensions allow adding custom properties to OpenAPI objects.\nAll extension properties must start with `x-` and can contain any valid JSON value.",
-        "examples": [
-          "x-custom-property",
-          "x-internal-id",
-          "x-codegen-settings"
-        ]
+        "examples": ["x-custom-property", "x-internal-id", "x-codegen-settings"]
       },
       "description": "----- License Object\n-----\n\nThe License Object provides license information for the exposed API. It appears in the OpenAPI and Swagger specifications from v2.0 through v3.2.x.\n\nSpecification Extensions (`x-*`) are always allowed.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#license-object OpenAPI 3.2.0 License }  |\n\n----- Fields\n-----",
       "markdownDescription": "-----\nLicense Object\n-----\n\nThe License Object provides license information for the exposed API.\nIt appears in the OpenAPI and Swagger specifications from v2.0 through v3.2.x.\n\nSpecification Extensions (`x-*`) are always allowed.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#license-object OpenAPI 3.2.0 License }  |\n\n-----\nFields\n-----"
@@ -415,17 +360,13 @@
           "type": "string",
           "description": "A URL to the target host. This URL supports Server Variables and MAY be relative, to indicate that the host location is relative to the location where the OpenAPI document is being served. Variable substitutions will be made when a variable is named in {brackets}.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#server-object OpenAPI 3.2.0 Server Object - url }  |",
           "markdownDescription": "A URL to the target host.\nThis URL supports Server Variables and MAY be relative, to indicate that the host\nlocation is relative to the location where the OpenAPI document is being served.\nVariable substitutions will be made when a variable is named in {brackets}.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#server-object OpenAPI 3.2.0 Server Object - url }  |",
-          "examples": [
-            "https://api.example.com/v1"
-          ]
+          "examples": ["https://api.example.com/v1"]
         },
         "description": {
           "type": "string",
           "description": "An optional string describing the host designated by the URL. CommonMark syntax MAY be used for rich text representation.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#server-object OpenAPI 3.2.0 Server Object - description }  |",
           "markdownDescription": "An optional string describing the host designated by the URL.\nCommonMark syntax MAY be used for rich text representation.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#server-object OpenAPI 3.2.0 Server Object - description }  |",
-          "examples": [
-            "The production API server"
-          ]
+          "examples": ["The production API server"]
         },
         "variables": {
           "type": "object",
@@ -446,17 +387,11 @@
           ]
         }
       },
-      "required": [
-        "url"
-      ],
+      "required": ["url"],
       "additionalProperties": {
         "description": "Specification Extensions allow adding custom properties to OpenAPI objects. All extension properties must start with `x-` and can contain any valid JSON value.",
         "markdownDescription": "Specification Extensions allow adding custom properties to OpenAPI objects.\nAll extension properties must start with `x-` and can contain any valid JSON value.",
-        "examples": [
-          "x-custom-property",
-          "x-internal-id",
-          "x-codegen-settings"
-        ]
+        "examples": ["x-custom-property", "x-internal-id", "x-codegen-settings"]
       },
       "description": "----- Server Object\n-----\n\nAn object representing a Server.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#server-object OpenAPI 3.2.0 Server Object }  |\n\n----- Fields\n-----",
       "markdownDescription": "-----\nServer Object\n-----\n\nAn object representing a Server.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#server-object OpenAPI 3.2.0 Server Object }  |\n\n-----\nFields\n-----"
@@ -471,41 +406,26 @@
           },
           "description": "An enumeration of string values to be used if the substitution options are from a limited set. The array SHOULD NOT be empty.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#server-variable-object OpenAPI 3.2.0 Server Variable Object - enum }  |",
           "markdownDescription": "An enumeration of string values to be used if the substitution options\nare from a limited set. The array SHOULD NOT be empty.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#server-variable-object OpenAPI 3.2.0 Server Variable Object - enum }  |",
-          "examples": [
-            [
-              "8443",
-              "443"
-            ]
-          ]
+          "examples": [["8443", "443"]]
         },
         "default": {
           "type": "string",
           "description": "The default value to use for substitution, which SHALL be sent if an alternate value is not supplied. Note this behavior is different than the Schema Object's treatment of default values, because in those cases parameter values are optional.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#server-variable-object OpenAPI 3.2.0 Server Variable Object - default }  |",
           "markdownDescription": "The default value to use for substitution, which SHALL be sent if an\nalternate value is not supplied. Note this behavior is different than\nthe Schema Object's treatment of default values, because in those cases\nparameter values are optional.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#server-variable-object OpenAPI 3.2.0 Server Variable Object - default }  |",
-          "examples": [
-            "demo"
-          ]
+          "examples": ["demo"]
         },
         "description": {
           "type": "string",
           "description": "An optional description for the server variable. CommonMark syntax MAY be used for rich text representation.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#server-variable-object OpenAPI 3.2.0 Server Variable Object - description }  |",
           "markdownDescription": "An optional description for the server variable.\nCommonMark syntax MAY be used for rich text representation.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#server-variable-object OpenAPI 3.2.0 Server Variable Object - description }  |",
-          "examples": [
-            "this value is assigned by the service provider"
-          ]
+          "examples": ["this value is assigned by the service provider"]
         }
       },
-      "required": [
-        "default"
-      ],
+      "required": ["default"],
       "additionalProperties": {
         "description": "Specification Extensions allow adding custom properties to OpenAPI objects. All extension properties must start with `x-` and can contain any valid JSON value.",
         "markdownDescription": "Specification Extensions allow adding custom properties to OpenAPI objects.\nAll extension properties must start with `x-` and can contain any valid JSON value.",
-        "examples": [
-          "x-custom-property",
-          "x-internal-id",
-          "x-codegen-settings"
-        ]
+        "examples": ["x-custom-property", "x-internal-id", "x-codegen-settings"]
       },
       "description": "----- Server Variable Object\n-----\n\nAn object representing a Server Variable for server URL template substitution.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#server-variable-object OpenAPI 3.2.0 Server Variable Object }  |\n\n----- Fields\n-----",
       "markdownDescription": "-----\nServer Variable Object\n-----\n\nAn object representing a Server Variable for server URL template substitution.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#server-variable-object OpenAPI 3.2.0 Server Variable Object }  |\n\n-----\nFields\n-----"
@@ -532,19 +452,13 @@
           "type": "string",
           "description": "An optional, string summary, intended to apply to all operations in this path.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#path-item-object OpenAPI 3.2.0 Path Item Object - summary }  |",
           "markdownDescription": "An optional, string summary, intended to apply to all operations in this path.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#path-item-object OpenAPI 3.2.0 Path Item Object - summary }  |",
-          "examples": [
-            "Pet operations",
-            "User management"
-          ]
+          "examples": ["Pet operations", "User management"]
         },
         "description": {
           "type": "string",
           "description": "An optional, string description, intended to apply to all operations in this path. CommonMark syntax MAY be used for rich text representation.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#path-item-object OpenAPI 3.2.0 Path Item Object - description }  |",
           "markdownDescription": "An optional, string description, intended to apply to all operations in this path.\nCommonMark syntax MAY be used for rich text representation.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#path-item-object OpenAPI 3.2.0 Path Item Object - description }  |",
-          "examples": [
-            "Operations related to pet management",
-            "All user-related operations"
-          ]
+          "examples": ["Operations related to pet management", "All user-related operations"]
         },
         "get": {
           "$ref": "#/definitions/Operation",
@@ -606,11 +520,7 @@
       "additionalProperties": {
         "description": "Specification Extensions allow adding custom properties to OpenAPI objects. All extension properties must start with `x-` and can contain any valid JSON value.",
         "markdownDescription": "Specification Extensions allow adding custom properties to OpenAPI objects.\nAll extension properties must start with `x-` and can contain any valid JSON value.",
-        "examples": [
-          "x-custom-property",
-          "x-internal-id",
-          "x-codegen-settings"
-        ]
+        "examples": ["x-custom-property", "x-internal-id", "x-codegen-settings"]
       },
       "description": "----- Path Item Object\n-----\n\nDescribes the operations available on a single path. A Path Item MAY be empty, due to ACL constraints. The path itself is still exposed to the documentation viewer but they will not know which operations and parameters are available.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#path-item-object OpenAPI 3.2.0 Path Item Object }  |\n\n----- Fields\n-----",
       "markdownDescription": "-----\nPath Item Object\n-----\n\nDescribes the operations available on a single path. A Path Item MAY be empty,\ndue to ACL constraints. The path itself is still exposed to the documentation\nviewer but they will not know which operations and parameters are available.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#path-item-object OpenAPI 3.2.0 Path Item Object }  |\n\n-----\nFields\n-----"
@@ -626,24 +536,15 @@
           "description": "A list of tags for API documentation control. Tags can be used for logical grouping of operations by resources or any other qualifier.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#operation-object OpenAPI 3.2.0 Operation Object - tags }  |",
           "markdownDescription": "A list of tags for API documentation control. Tags can be used for logical grouping of operations by resources or any other qualifier.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#operation-object OpenAPI 3.2.0 Operation Object - tags }  |",
           "examples": [
-            [
-              "pets",
-              "list"
-            ],
-            [
-              "users",
-              "authentication"
-            ]
+            ["pets", "list"],
+            ["users", "authentication"]
           ]
         },
         "summary": {
           "type": "string",
           "description": "A short summary of what the operation does.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#operation-object OpenAPI 3.2.0 Operation Object - summary }  |",
           "markdownDescription": "A short summary of what the operation does.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#operation-object OpenAPI 3.2.0 Operation Object - summary }  |",
-          "examples": [
-            "List all pets",
-            "Create a new user"
-          ]
+          "examples": ["List all pets", "Create a new user"]
         },
         "description": {
           "type": "string",
@@ -663,10 +564,7 @@
           "type": "string",
           "description": "Unique string used to identify the operation. The id MUST be unique among all operations described in the API. The operationId value is case-sensitive. Tools and libraries MAY use the operationId to uniquely identify an operation, therefore, it is RECOMMENDED to follow common programming naming conventions.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#operation-object OpenAPI 3.2.0 Operation Object - operationId }  |",
           "markdownDescription": "Unique string used to identify the operation. The id MUST be unique among all operations described in the API. The operationId value is case-sensitive. Tools and libraries MAY use the operationId to uniquely identify an operation, therefore, it is RECOMMENDED to follow common programming naming conventions.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#operation-object OpenAPI 3.2.0 Operation Object - operationId }  |",
-          "examples": [
-            "listPets",
-            "createUser"
-          ]
+          "examples": ["listPets", "createUser"]
         },
         "parameters": {
           "type": "array",
@@ -705,10 +603,7 @@
           "type": "boolean",
           "description": "Declares this operation to be deprecated. Consumers SHOULD refrain from usage of the declared operation. Default value is false.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#operation-object OpenAPI 3.2.0 Operation Object - deprecated }  |",
           "markdownDescription": "Declares this operation to be deprecated. Consumers SHOULD refrain from usage of the declared operation. Default value is false.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#operation-object OpenAPI 3.2.0 Operation Object - deprecated }  |",
-          "examples": [
-            true,
-            false
-          ]
+          "examples": [true, false]
         },
         "security": {
           "type": "array",
@@ -730,11 +625,7 @@
       "additionalProperties": {
         "description": "Specification Extensions allow adding custom properties to OpenAPI objects. All extension properties must start with `x-` and can contain any valid JSON value.",
         "markdownDescription": "Specification Extensions allow adding custom properties to OpenAPI objects.\nAll extension properties must start with `x-` and can contain any valid JSON value.",
-        "examples": [
-          "x-custom-property",
-          "x-internal-id",
-          "x-codegen-settings"
-        ]
+        "examples": ["x-custom-property", "x-internal-id", "x-codegen-settings"]
       },
       "description": "----- Operation Object\n-----\n\nDescribes a single API operation on a path.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#operation-object OpenAPI 3.2.0 Operation Object }  |\n\n----- Fields\n-----",
       "markdownDescription": "-----\nOperation Object\n-----\n\nDescribes a single API operation on a path.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#operation-object OpenAPI 3.2.0 Operation Object }  |\n\n-----\nFields\n-----"
@@ -746,32 +637,20 @@
           "type": "string",
           "description": "A short description of the target documentation. CommonMark syntax MAY be used for rich text representation.",
           "markdownDescription": "A short description of the target documentation. CommonMark syntax MAY be used\nfor rich text representation.",
-          "examples": [
-            "Find out more about our API",
-            "Additional documentation for this endpoint"
-          ]
+          "examples": ["Find out more about our API", "Additional documentation for this endpoint"]
         },
         "url": {
           "type": "string",
           "description": "The URL for the target documentation. This field is required and MUST be in the format of a URL.",
           "markdownDescription": "The URL for the target documentation. This field is required and MUST be in the\nformat of a URL.",
-          "examples": [
-            "https://example.com/docs",
-            "https://docs.example.com/api"
-          ]
+          "examples": ["https://example.com/docs", "https://docs.example.com/api"]
         }
       },
-      "required": [
-        "url"
-      ],
+      "required": ["url"],
       "additionalProperties": {
         "description": "Specification Extensions allow adding custom properties to OpenAPI objects. All extension properties must start with `x-` and can contain any valid JSON value.",
         "markdownDescription": "Specification Extensions allow adding custom properties to OpenAPI objects.\nAll extension properties must start with `x-` and can contain any valid JSON value.",
-        "examples": [
-          "x-custom-property",
-          "x-internal-id",
-          "x-codegen-settings"
-        ]
+        "examples": ["x-custom-property", "x-internal-id", "x-codegen-settings"]
       },
       "description": "----- External Documentation Object\n-----\n\nAllows referencing an external resource for extended documentation.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#external-documentation-object OpenAPI 3.2.0 External Documentation Object }  |\n\n----- Fields\n-----",
       "markdownDescription": "-----\nExternal Documentation Object\n-----\n\nAllows referencing an external resource for extended documentation.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#external-documentation-object OpenAPI 3.2.0 External Documentation Object }  |\n\n-----\nFields\n-----"
@@ -783,64 +662,38 @@
           "type": "string",
           "description": "The name of the parameter. Parameter names are case sensitive.\n- If in is \"path\", the name field MUST correspond to the associated path segment\n- If in is \"header\" and the name field is \"Accept\", \"Content-Type\" or \"Authorization\", the parameter definition SHALL be ignored\n- For all other cases, the name corresponds to the parameter name used by the in property\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#parameter-object OpenAPI 3.2.0 Parameter Object - name }  |",
           "markdownDescription": "The name of the parameter. Parameter names are case sensitive.\n- If in is \"path\", the name field MUST correspond to the associated path segment\n- If in is \"header\" and the name field is \"Accept\", \"Content-Type\" or \"Authorization\", the parameter definition SHALL be ignored\n- For all other cases, the name corresponds to the parameter name used by the in property\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#parameter-object OpenAPI 3.2.0 Parameter Object - name }  |",
-          "examples": [
-            "id",
-            "limit",
-            "user"
-          ]
+          "examples": ["id", "limit", "user"]
         },
         "in": {
           "type": "string",
-          "enum": [
-            "query",
-            "header",
-            "path",
-            "cookie"
-          ],
+          "enum": ["query", "header", "path", "cookie"],
           "description": "The location of the parameter. Possible values are \"query\", \"header\", \"path\" or \"cookie\".\n\n- **query**: Parameters that are appended to the URL\n- **header**: Custom headers that are expected as part of the request\n- **path**: Used together with Path Templating, where the parameter value is actually part of the operation's URL\n- **cookie**: Used to pass a specific cookie value to the API\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#parameter-object OpenAPI 3.2.0 Parameter Object - in }  |",
           "markdownDescription": "The location of the parameter. Possible values are \"query\", \"header\", \"path\" or \"cookie\".\n\n- **query**: Parameters that are appended to the URL\n- **header**: Custom headers that are expected as part of the request\n- **path**: Used together with Path Templating, where the parameter value is actually part of the operation's URL\n- **cookie**: Used to pass a specific cookie value to the API\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#parameter-object OpenAPI 3.2.0 Parameter Object - in }  |",
-          "examples": [
-            "query",
-            "path",
-            "header",
-            "cookie"
-          ]
+          "examples": ["query", "path", "header", "cookie"]
         },
         "description": {
           "type": "string",
           "description": "A brief description of the parameter. This could contain examples of use. CommonMark syntax MAY be used for rich text representation.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#parameter-object OpenAPI 3.2.0 Parameter Object - description }  |",
           "markdownDescription": "A brief description of the parameter. This could contain examples of use.\nCommonMark syntax MAY be used for rich text representation.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#parameter-object OpenAPI 3.2.0 Parameter Object - description }  |",
-          "examples": [
-            "User ID to retrieve",
-            "Number of items to return"
-          ]
+          "examples": ["User ID to retrieve", "Number of items to return"]
         },
         "required": {
           "type": "boolean",
           "description": "Determines whether this parameter is mandatory. If the parameter location is \"path\", this property is REQUIRED and its value MUST be true. Otherwise, the property MAY be included and its default value is false.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#parameter-object OpenAPI 3.2.0 Parameter Object - required }  |",
           "markdownDescription": "Determines whether this parameter is mandatory. If the parameter location is \"path\",\nthis property is REQUIRED and its value MUST be true. Otherwise, the property MAY be\nincluded and its default value is false.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#parameter-object OpenAPI 3.2.0 Parameter Object - required }  |",
-          "examples": [
-            true,
-            false
-          ]
+          "examples": [true, false]
         },
         "deprecated": {
           "type": "boolean",
           "description": "Specifies that a parameter is deprecated and SHOULD be transitioned out of usage.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#parameter-object OpenAPI 3.2.0 Parameter Object - deprecated }  |",
           "markdownDescription": "Specifies that a parameter is deprecated and SHOULD be transitioned out of usage.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#parameter-object OpenAPI 3.2.0 Parameter Object - deprecated }  |",
-          "examples": [
-            true,
-            false
-          ]
+          "examples": [true, false]
         },
         "allowEmptyValue": {
           "type": "boolean",
           "description": "Sets the ability to pass empty-valued parameters. This is valid only for query parameters and allows sending a parameter with an empty value. Default value is false.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#parameter-object OpenAPI 3.2.0 Parameter Object - allowEmptyValue }  |",
           "markdownDescription": "Sets the ability to pass empty-valued parameters. This is valid only for query\nparameters and allows sending a parameter with an empty value. Default value is false.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#parameter-object OpenAPI 3.2.0 Parameter Object - allowEmptyValue }  |",
-          "examples": [
-            true,
-            false
-          ]
+          "examples": [true, false]
         },
         "style": {
           "type": "string",
@@ -869,19 +722,13 @@
           "type": "boolean",
           "description": "When this is true, parameter values of type array or object generate separate parameters for each value of the array or key-value pair of the map. For other types of parameters this property has no effect. When style is form, the default value is true. For all other styles, the default value is false.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#parameter-object OpenAPI 3.2.0 Parameter Object - explode }  |",
           "markdownDescription": "When this is true, parameter values of type array or object generate separate parameters\nfor each value of the array or key-value pair of the map. For other types of parameters\nthis property has no effect. When style is form, the default value is true.\nFor all other styles, the default value is false.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#parameter-object OpenAPI 3.2.0 Parameter Object - explode }  |",
-          "examples": [
-            true,
-            false
-          ]
+          "examples": [true, false]
         },
         "allowReserved": {
           "type": "boolean",
           "description": "Determines whether the parameter value SHOULD allow reserved characters, as defined by RFC3986 :/?#[]@!$&'()*+,;= to be included without percent-encoding. This property only applies to parameters with an in value of query. The default value is false.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#parameter-object OpenAPI 3.2.0 Parameter Object - allowReserved }  |",
           "markdownDescription": "Determines whether the parameter value SHOULD allow reserved characters, as defined by\nRFC3986 :/?#[]@!$&'()*+,;= to be included without percent-encoding. This property only\napplies to parameters with an in value of query. The default value is false.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#parameter-object OpenAPI 3.2.0 Parameter Object - allowReserved }  |",
-          "examples": [
-            true,
-            false
-          ]
+          "examples": [true, false]
         },
         "schema": {
           "$ref": "#/definitions/Schema",
@@ -901,10 +748,7 @@
         "example": {
           "description": "Example of the media type. The example SHOULD match the specified schema and encoding properties if present. The example object is mutually exclusive of the examples object.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#parameter-object OpenAPI 3.2.0 Parameter Object - example }  |",
           "markdownDescription": "Example of the media type. The example SHOULD match the specified schema and encoding\nproperties if present. The example object is mutually exclusive of the examples object.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#parameter-object OpenAPI 3.2.0 Parameter Object - example }  |",
-          "examples": [
-            "example-value",
-            42
-          ]
+          "examples": ["example-value", 42]
         },
         "examples": {
           "type": "object",
@@ -947,18 +791,11 @@
           ]
         }
       },
-      "required": [
-        "name",
-        "in"
-      ],
+      "required": ["name", "in"],
       "additionalProperties": {
         "description": "Specification Extensions allow adding custom properties to OpenAPI objects. All extension properties must start with `x-` and can contain any valid JSON value.",
         "markdownDescription": "Specification Extensions allow adding custom properties to OpenAPI objects.\nAll extension properties must start with `x-` and can contain any valid JSON value.",
-        "examples": [
-          "x-custom-property",
-          "x-internal-id",
-          "x-codegen-settings"
-        ]
+        "examples": ["x-custom-property", "x-internal-id", "x-codegen-settings"]
       },
       "description": "----- Parameter Object\n-----\n\nDescribes a single operation parameter. A unique parameter is defined by a combination of a name and location.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#parameter-object OpenAPI 3.2.0 Parameter Object }  |\n\n----- Fields\n-----",
       "markdownDescription": "-----\nParameter Object\n-----\n\nDescribes a single operation parameter.\nA unique parameter is defined by a combination of a name and location.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#parameter-object OpenAPI 3.2.0 Parameter Object }  |\n\n-----\nFields\n-----"
@@ -1007,17 +844,11 @@
           "markdownDescription": "A description of the referenced schema.\nCommonMark syntax MAY be used for rich text representation.\n\nExample: `\"Reference to a user schema\"`"
         }
       },
-      "required": [
-        "$ref"
-      ],
+      "required": ["$ref"],
       "additionalProperties": {
         "description": "Specification Extensions allow adding custom properties to OpenAPI objects. All extension properties must start with `x-` and can contain any valid JSON value.",
         "markdownDescription": "Specification Extensions allow adding custom properties to OpenAPI objects.\nAll extension properties must start with `x-` and can contain any valid JSON value.",
-        "examples": [
-          "x-custom-property",
-          "x-internal-id",
-          "x-codegen-settings"
-        ]
+        "examples": ["x-custom-property", "x-internal-id", "x-codegen-settings"]
       },
       "description": "----- Reference Schema\n-----\n\nA schema that references another schema. When a schema contains `$ref`, no other sibling keys are allowed except `description` and extensions. This enforces the OpenAPI 3.2.0 rule that `$ref` is exclusive with other properties.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#reference-object OpenAPI 3.2.0 Reference Object }  |\n\n----- Fields\n-----",
       "markdownDescription": "-----\nReference Schema\n-----\n\nA schema that references another schema. When a schema contains `$ref`,\nno other sibling keys are allowed except `description` and extensions.\nThis enforces the OpenAPI 3.2.0 rule that `$ref` is exclusive with other properties.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#reference-object OpenAPI 3.2.0 Reference Object }  |\n\n-----\nFields\n-----"
@@ -1093,17 +924,11 @@
           "markdownDescription": "XML representation metadata for the schema.\nAllows for fine-tuned XML model definitions using the modernized\nnodeType approach in OpenAPI 3.2.0.\n\nExample: `{ nodeType: \"element\", name: \"userName\" }`"
         }
       },
-      "required": [
-        "type"
-      ],
+      "required": ["type"],
       "additionalProperties": {
         "description": "Specification Extensions allow adding custom properties to OpenAPI objects. All extension properties must start with `x-` and can contain any valid JSON value.",
         "markdownDescription": "Specification Extensions allow adding custom properties to OpenAPI objects.\nAll extension properties must start with `x-` and can contain any valid JSON value.",
-        "examples": [
-          "x-custom-property",
-          "x-internal-id",
-          "x-codegen-settings"
-        ]
+        "examples": ["x-custom-property", "x-internal-id", "x-codegen-settings"]
       },
       "description": "----- String Schema\n-----\n\nA schema for string values. Includes string-specific validation properties that are only valid when `type: \"string\"` is specified.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#data-types OpenAPI 3.2.0 Data Types }  |\n\n----- Fields\n-----",
       "markdownDescription": "-----\nString Schema\n-----\n\nA schema for string values. Includes string-specific validation properties\nthat are only valid when `type: \"string\"` is specified.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#data-types OpenAPI 3.2.0 Data Types }  |\n\n-----\nFields\n-----"
@@ -1113,60 +938,34 @@
       "properties": {
         "nodeType": {
           "type": "string",
-          "enum": [
-            "element",
-            "attribute",
-            "text",
-            "cdata",
-            "none"
-          ],
+          "enum": ["element", "attribute", "text", "cdata", "none"],
           "description": "The type of XML node this schema produces. Determines how the schema is serialized to XML.\n\n- `\"element\"`: Produces an XML element node (may contain attributes, child elements, or text)\n- `\"attribute\"`: Produces an XML attribute node on the containing element (value-only)\n- `\"text\"`: Contributes character data of the containing element (PCDATA)\n- `\"cdata\"`: Contributes a CDATA section of the containing element\n- `\"none\"`: Does not directly produce a node (used for structural control, e.g., array wrappers)",
           "markdownDescription": "The type of XML node this schema produces. Determines how the schema\nis serialized to XML.\n\n- `\"element\"`: Produces an XML element node (may contain attributes, child elements, or text)\n- `\"attribute\"`: Produces an XML attribute node on the containing element (value-only)\n- `\"text\"`: Contributes character data of the containing element (PCDATA)\n- `\"cdata\"`: Contributes a CDATA section of the containing element\n- `\"none\"`: Does not directly produce a node (used for structural control, e.g., array wrappers)",
-          "examples": [
-            "element",
-            "attribute",
-            "text",
-            "cdata",
-            "none"
-          ]
+          "examples": ["element", "attribute", "text", "cdata", "none"]
         },
         "name": {
           "type": "string",
           "description": "Replaces the name of the element/attribute used for the described schema property. Only effective when `nodeType` is \"element\" or \"attribute\". When defined within the Items Object (items), it will affect the name of the individual XML elements within the list. When defined alongside type being array (outside the items), it will affect the wrapping element name.",
           "markdownDescription": "Replaces the name of the element/attribute used for the described schema property.\nOnly effective when `nodeType` is \"element\" or \"attribute\". When defined within\nthe Items Object (items), it will affect the name of the individual XML elements\nwithin the list. When defined alongside type being array (outside the items),\nit will affect the wrapping element name.",
-          "examples": [
-            "user",
-            "id",
-            "users"
-          ]
+          "examples": ["user", "id", "users"]
         },
         "namespace": {
           "type": "string",
           "description": "The URI of the namespace definition. This MUST be in the form of an absolute URI. Only effective when `nodeType` is \"element\" or \"attribute\".",
           "markdownDescription": "The URI of the namespace definition. This MUST be in the form of an absolute URI.\nOnly effective when `nodeType` is \"element\" or \"attribute\".",
-          "examples": [
-            "http://example.com/schema/user",
-            "http://www.w3.org/XML/1998/namespace"
-          ]
+          "examples": ["http://example.com/schema/user", "http://www.w3.org/XML/1998/namespace"]
         },
         "prefix": {
           "type": "string",
           "description": "The prefix to be used for the name. Only effective when `nodeType` is \"element\" or \"attribute\".",
           "markdownDescription": "The prefix to be used for the name. Only effective when `nodeType` is \"element\" or \"attribute\".",
-          "examples": [
-            "user",
-            "xml"
-          ]
+          "examples": ["user", "xml"]
         }
       },
       "additionalProperties": {
         "description": "Specification Extensions allow adding custom properties to OpenAPI objects. All extension properties must start with `x-` and can contain any valid JSON value.",
         "markdownDescription": "Specification Extensions allow adding custom properties to OpenAPI objects.\nAll extension properties must start with `x-` and can contain any valid JSON value.",
-        "examples": [
-          "x-custom-property",
-          "x-internal-id",
-          "x-codegen-settings"
-        ]
+        "examples": ["x-custom-property", "x-internal-id", "x-codegen-settings"]
       },
       "description": "----- XML Object\n-----\n\nA metadata object that allows for more fine-tuned XML model definitions. OpenAPI 3.2.0 introduces a modernized XML modeling approach using `nodeType` to replace the deprecated `attribute` and `wrapped` fields from earlier versions.\n\nWhen using arrays, XML element names are not inferred (for singular/plural forms) and the `name` property SHOULD be used to add that information.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#xml-object OpenAPI 3.2.0 XML Object }  |\n\n----- Fields\n-----",
       "markdownDescription": "-----\nXML Object\n-----\n\nA metadata object that allows for more fine-tuned XML model definitions.\nOpenAPI 3.2.0 introduces a modernized XML modeling approach using `nodeType`\nto replace the deprecated `attribute` and `wrapped` fields from earlier versions.\n\nWhen using arrays, XML element names are not inferred (for singular/plural forms)\nand the `name` property SHOULD be used to add that information.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#xml-object OpenAPI 3.2.0 XML Object }  |\n\n-----\nFields\n-----"
@@ -1252,17 +1051,11 @@
           "markdownDescription": "XML representation metadata for the schema.\nAllows for fine-tuned XML model definitions using the modernized\nnodeType approach in OpenAPI 3.2.0.\n\nExample: `{ nodeType: \"element\", name: \"price\" }`"
         }
       },
-      "required": [
-        "type"
-      ],
+      "required": ["type"],
       "additionalProperties": {
         "description": "Specification Extensions allow adding custom properties to OpenAPI objects. All extension properties must start with `x-` and can contain any valid JSON value.",
         "markdownDescription": "Specification Extensions allow adding custom properties to OpenAPI objects.\nAll extension properties must start with `x-` and can contain any valid JSON value.",
-        "examples": [
-          "x-custom-property",
-          "x-internal-id",
-          "x-codegen-settings"
-        ]
+        "examples": ["x-custom-property", "x-internal-id", "x-codegen-settings"]
       },
       "description": "----- Number Schema\n-----\n\nA schema for number values. Includes number-specific validation properties that are only valid when `type: \"number\"` is specified.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#data-types OpenAPI 3.2.0 Data Types }  |\n\n----- Fields\n-----",
       "markdownDescription": "-----\nNumber Schema\n-----\n\nA schema for number values. Includes number-specific validation properties\nthat are only valid when `type: \"number\"` is specified.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#data-types OpenAPI 3.2.0 Data Types }  |\n\n-----\nFields\n-----"
@@ -1348,17 +1141,11 @@
           "markdownDescription": "XML representation metadata for the schema.\nAllows for fine-tuned XML model definitions using the modernized\nnodeType approach in OpenAPI 3.2.0.\n\nExample: `{ nodeType: \"element\", name: \"userId\" }`"
         }
       },
-      "required": [
-        "type"
-      ],
+      "required": ["type"],
       "additionalProperties": {
         "description": "Specification Extensions allow adding custom properties to OpenAPI objects. All extension properties must start with `x-` and can contain any valid JSON value.",
         "markdownDescription": "Specification Extensions allow adding custom properties to OpenAPI objects.\nAll extension properties must start with `x-` and can contain any valid JSON value.",
-        "examples": [
-          "x-custom-property",
-          "x-internal-id",
-          "x-codegen-settings"
-        ]
+        "examples": ["x-custom-property", "x-internal-id", "x-codegen-settings"]
       },
       "description": "----- Integer Schema\n-----\n\nA schema for integer values. Includes integer-specific validation properties that are only valid when `type: \"integer\"` is specified.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#data-types OpenAPI 3.2.0 Data Types }  |\n\n----- Fields\n-----",
       "markdownDescription": "-----\nInteger Schema\n-----\n\nA schema for integer values. Includes integer-specific validation properties\nthat are only valid when `type: \"integer\"` is specified.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#data-types OpenAPI 3.2.0 Data Types }  |\n\n-----\nFields\n-----"
@@ -1414,17 +1201,11 @@
           "markdownDescription": "XML representation metadata for the schema.\nAllows for fine-tuned XML model definitions using the modernized\nnodeType approach in OpenAPI 3.2.0.\n\nExample: `{ nodeType: \"element\", name: \"isActive\" }`"
         }
       },
-      "required": [
-        "type"
-      ],
+      "required": ["type"],
       "additionalProperties": {
         "description": "Specification Extensions allow adding custom properties to OpenAPI objects. All extension properties must start with `x-` and can contain any valid JSON value.",
         "markdownDescription": "Specification Extensions allow adding custom properties to OpenAPI objects.\nAll extension properties must start with `x-` and can contain any valid JSON value.",
-        "examples": [
-          "x-custom-property",
-          "x-internal-id",
-          "x-codegen-settings"
-        ]
+        "examples": ["x-custom-property", "x-internal-id", "x-codegen-settings"]
       },
       "description": "----- Boolean Schema\n-----\n\nA schema for boolean values. Includes common validation properties that are only valid when `type: \"boolean\"` is specified.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#data-types OpenAPI 3.2.0 Data Types }  |\n\n----- Fields\n-----",
       "markdownDescription": "-----\nBoolean Schema\n-----\n\nA schema for boolean values. Includes common validation properties\nthat are only valid when `type: \"boolean\"` is specified.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#data-types OpenAPI 3.2.0 Data Types }  |\n\n-----\nFields\n-----"
@@ -1519,17 +1300,11 @@
           "markdownDescription": "XML representation metadata for the schema.\nAllows for fine-tuned XML model definitions using the modernized\nnodeType approach in OpenAPI 3.2.0.\n\nExample: `{ nodeType: \"element\", name: \"users\" }`"
         }
       },
-      "required": [
-        "type"
-      ],
+      "required": ["type"],
       "additionalProperties": {
         "description": "Specification Extensions allow adding custom properties to OpenAPI objects. All extension properties must start with `x-` and can contain any valid JSON value.",
         "markdownDescription": "Specification Extensions allow adding custom properties to OpenAPI objects.\nAll extension properties must start with `x-` and can contain any valid JSON value.",
-        "examples": [
-          "x-custom-property",
-          "x-internal-id",
-          "x-codegen-settings"
-        ]
+        "examples": ["x-custom-property", "x-internal-id", "x-codegen-settings"]
       },
       "description": "----- Array Schema\n-----\n\nA schema for array values. Includes array-specific validation properties that are only valid when `type: \"array\"` is specified.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#data-types OpenAPI 3.2.0 Data Types }  |\n\n----- Fields\n-----",
       "markdownDescription": "-----\nArray Schema\n-----\n\nA schema for array values. Includes array-specific validation properties\nthat are only valid when `type: \"array\"` is specified.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#data-types OpenAPI 3.2.0 Data Types }  |\n\n-----\nFields\n-----"
@@ -1659,17 +1434,11 @@
           "markdownDescription": "XML representation metadata for the schema.\nAllows for fine-tuned XML model definitions using the modernized\nnodeType approach in OpenAPI 3.2.0.\n\nExample: `{ nodeType: \"element\", name: \"user\" }`"
         }
       },
-      "required": [
-        "type"
-      ],
+      "required": ["type"],
       "additionalProperties": {
         "description": "Specification Extensions allow adding custom properties to OpenAPI objects. All extension properties must start with `x-` and can contain any valid JSON value.",
         "markdownDescription": "Specification Extensions allow adding custom properties to OpenAPI objects.\nAll extension properties must start with `x-` and can contain any valid JSON value.",
-        "examples": [
-          "x-custom-property",
-          "x-internal-id",
-          "x-codegen-settings"
-        ]
+        "examples": ["x-custom-property", "x-internal-id", "x-codegen-settings"]
       },
       "description": "----- Object Schema\n-----\n\nA schema for object values. Includes object-specific validation properties that are only valid when `type: \"object\"` is specified.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#data-types OpenAPI 3.2.0 Data Types }  |\n\n----- Fields\n-----",
       "markdownDescription": "-----\nObject Schema\n-----\n\nA schema for object values. Includes object-specific validation properties\nthat are only valid when `type: \"object\"` is specified.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#data-types OpenAPI 3.2.0 Data Types }  |\n\n-----\nFields\n-----"
@@ -1760,11 +1529,7 @@
       "additionalProperties": {
         "description": "Specification Extensions allow adding custom properties to OpenAPI objects. All extension properties must start with `x-` and can contain any valid JSON value.",
         "markdownDescription": "Specification Extensions allow adding custom properties to OpenAPI objects.\nAll extension properties must start with `x-` and can contain any valid JSON value.",
-        "examples": [
-          "x-custom-property",
-          "x-internal-id",
-          "x-codegen-settings"
-        ]
+        "examples": ["x-custom-property", "x-internal-id", "x-codegen-settings"]
       },
       "description": "----- Composition Schema\n-----\n\nA schema that uses composition keywords (allOf, anyOf, oneOf, not). These keywords are mutually exclusive with $ref, but otherwise can appear with any validation keywords. This schema type supports advanced JSON Schema 2020-12 features like conditional schemas.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#schema-object OpenAPI 3.2.0 Schema Object }  |\n\n----- Fields\n-----",
       "markdownDescription": "-----\nComposition Schema\n-----\n\nA schema that uses composition keywords (allOf, anyOf, oneOf, not).\nThese keywords are mutually exclusive with $ref, but otherwise can\nappear with any validation keywords. This schema type supports\nadvanced JSON Schema 2020-12 features like conditional schemas.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#schema-object OpenAPI 3.2.0 Schema Object }  |\n\n-----\nFields\n-----"
@@ -1776,10 +1541,7 @@
           "type": "string",
           "description": "Short description for the example.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#example-object OpenAPI 3.2.0 Example Object - summary }  |",
           "markdownDescription": "Short description for the example.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#example-object OpenAPI 3.2.0 Example Object - summary }  |",
-          "examples": [
-            "A user example",
-            "Error response"
-          ]
+          "examples": ["A user example", "Error response"]
         },
         "description": {
           "type": "string",
@@ -1815,11 +1577,7 @@
       "additionalProperties": {
         "description": "Specification Extensions allow adding custom properties to OpenAPI objects. All extension properties must start with `x-` and can contain any valid JSON value.",
         "markdownDescription": "Specification Extensions allow adding custom properties to OpenAPI objects.\nAll extension properties must start with `x-` and can contain any valid JSON value.",
-        "examples": [
-          "x-custom-property",
-          "x-internal-id",
-          "x-codegen-settings"
-        ]
+        "examples": ["x-custom-property", "x-internal-id", "x-codegen-settings"]
       },
       "description": "----- Example Object\n-----\n\nIn all cases, the example value is expected to be compatible with the type schema of its associated value. Tooling implementations MAY choose to validate compatibility automatically, and reject the example value(s) if incompatible.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#example-object OpenAPI 3.2.0 Example Object }  |\n\n----- Fields\n-----",
       "markdownDescription": "-----\nExample Object\n-----\n\nIn all cases, the example value is expected to be compatible with the type schema of its associated value.\nTooling implementations MAY choose to validate compatibility automatically, and reject the example value(s) if incompatible.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#example-object OpenAPI 3.2.0 Example Object }  |\n\n-----\nFields\n-----"
@@ -1850,15 +1608,10 @@
           "type": "string",
           "description": "A short summary of the referenced object. This can be used to provide a brief overview of what the referenced object represents.",
           "markdownDescription": "A short summary of the referenced object. This can be used to provide\na brief overview of what the referenced object represents.",
-          "examples": [
-            "User schema",
-            "Not found response"
-          ]
+          "examples": ["User schema", "Not found response"]
         }
       },
-      "required": [
-        "$ref"
-      ],
+      "required": ["$ref"],
       "additionalProperties": false,
       "description": "----- Reference Object\n-----\n\nA simple object to allow referencing other components in the specification, internally and externally. The Reference Object is a special JSON object that allows you to reference other parts of the OpenAPI specification.\n\nThe `$ref` keyword is used to reference other components, and when present, the Reference Object is the only property that should be present (except for `description` and specification extensions).\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#reference-object OpenAPI 3.2.0 Reference Object }  |\n\n----- Fields\n-----",
       "markdownDescription": "-----\nReference Object\n-----\n\nA simple object to allow referencing other components in the specification,\ninternally and externally. The Reference Object is a special JSON object\nthat allows you to reference other parts of the OpenAPI specification.\n\nThe `$ref` keyword is used to reference other components, and when present,\nthe Reference Object is the only property that should be present (except\nfor `description` and specification extensions).\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#reference-object OpenAPI 3.2.0 Reference Object }  |\n\n-----\nFields\n-----"
@@ -1940,11 +1693,7 @@
       "additionalProperties": {
         "description": "Specification Extensions allow adding custom properties to OpenAPI objects. All extension properties must start with `x-` and can contain any valid JSON value.",
         "markdownDescription": "Specification Extensions allow adding custom properties to OpenAPI objects.\nAll extension properties must start with `x-` and can contain any valid JSON value.",
-        "examples": [
-          "x-custom-property",
-          "x-internal-id",
-          "x-codegen-settings"
-        ]
+        "examples": ["x-custom-property", "x-internal-id", "x-codegen-settings"]
       },
       "description": "----- Media Type Object\n-----\n\nEach Media Type Object provides schema and examples for the media type identified by its key.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#media-type-object OpenAPI 3.2.0 Media Type Object }  |\n\n----- Fields\n-----",
       "markdownDescription": "-----\nMedia Type Object\n-----\n\nEach Media Type Object provides schema and examples for the media type identified by its key.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#media-type-object OpenAPI 3.2.0 Media Type Object }  |\n\n-----\nFields\n-----"
@@ -1956,11 +1705,7 @@
           "type": "string",
           "description": "The Content-Type for encoding a specific property. Default value depends on the property type: for string with format being binary – application/octet-stream; for other primitive types – text/plain; for object – application/json; for array – the default is defined based on the inner type.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#encoding-object OpenAPI 3.2.0 Encoding Object - contentType }  |",
           "markdownDescription": "The Content-Type for encoding a specific property.\nDefault value depends on the property type: for string with format being binary – application/octet-stream;\nfor other primitive types – text/plain; for object – application/json; for array – the default is defined based on the inner type.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#encoding-object OpenAPI 3.2.0 Encoding Object - contentType }  |",
-          "examples": [
-            "text/plain",
-            "application/json",
-            "image/png"
-          ]
+          "examples": ["text/plain", "application/json", "image/png"]
         },
         "headers": {
           "type": "object",
@@ -1988,48 +1733,28 @@
         },
         "style": {
           "type": "string",
-          "enum": [
-            "form",
-            "spaceDelimited",
-            "pipeDelimited",
-            "deepObject"
-          ],
+          "enum": ["form", "spaceDelimited", "pipeDelimited", "deepObject"],
           "description": "Describes how a specific property value will be serialized depending on its type. See Parameter Object for details on the style property. The behavior follows the same values as query parameters. Default value depends on the property type: for string with format being binary – binary; for other primitive types – form.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#encoding-object OpenAPI 3.2.0 Encoding Object - style }  |",
           "markdownDescription": "Describes how a specific property value will be serialized depending on its type.\nSee Parameter Object for details on the style property. The behavior follows the same values as query parameters.\nDefault value depends on the property type: for string with format being binary – binary; for other primitive types – form.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#encoding-object OpenAPI 3.2.0 Encoding Object - style }  |",
-          "examples": [
-            "form",
-            "spaceDelimited",
-            "pipeDelimited",
-            "deepObject"
-          ]
+          "examples": ["form", "spaceDelimited", "pipeDelimited", "deepObject"]
         },
         "explode": {
           "type": "boolean",
           "description": "When this is true, property values of type array or object generate separate parameters for each value of the array or key-value pair of the map. For other types of properties this property has no effect. When style is form, the default value is true. For all other styles, the default value is false.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#encoding-object OpenAPI 3.2.0 Encoding Object - explode }  |",
           "markdownDescription": "When this is true, property values of type array or object generate separate parameters\nfor each value of the array or key-value pair of the map. For other types of properties\nthis property has no effect. When style is form, the default value is true.\nFor all other styles, the default value is false.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#encoding-object OpenAPI 3.2.0 Encoding Object - explode }  |",
-          "examples": [
-            true,
-            false
-          ]
+          "examples": [true, false]
         },
         "allowReserved": {
           "type": "boolean",
           "description": "Determines whether the parameter value SHOULD allow reserved characters, as defined by RFC3986 :/?#[]@!$&'()*+,;= to be included without percent-encoding. The default value is false.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#encoding-object OpenAPI 3.2.0 Encoding Object - allowReserved }  |",
           "markdownDescription": "Determines whether the parameter value SHOULD allow reserved characters, as defined by\nRFC3986 :/?#[]@!$&'()*+,;= to be included without percent-encoding. The default value is false.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#encoding-object OpenAPI 3.2.0 Encoding Object - allowReserved }  |",
-          "examples": [
-            true,
-            false
-          ]
+          "examples": [true, false]
         }
       },
       "additionalProperties": {
         "description": "Specification Extensions allow adding custom properties to OpenAPI objects. All extension properties must start with `x-` and can contain any valid JSON value.",
         "markdownDescription": "Specification Extensions allow adding custom properties to OpenAPI objects.\nAll extension properties must start with `x-` and can contain any valid JSON value.",
-        "examples": [
-          "x-custom-property",
-          "x-internal-id",
-          "x-codegen-settings"
-        ]
+        "examples": ["x-custom-property", "x-internal-id", "x-codegen-settings"]
       },
       "description": "----- Encoding Object\n-----\n\nA single encoding definition applied to a single schema property. The Encoding Object is used to describe how a specific property value will be serialized.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#encoding-object OpenAPI 3.2.0 Encoding Object }  |\n\n----- Fields\n-----",
       "markdownDescription": "-----\nEncoding Object\n-----\n\nA single encoding definition applied to a single schema property.\nThe Encoding Object is used to describe how a specific property value will be serialized.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#encoding-object OpenAPI 3.2.0 Encoding Object }  |\n\n-----\nFields\n-----"
@@ -2041,64 +1766,44 @@
           "type": "string",
           "description": "A brief description of the header. This could contain examples of use. CommonMark syntax MAY be used for rich text representation.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#header-object OpenAPI 3.2.0 Header Object - description }  |",
           "markdownDescription": "A brief description of the header. This could contain examples of use.\nCommonMark syntax MAY be used for rich text representation.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#header-object OpenAPI 3.2.0 Header Object - description }  |",
-          "examples": [
-            "Rate limit header",
-            "Authentication token"
-          ]
+          "examples": ["Rate limit header", "Authentication token"]
         },
         "required": {
           "type": "boolean",
           "description": "Determines whether this header is mandatory. Default value is false.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#header-object OpenAPI 3.2.0 Header Object - required }  |",
           "markdownDescription": "Determines whether this header is mandatory. Default value is false.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#header-object OpenAPI 3.2.0 Header Object - required }  |",
-          "examples": [
-            true,
-            false
-          ]
+          "examples": [true, false]
         },
         "deprecated": {
           "type": "boolean",
           "description": "Specifies that a header is deprecated and SHOULD be transitioned out of usage.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#header-object OpenAPI 3.2.0 Header Object - deprecated }  |",
           "markdownDescription": "Specifies that a header is deprecated and SHOULD be transitioned out of usage.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#header-object OpenAPI 3.2.0 Header Object - deprecated }  |",
-          "examples": [
-            true,
-            false
-          ]
+          "examples": [true, false]
         },
         "allowEmptyValue": {
           "type": "boolean",
           "description": "Sets the ability to pass empty-valued headers. Default value is false.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#header-object OpenAPI 3.2.0 Header Object - allowEmptyValue }  |",
           "markdownDescription": "Sets the ability to pass empty-valued headers. Default value is false.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#header-object OpenAPI 3.2.0 Header Object - allowEmptyValue }  |",
-          "examples": [
-            true,
-            false
-          ]
+          "examples": [true, false]
         },
         "style": {
           "type": "string",
           "const": "simple",
           "description": "Describes how the header value will be serialized. Default value is \"simple\".\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#header-object OpenAPI 3.2.0 Header Object - style }  |",
           "markdownDescription": "Describes how the header value will be serialized. Default value is \"simple\".\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#header-object OpenAPI 3.2.0 Header Object - style }  |",
-          "examples": [
-            "simple"
-          ]
+          "examples": ["simple"]
         },
         "explode": {
           "type": "boolean",
           "description": "When this is true, header values of type array or object generate separate headers for each value of the array or key-value pair of the map. For other types of headers this property has no effect. Default value is false.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#header-object OpenAPI 3.2.0 Header Object - explode }  |",
           "markdownDescription": "When this is true, header values of type array or object generate separate headers\nfor each value of the array or key-value pair of the map. For other types of headers\nthis property has no effect. Default value is false.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#header-object OpenAPI 3.2.0 Header Object - explode }  |",
-          "examples": [
-            true,
-            false
-          ]
+          "examples": [true, false]
         },
         "allowReserved": {
           "type": "boolean",
           "description": "Determines whether the header value SHOULD allow reserved characters, as defined by RFC3986 :/?#[]@!$&'()*+,;= to be included without percent-encoding. Default value is false.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#header-object OpenAPI 3.2.0 Header Object - allowReserved }  |",
           "markdownDescription": "Determines whether the header value SHOULD allow reserved characters, as defined by\nRFC3986 :/?#[]@!$&'()*+,;= to be included without percent-encoding. Default value is false.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#header-object OpenAPI 3.2.0 Header Object - allowReserved }  |",
-          "examples": [
-            true,
-            false
-          ]
+          "examples": [true, false]
         },
         "schema": {
           "$ref": "#/definitions/Schema",
@@ -2117,10 +1822,7 @@
         "example": {
           "description": "Example of the header. The example SHOULD match the specified schema and encoding properties if present. The example object is mutually exclusive of the examples object.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#header-object OpenAPI 3.2.0 Header Object - example }  |",
           "markdownDescription": "Example of the header. The example SHOULD match the specified schema and encoding\nproperties if present. The example object is mutually exclusive of the examples object.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#header-object OpenAPI 3.2.0 Header Object - example }  |",
-          "examples": [
-            "example-value",
-            42
-          ]
+          "examples": ["example-value", 42]
         },
         "examples": {
           "type": "object",
@@ -2166,11 +1868,7 @@
       "additionalProperties": {
         "description": "Specification Extensions allow adding custom properties to OpenAPI objects. All extension properties must start with `x-` and can contain any valid JSON value.",
         "markdownDescription": "Specification Extensions allow adding custom properties to OpenAPI objects.\nAll extension properties must start with `x-` and can contain any valid JSON value.",
-        "examples": [
-          "x-custom-property",
-          "x-internal-id",
-          "x-codegen-settings"
-        ]
+        "examples": ["x-custom-property", "x-internal-id", "x-codegen-settings"]
       },
       "description": "----- Header Object\n-----\n\nThe Header Object follows the structure of the Parameter Object with the following changes: 1. `name` MUST NOT be specified, it is given in the corresponding `headers` map 2. `in` MUST NOT be specified, it is implicitly in `header` 3. All traits that are affected by the location MUST be applicable to a location of `header` (for example, `style`)\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#header-object OpenAPI 3.2.0 Header Object }  |\n\n----- Fields\n-----",
       "markdownDescription": "-----\nHeader Object\n-----\n\nThe Header Object follows the structure of the Parameter Object with the following changes:\n1. `name` MUST NOT be specified, it is given in the corresponding `headers` map\n2. `in` MUST NOT be specified, it is implicitly in `header`\n3. All traits that are affected by the location MUST be applicable to a location of `header` (for example, `style`)\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#header-object OpenAPI 3.2.0 Header Object }  |\n\n-----\nFields\n-----"
@@ -2182,10 +1880,7 @@
           "type": "string",
           "description": "A brief description of the request body. This could contain examples of use. CommonMark syntax MAY be used for rich text representation.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#request-body-object OpenAPI 3.2.0 Request Body Object - description }  |",
           "markdownDescription": "A brief description of the request body. This could contain examples of use.\nCommonMark syntax MAY be used for rich text representation.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#request-body-object OpenAPI 3.2.0 Request Body Object - description }  |",
-          "examples": [
-            "User data",
-            "Pet information to add to the store"
-          ]
+          "examples": ["User data", "Pet information to add to the store"]
         },
         "content": {
           "type": "object",
@@ -2208,23 +1903,14 @@
           "type": "boolean",
           "description": "Determines if the request body is required in the request. Defaults to false.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#request-body-object OpenAPI 3.2.0 Request Body Object - required }  |",
           "markdownDescription": "Determines if the request body is required in the request. Defaults to false.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#request-body-object OpenAPI 3.2.0 Request Body Object - required }  |",
-          "examples": [
-            true,
-            false
-          ]
+          "examples": [true, false]
         }
       },
-      "required": [
-        "content"
-      ],
+      "required": ["content"],
       "additionalProperties": {
         "description": "Specification Extensions allow adding custom properties to OpenAPI objects. All extension properties must start with `x-` and can contain any valid JSON value.",
         "markdownDescription": "Specification Extensions allow adding custom properties to OpenAPI objects.\nAll extension properties must start with `x-` and can contain any valid JSON value.",
-        "examples": [
-          "x-custom-property",
-          "x-internal-id",
-          "x-codegen-settings"
-        ]
+        "examples": ["x-custom-property", "x-internal-id", "x-codegen-settings"]
       },
       "description": "----- Request Body Object\n-----\n\nDescribes a single request body.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#request-body-object OpenAPI 3.2.0 Request Body Object }  |\n\n----- Fields\n-----",
       "markdownDescription": "-----\nRequest Body Object\n-----\n\nDescribes a single request body.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#request-body-object OpenAPI 3.2.0 Request Body Object }  |\n\n-----\nFields\n-----"
@@ -2594,10 +2280,7 @@
           "type": "string",
           "description": "A short description of the response. CommonMark syntax MAY be used for rich text representation.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#response-object OpenAPI 3.2.0 Response Object - description }  |",
           "markdownDescription": "A short description of the response. CommonMark syntax MAY be used for rich text representation.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#response-object OpenAPI 3.2.0 Response Object - description }  |",
-          "examples": [
-            "A list of pets",
-            "User created successfully"
-          ]
+          "examples": ["A list of pets", "User created successfully"]
         },
         "headers": {
           "type": "object",
@@ -2670,17 +2353,11 @@
           ]
         }
       },
-      "required": [
-        "description"
-      ],
+      "required": ["description"],
       "additionalProperties": {
         "description": "Specification Extensions allow adding custom properties to OpenAPI objects. All extension properties must start with `x-` and can contain any valid JSON value.",
         "markdownDescription": "Specification Extensions allow adding custom properties to OpenAPI objects.\nAll extension properties must start with `x-` and can contain any valid JSON value.",
-        "examples": [
-          "x-custom-property",
-          "x-internal-id",
-          "x-codegen-settings"
-        ]
+        "examples": ["x-custom-property", "x-internal-id", "x-codegen-settings"]
       },
       "description": "----- Response Object\n-----\n\nDescribes a single response from an API Operation.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#response-object OpenAPI 3.2.0 Response Object }  |\n\n----- Fields\n-----",
       "markdownDescription": "-----\nResponse Object\n-----\n\nDescribes a single response from an API Operation.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#response-object OpenAPI 3.2.0 Response Object }  |\n\n-----\nFields\n-----"
@@ -2701,10 +2378,7 @@
           "type": "string",
           "description": "The name of an existing, resolvable OAS operation. This field is mutually exclusive of the operationRef field.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#link-object OpenAPI 3.2.0 Link Object - operationId }  |",
           "markdownDescription": "The name of an existing, resolvable OAS operation. This field is mutually exclusive of the operationRef field.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#link-object OpenAPI 3.2.0 Link Object - operationId }  |",
-          "examples": [
-            "getUserRepositories",
-            "getUserById"
-          ]
+          "examples": ["getUserRepositories", "getUserById"]
         },
         "parameters": {
           "type": "object",
@@ -2742,10 +2416,7 @@
           "type": "string",
           "description": "A description of the link. CommonMark syntax MAY be used for rich text representation.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#link-object OpenAPI 3.2.0 Link Object - description }  |",
           "markdownDescription": "A description of the link. CommonMark syntax MAY be used for rich text representation.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#link-object OpenAPI 3.2.0 Link Object - description }  |",
-          "examples": [
-            "Link to user repositories",
-            "Link to user profile"
-          ]
+          "examples": ["Link to user repositories", "Link to user profile"]
         },
         "server": {
           "$ref": "#/definitions/Server",
@@ -2761,11 +2432,7 @@
       "additionalProperties": {
         "description": "Specification Extensions allow adding custom properties to OpenAPI objects. All extension properties must start with `x-` and can contain any valid JSON value.",
         "markdownDescription": "Specification Extensions allow adding custom properties to OpenAPI objects.\nAll extension properties must start with `x-` and can contain any valid JSON value.",
-        "examples": [
-          "x-custom-property",
-          "x-internal-id",
-          "x-codegen-settings"
-        ]
+        "examples": ["x-custom-property", "x-internal-id", "x-codegen-settings"]
       },
       "description": "----- Link Object\n-----\n\nThe Link object represents a possible design-time link for a response. The presence of a link does not guarantee the caller's ability to successfully invoke it, rather it provides a known relationship and traversal mechanism between responses and other operations.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#link-object OpenAPI 3.2.0 Link Object }  |\n\n----- Fields\n-----",
       "markdownDescription": "-----\nLink Object\n-----\n\nThe Link object represents a possible design-time link for a response. The presence of a link does not guarantee\nthe caller's ability to successfully invoke it, rather it provides a known relationship and traversal mechanism\nbetween responses and other operations.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#link-object OpenAPI 3.2.0 Link Object }  |\n\n-----\nFields\n-----"
@@ -2810,11 +2477,7 @@
           {
             "description": "Specification Extensions allow adding custom properties to OpenAPI objects. All extension properties must start with `x-` and can contain any valid JSON value.",
             "markdownDescription": "Specification Extensions allow adding custom properties to OpenAPI objects.\nAll extension properties must start with `x-` and can contain any valid JSON value.",
-            "examples": [
-              "x-custom-property",
-              "x-internal-id",
-              "x-codegen-settings"
-            ]
+            "examples": ["x-custom-property", "x-internal-id", "x-codegen-settings"]
           }
         ]
       },
@@ -3061,11 +2724,7 @@
       "additionalProperties": {
         "description": "Specification Extensions allow adding custom properties to OpenAPI objects. All extension properties must start with `x-` and can contain any valid JSON value.",
         "markdownDescription": "Specification Extensions allow adding custom properties to OpenAPI objects.\nAll extension properties must start with `x-` and can contain any valid JSON value.",
-        "examples": [
-          "x-custom-property",
-          "x-internal-id",
-          "x-codegen-settings"
-        ]
+        "examples": ["x-custom-property", "x-internal-id", "x-codegen-settings"]
       },
       "description": "----- Components Object\n-----\n\nHolds a set of reusable objects for different aspects of the OAS. All objects defined within the components object will have no effect on the API unless they are explicitly referenced from properties outside the components object.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#components-object OpenAPI 3.2.0 Components Object }  |\n\n----- Fields\n-----",
       "markdownDescription": "-----\nComponents Object\n-----\n\nHolds a set of reusable objects for different aspects of the OAS. All objects defined\nwithin the components object will have no effect on the API unless they are explicitly\nreferenced from properties outside the components object.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#components-object OpenAPI 3.2.0 Components Object }  |\n\n-----\nFields\n-----"
@@ -3075,72 +2734,41 @@
       "properties": {
         "type": {
           "type": "string",
-          "enum": [
-            "apiKey",
-            "http",
-            "oauth2",
-            "openIdConnect"
-          ],
+          "enum": ["apiKey", "http", "oauth2", "openIdConnect"],
           "description": "The type of the security scheme. Valid values are \"apiKey\", \"http\", \"oauth2\", \"openIdConnect\".\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#security-scheme-object OpenAPI 3.2.0 Security Scheme Object - type }  |",
           "markdownDescription": "The type of the security scheme. Valid values are \"apiKey\", \"http\", \"oauth2\", \"openIdConnect\".\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#security-scheme-object OpenAPI 3.2.0 Security Scheme Object - type }  |",
-          "examples": [
-            "apiKey",
-            "http",
-            "oauth2",
-            "openIdConnect"
-          ]
+          "examples": ["apiKey", "http", "oauth2", "openIdConnect"]
         },
         "description": {
           "type": "string",
           "description": "A short description for security scheme. CommonMark syntax MAY be used for rich text representation.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#security-scheme-object OpenAPI 3.2.0 Security Scheme Object - description }  |",
           "markdownDescription": "A short description for security scheme. CommonMark syntax MAY be used for rich text representation.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#security-scheme-object OpenAPI 3.2.0 Security Scheme Object - description }  |",
-          "examples": [
-            "API key authentication",
-            "OAuth2 authentication"
-          ]
+          "examples": ["API key authentication", "OAuth2 authentication"]
         },
         "name": {
           "type": "string",
           "description": "The name of the header, query or cookie parameter to be used.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#security-scheme-object OpenAPI 3.2.0 Security Scheme Object - name }  |",
           "markdownDescription": "The name of the header, query or cookie parameter to be used.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#security-scheme-object OpenAPI 3.2.0 Security Scheme Object - name }  |",
-          "examples": [
-            "X-API-Key",
-            "Authorization"
-          ]
+          "examples": ["X-API-Key", "Authorization"]
         },
         "in": {
           "type": "string",
-          "enum": [
-            "query",
-            "header",
-            "cookie"
-          ],
+          "enum": ["query", "header", "cookie"],
           "description": "The location of the API key. Valid values are \"query\", \"header\" or \"cookie\".\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#security-scheme-object OpenAPI 3.2.0 Security Scheme Object - in }  |",
           "markdownDescription": "The location of the API key. Valid values are \"query\", \"header\" or \"cookie\".\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#security-scheme-object OpenAPI 3.2.0 Security Scheme Object - in }  |",
-          "examples": [
-            "query",
-            "header",
-            "cookie"
-          ]
+          "examples": ["query", "header", "cookie"]
         },
         "scheme": {
           "type": "string",
           "description": "The name of the HTTP Authorization scheme to be used in the Authorization header as defined in RFC7235.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#security-scheme-object OpenAPI 3.2.0 Security Scheme Object - scheme }  |",
           "markdownDescription": "The name of the HTTP Authorization scheme to be used in the Authorization header as defined in RFC7235.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#security-scheme-object OpenAPI 3.2.0 Security Scheme Object - scheme }  |",
-          "examples": [
-            "basic",
-            "bearer",
-            "digest"
-          ]
+          "examples": ["basic", "bearer", "digest"]
         },
         "bearerFormat": {
           "type": "string",
           "description": "A hint to the client to identify how the bearer token is formatted. Bearer tokens are not necessarily generated by an authorization server, so this field is a hint only.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#security-scheme-object OpenAPI 3.2.0 Security Scheme Object - bearerFormat }  |",
           "markdownDescription": "A hint to the client to identify how the bearer token is formatted. Bearer tokens are not necessarily\ngenerated by an authorization server, so this field is a hint only.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#security-scheme-object OpenAPI 3.2.0 Security Scheme Object - bearerFormat }  |",
-          "examples": [
-            "JWT",
-            "OAuth2"
-          ]
+          "examples": ["JWT", "OAuth2"]
         },
         "flows": {
           "$ref": "#/definitions/OAuthFlows",
@@ -3161,22 +2789,14 @@
           "type": "string",
           "description": "OpenId Connect URL to discover OAuth2 configuration values. This MUST be in the form of a URL.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#security-scheme-object OpenAPI 3.2.0 Security Scheme Object - openIdConnectUrl }  |",
           "markdownDescription": "OpenId Connect URL to discover OAuth2 configuration values. This MUST be in the form of a URL.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#security-scheme-object OpenAPI 3.2.0 Security Scheme Object - openIdConnectUrl }  |",
-          "examples": [
-            "https://example.com/.well-known/openid_configuration"
-          ]
+          "examples": ["https://example.com/.well-known/openid_configuration"]
         }
       },
-      "required": [
-        "type"
-      ],
+      "required": ["type"],
       "additionalProperties": {
         "description": "Specification Extensions allow adding custom properties to OpenAPI objects. All extension properties must start with `x-` and can contain any valid JSON value.",
         "markdownDescription": "Specification Extensions allow adding custom properties to OpenAPI objects.\nAll extension properties must start with `x-` and can contain any valid JSON value.",
-        "examples": [
-          "x-custom-property",
-          "x-internal-id",
-          "x-codegen-settings"
-        ]
+        "examples": ["x-custom-property", "x-internal-id", "x-codegen-settings"]
       },
       "description": "----- Security Scheme Object\n-----\n\nDefines a security scheme that can be used by the operations. Supported schemes are HTTP authentication, an API key (either as a header, a cookie parameter or as a query parameter), OAuth2's common flows (implicit, password, client credentials and authorization code) as defined in RFC6749, and OpenID Connect Discovery.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#security-scheme-object OpenAPI 3.2.0 Security Scheme Object }  |\n\n----- Fields\n-----",
       "markdownDescription": "-----\nSecurity Scheme Object\n-----\n\nDefines a security scheme that can be used by the operations. Supported schemes are HTTP authentication,\nan API key (either as a header, a cookie parameter or as a query parameter), OAuth2's common flows\n(implicit, password, client credentials and authorization code) as defined in RFC6749, and OpenID Connect Discovery.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#security-scheme-object OpenAPI 3.2.0 Security Scheme Object }  |\n\n-----\nFields\n-----"
@@ -3213,11 +2833,7 @@
       "additionalProperties": {
         "description": "Specification Extensions allow adding custom properties to OpenAPI objects. All extension properties must start with `x-` and can contain any valid JSON value.",
         "markdownDescription": "Specification Extensions allow adding custom properties to OpenAPI objects.\nAll extension properties must start with `x-` and can contain any valid JSON value.",
-        "examples": [
-          "x-custom-property",
-          "x-internal-id",
-          "x-codegen-settings"
-        ]
+        "examples": ["x-custom-property", "x-internal-id", "x-codegen-settings"]
       },
       "description": "----- OAuth Flows Object\n-----\n\nAllows configuration of the supported OAuth Flows. This object describes the OAuth flows that are available for this API.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#oauth-flows-object OpenAPI 3.2.0 OAuth Flows Object }  |\n\n----- Fields\n-----",
       "markdownDescription": "-----\nOAuth Flows Object\n-----\n\nAllows configuration of the supported OAuth Flows.\nThis object describes the OAuth flows that are available for this API.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#oauth-flows-object OpenAPI 3.2.0 OAuth Flows Object }  |\n\n-----\nFields\n-----"
@@ -3254,17 +2870,11 @@
           "markdownDescription": "The URL to be used for OAuth 2.0 metadata.\nThis MUST be in the form of a URL.\n\nExample: `\"https://example.com/.well-known/oauth-authorization-server\"`"
         }
       },
-      "required": [
-        "scopes"
-      ],
+      "required": ["scopes"],
       "additionalProperties": {
         "description": "Specification Extensions allow adding custom properties to OpenAPI objects. All extension properties must start with `x-` and can contain any valid JSON value.",
         "markdownDescription": "Specification Extensions allow adding custom properties to OpenAPI objects.\nAll extension properties must start with `x-` and can contain any valid JSON value.",
-        "examples": [
-          "x-custom-property",
-          "x-internal-id",
-          "x-codegen-settings"
-        ]
+        "examples": ["x-custom-property", "x-internal-id", "x-codegen-settings"]
       },
       "description": "----- OAuth Flow Object\n-----\n\nConfiguration details for a supported OAuth Flow. This object describes the OAuth flow configuration for a specific OAuth flow type.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#oauth-flow-object OpenAPI 3.2.0 OAuth Flow Object }  |\n\n----- Fields\n-----",
       "markdownDescription": "-----\nOAuth Flow Object\n-----\n\nConfiguration details for a supported OAuth Flow.\nThis object describes the OAuth flow configuration for a specific OAuth flow type.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#oauth-flow-object OpenAPI 3.2.0 OAuth Flow Object }  |\n\n-----\nFields\n-----"
@@ -3276,20 +2886,13 @@
           "type": "string",
           "description": "The name of the tag. This field is required.",
           "markdownDescription": "The name of the tag. This field is required.",
-          "examples": [
-            "users",
-            "pets",
-            "authentication"
-          ]
+          "examples": ["users", "pets", "authentication"]
         },
         "description": {
           "type": "string",
           "description": "A short description for the tag. CommonMark syntax MAY be used for rich text representation.",
           "markdownDescription": "A short description for the tag. CommonMark syntax MAY be used for rich text representation.",
-          "examples": [
-            "User management operations",
-            "Pet store operations"
-          ]
+          "examples": ["User management operations", "Pet store operations"]
         },
         "externalDocs": {
           "$ref": "#/definitions/ExternalDocumentation",
@@ -3303,17 +2906,11 @@
           ]
         }
       },
-      "required": [
-        "name"
-      ],
+      "required": ["name"],
       "additionalProperties": {
         "description": "Specification Extensions allow adding custom properties to OpenAPI objects. All extension properties must start with `x-` and can contain any valid JSON value.",
         "markdownDescription": "Specification Extensions allow adding custom properties to OpenAPI objects.\nAll extension properties must start with `x-` and can contain any valid JSON value.",
-        "examples": [
-          "x-custom-property",
-          "x-internal-id",
-          "x-codegen-settings"
-        ]
+        "examples": ["x-custom-property", "x-internal-id", "x-codegen-settings"]
       },
       "description": "----- Tag Object\n-----\n\nAdds metadata to a single tag that is used by the Tag Object. It is not mandatory to have a Tag Object per tag used there.\n\nTags provide a way to organize and categorize API operations, making it easier for developers to understand and navigate the API. They are commonly used to group operations by resource type, functionality, or any other logical division.\n\n| Version | Reference | |---|-----| | 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#tag-object OpenAPI 3.2.0 Tag Object }  |\n\n----- Fields\n-----",
       "markdownDescription": "-----\nTag Object\n-----\n\nAdds metadata to a single tag that is used by the Tag Object.\nIt is not mandatory to have a Tag Object per tag used there.\n\nTags provide a way to organize and categorize API operations, making it easier\nfor developers to understand and navigate the API. They are commonly used to\ngroup operations by resource type, functionality, or any other logical division.\n\n| Version | Reference |\n|---|-----|\n| 3.2.0   |  {@link  https://spec.openapis.org/oas/v3.2.0#tag-object OpenAPI 3.2.0 Tag Object }  |\n\n-----\nFields\n-----"

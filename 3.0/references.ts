@@ -38,21 +38,21 @@ import type { Extension } from "./extensions";
  * ```
  */
 export interface Reference extends Extension {
-	/**
-	 * The reference string. MUST be a valid JSON Reference.
-	 * *
-	 * | Version | Reference |
-	 * |---|-----|
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#reference-object  | OpenAPI 3.0.4 Reference Object - $ref} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#reference-object  | OpenAPI 3.0.3 Reference Object - $ref} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#reference-object  | OpenAPI 3.0.2 Reference Object - $ref} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#reference-object  | OpenAPI 3.0.1 Reference Object - $ref} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#reference-object  | OpenAPI 3.0.0 Reference Object - $ref} |
-	 * @property `$ref` - Required The reference string
-	 *
-	 * @example "#/components/schemas/User"
-	 * @example "#/components/responses/NotFound"
-	 * @example "#/components/parameters/LimitParam"
-	 */
-	$ref: string;
+  /**
+   * The reference string. MUST be a valid JSON Reference.
+   * *
+   * | Version | Reference |
+   * |---|-----|
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#reference-object  | OpenAPI 3.0.4 Reference Object - $ref} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#reference-object  | OpenAPI 3.0.3 Reference Object - $ref} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#reference-object  | OpenAPI 3.0.2 Reference Object - $ref} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#reference-object  | OpenAPI 3.0.1 Reference Object - $ref} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#reference-object  | OpenAPI 3.0.0 Reference Object - $ref} |
+   * @property `$ref` - Required The reference string
+   *
+   * @example "#/components/schemas/User"
+   * @example "#/components/responses/NotFound"
+   * @example "#/components/parameters/LimitParam"
+   */
+  $ref: string;
 }

@@ -61,103 +61,103 @@ import type { Extension } from "./extensions";
  * ```
  */
 export interface Info extends Extension {
-	/**
-	 * The title of the API.
-	 * This field is required and should be descriptive of the API.
-	 *
-	 * | Version | Reference |
-	 * |---|-----|
-	 * | 3.2.0   | {@link https://spec.openapis.org/oas/v3.2.0#info-object | OpenAPI 3.2.0 Info Object - title} |
-	 *
-	 * @property `title` - Required The title of the API
-	 *
-	 * @example "Pet Store API"
-	 */
-	title: string;
+  /**
+   * The title of the API.
+   * This field is required and should be descriptive of the API.
+   *
+   * | Version | Reference |
+   * |---|-----|
+   * | 3.2.0   | {@link https://spec.openapis.org/oas/v3.2.0#info-object | OpenAPI 3.2.0 Info Object - title} |
+   *
+   * @property `title` - Required The title of the API
+   *
+   * @example "Pet Store API"
+   */
+  title: string;
 
-	/**
-	 * A short summary of the API.
-	 * This should be a brief description of what the API does.
-	 *
-	 * | Version | Reference |
-	 * |---|-----|
-	 * | 3.2.0   | {@link https://spec.openapis.org/oas/v3.2.0#info-object | OpenAPI 3.2.0 Info Object - summary} |
-	 *
-	 * @property `summary` - Optional A short summary of the API
-	 *
-	 * @example "A sample API that uses a petstore as an example"
-	 */
-	summary?: string;
+  /**
+   * A short summary of the API.
+   * This should be a brief description of what the API does.
+   *
+   * | Version | Reference |
+   * |---|-----|
+   * | 3.2.0   | {@link https://spec.openapis.org/oas/v3.2.0#info-object | OpenAPI 3.2.0 Info Object - summary} |
+   *
+   * @property `summary` - Optional A short summary of the API
+   *
+   * @example "A sample API that uses a petstore as an example"
+   */
+  summary?: string;
 
-	/**
-	 * A description of the API.
-	 * CommonMark syntax MAY be used for rich text representation.
-	 *
-	 * | Version | Reference |
-	 * |---|-----|
-	 * | 3.2.0   | {@link https://spec.openapis.org/oas/v3.2.0#info-object | OpenAPI 3.2.0 Info Object - description} |
-	 *
-	 * @property `description` - Optional A description of the API
-	 *
-	 * @example "This is a sample server Petstore server."
-	 */
-	description?: string;
+  /**
+   * A description of the API.
+   * CommonMark syntax MAY be used for rich text representation.
+   *
+   * | Version | Reference |
+   * |---|-----|
+   * | 3.2.0   | {@link https://spec.openapis.org/oas/v3.2.0#info-object | OpenAPI 3.2.0 Info Object - description} |
+   *
+   * @property `description` - Optional A description of the API
+   *
+   * @example "This is a sample server Petstore server."
+   */
+  description?: string;
 
-	/**
-	 * A URL to the Terms of Service for the API.
-	 * This MUST be in the format of a URL.
-	 *
-	 * | Version | Reference |
-	 * |---|-----|
-	 * | 3.2.0   | {@link https://spec.openapis.org/oas/v3.2.0#info-object | OpenAPI 3.2.0 Info Object - termsOfService} |
-	 *
-	 * @property `termsOfService` - Optional A URL to the Terms of Service for the API
-	 *
-	 * @example "http://example.com/terms/"
-	 */
-	termsOfService?: string;
+  /**
+   * A URL to the Terms of Service for the API.
+   * This MUST be in the format of a URL.
+   *
+   * | Version | Reference |
+   * |---|-----|
+   * | 3.2.0   | {@link https://spec.openapis.org/oas/v3.2.0#info-object | OpenAPI 3.2.0 Info Object - termsOfService} |
+   *
+   * @property `termsOfService` - Optional A URL to the Terms of Service for the API
+   *
+   * @example "http://example.com/terms/"
+   */
+  termsOfService?: string;
 
-	/**
-	 * The contact information for the exposed API.
-	 * This object contains contact details for the API.
-	 *
-	 * | Version | Reference |
-	 * |---|-----|
-	 * | 3.2.0   | {@link https://spec.openapis.org/oas/v3.2.0#info-object | OpenAPI 3.2.0 Info Object - contact} |
-	 *
-	 * @property `contact` - Optional The contact information for the exposed API
-	 *
-	 * @example { name: "API Support", email: "support@example.com" }
-	 */
-	contact?: Contact;
+  /**
+   * The contact information for the exposed API.
+   * This object contains contact details for the API.
+   *
+   * | Version | Reference |
+   * |---|-----|
+   * | 3.2.0   | {@link https://spec.openapis.org/oas/v3.2.0#info-object | OpenAPI 3.2.0 Info Object - contact} |
+   *
+   * @property `contact` - Optional The contact information for the exposed API
+   *
+   * @example { name: "API Support", email: "support@example.com" }
+   */
+  contact?: Contact;
 
-	/**
-	 * The license information for the exposed API.
-	 * This object contains license details for the API.
-	 *
-	 * | Version | Reference |
-	 * |---|-----|
-	 * | 3.2.0   | {@link https://spec.openapis.org/oas/v3.2.0#info-object | OpenAPI 3.2.0 Info Object - license} |
-	 *
-	 * @property `license` - Optional The license information for the exposed API
-	 *
-	 * @example { name: "Apache 2.0", url: "https://www.apache.org/licenses/LICENSE-2.0.html" }
-	 */
-	license?: License;
+  /**
+   * The license information for the exposed API.
+   * This object contains license details for the API.
+   *
+   * | Version | Reference |
+   * |---|-----|
+   * | 3.2.0   | {@link https://spec.openapis.org/oas/v3.2.0#info-object | OpenAPI 3.2.0 Info Object - license} |
+   *
+   * @property `license` - Optional The license information for the exposed API
+   *
+   * @example { name: "Apache 2.0", url: "https://www.apache.org/licenses/LICENSE-2.0.html" }
+   */
+  license?: License;
 
-	/**
-	 * The version of the OpenAPI document.
-	 * This field is required and should follow semantic versioning.
-	 *
-	 * | Version | Reference |
-	 * |---|-----|
-	 * | 3.2.0   | {@link https://spec.openapis.org/oas/v3.2.0#info-object | OpenAPI 3.2.0 Info Object - version} |
-	 *
-	 * @property `version` - Required The version of the OpenAPI document
-	 *
-	 * @example "1.0.0"
-	 */
-	version: string;
+  /**
+   * The version of the OpenAPI document.
+   * This field is required and should follow semantic versioning.
+   *
+   * | Version | Reference |
+   * |---|-----|
+   * | 3.2.0   | {@link https://spec.openapis.org/oas/v3.2.0#info-object | OpenAPI 3.2.0 Info Object - version} |
+   *
+   * @property `version` - Required The version of the OpenAPI document
+   *
+   * @example "1.0.0"
+   */
+  version: string;
 }
 
 /**
@@ -217,49 +217,49 @@ export interface Info extends Extension {
  * ```
  */
 export interface Contact extends Extension {
-	/**
-	 * The identifying name of the contact person/organization.
-	 *
-	 * | Version | Reference |
-	 * |---|-----|
-	 * | 3.2.0   | {@link https://spec.openapis.org/oas/v3.2.0#contact-object | OpenAPI 3.2.0 Contact Object - name} |
-	 *
-	 * @property `name` - Optional The identifying name of the contact person/organization
-	 *
-	 * @example "API Support"
-	 * @example "John Doe"
-	 */
-	name?: string;
+  /**
+   * The identifying name of the contact person/organization.
+   *
+   * | Version | Reference |
+   * |---|-----|
+   * | 3.2.0   | {@link https://spec.openapis.org/oas/v3.2.0#contact-object | OpenAPI 3.2.0 Contact Object - name} |
+   *
+   * @property `name` - Optional The identifying name of the contact person/organization
+   *
+   * @example "API Support"
+   * @example "John Doe"
+   */
+  name?: string;
 
-	/**
-	 * The URL pointing to the contact information.
-	 * MUST be in the format of a URL.
-	 *
-	 * | Version | Reference |
-	 * |---|-----|
-	 * | 3.2.0   | {@link https://spec.openapis.org/oas/v3.2.0#contact-object | OpenAPI 3.2.0 Contact Object - url} |
-	 *
-	 * @property `url` - Optional A URL pointing to the contact information
-	 *
-	 * @example "http://www.acme.com/support"
-	 * @example "https://example.com/contact"
-	 */
-	url?: string;
+  /**
+   * The URL pointing to the contact information.
+   * MUST be in the format of a URL.
+   *
+   * | Version | Reference |
+   * |---|-----|
+   * | 3.2.0   | {@link https://spec.openapis.org/oas/v3.2.0#contact-object | OpenAPI 3.2.0 Contact Object - url} |
+   *
+   * @property `url` - Optional A URL pointing to the contact information
+   *
+   * @example "http://www.acme.com/support"
+   * @example "https://example.com/contact"
+   */
+  url?: string;
 
-	/**
-	 * The email address of the contact person/organization.
-	 * MUST be in the format of an email address.
-	 *
-	 * | Version | Reference |
-	 * |---|-----|
-	 * | 3.2.0   | {@link https://spec.openapis.org/oas/v3.2.0#contact-object | OpenAPI 3.2.0 Contact Object - email} |
-	 *
-	 * @property `email` - Optional The email address of the contact person/organization
-	 *
-	 * @example "support@acme.com"
-	 * @example "contact@example.com"
-	 */
-	email?: string;
+  /**
+   * The email address of the contact person/organization.
+   * MUST be in the format of an email address.
+   *
+   * | Version | Reference |
+   * |---|-----|
+   * | 3.2.0   | {@link https://spec.openapis.org/oas/v3.2.0#contact-object | OpenAPI 3.2.0 Contact Object - email} |
+   *
+   * @property `email` - Optional The email address of the contact person/organization
+   *
+   * @example "support@acme.com"
+   * @example "contact@example.com"
+   */
+  email?: string;
 }
 
 /**
@@ -316,35 +316,35 @@ export interface Contact extends Extension {
  * ```
  */
 export interface License extends Extension {
-	/**
-	 * The license name used for the API.
-	 * This field is required.
-	 *
-	 * | Version | Reference |
-	 * |---|-----|
-	 * | 3.2.0   | {@link https://spec.openapis.org/oas/v3.2.0#license-object | OpenAPI 3.2.0 License Object - name} |
-	 *
-	 * @property `name` - Required The license name used for the API
-	 *
-	 * @example "Apache 2.0"
-	 * @example "MIT"
-	 * @example "Proprietary License"
-	 */
-	name: string;
+  /**
+   * The license name used for the API.
+   * This field is required.
+   *
+   * | Version | Reference |
+   * |---|-----|
+   * | 3.2.0   | {@link https://spec.openapis.org/oas/v3.2.0#license-object | OpenAPI 3.2.0 License Object - name} |
+   *
+   * @property `name` - Required The license name used for the API
+   *
+   * @example "Apache 2.0"
+   * @example "MIT"
+   * @example "Proprietary License"
+   */
+  name: string;
 
-	/**
-	 * A URL to the license used for the API.
-	 * MUST be in the format of a URL.
-	 *
-	 * | Version | Reference |
-	 * |---|-----|
-	 * | 3.2.0   | {@link https://spec.openapis.org/oas/v3.2.0#license-object | OpenAPI 3.2.0 License Object - url} |
-	 *
-	 * @property `url` - Optional A URL to the license used for the API
-	 *
-	 * @example "https://www.apache.org/licenses/LICENSE-2.0.html"
-	 * @example "https://opensource.org/licenses/MIT"
-	 * @example "https://example.com/licenses/proprietary-1.0"
-	 */
-	url?: string;
+  /**
+   * A URL to the license used for the API.
+   * MUST be in the format of a URL.
+   *
+   * | Version | Reference |
+   * |---|-----|
+   * | 3.2.0   | {@link https://spec.openapis.org/oas/v3.2.0#license-object | OpenAPI 3.2.0 License Object - url} |
+   *
+   * @property `url` - Optional A URL to the license used for the API
+   *
+   * @example "https://www.apache.org/licenses/LICENSE-2.0.html"
+   * @example "https://opensource.org/licenses/MIT"
+   * @example "https://example.com/licenses/proprietary-1.0"
+   */
+  url?: string;
 }

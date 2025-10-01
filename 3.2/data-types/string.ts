@@ -72,98 +72,98 @@ import type { XML } from "../xml";
  * ```
  */
 export interface StringSchema extends Extension {
-	/**
-	 * The type identifier for string schemas.
-	 * Must be "string".
-	 */
-	type: "string";
+  /**
+   * The type identifier for string schemas.
+   * Must be "string".
+   */
+  type: "string";
 
-	/**
-	 * The format of the string.
-	 * See OpenAPI 3.2.0 Data Type Formats for further details.
-	 *
-	 * Example: `"email"`, `"date-time"`, `"uuid"`
-	 */
-	format?: string;
+  /**
+   * The format of the string.
+   * See OpenAPI 3.2.0 Data Type Formats for further details.
+   *
+   * Example: `"email"`, `"date-time"`, `"uuid"`
+   */
+  format?: string;
 
-	/**
-	 * The maximum length of the string.
-	 * Must be a non-negative integer.
-	 *
-	 * Example: `255`
-	 */
-	maxLength?: number;
+  /**
+   * The maximum length of the string.
+   * Must be a non-negative integer.
+   *
+   * Example: `255`
+   */
+  maxLength?: number;
 
-	/**
-	 * The minimum length of the string.
-	 * Must be a non-negative integer.
-	 *
-	 * Example: `1`
-	 */
-	minLength?: number;
+  /**
+   * The minimum length of the string.
+   * Must be a non-negative integer.
+   *
+   * Example: `1`
+   */
+  minLength?: number;
 
-	/**
-	 * A regular expression pattern that the string must match.
-	 * Should be a valid ECMA 262 regular expression.
-	 *
-	 * Example: `"^[A-Za-z0-9]+$"`
-	 */
-	pattern?: string;
+  /**
+   * A regular expression pattern that the string must match.
+   * Should be a valid ECMA 262 regular expression.
+   *
+   * Example: `"^[A-Za-z0-9]+$"`
+   */
+  pattern?: string;
 
-	/**
-	 * An array of allowed values for the string.
-	 * The value must be one of the values in this array.
-	 *
-	 * Example: `["active", "inactive", "pending"]`
-	 */
-	enum?: string[];
+  /**
+   * An array of allowed values for the string.
+   * The value must be one of the values in this array.
+   *
+   * Example: `["active", "inactive", "pending"]`
+   */
+  enum?: string[];
 
-	/**
-	 * A single allowed value for the string.
-	 * The value must be exactly this value.
-	 *
-	 * Example: `"active"`
-	 */
-	const?: string;
+  /**
+   * A single allowed value for the string.
+   * The value must be exactly this value.
+   *
+   * Example: `"active"`
+   */
+  const?: string;
 
-	/**
-	 * An array of example values for the string.
-	 * These are for documentation purposes only.
-	 *
-	 * Example: `["example@email.com", "test@domain.com"]`
-	 */
-	examples?: string[];
+  /**
+   * An array of example values for the string.
+   * These are for documentation purposes only.
+   *
+   * Example: `["example@email.com", "test@domain.com"]`
+   */
+  examples?: string[];
 
-	/**
-	 * The default value for the string.
-	 * This value will be used if no value is provided.
-	 *
-	 * Example: `"default"`
-	 */
-	default?: string;
+  /**
+   * The default value for the string.
+   * This value will be used if no value is provided.
+   *
+   * Example: `"default"`
+   */
+  default?: string;
 
-	/**
-	 * A short title for the schema.
-	 * This is for documentation purposes only.
-	 *
-	 * Example: `"User Email"`
-	 */
-	title?: string;
+  /**
+   * A short title for the schema.
+   * This is for documentation purposes only.
+   *
+   * Example: `"User Email"`
+   */
+  title?: string;
 
-	/**
-	 * A description of the schema.
-	 * CommonMark syntax MAY be used for rich text representation.
-	 *
-	 * Example: `"The email address of the user"`
-	 */
-	description?: string;
+  /**
+   * A description of the schema.
+   * CommonMark syntax MAY be used for rich text representation.
+   *
+   * Example: `"The email address of the user"`
+   */
+  description?: string;
 
-	/**
-	 * XML representation metadata for the schema.
-	 * Allows for fine-tuned XML model definitions using the modernized
-	 * nodeType approach in OpenAPI 3.2.0.
-	 *
-	 * Example: `{ nodeType: "element", name: "userName" }`
-	 */
-	xml?: XML;
+  /**
+   * XML representation metadata for the schema.
+   * Allows for fine-tuned XML model definitions using the modernized
+   * nodeType approach in OpenAPI 3.2.0.
+   *
+   * Example: `{ nodeType: "element", name: "userName" }`
+   */
+  xml?: XML;
 }

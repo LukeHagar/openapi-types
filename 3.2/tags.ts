@@ -54,27 +54,27 @@ import type { ExternalDocumentation } from "./externalDocs";
  * ```
  */
 export interface Tag extends Extension {
-	/**
-	 * The name of the tag. This field is required.
-	 *
-	 * @example "users"
-	 * @example "pets"
-	 * @example "authentication"
-	 */
-	name: string;
+  /**
+   * The name of the tag. This field is required.
+   *
+   * @example "users"
+   * @example "pets"
+   * @example "authentication"
+   */
+  name: string;
 
-	/**
-	 * A short description for the tag. CommonMark syntax MAY be used for rich text representation.
-	 *
-	 * @example "User management operations"
-	 * @example "Pet store operations"
-	 */
-	description?: string;
+  /**
+   * A short description for the tag. CommonMark syntax MAY be used for rich text representation.
+   *
+   * @example "User management operations"
+   * @example "Pet store operations"
+   */
+  description?: string;
 
-	/**
-	 * Additional external documentation for this tag.
-	 *
-	 * @example { description: "Find out more about user management", url: "https://example.com/docs/users" }
-	 */
-	externalDocs?: ExternalDocumentation;
+  /**
+   * Additional external documentation for this tag.
+   *
+   * @example { description: "Find out more about user management", url: "https://example.com/docs/users" }
+   */
+  externalDocs?: ExternalDocumentation;
 }

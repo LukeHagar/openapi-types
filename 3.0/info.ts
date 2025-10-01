@@ -70,188 +70,188 @@ import type { Extension } from "./extensions";
  * ```
  */
 export interface Info extends Extension {
-	/**
-	 * The title of the application. This field is required.
-	 *
-	 * | Version | Reference |
-	 * |---|-----|
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#info-object | OpenAPI 3.0.4 Info Object - title} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#info-object | OpenAPI 3.0.3 Info Object - title} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#info-object | OpenAPI 3.0.2 Info Object - title} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#info-object | OpenAPI 3.0.1 Info Object - title} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#info-object | OpenAPI 3.0.0 Info Object - title} |
-	 *
-	 * @property `title` - Required The title of the application
-	 *
-	 * @example "Sample Pet Store App"
-	 * @example "My API"
-	 */
-	title: string;
+  /**
+   * The title of the application. This field is required.
+   *
+   * | Version | Reference |
+   * |---|-----|
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#info-object | OpenAPI 3.0.4 Info Object - title} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#info-object | OpenAPI 3.0.3 Info Object - title} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#info-object | OpenAPI 3.0.2 Info Object - title} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#info-object | OpenAPI 3.0.1 Info Object - title} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#info-object | OpenAPI 3.0.0 Info Object - title} |
+   *
+   * @property `title` - Required The title of the application
+   *
+   * @example "Sample Pet Store App"
+   * @example "My API"
+   */
+  title: string;
 
-	/**
-	 * A short description of the application. CommonMark syntax MAY be used for rich text representation.
-	 *
-	 * | Version | Reference |
-	 * |---|-----|
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#info-object | OpenAPI 3.0.4 Info Object - description} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#info-object | OpenAPI 3.0.3 Info Object - description} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#info-object | OpenAPI 3.0.2 Info Object - description} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#info-object | OpenAPI 3.0.1 Info Object - description} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#info-object | OpenAPI 3.0.0 Info Object - description} |
-	 *
-	 * @property `description` - Optional A short description of the application
-	 *
-	 * @example "This is a sample server for a pet store."
-	 * @example "A comprehensive API for managing user data"
-	 */
-	description?: string;
+  /**
+   * A short description of the application. CommonMark syntax MAY be used for rich text representation.
+   *
+   * | Version | Reference |
+   * |---|-----|
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#info-object | OpenAPI 3.0.4 Info Object - description} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#info-object | OpenAPI 3.0.3 Info Object - description} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#info-object | OpenAPI 3.0.2 Info Object - description} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#info-object | OpenAPI 3.0.1 Info Object - description} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#info-object | OpenAPI 3.0.0 Info Object - description} |
+   *
+   * @property `description` - Optional A short description of the application
+   *
+   * @example "This is a sample server for a pet store."
+   * @example "A comprehensive API for managing user data"
+   */
+  description?: string;
 
-	/**
-	 * A URL to the Terms of Service for the API. MUST be in the format of a URL.
-	 * *
-	 * | Version | Reference |
-	 * |---|-----|
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#info-object  | OpenAPI 3.0.4 Info Object - termsOfService} |
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#info-object  | OpenAPI 3.0.4 Info Object - termsOfService} |
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#info-object  | OpenAPI 3.0.4 Info Object - termsOfService} |
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#info-object  | OpenAPI 3.0.4 Info Object - termsOfService} |
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#info-object  | OpenAPI 3.0.4 Info Object - termsOfService} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#info-object  | OpenAPI 3.0.3 Info Object - termsOfService} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#info-object  | OpenAPI 3.0.3 Info Object - termsOfService} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#info-object  | OpenAPI 3.0.3 Info Object - termsOfService} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#info-object  | OpenAPI 3.0.3 Info Object - termsOfService} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#info-object  | OpenAPI 3.0.3 Info Object - termsOfService} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#info-object  | OpenAPI 3.0.2 Info Object - termsOfService} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#info-object  | OpenAPI 3.0.2 Info Object - termsOfService} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#info-object  | OpenAPI 3.0.2 Info Object - termsOfService} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#info-object  | OpenAPI 3.0.2 Info Object - termsOfService} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#info-object  | OpenAPI 3.0.2 Info Object - termsOfService} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#info-object  | OpenAPI 3.0.1 Info Object - termsOfService} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#info-object  | OpenAPI 3.0.1 Info Object - termsOfService} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#info-object  | OpenAPI 3.0.1 Info Object - termsOfService} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#info-object  | OpenAPI 3.0.1 Info Object - termsOfService} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#info-object  | OpenAPI 3.0.1 Info Object - termsOfService} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#info-object  | OpenAPI 3.0.0 Info Object - termsOfService} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#info-object  | OpenAPI 3.0.0 Info Object - termsOfService} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#info-object  | OpenAPI 3.0.0 Info Object - termsOfService} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#info-object  | OpenAPI 3.0.0 Info Object - termsOfService} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#info-object  | OpenAPI 3.0.0 Info Object - termsOfService} |
-	 * @property `termsOfService` - Optional A URL to the Terms of Service for the API
-	 *
-	 * @example "http://example.com/terms/"
-	 * @example "https://example.com/terms"
-	 */
-	termsOfService?: string;
+  /**
+   * A URL to the Terms of Service for the API. MUST be in the format of a URL.
+   * *
+   * | Version | Reference |
+   * |---|-----|
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#info-object  | OpenAPI 3.0.4 Info Object - termsOfService} |
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#info-object  | OpenAPI 3.0.4 Info Object - termsOfService} |
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#info-object  | OpenAPI 3.0.4 Info Object - termsOfService} |
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#info-object  | OpenAPI 3.0.4 Info Object - termsOfService} |
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#info-object  | OpenAPI 3.0.4 Info Object - termsOfService} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#info-object  | OpenAPI 3.0.3 Info Object - termsOfService} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#info-object  | OpenAPI 3.0.3 Info Object - termsOfService} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#info-object  | OpenAPI 3.0.3 Info Object - termsOfService} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#info-object  | OpenAPI 3.0.3 Info Object - termsOfService} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#info-object  | OpenAPI 3.0.3 Info Object - termsOfService} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#info-object  | OpenAPI 3.0.2 Info Object - termsOfService} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#info-object  | OpenAPI 3.0.2 Info Object - termsOfService} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#info-object  | OpenAPI 3.0.2 Info Object - termsOfService} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#info-object  | OpenAPI 3.0.2 Info Object - termsOfService} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#info-object  | OpenAPI 3.0.2 Info Object - termsOfService} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#info-object  | OpenAPI 3.0.1 Info Object - termsOfService} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#info-object  | OpenAPI 3.0.1 Info Object - termsOfService} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#info-object  | OpenAPI 3.0.1 Info Object - termsOfService} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#info-object  | OpenAPI 3.0.1 Info Object - termsOfService} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#info-object  | OpenAPI 3.0.1 Info Object - termsOfService} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#info-object  | OpenAPI 3.0.0 Info Object - termsOfService} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#info-object  | OpenAPI 3.0.0 Info Object - termsOfService} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#info-object  | OpenAPI 3.0.0 Info Object - termsOfService} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#info-object  | OpenAPI 3.0.0 Info Object - termsOfService} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#info-object  | OpenAPI 3.0.0 Info Object - termsOfService} |
+   * @property `termsOfService` - Optional A URL to the Terms of Service for the API
+   *
+   * @example "http://example.com/terms/"
+   * @example "https://example.com/terms"
+   */
+  termsOfService?: string;
 
-	/**
-	 * The contact information for the exposed API.
-	 * *
-	 * | Version | Reference |
-	 * |---|-----|
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#info-object  | OpenAPI 3.0.4 Info Object - contact} |
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#info-object  | OpenAPI 3.0.4 Info Object - contact} |
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#info-object  | OpenAPI 3.0.4 Info Object - contact} |
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#info-object  | OpenAPI 3.0.4 Info Object - contact} |
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#info-object  | OpenAPI 3.0.4 Info Object - contact} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#info-object  | OpenAPI 3.0.3 Info Object - contact} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#info-object  | OpenAPI 3.0.3 Info Object - contact} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#info-object  | OpenAPI 3.0.3 Info Object - contact} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#info-object  | OpenAPI 3.0.3 Info Object - contact} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#info-object  | OpenAPI 3.0.3 Info Object - contact} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#info-object  | OpenAPI 3.0.2 Info Object - contact} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#info-object  | OpenAPI 3.0.2 Info Object - contact} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#info-object  | OpenAPI 3.0.2 Info Object - contact} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#info-object  | OpenAPI 3.0.2 Info Object - contact} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#info-object  | OpenAPI 3.0.2 Info Object - contact} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#info-object  | OpenAPI 3.0.1 Info Object - contact} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#info-object  | OpenAPI 3.0.1 Info Object - contact} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#info-object  | OpenAPI 3.0.1 Info Object - contact} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#info-object  | OpenAPI 3.0.1 Info Object - contact} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#info-object  | OpenAPI 3.0.1 Info Object - contact} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#info-object  | OpenAPI 3.0.0 Info Object - contact} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#info-object  | OpenAPI 3.0.0 Info Object - contact} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#info-object  | OpenAPI 3.0.0 Info Object - contact} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#info-object  | OpenAPI 3.0.0 Info Object - contact} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#info-object  | OpenAPI 3.0.0 Info Object - contact} |
-	 * @property `contact` - Optional The contact information for the exposed API
-	 *
-	 * @example { name: "API Support", email: "support@example.com" }
-	 */
-	contact?: Contact;
+  /**
+   * The contact information for the exposed API.
+   * *
+   * | Version | Reference |
+   * |---|-----|
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#info-object  | OpenAPI 3.0.4 Info Object - contact} |
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#info-object  | OpenAPI 3.0.4 Info Object - contact} |
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#info-object  | OpenAPI 3.0.4 Info Object - contact} |
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#info-object  | OpenAPI 3.0.4 Info Object - contact} |
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#info-object  | OpenAPI 3.0.4 Info Object - contact} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#info-object  | OpenAPI 3.0.3 Info Object - contact} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#info-object  | OpenAPI 3.0.3 Info Object - contact} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#info-object  | OpenAPI 3.0.3 Info Object - contact} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#info-object  | OpenAPI 3.0.3 Info Object - contact} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#info-object  | OpenAPI 3.0.3 Info Object - contact} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#info-object  | OpenAPI 3.0.2 Info Object - contact} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#info-object  | OpenAPI 3.0.2 Info Object - contact} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#info-object  | OpenAPI 3.0.2 Info Object - contact} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#info-object  | OpenAPI 3.0.2 Info Object - contact} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#info-object  | OpenAPI 3.0.2 Info Object - contact} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#info-object  | OpenAPI 3.0.1 Info Object - contact} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#info-object  | OpenAPI 3.0.1 Info Object - contact} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#info-object  | OpenAPI 3.0.1 Info Object - contact} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#info-object  | OpenAPI 3.0.1 Info Object - contact} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#info-object  | OpenAPI 3.0.1 Info Object - contact} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#info-object  | OpenAPI 3.0.0 Info Object - contact} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#info-object  | OpenAPI 3.0.0 Info Object - contact} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#info-object  | OpenAPI 3.0.0 Info Object - contact} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#info-object  | OpenAPI 3.0.0 Info Object - contact} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#info-object  | OpenAPI 3.0.0 Info Object - contact} |
+   * @property `contact` - Optional The contact information for the exposed API
+   *
+   * @example { name: "API Support", email: "support@example.com" }
+   */
+  contact?: Contact;
 
-	/**
-	 * The license information for the exposed API.
-	 * *
-	 * | Version | Reference |
-	 * |---|-----|
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#info-object  | OpenAPI 3.0.4 Info Object - license} |
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#info-object  | OpenAPI 3.0.4 Info Object - license} |
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#info-object  | OpenAPI 3.0.4 Info Object - license} |
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#info-object  | OpenAPI 3.0.4 Info Object - license} |
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#info-object  | OpenAPI 3.0.4 Info Object - license} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#info-object  | OpenAPI 3.0.3 Info Object - license} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#info-object  | OpenAPI 3.0.3 Info Object - license} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#info-object  | OpenAPI 3.0.3 Info Object - license} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#info-object  | OpenAPI 3.0.3 Info Object - license} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#info-object  | OpenAPI 3.0.3 Info Object - license} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#info-object  | OpenAPI 3.0.2 Info Object - license} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#info-object  | OpenAPI 3.0.2 Info Object - license} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#info-object  | OpenAPI 3.0.2 Info Object - license} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#info-object  | OpenAPI 3.0.2 Info Object - license} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#info-object  | OpenAPI 3.0.2 Info Object - license} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#info-object  | OpenAPI 3.0.1 Info Object - license} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#info-object  | OpenAPI 3.0.1 Info Object - license} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#info-object  | OpenAPI 3.0.1 Info Object - license} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#info-object  | OpenAPI 3.0.1 Info Object - license} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#info-object  | OpenAPI 3.0.1 Info Object - license} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#info-object  | OpenAPI 3.0.0 Info Object - license} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#info-object  | OpenAPI 3.0.0 Info Object - license} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#info-object  | OpenAPI 3.0.0 Info Object - license} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#info-object  | OpenAPI 3.0.0 Info Object - license} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#info-object  | OpenAPI 3.0.0 Info Object - license} |
-	 * @property `license` - Optional The license information for the exposed API
-	 *
-	 * @example { name: "Apache 2.0", url: "http://www.apache.org/licenses/LICENSE-2.0.html" }
-	 */
-	license?: License;
+  /**
+   * The license information for the exposed API.
+   * *
+   * | Version | Reference |
+   * |---|-----|
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#info-object  | OpenAPI 3.0.4 Info Object - license} |
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#info-object  | OpenAPI 3.0.4 Info Object - license} |
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#info-object  | OpenAPI 3.0.4 Info Object - license} |
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#info-object  | OpenAPI 3.0.4 Info Object - license} |
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#info-object  | OpenAPI 3.0.4 Info Object - license} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#info-object  | OpenAPI 3.0.3 Info Object - license} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#info-object  | OpenAPI 3.0.3 Info Object - license} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#info-object  | OpenAPI 3.0.3 Info Object - license} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#info-object  | OpenAPI 3.0.3 Info Object - license} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#info-object  | OpenAPI 3.0.3 Info Object - license} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#info-object  | OpenAPI 3.0.2 Info Object - license} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#info-object  | OpenAPI 3.0.2 Info Object - license} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#info-object  | OpenAPI 3.0.2 Info Object - license} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#info-object  | OpenAPI 3.0.2 Info Object - license} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#info-object  | OpenAPI 3.0.2 Info Object - license} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#info-object  | OpenAPI 3.0.1 Info Object - license} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#info-object  | OpenAPI 3.0.1 Info Object - license} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#info-object  | OpenAPI 3.0.1 Info Object - license} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#info-object  | OpenAPI 3.0.1 Info Object - license} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#info-object  | OpenAPI 3.0.1 Info Object - license} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#info-object  | OpenAPI 3.0.0 Info Object - license} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#info-object  | OpenAPI 3.0.0 Info Object - license} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#info-object  | OpenAPI 3.0.0 Info Object - license} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#info-object  | OpenAPI 3.0.0 Info Object - license} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#info-object  | OpenAPI 3.0.0 Info Object - license} |
+   * @property `license` - Optional The license information for the exposed API
+   *
+   * @example { name: "Apache 2.0", url: "http://www.apache.org/licenses/LICENSE-2.0.html" }
+   */
+  license?: License;
 
-	/**
-	 * The version of the OpenAPI document (which is distinct from the OpenAPI Specification version
-	 * or the API implementation version). This field is required.
-	 * *
-	 * | Version | Reference |
-	 * |---|-----|
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#info-object  | OpenAPI 3.0.4 Info Object - version} |
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#info-object  | OpenAPI 3.0.4 Info Object - version} |
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#info-object  | OpenAPI 3.0.4 Info Object - version} |
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#info-object  | OpenAPI 3.0.4 Info Object - version} |
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#info-object  | OpenAPI 3.0.4 Info Object - version} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#info-object  | OpenAPI 3.0.3 Info Object - version} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#info-object  | OpenAPI 3.0.3 Info Object - version} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#info-object  | OpenAPI 3.0.3 Info Object - version} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#info-object  | OpenAPI 3.0.3 Info Object - version} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#info-object  | OpenAPI 3.0.3 Info Object - version} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#info-object  | OpenAPI 3.0.2 Info Object - version} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#info-object  | OpenAPI 3.0.2 Info Object - version} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#info-object  | OpenAPI 3.0.2 Info Object - version} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#info-object  | OpenAPI 3.0.2 Info Object - version} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#info-object  | OpenAPI 3.0.2 Info Object - version} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#info-object  | OpenAPI 3.0.1 Info Object - version} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#info-object  | OpenAPI 3.0.1 Info Object - version} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#info-object  | OpenAPI 3.0.1 Info Object - version} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#info-object  | OpenAPI 3.0.1 Info Object - version} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#info-object  | OpenAPI 3.0.1 Info Object - version} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#info-object  | OpenAPI 3.0.0 Info Object - version} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#info-object  | OpenAPI 3.0.0 Info Object - version} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#info-object  | OpenAPI 3.0.0 Info Object - version} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#info-object  | OpenAPI 3.0.0 Info Object - version} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#info-object  | OpenAPI 3.0.0 Info Object - version} |
-	 * @property `version` - Required The version of the OpenAPI document
-	 *
-	 * @example "1.0.1"
-	 * @example "2.0.0"
-	 */
-	version: string;
+  /**
+   * The version of the OpenAPI document (which is distinct from the OpenAPI Specification version
+   * or the API implementation version). This field is required.
+   * *
+   * | Version | Reference |
+   * |---|-----|
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#info-object  | OpenAPI 3.0.4 Info Object - version} |
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#info-object  | OpenAPI 3.0.4 Info Object - version} |
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#info-object  | OpenAPI 3.0.4 Info Object - version} |
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#info-object  | OpenAPI 3.0.4 Info Object - version} |
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#info-object  | OpenAPI 3.0.4 Info Object - version} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#info-object  | OpenAPI 3.0.3 Info Object - version} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#info-object  | OpenAPI 3.0.3 Info Object - version} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#info-object  | OpenAPI 3.0.3 Info Object - version} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#info-object  | OpenAPI 3.0.3 Info Object - version} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#info-object  | OpenAPI 3.0.3 Info Object - version} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#info-object  | OpenAPI 3.0.2 Info Object - version} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#info-object  | OpenAPI 3.0.2 Info Object - version} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#info-object  | OpenAPI 3.0.2 Info Object - version} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#info-object  | OpenAPI 3.0.2 Info Object - version} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#info-object  | OpenAPI 3.0.2 Info Object - version} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#info-object  | OpenAPI 3.0.1 Info Object - version} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#info-object  | OpenAPI 3.0.1 Info Object - version} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#info-object  | OpenAPI 3.0.1 Info Object - version} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#info-object  | OpenAPI 3.0.1 Info Object - version} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#info-object  | OpenAPI 3.0.1 Info Object - version} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#info-object  | OpenAPI 3.0.0 Info Object - version} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#info-object  | OpenAPI 3.0.0 Info Object - version} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#info-object  | OpenAPI 3.0.0 Info Object - version} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#info-object  | OpenAPI 3.0.0 Info Object - version} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#info-object  | OpenAPI 3.0.0 Info Object - version} |
+   * @property `version` - Required The version of the OpenAPI document
+   *
+   * @example "1.0.1"
+   * @example "2.0.0"
+   */
+  version: string;
 }
 
 /**
@@ -317,116 +317,116 @@ export interface Info extends Extension {
  * ```
  */
 export interface Contact extends Extension {
-	/**
-	 * The identifying name of the contact person/organization.
-	 * *
-	 * | Version | Reference |
-	 * |---|-----|
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#contact-object  | OpenAPI 3.0.4 Contact Object - name} |
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#contact-object  | OpenAPI 3.0.4 Contact Object - name} |
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#contact-object  | OpenAPI 3.0.4 Contact Object - name} |
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#contact-object  | OpenAPI 3.0.4 Contact Object - name} |
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#contact-object  | OpenAPI 3.0.4 Contact Object - name} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#contact-object  | OpenAPI 3.0.3 Contact Object - name} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#contact-object  | OpenAPI 3.0.3 Contact Object - name} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#contact-object  | OpenAPI 3.0.3 Contact Object - name} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#contact-object  | OpenAPI 3.0.3 Contact Object - name} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#contact-object  | OpenAPI 3.0.3 Contact Object - name} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#contact-object  | OpenAPI 3.0.2 Contact Object - name} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#contact-object  | OpenAPI 3.0.2 Contact Object - name} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#contact-object  | OpenAPI 3.0.2 Contact Object - name} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#contact-object  | OpenAPI 3.0.2 Contact Object - name} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#contact-object  | OpenAPI 3.0.2 Contact Object - name} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#contact-object  | OpenAPI 3.0.1 Contact Object - name} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#contact-object  | OpenAPI 3.0.1 Contact Object - name} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#contact-object  | OpenAPI 3.0.1 Contact Object - name} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#contact-object  | OpenAPI 3.0.1 Contact Object - name} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#contact-object  | OpenAPI 3.0.1 Contact Object - name} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#contact-object  | OpenAPI 3.0.0 Contact Object - name} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#contact-object  | OpenAPI 3.0.0 Contact Object - name} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#contact-object  | OpenAPI 3.0.0 Contact Object - name} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#contact-object  | OpenAPI 3.0.0 Contact Object - name} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#contact-object  | OpenAPI 3.0.0 Contact Object - name} |
-	 * @property `name` - Optional The identifying name of the contact person/organization
-	 *
-	 * @example "API Support"
-	 * @example "John Doe"
-	 */
-	name?: string;
+  /**
+   * The identifying name of the contact person/organization.
+   * *
+   * | Version | Reference |
+   * |---|-----|
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#contact-object  | OpenAPI 3.0.4 Contact Object - name} |
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#contact-object  | OpenAPI 3.0.4 Contact Object - name} |
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#contact-object  | OpenAPI 3.0.4 Contact Object - name} |
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#contact-object  | OpenAPI 3.0.4 Contact Object - name} |
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#contact-object  | OpenAPI 3.0.4 Contact Object - name} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#contact-object  | OpenAPI 3.0.3 Contact Object - name} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#contact-object  | OpenAPI 3.0.3 Contact Object - name} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#contact-object  | OpenAPI 3.0.3 Contact Object - name} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#contact-object  | OpenAPI 3.0.3 Contact Object - name} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#contact-object  | OpenAPI 3.0.3 Contact Object - name} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#contact-object  | OpenAPI 3.0.2 Contact Object - name} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#contact-object  | OpenAPI 3.0.2 Contact Object - name} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#contact-object  | OpenAPI 3.0.2 Contact Object - name} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#contact-object  | OpenAPI 3.0.2 Contact Object - name} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#contact-object  | OpenAPI 3.0.2 Contact Object - name} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#contact-object  | OpenAPI 3.0.1 Contact Object - name} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#contact-object  | OpenAPI 3.0.1 Contact Object - name} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#contact-object  | OpenAPI 3.0.1 Contact Object - name} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#contact-object  | OpenAPI 3.0.1 Contact Object - name} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#contact-object  | OpenAPI 3.0.1 Contact Object - name} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#contact-object  | OpenAPI 3.0.0 Contact Object - name} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#contact-object  | OpenAPI 3.0.0 Contact Object - name} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#contact-object  | OpenAPI 3.0.0 Contact Object - name} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#contact-object  | OpenAPI 3.0.0 Contact Object - name} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#contact-object  | OpenAPI 3.0.0 Contact Object - name} |
+   * @property `name` - Optional The identifying name of the contact person/organization
+   *
+   * @example "API Support"
+   * @example "John Doe"
+   */
+  name?: string;
 
-	/**
-	 * The URL pointing to the contact information. MUST be in the format of a URL.
-	 * *
-	 * | Version | Reference |
-	 * |---|-----|
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#contact-object  | OpenAPI 3.0.4 Contact Object - url} |
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#contact-object  | OpenAPI 3.0.4 Contact Object - url} |
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#contact-object  | OpenAPI 3.0.4 Contact Object - url} |
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#contact-object  | OpenAPI 3.0.4 Contact Object - url} |
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#contact-object  | OpenAPI 3.0.4 Contact Object - url} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#contact-object  | OpenAPI 3.0.3 Contact Object - url} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#contact-object  | OpenAPI 3.0.3 Contact Object - url} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#contact-object  | OpenAPI 3.0.3 Contact Object - url} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#contact-object  | OpenAPI 3.0.3 Contact Object - url} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#contact-object  | OpenAPI 3.0.3 Contact Object - url} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#contact-object  | OpenAPI 3.0.2 Contact Object - url} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#contact-object  | OpenAPI 3.0.2 Contact Object - url} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#contact-object  | OpenAPI 3.0.2 Contact Object - url} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#contact-object  | OpenAPI 3.0.2 Contact Object - url} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#contact-object  | OpenAPI 3.0.2 Contact Object - url} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#contact-object  | OpenAPI 3.0.1 Contact Object - url} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#contact-object  | OpenAPI 3.0.1 Contact Object - url} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#contact-object  | OpenAPI 3.0.1 Contact Object - url} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#contact-object  | OpenAPI 3.0.1 Contact Object - url} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#contact-object  | OpenAPI 3.0.1 Contact Object - url} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#contact-object  | OpenAPI 3.0.0 Contact Object - url} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#contact-object  | OpenAPI 3.0.0 Contact Object - url} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#contact-object  | OpenAPI 3.0.0 Contact Object - url} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#contact-object  | OpenAPI 3.0.0 Contact Object - url} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#contact-object  | OpenAPI 3.0.0 Contact Object - url} |
-	 * @property `url` - Optional A URL pointing to the contact information
-	 *
-	 * @example "http://www.example.com/support"
-	 * @example "https://example.com/contact"
-	 */
-	url?: string;
+  /**
+   * The URL pointing to the contact information. MUST be in the format of a URL.
+   * *
+   * | Version | Reference |
+   * |---|-----|
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#contact-object  | OpenAPI 3.0.4 Contact Object - url} |
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#contact-object  | OpenAPI 3.0.4 Contact Object - url} |
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#contact-object  | OpenAPI 3.0.4 Contact Object - url} |
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#contact-object  | OpenAPI 3.0.4 Contact Object - url} |
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#contact-object  | OpenAPI 3.0.4 Contact Object - url} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#contact-object  | OpenAPI 3.0.3 Contact Object - url} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#contact-object  | OpenAPI 3.0.3 Contact Object - url} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#contact-object  | OpenAPI 3.0.3 Contact Object - url} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#contact-object  | OpenAPI 3.0.3 Contact Object - url} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#contact-object  | OpenAPI 3.0.3 Contact Object - url} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#contact-object  | OpenAPI 3.0.2 Contact Object - url} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#contact-object  | OpenAPI 3.0.2 Contact Object - url} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#contact-object  | OpenAPI 3.0.2 Contact Object - url} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#contact-object  | OpenAPI 3.0.2 Contact Object - url} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#contact-object  | OpenAPI 3.0.2 Contact Object - url} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#contact-object  | OpenAPI 3.0.1 Contact Object - url} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#contact-object  | OpenAPI 3.0.1 Contact Object - url} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#contact-object  | OpenAPI 3.0.1 Contact Object - url} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#contact-object  | OpenAPI 3.0.1 Contact Object - url} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#contact-object  | OpenAPI 3.0.1 Contact Object - url} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#contact-object  | OpenAPI 3.0.0 Contact Object - url} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#contact-object  | OpenAPI 3.0.0 Contact Object - url} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#contact-object  | OpenAPI 3.0.0 Contact Object - url} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#contact-object  | OpenAPI 3.0.0 Contact Object - url} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#contact-object  | OpenAPI 3.0.0 Contact Object - url} |
+   * @property `url` - Optional A URL pointing to the contact information
+   *
+   * @example "http://www.example.com/support"
+   * @example "https://example.com/contact"
+   */
+  url?: string;
 
-	/**
-	 * The email address of the contact person/organization. MUST be in the format of an email address.
-	 * *
-	 * | Version | Reference |
-	 * |---|-----|
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#contact-object  | OpenAPI 3.0.4 Contact Object - email} |
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#contact-object  | OpenAPI 3.0.4 Contact Object - email} |
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#contact-object  | OpenAPI 3.0.4 Contact Object - email} |
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#contact-object  | OpenAPI 3.0.4 Contact Object - email} |
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#contact-object  | OpenAPI 3.0.4 Contact Object - email} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#contact-object  | OpenAPI 3.0.3 Contact Object - email} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#contact-object  | OpenAPI 3.0.3 Contact Object - email} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#contact-object  | OpenAPI 3.0.3 Contact Object - email} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#contact-object  | OpenAPI 3.0.3 Contact Object - email} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#contact-object  | OpenAPI 3.0.3 Contact Object - email} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#contact-object  | OpenAPI 3.0.2 Contact Object - email} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#contact-object  | OpenAPI 3.0.2 Contact Object - email} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#contact-object  | OpenAPI 3.0.2 Contact Object - email} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#contact-object  | OpenAPI 3.0.2 Contact Object - email} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#contact-object  | OpenAPI 3.0.2 Contact Object - email} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#contact-object  | OpenAPI 3.0.1 Contact Object - email} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#contact-object  | OpenAPI 3.0.1 Contact Object - email} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#contact-object  | OpenAPI 3.0.1 Contact Object - email} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#contact-object  | OpenAPI 3.0.1 Contact Object - email} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#contact-object  | OpenAPI 3.0.1 Contact Object - email} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#contact-object  | OpenAPI 3.0.0 Contact Object - email} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#contact-object  | OpenAPI 3.0.0 Contact Object - email} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#contact-object  | OpenAPI 3.0.0 Contact Object - email} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#contact-object  | OpenAPI 3.0.0 Contact Object - email} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#contact-object  | OpenAPI 3.0.0 Contact Object - email} |
-	 * @property `email` - Optional The email address of the contact person/organization
-	 *
-	 * @example "support@example.com"
-	 * @example "contact@example.com"
-	 */
-	email?: string;
+  /**
+   * The email address of the contact person/organization. MUST be in the format of an email address.
+   * *
+   * | Version | Reference |
+   * |---|-----|
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#contact-object  | OpenAPI 3.0.4 Contact Object - email} |
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#contact-object  | OpenAPI 3.0.4 Contact Object - email} |
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#contact-object  | OpenAPI 3.0.4 Contact Object - email} |
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#contact-object  | OpenAPI 3.0.4 Contact Object - email} |
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#contact-object  | OpenAPI 3.0.4 Contact Object - email} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#contact-object  | OpenAPI 3.0.3 Contact Object - email} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#contact-object  | OpenAPI 3.0.3 Contact Object - email} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#contact-object  | OpenAPI 3.0.3 Contact Object - email} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#contact-object  | OpenAPI 3.0.3 Contact Object - email} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#contact-object  | OpenAPI 3.0.3 Contact Object - email} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#contact-object  | OpenAPI 3.0.2 Contact Object - email} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#contact-object  | OpenAPI 3.0.2 Contact Object - email} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#contact-object  | OpenAPI 3.0.2 Contact Object - email} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#contact-object  | OpenAPI 3.0.2 Contact Object - email} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#contact-object  | OpenAPI 3.0.2 Contact Object - email} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#contact-object  | OpenAPI 3.0.1 Contact Object - email} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#contact-object  | OpenAPI 3.0.1 Contact Object - email} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#contact-object  | OpenAPI 3.0.1 Contact Object - email} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#contact-object  | OpenAPI 3.0.1 Contact Object - email} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#contact-object  | OpenAPI 3.0.1 Contact Object - email} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#contact-object  | OpenAPI 3.0.0 Contact Object - email} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#contact-object  | OpenAPI 3.0.0 Contact Object - email} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#contact-object  | OpenAPI 3.0.0 Contact Object - email} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#contact-object  | OpenAPI 3.0.0 Contact Object - email} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#contact-object  | OpenAPI 3.0.0 Contact Object - email} |
+   * @property `email` - Optional The email address of the contact person/organization
+   *
+   * @example "support@example.com"
+   * @example "contact@example.com"
+   */
+  email?: string;
 }
 
 /**
@@ -497,79 +497,79 @@ export interface Contact extends Extension {
  * ```
  */
 export interface License extends Extension {
-	/**
-	 * The license name used for the API. This field is required.
-	 * *
-	 * | Version | Reference |
-	 * |---|-----|
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#license-object  | OpenAPI 3.0.4 License Object - name} |
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#license-object  | OpenAPI 3.0.4 License Object - name} |
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#license-object  | OpenAPI 3.0.4 License Object - name} |
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#license-object  | OpenAPI 3.0.4 License Object - name} |
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#license-object  | OpenAPI 3.0.4 License Object - name} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#license-object  | OpenAPI 3.0.3 License Object - name} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#license-object  | OpenAPI 3.0.3 License Object - name} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#license-object  | OpenAPI 3.0.3 License Object - name} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#license-object  | OpenAPI 3.0.3 License Object - name} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#license-object  | OpenAPI 3.0.3 License Object - name} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#license-object  | OpenAPI 3.0.2 License Object - name} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#license-object  | OpenAPI 3.0.2 License Object - name} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#license-object  | OpenAPI 3.0.2 License Object - name} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#license-object  | OpenAPI 3.0.2 License Object - name} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#license-object  | OpenAPI 3.0.2 License Object - name} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#license-object  | OpenAPI 3.0.1 License Object - name} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#license-object  | OpenAPI 3.0.1 License Object - name} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#license-object  | OpenAPI 3.0.1 License Object - name} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#license-object  | OpenAPI 3.0.1 License Object - name} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#license-object  | OpenAPI 3.0.1 License Object - name} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#license-object  | OpenAPI 3.0.0 License Object - name} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#license-object  | OpenAPI 3.0.0 License Object - name} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#license-object  | OpenAPI 3.0.0 License Object - name} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#license-object  | OpenAPI 3.0.0 License Object - name} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#license-object  | OpenAPI 3.0.0 License Object - name} |
-	 * @property `name` - Required The license name used for the API
-	 *
-	 * @example "MIT License"
-	 * @example "Apache 2.0"
-	 * @example "Proprietary License"
-	 */
-	name: LicenseName;
+  /**
+   * The license name used for the API. This field is required.
+   * *
+   * | Version | Reference |
+   * |---|-----|
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#license-object  | OpenAPI 3.0.4 License Object - name} |
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#license-object  | OpenAPI 3.0.4 License Object - name} |
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#license-object  | OpenAPI 3.0.4 License Object - name} |
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#license-object  | OpenAPI 3.0.4 License Object - name} |
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#license-object  | OpenAPI 3.0.4 License Object - name} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#license-object  | OpenAPI 3.0.3 License Object - name} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#license-object  | OpenAPI 3.0.3 License Object - name} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#license-object  | OpenAPI 3.0.3 License Object - name} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#license-object  | OpenAPI 3.0.3 License Object - name} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#license-object  | OpenAPI 3.0.3 License Object - name} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#license-object  | OpenAPI 3.0.2 License Object - name} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#license-object  | OpenAPI 3.0.2 License Object - name} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#license-object  | OpenAPI 3.0.2 License Object - name} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#license-object  | OpenAPI 3.0.2 License Object - name} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#license-object  | OpenAPI 3.0.2 License Object - name} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#license-object  | OpenAPI 3.0.1 License Object - name} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#license-object  | OpenAPI 3.0.1 License Object - name} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#license-object  | OpenAPI 3.0.1 License Object - name} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#license-object  | OpenAPI 3.0.1 License Object - name} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#license-object  | OpenAPI 3.0.1 License Object - name} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#license-object  | OpenAPI 3.0.0 License Object - name} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#license-object  | OpenAPI 3.0.0 License Object - name} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#license-object  | OpenAPI 3.0.0 License Object - name} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#license-object  | OpenAPI 3.0.0 License Object - name} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#license-object  | OpenAPI 3.0.0 License Object - name} |
+   * @property `name` - Required The license name used for the API
+   *
+   * @example "MIT License"
+   * @example "Apache 2.0"
+   * @example "Proprietary License"
+   */
+  name: LicenseName;
 
-	/**
-	 * A URL to the license used for the API. MUST be in the format of a URL.
-	 * *
-	 * | Version | Reference |
-	 * |---|-----|
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#license-object  | OpenAPI 3.0.4 License Object - url} |
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#license-object  | OpenAPI 3.0.4 License Object - url} |
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#license-object  | OpenAPI 3.0.4 License Object - url} |
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#license-object  | OpenAPI 3.0.4 License Object - url} |
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#license-object  | OpenAPI 3.0.4 License Object - url} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#license-object  | OpenAPI 3.0.3 License Object - url} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#license-object  | OpenAPI 3.0.3 License Object - url} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#license-object  | OpenAPI 3.0.3 License Object - url} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#license-object  | OpenAPI 3.0.3 License Object - url} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#license-object  | OpenAPI 3.0.3 License Object - url} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#license-object  | OpenAPI 3.0.2 License Object - url} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#license-object  | OpenAPI 3.0.2 License Object - url} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#license-object  | OpenAPI 3.0.2 License Object - url} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#license-object  | OpenAPI 3.0.2 License Object - url} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#license-object  | OpenAPI 3.0.2 License Object - url} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#license-object  | OpenAPI 3.0.1 License Object - url} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#license-object  | OpenAPI 3.0.1 License Object - url} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#license-object  | OpenAPI 3.0.1 License Object - url} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#license-object  | OpenAPI 3.0.1 License Object - url} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#license-object  | OpenAPI 3.0.1 License Object - url} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#license-object  | OpenAPI 3.0.0 License Object - url} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#license-object  | OpenAPI 3.0.0 License Object - url} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#license-object  | OpenAPI 3.0.0 License Object - url} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#license-object  | OpenAPI 3.0.0 License Object - url} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#license-object  | OpenAPI 3.0.0 License Object - url} |
-	 * @property `url` - Optional A URL to the license used for the API
-	 *
-	 * @example "https://opensource.org/license/mit/"
-	 * @example "http://www.apache.org/licenses/LICENSE-2.0.html"
-	 * @example "https://example.com/licenses/proprietary-1.0"
-	 */
-	url?: LicenseURL;
+  /**
+   * A URL to the license used for the API. MUST be in the format of a URL.
+   * *
+   * | Version | Reference |
+   * |---|-----|
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#license-object  | OpenAPI 3.0.4 License Object - url} |
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#license-object  | OpenAPI 3.0.4 License Object - url} |
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#license-object  | OpenAPI 3.0.4 License Object - url} |
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#license-object  | OpenAPI 3.0.4 License Object - url} |
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#license-object  | OpenAPI 3.0.4 License Object - url} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#license-object  | OpenAPI 3.0.3 License Object - url} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#license-object  | OpenAPI 3.0.3 License Object - url} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#license-object  | OpenAPI 3.0.3 License Object - url} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#license-object  | OpenAPI 3.0.3 License Object - url} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#license-object  | OpenAPI 3.0.3 License Object - url} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#license-object  | OpenAPI 3.0.2 License Object - url} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#license-object  | OpenAPI 3.0.2 License Object - url} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#license-object  | OpenAPI 3.0.2 License Object - url} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#license-object  | OpenAPI 3.0.2 License Object - url} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#license-object  | OpenAPI 3.0.2 License Object - url} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#license-object  | OpenAPI 3.0.1 License Object - url} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#license-object  | OpenAPI 3.0.1 License Object - url} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#license-object  | OpenAPI 3.0.1 License Object - url} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#license-object  | OpenAPI 3.0.1 License Object - url} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#license-object  | OpenAPI 3.0.1 License Object - url} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#license-object  | OpenAPI 3.0.0 License Object - url} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#license-object  | OpenAPI 3.0.0 License Object - url} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#license-object  | OpenAPI 3.0.0 License Object - url} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#license-object  | OpenAPI 3.0.0 License Object - url} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#license-object  | OpenAPI 3.0.0 License Object - url} |
+   * @property `url` - Optional A URL to the license used for the API
+   *
+   * @example "https://opensource.org/license/mit/"
+   * @example "http://www.apache.org/licenses/LICENSE-2.0.html"
+   * @example "https://example.com/licenses/proprietary-1.0"
+   */
+  url?: LicenseURL;
 }

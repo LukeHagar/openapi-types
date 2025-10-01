@@ -1,12 +1,12 @@
 import type {
-	ArraySchema,
-	BooleanSchema,
-	CompositionSchema,
-	IntegerSchema,
-	NumberSchema,
-	ObjectSchema,
-	ReferenceSchema,
-	StringSchema,
+  ArraySchema,
+  BooleanSchema,
+  CompositionSchema,
+  IntegerSchema,
+  NumberSchema,
+  ObjectSchema,
+  ReferenceSchema,
+  StringSchema,
 } from "./data-types";
 import type { Extension } from "./extensions";
 
@@ -56,21 +56,21 @@ import type { Extension } from "./extensions";
  * ```
  */
 export interface Discriminator extends Extension {
-	/**
-	 * The name of the property in the payload that will hold the discriminator value.
-	 * This property must be present in the payload.
-	 *
-	 * Example: `"petType"`
-	 */
-	propertyName: string;
+  /**
+   * The name of the property in the payload that will hold the discriminator value.
+   * This property must be present in the payload.
+   *
+   * Example: `"petType"`
+   */
+  propertyName: string;
 
-	/**
-	 * An object to hold mappings between payload values and schema names or references.
-	 * If not provided, the schema name will be used as the discriminator value.
-	 *
-	 * Example: `{ dog: "#/components/schemas/Dog", cat: "#/components/schemas/Cat" }`
-	 */
-	mapping?: Record<string, string>;
+  /**
+   * An object to hold mappings between payload values and schema names or references.
+   * If not provided, the schema name will be used as the discriminator value.
+   *
+   * Example: `{ dog: "#/components/schemas/Dog", cat: "#/components/schemas/Cat" }`
+   */
+  mapping?: Record<string, string>;
 }
 
 /**
@@ -228,11 +228,11 @@ export interface Discriminator extends Extension {
  * ```
  */
 export type Schema =
-	| ReferenceSchema
-	| StringSchema
-	| NumberSchema
-	| IntegerSchema
-	| BooleanSchema
-	| ArraySchema
-	| ObjectSchema
-	| CompositionSchema;
+  | ReferenceSchema
+  | StringSchema
+  | NumberSchema
+  | IntegerSchema
+  | BooleanSchema
+  | ArraySchema
+  | ObjectSchema
+  | CompositionSchema;

@@ -1,13 +1,13 @@
 import type { Extension } from "./extensions";
 import type {
-	Callback,
-	Example,
-	Header,
-	Link,
-	Parameter,
-	PathItem,
-	RequestBody,
-	Response,
+  Callback,
+  Example,
+  Header,
+  Link,
+  Parameter,
+  PathItem,
+  RequestBody,
+  Response,
 } from "./paths";
 import type { Reference } from "./references";
 import type { Schema } from "./schema";
@@ -71,73 +71,73 @@ import type { SecurityScheme } from "./security";
  * ```
  */
 export interface Components extends Extension {
-	/**
-	 * An object to hold reusable Schema Objects.
-	 *
-	 * @example { User: { type: "object", properties: { id: { type: "integer" } } } }
-	 */
-	schemas?: Record<string, Schema | Reference>;
+  /**
+   * An object to hold reusable Schema Objects.
+   *
+   * @example { User: { type: "object", properties: { id: { type: "integer" } } } }
+   */
+  schemas?: Record<string, Schema | Reference>;
 
-	/**
-	 * An object to hold reusable Response Objects.
-	 *
-	 * @example { NotFound: { description: "Resource not found" } }
-	 */
-	responses?: Record<string, Response | Reference>;
+  /**
+   * An object to hold reusable Response Objects.
+   *
+   * @example { NotFound: { description: "Resource not found" } }
+   */
+  responses?: Record<string, Response | Reference>;
 
-	/**
-	 * An object to hold reusable Parameter Objects.
-	 *
-	 * @example { UserId: { name: "userId", in: "path", required: true, schema: { type: "string" } } }
-	 */
-	parameters?: Record<string, Parameter | Reference>;
+  /**
+   * An object to hold reusable Parameter Objects.
+   *
+   * @example { UserId: { name: "userId", in: "path", required: true, schema: { type: "string" } } }
+   */
+  parameters?: Record<string, Parameter | Reference>;
 
-	/**
-	 * An object to hold reusable Example Objects.
-	 *
-	 * @example { UserExample: { value: { id: 1, name: "John Doe" } } }
-	 */
-	examples?: Record<string, Example | Reference>;
+  /**
+   * An object to hold reusable Example Objects.
+   *
+   * @example { UserExample: { value: { id: 1, name: "John Doe" } } }
+   */
+  examples?: Record<string, Example | Reference>;
 
-	/**
-	 * An object to hold reusable Request Body Objects.
-	 *
-	 * @example { UserRequestBody: { description: "User data", content: { "application/json": { schema: { $ref: "#/components/schemas/User" } } } } }
-	 */
-	requestBodies?: Record<string, RequestBody | Reference>;
+  /**
+   * An object to hold reusable Request Body Objects.
+   *
+   * @example { UserRequestBody: { description: "User data", content: { "application/json": { schema: { $ref: "#/components/schemas/User" } } } } }
+   */
+  requestBodies?: Record<string, RequestBody | Reference>;
 
-	/**
-	 * An object to hold reusable Header Objects.
-	 *
-	 * @example { RateLimit: { description: "Rate limit per hour", schema: { type: "integer" } } }
-	 */
-	headers?: Record<string, Header | Reference>;
+  /**
+   * An object to hold reusable Header Objects.
+   *
+   * @example { RateLimit: { description: "Rate limit per hour", schema: { type: "integer" } } }
+   */
+  headers?: Record<string, Header | Reference>;
 
-	/**
-	 * An object to hold reusable Security Scheme Objects.
-	 *
-	 * @example { ApiKeyAuth: { type: "apiKey", in: "header", name: "X-API-KEY" } }
-	 */
-	securitySchemes?: Record<string, SecurityScheme | Reference>;
+  /**
+   * An object to hold reusable Security Scheme Objects.
+   *
+   * @example { ApiKeyAuth: { type: "apiKey", in: "header", name: "X-API-KEY" } }
+   */
+  securitySchemes?: Record<string, SecurityScheme | Reference>;
 
-	/**
-	 * An object to hold reusable Link Objects.
-	 *
-	 * @example { UserOrders: { operationId: "getOrdersByUserId", parameters: { userId: "$response.body#/id" } } }
-	 */
-	links?: Record<string, Link | Reference>;
+  /**
+   * An object to hold reusable Link Objects.
+   *
+   * @example { UserOrders: { operationId: "getOrdersByUserId", parameters: { userId: "$response.body#/id" } } }
+   */
+  links?: Record<string, Link | Reference>;
 
-	/**
-	 * An object to hold reusable Callback Objects.
-	 *
-	 * @example { UserCreatedCallback: { "{$request.body#/callbackUrl}": { post: { requestBody: { description: "User created event" } } } } }
-	 */
-	callbacks?: Record<string, Callback | Reference>;
+  /**
+   * An object to hold reusable Callback Objects.
+   *
+   * @example { UserCreatedCallback: { "{$request.body#/callbackUrl}": { post: { requestBody: { description: "User created event" } } } } }
+   */
+  callbacks?: Record<string, Callback | Reference>;
 
-	/**
-	 * An object to hold reusable Path Item Objects.
-	 *
-	 * @example { UserPath: { get: { summary: "Get user by ID" } } }
-	 */
-	pathItems?: Record<string, PathItem | Reference>;
+  /**
+   * An object to hold reusable Path Item Objects.
+   *
+   * @example { UserPath: { get: { summary: "Get user by ID" } } }
+   */
+  pathItems?: Record<string, PathItem | Reference>;
 }

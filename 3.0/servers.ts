@@ -75,61 +75,61 @@ import type { Extension } from "./extensions";
  * ```
  */
 export interface Server extends Extension {
-	/**
-	 * A URL to the target host. This URL supports Server Variables and MAY be relative,
-	 * to indicate that the host location is relative to the location where the OpenAPI
-	 * document is being served. Variable substitutions will be made when a variable
-	 * is named in {brackets}.
-	 * *
-	 * | Version | Reference |
-	 * |---|-----|
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#server-object  | OpenAPI 3.0.4 Server Object - url} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#server-object  | OpenAPI 3.0.3 Server Object - url} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#server-object  | OpenAPI 3.0.2 Server Object - url} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#server-object  | OpenAPI 3.0.1 Server Object - url} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#server-object  | OpenAPI 3.0.0 Server Object - url} |
-	 * @property `url` - Required A URL to the target host
-	 *
-	 * @example "https://api.example.com/v1"
-	 * @example "https://{username}.example.com:{port}/{basePath}"
-	 * @example "/v1"
-	 */
-	url: string;
+  /**
+   * A URL to the target host. This URL supports Server Variables and MAY be relative,
+   * to indicate that the host location is relative to the location where the OpenAPI
+   * document is being served. Variable substitutions will be made when a variable
+   * is named in {brackets}.
+   * *
+   * | Version | Reference |
+   * |---|-----|
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#server-object  | OpenAPI 3.0.4 Server Object - url} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#server-object  | OpenAPI 3.0.3 Server Object - url} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#server-object  | OpenAPI 3.0.2 Server Object - url} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#server-object  | OpenAPI 3.0.1 Server Object - url} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#server-object  | OpenAPI 3.0.0 Server Object - url} |
+   * @property `url` - Required A URL to the target host
+   *
+   * @example "https://api.example.com/v1"
+   * @example "https://{username}.example.com:{port}/{basePath}"
+   * @example "/v1"
+   */
+  url: string;
 
-	/**
-	 * An optional string describing the host designated by the URL.
-	 * CommonMark syntax MAY be used for rich text representation.
-	 * *
-	 * | Version | Reference |
-	 * |---|-----|
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#server-object  | OpenAPI 3.0.4 Server Object - description} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#server-object  | OpenAPI 3.0.3 Server Object - description} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#server-object  | OpenAPI 3.0.2 Server Object - description} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#server-object  | OpenAPI 3.0.1 Server Object - description} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#server-object  | OpenAPI 3.0.0 Server Object - description} |
-	 * @property `description` - Optional An optional string describing the host designated by the URL
-	 *
-	 * @example "Development server"
-	 * @example "Production server"
-	 */
-	description?: string;
+  /**
+   * An optional string describing the host designated by the URL.
+   * CommonMark syntax MAY be used for rich text representation.
+   * *
+   * | Version | Reference |
+   * |---|-----|
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#server-object  | OpenAPI 3.0.4 Server Object - description} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#server-object  | OpenAPI 3.0.3 Server Object - description} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#server-object  | OpenAPI 3.0.2 Server Object - description} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#server-object  | OpenAPI 3.0.1 Server Object - description} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#server-object  | OpenAPI 3.0.0 Server Object - description} |
+   * @property `description` - Optional An optional string describing the host designated by the URL
+   *
+   * @example "Development server"
+   * @example "Production server"
+   */
+  description?: string;
 
-	/**
-	 * A map between a variable name and its value. The value is used for substitution
-	 * in the server's URL template.
-	 * *
-	 * | Version | Reference |
-	 * |---|-----|
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#server-object  | OpenAPI 3.0.4 Server Object - variables} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#server-object  | OpenAPI 3.0.3 Server Object - variables} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#server-object  | OpenAPI 3.0.2 Server Object - variables} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#server-object  | OpenAPI 3.0.1 Server Object - variables} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#server-object  | OpenAPI 3.0.0 Server Object - variables} |
-	 * @property `variables` - Optional A map between a variable name and its value
-	 *
-	 * @example { username: { default: "demo" }, port: { default: "8080" } }
-	 */
-	variables?: Record<string, ServerVariable>;
+  /**
+   * A map between a variable name and its value. The value is used for substitution
+   * in the server's URL template.
+   * *
+   * | Version | Reference |
+   * |---|-----|
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#server-object  | OpenAPI 3.0.4 Server Object - variables} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#server-object  | OpenAPI 3.0.3 Server Object - variables} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#server-object  | OpenAPI 3.0.2 Server Object - variables} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#server-object  | OpenAPI 3.0.1 Server Object - variables} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#server-object  | OpenAPI 3.0.0 Server Object - variables} |
+   * @property `variables` - Optional A map between a variable name and its value
+   *
+   * @example { username: { default: "demo" }, port: { default: "8080" } }
+   */
+  variables?: Record<string, ServerVariable>;
 }
 
 /**
@@ -196,56 +196,56 @@ export interface Server extends Extension {
  * ```
  */
 export interface ServerVariable extends Extension {
-	/**
-	 * An enumeration of string values to be used if the substitution options are from a limited set.
-	 * *
-	 * | Version | Reference |
-	 * |---|-----|
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#server-variable-object  | OpenAPI 3.0.4 Server Variable Object - enum} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#server-variable-object  | OpenAPI 3.0.3 Server Variable Object - enum} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#server-variable-object  | OpenAPI 3.0.2 Server Variable Object - enum} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#server-variable-object  | OpenAPI 3.0.1 Server Variable Object - enum} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#server-variable-object  | OpenAPI 3.0.0 Server Variable Object - enum} |
-	 * @property `enum` - Optional An enumeration of string values to be used if the substitution options are from a limited set
-	 *
-	 * @example ["8443", "443"]
-	 * @example ["v1", "v2", "v3"]
-	 */
-	enum?: string[];
+  /**
+   * An enumeration of string values to be used if the substitution options are from a limited set.
+   * *
+   * | Version | Reference |
+   * |---|-----|
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#server-variable-object  | OpenAPI 3.0.4 Server Variable Object - enum} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#server-variable-object  | OpenAPI 3.0.3 Server Variable Object - enum} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#server-variable-object  | OpenAPI 3.0.2 Server Variable Object - enum} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#server-variable-object  | OpenAPI 3.0.1 Server Variable Object - enum} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#server-variable-object  | OpenAPI 3.0.0 Server Variable Object - enum} |
+   * @property `enum` - Optional An enumeration of string values to be used if the substitution options are from a limited set
+   *
+   * @example ["8443", "443"]
+   * @example ["v1", "v2", "v3"]
+   */
+  enum?: string[];
 
-	/**
-	 * The default value to use for substitution, and to send, if an alternate value is not supplied.
-	 * Unlike the Schema Object's default, this value MUST be provided by the consumer.
-	 * *
-	 * | Version | Reference |
-	 * |---|-----|
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#server-variable-object  | OpenAPI 3.0.4 Server Variable Object - default} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#server-variable-object  | OpenAPI 3.0.3 Server Variable Object - default} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#server-variable-object  | OpenAPI 3.0.2 Server Variable Object - default} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#server-variable-object  | OpenAPI 3.0.1 Server Variable Object - default} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#server-variable-object  | OpenAPI 3.0.0 Server Variable Object - default} |
-	 * @property `default` - Required The default value to use for substitution
-	 *
-	 * @example "demo"
-	 * @example "8443"
-	 * @example "v2"
-	 */
-	default: string;
+  /**
+   * The default value to use for substitution, and to send, if an alternate value is not supplied.
+   * Unlike the Schema Object's default, this value MUST be provided by the consumer.
+   * *
+   * | Version | Reference |
+   * |---|-----|
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#server-variable-object  | OpenAPI 3.0.4 Server Variable Object - default} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#server-variable-object  | OpenAPI 3.0.3 Server Variable Object - default} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#server-variable-object  | OpenAPI 3.0.2 Server Variable Object - default} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#server-variable-object  | OpenAPI 3.0.1 Server Variable Object - default} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#server-variable-object  | OpenAPI 3.0.0 Server Variable Object - default} |
+   * @property `default` - Required The default value to use for substitution
+   *
+   * @example "demo"
+   * @example "8443"
+   * @example "v2"
+   */
+  default: string;
 
-	/**
-	 * An optional description for the server variable. CommonMark syntax MAY be used for rich text representation.
-	 * *
-	 * | Version | Reference |
-	 * |---|-----|
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#server-variable-object  | OpenAPI 3.0.4 Server Variable Object - description} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#server-variable-object  | OpenAPI 3.0.3 Server Variable Object - description} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#server-variable-object  | OpenAPI 3.0.2 Server Variable Object - description} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#server-variable-object  | OpenAPI 3.0.1 Server Variable Object - description} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#server-variable-object  | OpenAPI 3.0.0 Server Variable Object - description} |
-	 * @property `description` - Optional An optional description for the server variable
-	 *
-	 * @example "this value is assigned by the service provider"
-	 * @example "Port number for the server"
-	 */
-	description?: string;
+  /**
+   * An optional description for the server variable. CommonMark syntax MAY be used for rich text representation.
+   * *
+   * | Version | Reference |
+   * |---|-----|
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#server-variable-object  | OpenAPI 3.0.4 Server Variable Object - description} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#server-variable-object  | OpenAPI 3.0.3 Server Variable Object - description} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#server-variable-object  | OpenAPI 3.0.2 Server Variable Object - description} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#server-variable-object  | OpenAPI 3.0.1 Server Variable Object - description} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#server-variable-object  | OpenAPI 3.0.0 Server Variable Object - description} |
+   * @property `description` - Optional An optional description for the server variable
+   *
+   * @example "this value is assigned by the service provider"
+   * @example "Port number for the server"
+   */
+  description?: string;
 }

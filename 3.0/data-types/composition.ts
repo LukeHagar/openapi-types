@@ -92,119 +92,119 @@ import type { XML } from "../xml";
  * ```
  */
 export interface CompositionSchema extends Extension {
-	/**
-	 * A short title for the schema.
-	 *
-	 * @example "Composed User"
-	 * @example "Flexible Value"
-	 */
-	title?: string;
+  /**
+   * A short title for the schema.
+   *
+   * @example "Composed User"
+   * @example "Flexible Value"
+   */
+  title?: string;
 
-	/**
-	 * A short description of the schema. CommonMark syntax MAY be used for rich text representation.
-	 *
-	 * @example "Schema composed from multiple base schemas"
-	 * @example "Value that can be string or number"
-	 */
-	description?: string;
+  /**
+   * A short description of the schema. CommonMark syntax MAY be used for rich text representation.
+   *
+   * @example "Schema composed from multiple base schemas"
+   * @example "Value that can be string or number"
+   */
+  description?: string;
 
-	/**
-	 * The default value for the schema.
-	 *
-	 * @example "default value"
-	 * @example { name: "default" }
-	 */
-	default?: unknown;
+  /**
+   * The default value for the schema.
+   *
+   * @example "default value"
+   * @example { name: "default" }
+   */
+  default?: unknown;
 
-	/**
-	 * Example value for the schema.
-	 *
-	 * @example "example value"
-	 * @example { name: "example" }
-	 */
-	example?: unknown;
+  /**
+   * Example value for the schema.
+   *
+   * @example "example value"
+   * @example { name: "example" }
+   */
+  example?: unknown;
 
-	/**
-	 * Enumeration of valid values.
-	 *
-	 * @example ["value1", "value2"]
-	 * @example [1, 2, 3]
-	 */
-	enum?: unknown[];
+  /**
+   * Enumeration of valid values.
+   *
+   * @example ["value1", "value2"]
+   * @example [1, 2, 3]
+   */
+  enum?: unknown[];
 
-	/**
-	 * Whether the property is read-only. Default value is false.
-	 *
-	 * @default false
-	 * @example true
-	 */
-	readOnly?: boolean;
+  /**
+   * Whether the property is read-only. Default value is false.
+   *
+   * @default false
+   * @example true
+   */
+  readOnly?: boolean;
 
-	/**
-	 * Whether the property is write-only. Default value is false.
-	 *
-	 * @default false
-	 * @example true
-	 */
-	writeOnly?: boolean;
+  /**
+   * Whether the property is write-only. Default value is false.
+   *
+   * @default false
+   * @example true
+   */
+  writeOnly?: boolean;
 
-	/**
-	 * XML representation metadata for the schema.
-	 *
-	 * @example { name: "composed", wrapped: true }
-	 */
-	xml?: XML;
+  /**
+   * XML representation metadata for the schema.
+   *
+   * @example { name: "composed", wrapped: true }
+   */
+  xml?: XML;
 
-	/**
-	 * Additional external documentation for the schema.
-	 *
-	 * @example { description: "Find out more about this schema", url: "https://example.com/docs" }
-	 */
-	externalDocs?: ExternalDocumentation;
+  /**
+   * Additional external documentation for the schema.
+   *
+   * @example { description: "Find out more about this schema", url: "https://example.com/docs" }
+   */
+  externalDocs?: ExternalDocumentation;
 
-	/**
-	 * Whether the schema is deprecated. Default value is false.
-	 *
-	 * @default false
-	 * @example true
-	 */
-	deprecated?: boolean;
+  /**
+   * Whether the schema is deprecated. Default value is false.
+   *
+   * @default false
+   * @example true
+   */
+  deprecated?: boolean;
 
-	/**
-	 * Discriminator for polymorphism. The property name used to differentiate between schemas.
-	 *
-	 * @example "petType"
-	 * @example "type"
-	 */
-	discriminator?: Discriminator;
+  /**
+   * Discriminator for polymorphism. The property name used to differentiate between schemas.
+   *
+   * @example "petType"
+   * @example "type"
+   */
+  discriminator?: Discriminator;
 
-	// Composition keywords (mutually exclusive)
-	/**
-	 * Array of schemas that must all be valid for the instance to be valid.
-	 *
-	 * @example [{ $ref: "#/components/schemas/Base" }, { type: "object", required: ["id"] }]
-	 */
-	allOf?: Schema[];
+  // Composition keywords (mutually exclusive)
+  /**
+   * Array of schemas that must all be valid for the instance to be valid.
+   *
+   * @example [{ $ref: "#/components/schemas/Base" }, { type: "object", required: ["id"] }]
+   */
+  allOf?: Schema[];
 
-	/**
-	 * Array of schemas where at least one must be valid for the instance to be valid.
-	 *
-	 * @example [{ type: "string" }, { type: "integer" }]
-	 */
-	anyOf?: Schema[];
+  /**
+   * Array of schemas where at least one must be valid for the instance to be valid.
+   *
+   * @example [{ type: "string" }, { type: "integer" }]
+   */
+  anyOf?: Schema[];
 
-	/**
-	 * Array of schemas where exactly one must be valid for the instance to be valid.
-	 *
-	 * @example [{ $ref: "#/components/schemas/Dog" }, { $ref: "#/components/schemas/Cat" }]
-	 */
-	oneOf?: Schema[];
+  /**
+   * Array of schemas where exactly one must be valid for the instance to be valid.
+   *
+   * @example [{ $ref: "#/components/schemas/Dog" }, { $ref: "#/components/schemas/Cat" }]
+   */
+  oneOf?: Schema[];
 
-	/**
-	 * Schema that must not be valid for the instance to be valid.
-	 *
-	 * @example { type: "null" }
-	 * @example { type: "string", maxLength: 0 }
-	 */
-	not?: Schema;
+  /**
+   * Schema that must not be valid for the instance to be valid.
+   *
+   * @example { type: "null" }
+   * @example { type: "string", maxLength: 0 }
+   */
+  not?: Schema;
 }

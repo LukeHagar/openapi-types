@@ -130,51 +130,51 @@ import type { Extension } from "./extensions";
  * ```
  */
 export interface XML extends Extension {
-	/**
-	 * The type of XML node this schema produces. Determines how the schema
-	 * is serialized to XML.
-	 *
-	 * - `"element"`: Produces an XML element node (may contain attributes, child elements, or text)
-	 * - `"attribute"`: Produces an XML attribute node on the containing element (value-only)
-	 * - `"text"`: Contributes character data of the containing element (PCDATA)
-	 * - `"cdata"`: Contributes a CDATA section of the containing element
-	 * - `"none"`: Does not directly produce a node (used for structural control, e.g., array wrappers)
-	 *
-	 * @example "element"
-	 * @example "attribute"
-	 * @example "text"
-	 * @example "cdata"
-	 * @example "none"
-	 */
-	nodeType?: "element" | "attribute" | "text" | "cdata" | "none";
+  /**
+   * The type of XML node this schema produces. Determines how the schema
+   * is serialized to XML.
+   *
+   * - `"element"`: Produces an XML element node (may contain attributes, child elements, or text)
+   * - `"attribute"`: Produces an XML attribute node on the containing element (value-only)
+   * - `"text"`: Contributes character data of the containing element (PCDATA)
+   * - `"cdata"`: Contributes a CDATA section of the containing element
+   * - `"none"`: Does not directly produce a node (used for structural control, e.g., array wrappers)
+   *
+   * @example "element"
+   * @example "attribute"
+   * @example "text"
+   * @example "cdata"
+   * @example "none"
+   */
+  nodeType?: "element" | "attribute" | "text" | "cdata" | "none";
 
-	/**
-	 * Replaces the name of the element/attribute used for the described schema property.
-	 * Only effective when `nodeType` is "element" or "attribute". When defined within
-	 * the Items Object (items), it will affect the name of the individual XML elements
-	 * within the list. When defined alongside type being array (outside the items),
-	 * it will affect the wrapping element name.
-	 *
-	 * @example "user"
-	 * @example "id"
-	 * @example "users"
-	 */
-	name?: string;
+  /**
+   * Replaces the name of the element/attribute used for the described schema property.
+   * Only effective when `nodeType` is "element" or "attribute". When defined within
+   * the Items Object (items), it will affect the name of the individual XML elements
+   * within the list. When defined alongside type being array (outside the items),
+   * it will affect the wrapping element name.
+   *
+   * @example "user"
+   * @example "id"
+   * @example "users"
+   */
+  name?: string;
 
-	/**
-	 * The URI of the namespace definition. This MUST be in the form of an absolute URI.
-	 * Only effective when `nodeType` is "element" or "attribute".
-	 *
-	 * @example "http://example.com/schema/user"
-	 * @example "http://www.w3.org/XML/1998/namespace"
-	 */
-	namespace?: string;
+  /**
+   * The URI of the namespace definition. This MUST be in the form of an absolute URI.
+   * Only effective when `nodeType` is "element" or "attribute".
+   *
+   * @example "http://example.com/schema/user"
+   * @example "http://www.w3.org/XML/1998/namespace"
+   */
+  namespace?: string;
 
-	/**
-	 * The prefix to be used for the name. Only effective when `nodeType` is "element" or "attribute".
-	 *
-	 * @example "user"
-	 * @example "xml"
-	 */
-	prefix?: string;
+  /**
+   * The prefix to be used for the name. Only effective when `nodeType` is "element" or "attribute".
+   *
+   * @example "user"
+   * @example "xml"
+   */
+  prefix?: string;
 }

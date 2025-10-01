@@ -27,64 +27,64 @@ import type { Extension } from "./extensions";
  * ```
  */
 export interface Info extends Extension {
-	/**
-	 * The title of the application. This field is required.
-	 *
-	 * @see {@link https://swagger.io/specification/v2/#info-object | Swagger 2.0 Specification - title}
-	 *
-	 * @example "Swagger Sample App"
-	 * @example "My API"
-	 */
-	title: string;
+  /**
+   * The title of the application. This field is required.
+   *
+   * @see {@link https://swagger.io/specification/v2/#info-object | Swagger 2.0 Specification - title}
+   *
+   * @example "Swagger Sample App"
+   * @example "My API"
+   */
+  title: string;
 
-	/**
-	 * A short description of the application. GFM syntax can be used for rich text representation.
-	 *
-	 * @see {@link https://swagger.io/specification/v2/#info-object | Swagger 2.0 Specification - description}
-	 *
-	 * @example "This is a sample server Petstore server."
-	 * @example "A comprehensive API for managing user data"
-	 */
-	description?: string;
+  /**
+   * A short description of the application. GFM syntax can be used for rich text representation.
+   *
+   * @see {@link https://swagger.io/specification/v2/#info-object | Swagger 2.0 Specification - description}
+   *
+   * @example "This is a sample server Petstore server."
+   * @example "A comprehensive API for managing user data"
+   */
+  description?: string;
 
-	/**
-	 * The Terms of Service for the API.
-	 *
-	 * @see {@link https://swagger.io/specification/v2/#info-object | Swagger 2.0 Specification - termsOfService}
-	 *
-	 * @example "http://swagger.io/terms/"
-	 * @example "https://example.com/terms"
-	 */
-	termsOfService?: string;
+  /**
+   * The Terms of Service for the API.
+   *
+   * @see {@link https://swagger.io/specification/v2/#info-object | Swagger 2.0 Specification - termsOfService}
+   *
+   * @example "http://swagger.io/terms/"
+   * @example "https://example.com/terms"
+   */
+  termsOfService?: string;
 
-	/**
-	 * The contact information for the exposed API.
-	 *
-	 * @see {@link https://swagger.io/specification/v2/#info-object | Swagger 2.0 Specification - contact}
-	 *
-	 * @example { name: "API Support", email: "support@example.com" }
-	 */
-	contact?: Contact;
+  /**
+   * The contact information for the exposed API.
+   *
+   * @see {@link https://swagger.io/specification/v2/#info-object | Swagger 2.0 Specification - contact}
+   *
+   * @example { name: "API Support", email: "support@example.com" }
+   */
+  contact?: Contact;
 
-	/**
-	 * The license information for the exposed API.
-	 *
-	 * @see {@link https://swagger.io/specification/v2/#info-object | Swagger 2.0 Specification - license}
-	 *
-	 * @example { name: "Apache 2.0", url: "http://www.apache.org/licenses/LICENSE-2.0.html" }
-	 */
-	license?: License;
+  /**
+   * The license information for the exposed API.
+   *
+   * @see {@link https://swagger.io/specification/v2/#info-object | Swagger 2.0 Specification - license}
+   *
+   * @example { name: "Apache 2.0", url: "http://www.apache.org/licenses/LICENSE-2.0.html" }
+   */
+  license?: License;
 
-	/**
-	 * Provides the version of the application API (not to be confused with the specification version).
-	 * This field is required.
-	 *
-	 * @see {@link https://swagger.io/specification/v2/#info-object | Swagger 2.0 Specification - version}
-	 *
-	 * @example "1.0.1"
-	 * @example "2.0.0"
-	 */
-	version: string;
+  /**
+   * Provides the version of the application API (not to be confused with the specification version).
+   * This field is required.
+   *
+   * @see {@link https://swagger.io/specification/v2/#info-object | Swagger 2.0 Specification - version}
+   *
+   * @example "1.0.1"
+   * @example "2.0.0"
+   */
+  version: string;
 }
 
 /**
@@ -103,35 +103,35 @@ export interface Info extends Extension {
  * ```
  */
 export interface Contact extends Extension {
-	/**
-	 * The identifying name of the contact person/organization.
-	 *
-	 * @see {@link https://swagger.io/specification/v2/#contact-object | Swagger 2.0 Specification - name}
-	 *
-	 * @example "API Support"
-	 * @example "John Doe"
-	 */
-	name?: string;
+  /**
+   * The identifying name of the contact person/organization.
+   *
+   * @see {@link https://swagger.io/specification/v2/#contact-object | Swagger 2.0 Specification - name}
+   *
+   * @example "API Support"
+   * @example "John Doe"
+   */
+  name?: string;
 
-	/**
-	 * The URL pointing to the contact information. MUST be in the format of a URL.
-	 *
-	 * @see {@link https://swagger.io/specification/v2/#contact-object | Swagger 2.0 Specification - url}
-	 *
-	 * @example "http://www.swagger.io/support"
-	 * @example "https://example.com/contact"
-	 */
-	url?: string;
+  /**
+   * The URL pointing to the contact information. MUST be in the format of a URL.
+   *
+   * @see {@link https://swagger.io/specification/v2/#contact-object | Swagger 2.0 Specification - url}
+   *
+   * @example "http://www.swagger.io/support"
+   * @example "https://example.com/contact"
+   */
+  url?: string;
 
-	/**
-	 * The email address of the contact person/organization. MUST be in the format of an email address.
-	 *
-	 * @see {@link https://swagger.io/specification/v2/#contact-object | Swagger 2.0 Specification - email}
-	 *
-	 * @example "support@swagger.io"
-	 * @example "contact@example.com"
-	 */
-	email?: string;
+  /**
+   * The email address of the contact person/organization. MUST be in the format of an email address.
+   *
+   * @see {@link https://swagger.io/specification/v2/#contact-object | Swagger 2.0 Specification - email}
+   *
+   * @example "support@swagger.io"
+   * @example "contact@example.com"
+   */
+  email?: string;
 }
 
 /**
@@ -202,25 +202,25 @@ export interface Contact extends Extension {
  * ```
  */
 export interface License extends Extension {
-	/**
-	 * The license name used for the API. This field is required.
-	 *
-	 * @see {@link https://swagger.io/specification/v2/#license-object | Swagger 2.0 Specification - name}
-	 *
-	 * @example "MIT License"
-	 * @example "Apache License 2.0"
-	 * @example "Proprietary Foo License"
-	 */
-	name: string;
+  /**
+   * The license name used for the API. This field is required.
+   *
+   * @see {@link https://swagger.io/specification/v2/#license-object | Swagger 2.0 Specification - name}
+   *
+   * @example "MIT License"
+   * @example "Apache License 2.0"
+   * @example "Proprietary Foo License"
+   */
+  name: string;
 
-	/**
-	 * A URL to the license used for the API. MUST be in the format of a URL.
-	 *
-	 * @see {@link https://swagger.io/specification/v2/#license-object | Swagger 2.0 Specification - url}
-	 *
-	 * @example "https://opensource.org/license/mit/"
-	 * @example "https://www.apache.org/licenses/LICENSE-2.0"
-	 * @example "https://example.com/licenses/foo-1.0"
-	 */
-	url?: string;
+  /**
+   * A URL to the license used for the API. MUST be in the format of a URL.
+   *
+   * @see {@link https://swagger.io/specification/v2/#license-object | Swagger 2.0 Specification - url}
+   *
+   * @example "https://opensource.org/license/mit/"
+   * @example "https://www.apache.org/licenses/LICENSE-2.0"
+   * @example "https://example.com/licenses/foo-1.0"
+   */
+  url?: string;
 }

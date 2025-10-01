@@ -43,21 +43,21 @@ import type { Extension } from "./extensions";
  * ```
  */
 export interface ExternalDocumentation extends Extension {
-	/**
-	 * A short description of the target documentation. CommonMark syntax MAY be used
-	 * for rich text representation.
-	 *
-	 * @example "Find out more about our API"
-	 * @example "Additional documentation for this endpoint"
-	 */
-	description?: string;
+  /**
+   * A short description of the target documentation. CommonMark syntax MAY be used
+   * for rich text representation.
+   *
+   * @example "Find out more about our API"
+   * @example "Additional documentation for this endpoint"
+   */
+  description?: string;
 
-	/**
-	 * The URL for the target documentation. This field is required and MUST be in the
-	 * format of a URL.
-	 *
-	 * @example "https://example.com/docs"
-	 * @example "https://docs.example.com/api"
-	 */
-	url: string;
+  /**
+   * The URL for the target documentation. This field is required and MUST be in the
+   * format of a URL.
+   *
+   * @example "https://example.com/docs"
+   * @example "https://docs.example.com/api"
+   */
+  url: string;
 }

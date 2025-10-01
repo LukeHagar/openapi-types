@@ -89,139 +89,139 @@ import type { XML } from "../xml";
  * ```
  */
 export interface NumberSchema extends Extension {
-	/**
-	 * The type of the schema. Must be "number" for number schemas.
-	 *
-	 * @example "number"
-	 */
-	type: "number";
+  /**
+   * The type of the schema. Must be "number" for number schemas.
+   *
+   * @example "number"
+   */
+  type: "number";
 
-	/**
-	 * The extending format for the number type. See OpenAPI 3.0.x Data Type Formats for details.
-	 *
-	 * @example "float"
-	 * @example "double"
-	 */
-	format?: string;
+  /**
+   * The extending format for the number type. See OpenAPI 3.0.x Data Type Formats for details.
+   *
+   * @example "float"
+   * @example "double"
+   */
+  format?: string;
 
-	/**
-	 * A short title for the schema.
-	 *
-	 * @example "Price"
-	 * @example "Temperature"
-	 */
-	title?: string;
+  /**
+   * A short title for the schema.
+   *
+   * @example "Price"
+   * @example "Temperature"
+   */
+  title?: string;
 
-	/**
-	 * A short description of the schema. CommonMark syntax MAY be used for rich text representation.
-	 *
-	 * @example "The price in dollars"
-	 * @example "Temperature in Celsius"
-	 */
-	description?: string;
+  /**
+   * A short description of the schema. CommonMark syntax MAY be used for rich text representation.
+   *
+   * @example "The price in dollars"
+   * @example "Temperature in Celsius"
+   */
+  description?: string;
 
-	/**
-	 * The default value for the schema.
-	 *
-	 * @example 0
-	 * @example 25.5
-	 */
-	default?: number;
+  /**
+   * The default value for the schema.
+   *
+   * @example 0
+   * @example 25.5
+   */
+  default?: number;
 
-	/**
-	 * Example value for the schema.
-	 *
-	 * @example 19.99
-	 * @example 98.6
-	 */
-	example?: number;
+  /**
+   * Example value for the schema.
+   *
+   * @example 19.99
+   * @example 98.6
+   */
+  example?: number;
 
-	/**
-	 * Enumeration of valid number values.
-	 *
-	 * @example [1.0, 2.0, 3.0, 4.0, 5.0]
-	 * @example [0.0, 0.5, 1.0]
-	 */
-	enum?: number[];
+  /**
+   * Enumeration of valid number values.
+   *
+   * @example [1.0, 2.0, 3.0, 4.0, 5.0]
+   * @example [0.0, 0.5, 1.0]
+   */
+  enum?: number[];
 
-	/**
-	 * Whether the property is read-only. Default value is false.
-	 *
-	 * @default false
-	 * @example true
-	 */
-	readOnly?: boolean;
+  /**
+   * Whether the property is read-only. Default value is false.
+   *
+   * @default false
+   * @example true
+   */
+  readOnly?: boolean;
 
-	/**
-	 * Whether the property is write-only. Default value is false.
-	 *
-	 * @default false
-	 * @example true
-	 */
-	writeOnly?: boolean;
+  /**
+   * Whether the property is write-only. Default value is false.
+   *
+   * @default false
+   * @example true
+   */
+  writeOnly?: boolean;
 
-	/**
-	 * XML representation metadata for the schema.
-	 *
-	 * @example { name: "price", attribute: true }
-	 */
-	xml?: XML;
+  /**
+   * XML representation metadata for the schema.
+   *
+   * @example { name: "price", attribute: true }
+   */
+  xml?: XML;
 
-	/**
-	 * Additional external documentation for the schema.
-	 *
-	 * @example { description: "Find out more about this field", url: "https://example.com/docs" }
-	 */
-	externalDocs?: ExternalDocumentation;
+  /**
+   * Additional external documentation for the schema.
+   *
+   * @example { description: "Find out more about this field", url: "https://example.com/docs" }
+   */
+  externalDocs?: ExternalDocumentation;
 
-	/**
-	 * Whether the schema is deprecated. Default value is false.
-	 *
-	 * @default false
-	 * @example true
-	 */
-	deprecated?: boolean;
+  /**
+   * Whether the schema is deprecated. Default value is false.
+   *
+   * @default false
+   * @example true
+   */
+  deprecated?: boolean;
 
-	// Number-specific validation constraints
-	/**
-	 * A number is valid against "multipleOf" if the result of the division
-	 * of the instance by this keyword's value is an integer.
-	 *
-	 * @example 0.01
-	 * @example 0.1
-	 * @example 2
-	 */
-	multipleOf?: number;
+  // Number-specific validation constraints
+  /**
+   * A number is valid against "multipleOf" if the result of the division
+   * of the instance by this keyword's value is an integer.
+   *
+   * @example 0.01
+   * @example 0.1
+   * @example 2
+   */
+  multipleOf?: number;
 
-	/**
-	 * A number is valid against "maximum" if it is less than or equal to this value.
-	 *
-	 * @example 100
-	 * @example 999.99
-	 */
-	maximum?: number;
+  /**
+   * A number is valid against "maximum" if it is less than or equal to this value.
+   *
+   * @example 100
+   * @example 999.99
+   */
+  maximum?: number;
 
-	/**
-	 * A number is valid against "exclusiveMaximum" if it is strictly less than this value.
-	 *
-	 * @example 100
-	 * @example 1000
-	 */
-	exclusiveMaximum?: number;
+  /**
+   * A number is valid against "exclusiveMaximum" if it is strictly less than this value.
+   *
+   * @example 100
+   * @example 1000
+   */
+  exclusiveMaximum?: number;
 
-	/**
-	 * A number is valid against "minimum" if it is greater than or equal to this value.
-	 *
-	 * @example 0
-	 * @example -273.15
-	 */
-	minimum?: number;
+  /**
+   * A number is valid against "minimum" if it is greater than or equal to this value.
+   *
+   * @example 0
+   * @example -273.15
+   */
+  minimum?: number;
 
-	/**
-	 * A number is valid against "exclusiveMinimum" if it is strictly greater than this value.
-	 *
-	 * @example 0
-	 * @example -100
-	 */
-	exclusiveMinimum?: number;
+  /**
+   * A number is valid against "exclusiveMinimum" if it is strictly greater than this value.
+   *
+   * @example 0
+   * @example -100
+   */
+  exclusiveMinimum?: number;
 }

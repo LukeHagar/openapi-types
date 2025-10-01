@@ -90,142 +90,142 @@ import type { Extension } from "./extensions";
  * ```
  */
 export interface SecurityScheme extends Extension {
-	/**
-	 * The type of the security scheme. This field is required.
-	 * *
-	 * | Version | Reference |
-	 * |---|-----|
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#security-scheme-object  | OpenAPI 3.0.4 Security Scheme Object - type} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#security-scheme-object  | OpenAPI 3.0.3 Security Scheme Object - type} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#security-scheme-object  | OpenAPI 3.0.2 Security Scheme Object - type} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#security-scheme-object  | OpenAPI 3.0.1 Security Scheme Object - type} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#security-scheme-object  | OpenAPI 3.0.0 Security Scheme Object - type} |
-	 * @property `type` - Required The type of the security scheme
-	 *
-	 * @example "apiKey"
-	 * @example "http"
-	 * @example "oauth2"
-	 * @example "openIdConnect"
-	 */
-	type: "apiKey" | "http" | "oauth2" | "openIdConnect";
+  /**
+   * The type of the security scheme. This field is required.
+   * *
+   * | Version | Reference |
+   * |---|-----|
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#security-scheme-object  | OpenAPI 3.0.4 Security Scheme Object - type} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#security-scheme-object  | OpenAPI 3.0.3 Security Scheme Object - type} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#security-scheme-object  | OpenAPI 3.0.2 Security Scheme Object - type} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#security-scheme-object  | OpenAPI 3.0.1 Security Scheme Object - type} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#security-scheme-object  | OpenAPI 3.0.0 Security Scheme Object - type} |
+   * @property `type` - Required The type of the security scheme
+   *
+   * @example "apiKey"
+   * @example "http"
+   * @example "oauth2"
+   * @example "openIdConnect"
+   */
+  type: "apiKey" | "http" | "oauth2" | "openIdConnect";
 
-	/**
-	 * A short description for security scheme. CommonMark syntax MAY be used for rich text representation.
-	 * *
-	 * | Version | Reference |
-	 * |---|-----|
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#security-scheme-object  | OpenAPI 3.0.4 Security Scheme Object - description} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#security-scheme-object  | OpenAPI 3.0.3 Security Scheme Object - description} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#security-scheme-object  | OpenAPI 3.0.2 Security Scheme Object - description} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#security-scheme-object  | OpenAPI 3.0.1 Security Scheme Object - description} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#security-scheme-object  | OpenAPI 3.0.0 Security Scheme Object - description} |
-	 * @property `description` - Optional A short description for security scheme
-	 *
-	 * @example "API key authentication"
-	 * @example "OAuth 2.0 authentication"
-	 */
-	description?: string;
+  /**
+   * A short description for security scheme. CommonMark syntax MAY be used for rich text representation.
+   * *
+   * | Version | Reference |
+   * |---|-----|
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#security-scheme-object  | OpenAPI 3.0.4 Security Scheme Object - description} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#security-scheme-object  | OpenAPI 3.0.3 Security Scheme Object - description} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#security-scheme-object  | OpenAPI 3.0.2 Security Scheme Object - description} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#security-scheme-object  | OpenAPI 3.0.1 Security Scheme Object - description} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#security-scheme-object  | OpenAPI 3.0.0 Security Scheme Object - description} |
+   * @property `description` - Optional A short description for security scheme
+   *
+   * @example "API key authentication"
+   * @example "OAuth 2.0 authentication"
+   */
+  description?: string;
 
-	/**
-	 * The name of the header, query or cookie parameter to be used.
-	 * *
-	 * | Version | Reference |
-	 * |---|-----|
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#security-scheme-object  | OpenAPI 3.0.4 Security Scheme Object - name} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#security-scheme-object  | OpenAPI 3.0.3 Security Scheme Object - name} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#security-scheme-object  | OpenAPI 3.0.2 Security Scheme Object - name} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#security-scheme-object  | OpenAPI 3.0.1 Security Scheme Object - name} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#security-scheme-object  | OpenAPI 3.0.0 Security Scheme Object - name} |
-	 * @property `name` - Optional The name of the header, query or cookie parameter to be used
-	 *
-	 * @example "X-API-Key"
-	 * @example "Authorization"
-	 */
-	name?: string;
+  /**
+   * The name of the header, query or cookie parameter to be used.
+   * *
+   * | Version | Reference |
+   * |---|-----|
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#security-scheme-object  | OpenAPI 3.0.4 Security Scheme Object - name} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#security-scheme-object  | OpenAPI 3.0.3 Security Scheme Object - name} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#security-scheme-object  | OpenAPI 3.0.2 Security Scheme Object - name} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#security-scheme-object  | OpenAPI 3.0.1 Security Scheme Object - name} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#security-scheme-object  | OpenAPI 3.0.0 Security Scheme Object - name} |
+   * @property `name` - Optional The name of the header, query or cookie parameter to be used
+   *
+   * @example "X-API-Key"
+   * @example "Authorization"
+   */
+  name?: string;
 
-	/**
-	 * The location of the API key. Valid values are "query", "header" or "cookie".
-	 * *
-	 * | Version | Reference |
-	 * |---|-----|
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#security-scheme-object  | OpenAPI 3.0.4 Security Scheme Object - in} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#security-scheme-object  | OpenAPI 3.0.3 Security Scheme Object - in} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#security-scheme-object  | OpenAPI 3.0.2 Security Scheme Object - in} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#security-scheme-object  | OpenAPI 3.0.1 Security Scheme Object - in} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#security-scheme-object  | OpenAPI 3.0.0 Security Scheme Object - in} |
-	 * @property `in` - Optional The location of the API key
-	 *
-	 * @example "query"
-	 * @example "header"
-	 * @example "cookie"
-	 */
-	in?: "query" | "header" | "cookie";
+  /**
+   * The location of the API key. Valid values are "query", "header" or "cookie".
+   * *
+   * | Version | Reference |
+   * |---|-----|
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#security-scheme-object  | OpenAPI 3.0.4 Security Scheme Object - in} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#security-scheme-object  | OpenAPI 3.0.3 Security Scheme Object - in} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#security-scheme-object  | OpenAPI 3.0.2 Security Scheme Object - in} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#security-scheme-object  | OpenAPI 3.0.1 Security Scheme Object - in} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#security-scheme-object  | OpenAPI 3.0.0 Security Scheme Object - in} |
+   * @property `in` - Optional The location of the API key
+   *
+   * @example "query"
+   * @example "header"
+   * @example "cookie"
+   */
+  in?: "query" | "header" | "cookie";
 
-	/**
-	 * The name of the HTTP Authorization scheme to be used in the Authorization header.
-	 * *
-	 * | Version | Reference |
-	 * |---|-----|
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#security-scheme-object  | OpenAPI 3.0.4 Security Scheme Object - scheme} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#security-scheme-object  | OpenAPI 3.0.3 Security Scheme Object - scheme} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#security-scheme-object  | OpenAPI 3.0.2 Security Scheme Object - scheme} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#security-scheme-object  | OpenAPI 3.0.1 Security Scheme Object - scheme} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#security-scheme-object  | OpenAPI 3.0.0 Security Scheme Object - scheme} |
-	 * @property `scheme` - Optional The name of the HTTP Authorization scheme to be used in the Authorization header
-	 *
-	 * @example "bearer"
-	 * @example "basic"
-	 */
-	scheme?: string;
+  /**
+   * The name of the HTTP Authorization scheme to be used in the Authorization header.
+   * *
+   * | Version | Reference |
+   * |---|-----|
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#security-scheme-object  | OpenAPI 3.0.4 Security Scheme Object - scheme} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#security-scheme-object  | OpenAPI 3.0.3 Security Scheme Object - scheme} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#security-scheme-object  | OpenAPI 3.0.2 Security Scheme Object - scheme} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#security-scheme-object  | OpenAPI 3.0.1 Security Scheme Object - scheme} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#security-scheme-object  | OpenAPI 3.0.0 Security Scheme Object - scheme} |
+   * @property `scheme` - Optional The name of the HTTP Authorization scheme to be used in the Authorization header
+   *
+   * @example "bearer"
+   * @example "basic"
+   */
+  scheme?: string;
 
-	/**
-	 * A hint to the client to identify how the bearer token is formatted.
-	 * *
-	 * | Version | Reference |
-	 * |---|-----|
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#security-scheme-object  | OpenAPI 3.0.4 Security Scheme Object - bearerFormat} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#security-scheme-object  | OpenAPI 3.0.3 Security Scheme Object - bearerFormat} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#security-scheme-object  | OpenAPI 3.0.2 Security Scheme Object - bearerFormat} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#security-scheme-object  | OpenAPI 3.0.1 Security Scheme Object - bearerFormat} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#security-scheme-object  | OpenAPI 3.0.0 Security Scheme Object - bearerFormat} |
-	 * @property `bearerFormat` - Optional A hint to the client to identify how the bearer token is formatted
-	 *
-	 * @example "JWT"
-	 * @example "Bearer"
-	 */
-	bearerFormat?: string;
+  /**
+   * A hint to the client to identify how the bearer token is formatted.
+   * *
+   * | Version | Reference |
+   * |---|-----|
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#security-scheme-object  | OpenAPI 3.0.4 Security Scheme Object - bearerFormat} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#security-scheme-object  | OpenAPI 3.0.3 Security Scheme Object - bearerFormat} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#security-scheme-object  | OpenAPI 3.0.2 Security Scheme Object - bearerFormat} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#security-scheme-object  | OpenAPI 3.0.1 Security Scheme Object - bearerFormat} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#security-scheme-object  | OpenAPI 3.0.0 Security Scheme Object - bearerFormat} |
+   * @property `bearerFormat` - Optional A hint to the client to identify how the bearer token is formatted
+   *
+   * @example "JWT"
+   * @example "Bearer"
+   */
+  bearerFormat?: string;
 
-	/**
-	 * An object containing configuration information for the flow types supported.
-	 * *
-	 * | Version | Reference |
-	 * |---|-----|
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#security-scheme-object  | OpenAPI 3.0.4 Security Scheme Object - flows} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#security-scheme-object  | OpenAPI 3.0.3 Security Scheme Object - flows} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#security-scheme-object  | OpenAPI 3.0.2 Security Scheme Object - flows} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#security-scheme-object  | OpenAPI 3.0.1 Security Scheme Object - flows} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#security-scheme-object  | OpenAPI 3.0.0 Security Scheme Object - flows} |
-	 * @property `flows` - Optional An object containing configuration information for the flow types supported
-	 *
-	 * @example { authorizationCode: { authorizationUrl: "https://example.com/oauth/authorize", tokenUrl: "https://example.com/oauth/token" } }
-	 */
-	flows?: OAuthFlows;
+  /**
+   * An object containing configuration information for the flow types supported.
+   * *
+   * | Version | Reference |
+   * |---|-----|
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#security-scheme-object  | OpenAPI 3.0.4 Security Scheme Object - flows} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#security-scheme-object  | OpenAPI 3.0.3 Security Scheme Object - flows} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#security-scheme-object  | OpenAPI 3.0.2 Security Scheme Object - flows} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#security-scheme-object  | OpenAPI 3.0.1 Security Scheme Object - flows} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#security-scheme-object  | OpenAPI 3.0.0 Security Scheme Object - flows} |
+   * @property `flows` - Optional An object containing configuration information for the flow types supported
+   *
+   * @example { authorizationCode: { authorizationUrl: "https://example.com/oauth/authorize", tokenUrl: "https://example.com/oauth/token" } }
+   */
+  flows?: OAuthFlows;
 
-	/**
-	 * OpenId Connect URL to discover OAuth2 configuration values.
-	 * *
-	 * | Version | Reference |
-	 * |---|-----|
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#security-scheme-object  | OpenAPI 3.0.4 Security Scheme Object - openIdConnectUrl} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#security-scheme-object  | OpenAPI 3.0.3 Security Scheme Object - openIdConnectUrl} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#security-scheme-object  | OpenAPI 3.0.2 Security Scheme Object - openIdConnectUrl} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#security-scheme-object  | OpenAPI 3.0.1 Security Scheme Object - openIdConnectUrl} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#security-scheme-object  | OpenAPI 3.0.0 Security Scheme Object - openIdConnectUrl} |
-	 * @property `openIdConnectUrl` - Optional OpenId Connect URL to discover OAuth2 configuration values
-	 *
-	 * @example "https://example.com/.well-known/openid_configuration"
-	 */
-	openIdConnectUrl?: string;
+  /**
+   * OpenId Connect URL to discover OAuth2 configuration values.
+   * *
+   * | Version | Reference |
+   * |---|-----|
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#security-scheme-object  | OpenAPI 3.0.4 Security Scheme Object - openIdConnectUrl} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#security-scheme-object  | OpenAPI 3.0.3 Security Scheme Object - openIdConnectUrl} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#security-scheme-object  | OpenAPI 3.0.2 Security Scheme Object - openIdConnectUrl} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#security-scheme-object  | OpenAPI 3.0.1 Security Scheme Object - openIdConnectUrl} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#security-scheme-object  | OpenAPI 3.0.0 Security Scheme Object - openIdConnectUrl} |
+   * @property `openIdConnectUrl` - Optional OpenId Connect URL to discover OAuth2 configuration values
+   *
+   * @example "https://example.com/.well-known/openid_configuration"
+   */
+  openIdConnectUrl?: string;
 }
 
 /**
@@ -297,69 +297,69 @@ export interface SecurityScheme extends Extension {
  * ```
  */
 export interface OAuthFlows extends Extension {
-	/**
-	 * Configuration for the OAuth Implicit flow.
-	 * *
-	 * | Version | Reference |
-	 * |---|-----|
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#oauth-flows-object  | OpenAPI 3.0.4 OAuth Flows Object - implicit} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#oauth-flows-object  | OpenAPI 3.0.3 OAuth Flows Object - implicit} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#oauth-flows-object  | OpenAPI 3.0.2 OAuth Flows Object - implicit} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#oauth-flows-object  | OpenAPI 3.0.1 OAuth Flows Object - implicit} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#oauth-flows-object  | OpenAPI 3.0.0 OAuth Flows Object - implicit} |
-	 * @property `implicit` - Optional Configuration for the OAuth Implicit flow
-	 *
-	 * @example { authorizationUrl: "https://example.com/oauth/authorize", scopes: { read: "Read access" } }
-	 */
-	implicit?: OAuthFlow;
+  /**
+   * Configuration for the OAuth Implicit flow.
+   * *
+   * | Version | Reference |
+   * |---|-----|
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#oauth-flows-object  | OpenAPI 3.0.4 OAuth Flows Object - implicit} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#oauth-flows-object  | OpenAPI 3.0.3 OAuth Flows Object - implicit} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#oauth-flows-object  | OpenAPI 3.0.2 OAuth Flows Object - implicit} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#oauth-flows-object  | OpenAPI 3.0.1 OAuth Flows Object - implicit} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#oauth-flows-object  | OpenAPI 3.0.0 OAuth Flows Object - implicit} |
+   * @property `implicit` - Optional Configuration for the OAuth Implicit flow
+   *
+   * @example { authorizationUrl: "https://example.com/oauth/authorize", scopes: { read: "Read access" } }
+   */
+  implicit?: OAuthFlow;
 
-	/**
-	 * Configuration for the OAuth Resource Owner Password flow.
-	 * *
-	 * | Version | Reference |
-	 * |---|-----|
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#oauth-flows-object  | OpenAPI 3.0.4 OAuth Flows Object - password} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#oauth-flows-object  | OpenAPI 3.0.3 OAuth Flows Object - password} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#oauth-flows-object  | OpenAPI 3.0.2 OAuth Flows Object - password} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#oauth-flows-object  | OpenAPI 3.0.1 OAuth Flows Object - password} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#oauth-flows-object  | OpenAPI 3.0.0 OAuth Flows Object - password} |
-	 * @property `password` - Optional Configuration for the OAuth Resource Owner Password flow
-	 *
-	 * @example { tokenUrl: "https://example.com/oauth/token", scopes: { read: "Read access" } }
-	 */
-	password?: OAuthFlow;
+  /**
+   * Configuration for the OAuth Resource Owner Password flow.
+   * *
+   * | Version | Reference |
+   * |---|-----|
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#oauth-flows-object  | OpenAPI 3.0.4 OAuth Flows Object - password} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#oauth-flows-object  | OpenAPI 3.0.3 OAuth Flows Object - password} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#oauth-flows-object  | OpenAPI 3.0.2 OAuth Flows Object - password} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#oauth-flows-object  | OpenAPI 3.0.1 OAuth Flows Object - password} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#oauth-flows-object  | OpenAPI 3.0.0 OAuth Flows Object - password} |
+   * @property `password` - Optional Configuration for the OAuth Resource Owner Password flow
+   *
+   * @example { tokenUrl: "https://example.com/oauth/token", scopes: { read: "Read access" } }
+   */
+  password?: OAuthFlow;
 
-	/**
-	 * Configuration for the OAuth Client Credentials flow.
-	 * *
-	 * | Version | Reference |
-	 * |---|-----|
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#oauth-flows-object  | OpenAPI 3.0.4 OAuth Flows Object - clientCredentials} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#oauth-flows-object  | OpenAPI 3.0.3 OAuth Flows Object - clientCredentials} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#oauth-flows-object  | OpenAPI 3.0.2 OAuth Flows Object - clientCredentials} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#oauth-flows-object  | OpenAPI 3.0.1 OAuth Flows Object - clientCredentials} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#oauth-flows-object  | OpenAPI 3.0.0 OAuth Flows Object - clientCredentials} |
-	 * @property `clientCredentials` - Optional Configuration for the OAuth Client Credentials flow
-	 *
-	 * @example { tokenUrl: "https://example.com/oauth/token", scopes: { read: "Read access" } }
-	 */
-	clientCredentials?: OAuthFlow;
+  /**
+   * Configuration for the OAuth Client Credentials flow.
+   * *
+   * | Version | Reference |
+   * |---|-----|
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#oauth-flows-object  | OpenAPI 3.0.4 OAuth Flows Object - clientCredentials} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#oauth-flows-object  | OpenAPI 3.0.3 OAuth Flows Object - clientCredentials} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#oauth-flows-object  | OpenAPI 3.0.2 OAuth Flows Object - clientCredentials} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#oauth-flows-object  | OpenAPI 3.0.1 OAuth Flows Object - clientCredentials} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#oauth-flows-object  | OpenAPI 3.0.0 OAuth Flows Object - clientCredentials} |
+   * @property `clientCredentials` - Optional Configuration for the OAuth Client Credentials flow
+   *
+   * @example { tokenUrl: "https://example.com/oauth/token", scopes: { read: "Read access" } }
+   */
+  clientCredentials?: OAuthFlow;
 
-	/**
-	 * Configuration for the OAuth Authorization Code flow.
-	 * *
-	 * | Version | Reference |
-	 * |---|-----|
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#oauth-flows-object  | OpenAPI 3.0.4 OAuth Flows Object - authorizationCode} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#oauth-flows-object  | OpenAPI 3.0.3 OAuth Flows Object - authorizationCode} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#oauth-flows-object  | OpenAPI 3.0.2 OAuth Flows Object - authorizationCode} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#oauth-flows-object  | OpenAPI 3.0.1 OAuth Flows Object - authorizationCode} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#oauth-flows-object  | OpenAPI 3.0.0 OAuth Flows Object - authorizationCode} |
-	 * @property `authorizationCode` - Optional Configuration for the OAuth Authorization Code flow
-	 *
-	 * @example { authorizationUrl: "https://example.com/oauth/authorize", tokenUrl: "https://example.com/oauth/token", scopes: { read: "Read access" } }
-	 */
-	authorizationCode?: OAuthFlow;
+  /**
+   * Configuration for the OAuth Authorization Code flow.
+   * *
+   * | Version | Reference |
+   * |---|-----|
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#oauth-flows-object  | OpenAPI 3.0.4 OAuth Flows Object - authorizationCode} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#oauth-flows-object  | OpenAPI 3.0.3 OAuth Flows Object - authorizationCode} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#oauth-flows-object  | OpenAPI 3.0.2 OAuth Flows Object - authorizationCode} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#oauth-flows-object  | OpenAPI 3.0.1 OAuth Flows Object - authorizationCode} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#oauth-flows-object  | OpenAPI 3.0.0 OAuth Flows Object - authorizationCode} |
+   * @property `authorizationCode` - Optional Configuration for the OAuth Authorization Code flow
+   *
+   * @example { authorizationUrl: "https://example.com/oauth/authorize", tokenUrl: "https://example.com/oauth/token", scopes: { read: "Read access" } }
+   */
+  authorizationCode?: OAuthFlow;
 }
 
 /**
@@ -433,73 +433,73 @@ export interface OAuthFlows extends Extension {
  * ```
  */
 export interface OAuthFlow extends Extension {
-	/**
-	 * The authorization URL to be used for this flow. This MUST be in the form of a URL.
-	 * *
-	 * | Version | Reference |
-	 * |---|-----|
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#oauth-flow-object  | OpenAPI 3.0.4 OAuth Flow Object - authorizationUrl} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#oauth-flow-object  | OpenAPI 3.0.3 OAuth Flow Object - authorizationUrl} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#oauth-flow-object  | OpenAPI 3.0.2 OAuth Flow Object - authorizationUrl} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#oauth-flow-object  | OpenAPI 3.0.1 OAuth Flow Object - authorizationUrl} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#oauth-flow-object  | OpenAPI 3.0.0 OAuth Flow Object - authorizationUrl} |
-	 * @property `authorizationUrl` - Optional The authorization URL to be used for this flow
-	 *
-	 * @example "https://example.com/oauth/authorize"
-	 * @example "https://api.example.com/oauth/authorize"
-	 */
-	authorizationUrl?: string;
+  /**
+   * The authorization URL to be used for this flow. This MUST be in the form of a URL.
+   * *
+   * | Version | Reference |
+   * |---|-----|
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#oauth-flow-object  | OpenAPI 3.0.4 OAuth Flow Object - authorizationUrl} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#oauth-flow-object  | OpenAPI 3.0.3 OAuth Flow Object - authorizationUrl} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#oauth-flow-object  | OpenAPI 3.0.2 OAuth Flow Object - authorizationUrl} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#oauth-flow-object  | OpenAPI 3.0.1 OAuth Flow Object - authorizationUrl} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#oauth-flow-object  | OpenAPI 3.0.0 OAuth Flow Object - authorizationUrl} |
+   * @property `authorizationUrl` - Optional The authorization URL to be used for this flow
+   *
+   * @example "https://example.com/oauth/authorize"
+   * @example "https://api.example.com/oauth/authorize"
+   */
+  authorizationUrl?: string;
 
-	/**
-	 * The token URL to be used for this flow. This MUST be in the form of a URL.
-	 * *
-	 * | Version | Reference |
-	 * |---|-----|
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#oauth-flow-object  | OpenAPI 3.0.4 OAuth Flow Object - tokenUrl} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#oauth-flow-object  | OpenAPI 3.0.3 OAuth Flow Object - tokenUrl} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#oauth-flow-object  | OpenAPI 3.0.2 OAuth Flow Object - tokenUrl} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#oauth-flow-object  | OpenAPI 3.0.1 OAuth Flow Object - tokenUrl} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#oauth-flow-object  | OpenAPI 3.0.0 OAuth Flow Object - tokenUrl} |
-	 * @property `tokenUrl` - Optional The token URL to be used for this flow
-	 *
-	 * @example "https://example.com/oauth/token"
-	 * @example "https://api.example.com/oauth/token"
-	 */
-	tokenUrl?: string;
+  /**
+   * The token URL to be used for this flow. This MUST be in the form of a URL.
+   * *
+   * | Version | Reference |
+   * |---|-----|
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#oauth-flow-object  | OpenAPI 3.0.4 OAuth Flow Object - tokenUrl} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#oauth-flow-object  | OpenAPI 3.0.3 OAuth Flow Object - tokenUrl} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#oauth-flow-object  | OpenAPI 3.0.2 OAuth Flow Object - tokenUrl} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#oauth-flow-object  | OpenAPI 3.0.1 OAuth Flow Object - tokenUrl} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#oauth-flow-object  | OpenAPI 3.0.0 OAuth Flow Object - tokenUrl} |
+   * @property `tokenUrl` - Optional The token URL to be used for this flow
+   *
+   * @example "https://example.com/oauth/token"
+   * @example "https://api.example.com/oauth/token"
+   */
+  tokenUrl?: string;
 
-	/**
-	 * The URL to be used for obtaining refresh tokens. This MUST be in the form of a URL.
-	 * *
-	 * | Version | Reference |
-	 * |---|-----|
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#oauth-flow-object  | OpenAPI 3.0.4 OAuth Flow Object - refreshUrl} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#oauth-flow-object  | OpenAPI 3.0.3 OAuth Flow Object - refreshUrl} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#oauth-flow-object  | OpenAPI 3.0.2 OAuth Flow Object - refreshUrl} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#oauth-flow-object  | OpenAPI 3.0.1 OAuth Flow Object - refreshUrl} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#oauth-flow-object  | OpenAPI 3.0.0 OAuth Flow Object - refreshUrl} |
-	 * @property `refreshUrl` - Optional The URL to be used for obtaining refresh tokens
-	 *
-	 * @example "https://example.com/oauth/refresh"
-	 * @example "https://api.example.com/oauth/refresh"
-	 */
-	refreshUrl?: string;
+  /**
+   * The URL to be used for obtaining refresh tokens. This MUST be in the form of a URL.
+   * *
+   * | Version | Reference |
+   * |---|-----|
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#oauth-flow-object  | OpenAPI 3.0.4 OAuth Flow Object - refreshUrl} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#oauth-flow-object  | OpenAPI 3.0.3 OAuth Flow Object - refreshUrl} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#oauth-flow-object  | OpenAPI 3.0.2 OAuth Flow Object - refreshUrl} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#oauth-flow-object  | OpenAPI 3.0.1 OAuth Flow Object - refreshUrl} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#oauth-flow-object  | OpenAPI 3.0.0 OAuth Flow Object - refreshUrl} |
+   * @property `refreshUrl` - Optional The URL to be used for obtaining refresh tokens
+   *
+   * @example "https://example.com/oauth/refresh"
+   * @example "https://api.example.com/oauth/refresh"
+   */
+  refreshUrl?: string;
 
-	/**
-	 * The available scopes for the OAuth2 security scheme. A map between the scope name and a short description for it.
-	 * *
-	 * | Version | Reference |
-	 * |---|-----|
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#oauth-flow-object  | OpenAPI 3.0.4 OAuth Flow Object - scopes} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#oauth-flow-object  | OpenAPI 3.0.3 OAuth Flow Object - scopes} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#oauth-flow-object  | OpenAPI 3.0.2 OAuth Flow Object - scopes} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#oauth-flow-object  | OpenAPI 3.0.1 OAuth Flow Object - scopes} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#oauth-flow-object  | OpenAPI 3.0.0 OAuth Flow Object - scopes} |
-	 * @property `scopes` - Required The available scopes for the OAuth2 security scheme
-	 *
-	 * @example { "read": "Read access", "write": "Write access" }
-	 * @example { "admin": "Administrative access" }
-	 */
-	scopes: Record<string, string>;
+  /**
+   * The available scopes for the OAuth2 security scheme. A map between the scope name and a short description for it.
+   * *
+   * | Version | Reference |
+   * |---|-----|
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#oauth-flow-object  | OpenAPI 3.0.4 OAuth Flow Object - scopes} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#oauth-flow-object  | OpenAPI 3.0.3 OAuth Flow Object - scopes} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#oauth-flow-object  | OpenAPI 3.0.2 OAuth Flow Object - scopes} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#oauth-flow-object  | OpenAPI 3.0.1 OAuth Flow Object - scopes} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#oauth-flow-object  | OpenAPI 3.0.0 OAuth Flow Object - scopes} |
+   * @property `scopes` - Required The available scopes for the OAuth2 security scheme
+   *
+   * @example { "read": "Read access", "write": "Write access" }
+   * @example { "admin": "Administrative access" }
+   */
+  scopes: Record<string, string>;
 }
 
 /**
@@ -567,5 +567,5 @@ export interface OAuthFlow extends Extension {
  * ```
  */
 export interface SecurityRequirement {
-	[schemeName: string]: string[];
+  [schemeName: string]: string[];
 }

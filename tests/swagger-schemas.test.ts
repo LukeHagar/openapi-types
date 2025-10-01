@@ -18,9 +18,7 @@ const ajv = new Ajv({
   strict: false,
 });
 
-const schema: JSONSchemaType<Specification> = JSON.parse(
-  JSON.stringify(schemas.specification)
-);
+const schema: JSONSchemaType<Specification> = JSON.parse(JSON.stringify(schemas.specification));
 
 // validate is a type guard for Specification - type is inferred from schema type
 const validate = ajv.compile(schema);
@@ -82,7 +80,7 @@ describe("Swagger 2.0 Schema Validation", () => {
         return { name, isValid, errors: validate.errors };
       });
 
-      const failedSpecs = results.filter((result) => !result.isValid);
+      const failedSpecs = results.filter(result => !result.isValid);
 
       if (failedSpecs.length > 0) {
         console.error("Failed specifications:");
@@ -154,12 +152,10 @@ describe("Swagger 2.0 Schema Validation", () => {
 
       // Check for specific error about swagger version
       const hasSwaggerVersionError = validate.errors?.some(
-        (error) =>
+        error =>
           error.instancePath === "/swagger" &&
           (error.message?.includes("must be equal to constant") ||
-            error.message?.includes(
-              "must be equal to one of the allowed values"
-            ))
+            error.message?.includes("must be equal to one of the allowed values"))
       );
       expect(hasSwaggerVersionError).toBe(true);
     });
@@ -175,14 +171,11 @@ describe("Swagger 2.0 Schema Validation", () => {
       expect(validate.errors).toBeDefined();
 
       // Print actual errors for debugging
-      console.log(
-        "Missing required fields validation errors:",
-        validate.errors
-      );
+      console.log("Missing required fields validation errors:", validate.errors);
 
       // Check for specific required field error
       const hasRequiredError = validate.errors?.some(
-        (error) =>
+        error =>
           error.keyword === "required" &&
           error.instancePath === "" &&
           error.message?.includes("must have required property 'info'")
@@ -204,20 +197,17 @@ describe("Swagger 2.0 Schema Validation", () => {
       expect(validate.errors).toBeDefined();
 
       // Print actual errors for debugging
-      console.log(
-        "Invalid info object structure validation errors:",
-        validate.errors
-      );
+      console.log("Invalid info object structure validation errors:", validate.errors);
 
       // Check for specific missing required fields in info
       const hasTitleError = validate.errors?.some(
-        (error) =>
+        error =>
           error.keyword === "required" &&
           error.instancePath === "/info" &&
           error.message?.includes("must have required property 'title'")
       );
       const hasVersionError = validate.errors?.some(
-        (error) =>
+        error =>
           error.keyword === "required" &&
           error.instancePath === "/info" &&
           error.message?.includes("must have required property 'version'")
@@ -245,7 +235,7 @@ describe("Swagger 2.0 Schema Validation", () => {
 
       // Check for specific host format error or missing paths error (since host validation might not be strict)
       const hasHostFormatError = validate.errors?.some(
-        (error) =>
+        error =>
           error.instancePath === "/host" &&
           (error.message?.includes("must not match") ||
             error.message?.includes("must match") ||
@@ -253,7 +243,7 @@ describe("Swagger 2.0 Schema Validation", () => {
       );
       // If no specific host format error, check for missing paths error (which is the main validation failure)
       const hasMissingPathsError = validate.errors?.some(
-        (error) =>
+        error =>
           error.instancePath === "" &&
           error.message?.includes("must have required property 'paths'")
       );
@@ -564,17 +554,14 @@ describe("Swagger 2.0 Schema Validation", () => {
       expect(validate.errors).toBeDefined();
 
       // Print actual errors for debugging
-      console.log(
-        "Detailed error messages validation errors:",
-        validate.errors
-      );
+      console.log("Detailed error messages validation errors:", validate.errors);
 
       // Check that error messages are descriptive
       const errors = validate.errors || [];
       expect(errors.length).toBeGreaterThan(0);
 
       // Verify error structure
-      errors.forEach((error) => {
+      errors.forEach(error => {
         expect(error).toHaveProperty("keyword");
         expect(error).toHaveProperty("message");
         // AJV uses 'instancePath' instead of 'dataPath' in newer versions
@@ -583,7 +570,7 @@ describe("Swagger 2.0 Schema Validation", () => {
 
       // Check for specific missing version error
       const hasVersionError = validate.errors?.some(
-        (error) =>
+        error =>
           error.keyword === "required" &&
           error.instancePath === "/info" &&
           error.message?.includes("must have required property 'version'")

@@ -15,14 +15,14 @@
 export type { Components } from "./components";
 // Re-export data-types for convenience
 export type {
-	ArraySchema,
-	BooleanSchema,
-	CompositionSchema,
-	IntegerSchema,
-	NumberSchema,
-	ObjectSchema,
-	ReferenceSchema,
-	StringSchema,
+  ArraySchema,
+  BooleanSchema,
+  CompositionSchema,
+  IntegerSchema,
+  NumberSchema,
+  ObjectSchema,
+  ReferenceSchema,
+  StringSchema,
 } from "./data-types";
 // Core OpenAPI types
 export type { Extension } from "./extensions";

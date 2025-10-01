@@ -48,13 +48,13 @@ The build process creates JSON schemas for:
 
 ```typescript
 // Import schemas for a specific version
-import { schemas } from 'oas-types/schemas/3.0';
+import { schemas } from "oas-types/schemas/3.0";
 
 // Import all schemas
-import { allSchemas } from 'oas-types/schemas';
+import { allSchemas } from "oas-types/schemas";
 
 // Use with JSON Schema validators
-import Ajv from 'ajv';
+import Ajv from "ajv";
 const ajv = new Ajv();
 const validator = ajv.compile(schemas.specification);
 ```
@@ -65,66 +65,42 @@ const validator = ajv.compile(schemas.specification);
 
 ```typescript
 // OpenAPI 3.2.0 (latest)
-import { 
-  Specification, 
-  Info, 
-  Paths, 
-  Schema,
-  Components 
-} from 'oas-types/3.2';
+import { Specification, Info, Paths, Schema, Components } from "oas-types/3.2";
 
 // OpenAPI 3.1.x
-import { 
-  Specification, 
-  Info, 
-  Paths, 
-  Schema,
-  Components 
-} from 'oas-types/3.1';
+import { Specification, Info, Paths, Schema, Components } from "oas-types/3.1";
 
 // OpenAPI 3.0.x
-import { 
-  Specification, 
-  Info, 
-  Paths, 
-  Schema,
-  Components 
-} from 'oas-types/3.0';
+import { Specification, Info, Paths, Schema, Components } from "oas-types/3.0";
 
 // Swagger 2.0
-import { 
-  Swagger, 
-  Info, 
-  Paths, 
-  Schema,
-  Definitions 
-} from 'oas-types/2.0';
+import { Swagger, Info, Paths, Schema, Definitions } from "oas-types/2.0";
 ```
 
 ### Import Specific OpenAPI Objects
 
 ```typescript
 // Import specific objects from any version
-import { Info, Contact, License } from 'oas-types/3.1/info';
-import { Paths, Operation, Parameter } from 'oas-types/3.1/paths';
-import { Schema, StringSchema, ObjectSchema } from 'oas-types/3.1/schema';
-import { SecurityScheme, OAuthFlows } from 'oas-types/3.1/security';
+import { Info, Contact, License } from "oas-types/3.1/info";
+import { Paths, Operation, Parameter } from "oas-types/3.1/paths";
+import { Schema, StringSchema, ObjectSchema } from "oas-types/3.1/schema";
+import { SecurityScheme, OAuthFlows } from "oas-types/3.1/security";
 ```
 
 ### Import Schema Data Types
 
 ```typescript
 // Import specific schema types for any version
-import { 
-  StringSchema, 
-  NumberSchema, 
-  IntegerSchema, 
+import {
+  StringSchema,
+  NumberSchema,
+  IntegerSchema,
   BooleanSchema,
-  ArraySchema, 
+  ArraySchema,
   ObjectSchema,
   CompositionSchema,
-  ReferenceSchema 
-} from 'oas-types/3.1/data-types';
+  ReferenceSchema,
+} from "oas-types/3.1/data-types";
 ```
 
 ## Project Structure
@@ -190,19 +166,25 @@ openapi-types/
 ## Philosophy
 
 ### Version-Specific Implementations
+
 Each OpenAPI version has its own complete implementation that accurately reflects the specification for that version. This ensures:
+
 - **Type accuracy** - Types match the exact specification requirements
 - **Version compatibility** - No confusion between different OpenAPI versions
 - **Future-proofing** - Easy to add new versions without breaking existing ones
 
 ### Modular Organization
+
 Types are organized by OpenAPI object type, making it easy to:
+
 - Import only what you need
 - Understand the structure of OpenAPI specifications
 - Maintain and update specific object types
 
 ### Comprehensive Documentation
+
 Every type includes:
+
 - **JSDoc comments** with detailed descriptions
 - **Links to official specifications** for each OpenAPI version
 - **Usage examples** showing practical implementations
@@ -220,7 +202,7 @@ Every type includes:
 ### Basic OpenAPI 3.1.x Usage
 
 ```typescript
-import { Specification, Info, Paths, Schema } from 'oas-types/3.1';
+import { Specification, Info, Paths, Schema } from "oas-types/3.1";
 
 const openApiSpec: Specification = {
   openapi: "3.1.0",
@@ -230,12 +212,12 @@ const openApiSpec: Specification = {
     description: "A sample API",
     contact: {
       name: "API Support",
-      email: "support@example.com"
+      email: "support@example.com",
     },
     license: {
       name: "MIT",
-      identifier: "MIT"
-    }
+      identifier: "MIT",
+    },
   } as Info,
   paths: {
     "/users": {
@@ -248,27 +230,22 @@ const openApiSpec: Specification = {
               "application/json": {
                 schema: {
                   type: "array",
-                  items: { $ref: "#/components/schemas/User" }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  } as Paths
+                  items: { $ref: "#/components/schemas/User" },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+  } as Paths,
 };
 ```
 
 ### Schema Definitions (OpenAPI 3.1.x)
 
 ```typescript
-import { 
-  StringSchema, 
-  ObjectSchema, 
-  ArraySchema,
-  Schema 
-} from 'oas-types/3.1';
+import { StringSchema, ObjectSchema, ArraySchema, Schema } from "oas-types/3.1";
 
 // String schema with validation
 const nameSchema: StringSchema = {
@@ -276,7 +253,7 @@ const nameSchema: StringSchema = {
   minLength: 1,
   maxLength: 100,
   pattern: "^[a-zA-Z\\s]+$",
-  description: "User's full name"
+  description: "User's full name",
 };
 
 // Object schema with properties
@@ -285,13 +262,13 @@ const userSchema: ObjectSchema = {
   properties: {
     id: { type: "integer" },
     name: nameSchema,
-    email: { 
-      type: "string", 
-      format: "email" 
-    }
+    email: {
+      type: "string",
+      format: "email",
+    },
   },
   required: ["id", "name", "email"],
-  description: "User object"
+  description: "User object",
 };
 
 // Array schema
@@ -299,21 +276,21 @@ const usersSchema: ArraySchema = {
   type: "array",
   items: userSchema,
   minItems: 1,
-  description: "Array of users"
+  description: "Array of users",
 };
 ```
 
 ### Swagger 2.0 Usage
 
 ```typescript
-import { Swagger, Info, Paths } from 'oas-types/2.0';
+import { Swagger, Info, Paths } from "oas-types/2.0";
 
 const swaggerSpec: Swagger = {
   swagger: "2.0",
   info: {
     title: "My API",
     version: "1.0.0",
-    description: "A sample API"
+    description: "A sample API",
   } as Info,
   paths: {
     "/users": {
@@ -324,36 +301,36 @@ const swaggerSpec: Swagger = {
             description: "A list of users",
             schema: {
               type: "array",
-              items: { $ref: "#/definitions/User" }
-            }
-          }
-        }
-      }
-    }
+              items: { $ref: "#/definitions/User" },
+            },
+          },
+        },
+      },
+    },
   } as Paths,
   definitions: {
     User: {
       type: "object",
       properties: {
         id: { type: "integer" },
-        name: { type: "string" }
+        name: { type: "string" },
       },
-      required: ["id", "name"]
-    }
-  }
+      required: ["id", "name"],
+    },
+  },
 };
 ```
 
 ### Security Schemes
 
 ```typescript
-import { SecurityScheme, OAuthFlows } from 'oas-types/3.1/security';
+import { SecurityScheme, OAuthFlows } from "oas-types/3.1/security";
 
 const apiKeyAuth: SecurityScheme = {
   type: "apiKey",
   in: "header",
   name: "X-API-Key",
-  description: "API key authentication"
+  description: "API key authentication",
 };
 
 const oauth2Auth: SecurityScheme = {
@@ -364,10 +341,10 @@ const oauth2Auth: SecurityScheme = {
       tokenUrl: "https://example.com/oauth/token",
       scopes: {
         "read:users": "Read user information",
-        "write:users": "Modify user information"
-      }
-    }
-  } as OAuthFlows
+        "write:users": "Modify user information",
+      },
+    },
+  } as OAuthFlows,
 };
 ```
 
@@ -382,6 +359,7 @@ const oauth2Auth: SecurityScheme = {
 ## Documentation
 
 Each type includes comprehensive JSDoc documentation with:
+
 - **Official specification links** for each OpenAPI version
 - **Usage examples** with practical implementations
 - **Property documentation** with example values and constraints
@@ -391,22 +369,26 @@ Each type includes comprehensive JSDoc documentation with:
 ## Key Features
 
 ### OpenAPI 3.2.0 Specific Features
+
 - **Latest OpenAPI specification** - Full support for OpenAPI 3.2.0 features
 - **Enhanced OAuth flows** - Support for all OAuth 2.0 flow types
 - **Advanced webhook support** - Comprehensive webhook definitions
 
 ### OpenAPI 3.1.x Specific Features
+
 - **JSON Schema 2020-12 alignment** - Full support for latest JSON Schema features
 - **Discriminated schema unions** - Type-safe schema type discrimination
 - **Composition schemas** - Support for `allOf`, `anyOf`, `oneOf`, `not`, `if`/`then`/`else`
 - **Enhanced validation** - Support for `const`, `examples`, and advanced validation keywords
 
 ### OpenAPI 3.0.x Features
+
 - **Nullable schemas** - Support for `nullable` property
 - **Discriminator objects** - Support for schema discrimination
 - **Callback objects** - Support for webhook definitions
 
 ### Swagger 2.0 Features
+
 - **Definitions object** - Support for schema definitions
 - **Security definitions** - Support for security schemes
 - **Response definitions** - Support for reusable response definitions
@@ -414,6 +396,7 @@ Each type includes comprehensive JSDoc documentation with:
 ## Contributing
 
 Contributions are welcome! Please ensure that:
+
 - All types follow the OpenAPI specification exactly
 - JSDoc documentation is complete and accurate
 - Version compatibility is maintained

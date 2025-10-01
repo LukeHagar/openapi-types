@@ -46,6 +46,7 @@ const schemasToGenerate = {
     "Schema",
     "Response",
     "Parameter",
+    "PathItem",
     "Example",
     "RequestBody",
     "Header",
@@ -80,9 +81,7 @@ const schemasToGenerate = {
   ],
 };
 
-async function generateAllSchemasForVersion(
-  version: string
-): Promise<BuildResult[]> {
+async function generateAllSchemasForVersion(version: string): Promise<BuildResult[]> {
   const results: BuildResult[] = [];
   const outputDir = resolve(`./schemas/${version}`);
 
@@ -113,9 +112,7 @@ async function generateAllSchemasForVersion(
 
     // Generate schema for ALL exported types at once
     try {
-      console.log(
-        `🔍 Generating schemas for all exported types in ${version}...`
-      );
+      console.log(`🔍 Generating schemas for all exported types in ${version}...`);
       const schema = generator.createSchema(); // No type parameter = all types
 
       if (schema?.definitions) {
@@ -123,9 +120,7 @@ async function generateAllSchemasForVersion(
         const definitionNames = Object.keys(definitions);
 
         console.log(
-          `📋 Found ${
-            definitionNames.length
-          } exported types: ${definitionNames.join(", ")}`
+          `📋 Found ${definitionNames.length} exported types: ${definitionNames.join(", ")}`
         );
 
         // Generate main specification schema (if it exists)
@@ -150,11 +145,7 @@ async function generateAllSchemasForVersion(
         // Generate individual component schemas
         for (const [typeName, typeSchema] of Object.entries(definitions)) {
           if (typeName === "Specification") continue; // Skip main spec, already handled
-          if (
-            !schemasToGenerate[
-              version as keyof typeof schemasToGenerate
-            ].includes(typeName)
-          )
+          if (!schemasToGenerate[version as keyof typeof schemasToGenerate].includes(typeName))
             continue; // Skip types that are not in the schemasToGenerate object
 
           try {
@@ -173,9 +164,7 @@ async function generateAllSchemasForVersion(
               success: true,
               outputPath,
             });
-            console.log(
-              `✅ Generated component schema for ${version}/${typeName}`
-            );
+            console.log(`✅ Generated component schema for ${version}/${typeName}`);
           } catch (error) {
             results.push({
               version,
@@ -183,10 +172,7 @@ async function generateAllSchemasForVersion(
               success: false,
               error: error instanceof Error ? error.message : String(error),
             });
-            console.error(
-              `❌ Failed to generate schema for ${version}/${typeName}:`,
-              error
-            );
+            console.error(`❌ Failed to generate schema for ${version}/${typeName}:`, error);
           }
         }
       } else {
@@ -255,8 +241,8 @@ async function generateIndexFiles(): Promise<void> {
 
     if (existsSync(componentsDir)) {
       componentFiles = readdirSync(componentsDir)
-        .filter((file) => file.endsWith(".json"))
-        .map((file) => file.replace(".json", ""));
+        .filter(file => file.endsWith(".json"))
+        .map(file => file.replace(".json", ""));
 
       for (const component of componentFiles) {
         indexContent += `export { default as ${component} } from "./components/${component}.json";\n`;
@@ -338,8 +324,8 @@ async function main() {
   await generateIndexFiles();
 
   // Summary
-  const successful = allResults.filter((r) => r.success);
-  const failed = allResults.filter((r) => !r.success);
+  const successful = allResults.filter(r => r.success);
+  const failed = allResults.filter(r => !r.success);
 
   console.log("📊 Build Summary:");
   console.log(`✅ Successful: ${successful.length}`);
@@ -347,7 +333,7 @@ async function main() {
 
   if (failed.length > 0) {
     console.log("\n❌ Failed generations:");
-    failed.forEach((result) => {
+    failed.forEach(result => {
       console.log(`  - ${result.version}/${result.type}: ${result.error}`);
     });
   }

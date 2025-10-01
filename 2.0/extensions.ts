@@ -96,20 +96,20 @@
  * ```
  */
 export type Extension = {
-	/**
-	 * Vendor extensions allow adding custom properties to Swagger objects.
-	 * All extension property names MUST begin with "x-" followed by any valid identifier.
-	 * The value can be any valid JSON value (null, primitive, array, or object).
-	 *
-	 * Extensions enable API providers to add custom functionality and metadata
-	 * to their specifications without breaking compatibility with standard
-	 * Swagger tools. They should be used consistently and documented properly.
-	 *
-	 * @example { "x-internal-id": "12345" }
-	 * @example { "x-custom-feature": { enabled: true, version: "1.0" } }
-	 * @example { "x-tags": ["internal", "beta"] }
-	 * @example { "x-deprecated": true }
-	 * @example { "x-optional-field": null }
-	 */
-	[K in `x-${string}`]: unknown;
+  /**
+   * Vendor extensions allow adding custom properties to Swagger objects.
+   * All extension property names MUST begin with "x-" followed by any valid identifier.
+   * The value can be any valid JSON value (null, primitive, array, or object).
+   *
+   * Extensions enable API providers to add custom functionality and metadata
+   * to their specifications without breaking compatibility with standard
+   * Swagger tools. They should be used consistently and documented properly.
+   *
+   * @example { "x-internal-id": "12345" }
+   * @example { "x-custom-feature": { enabled: true, version: "1.0" } }
+   * @example { "x-tags": ["internal", "beta"] }
+   * @example { "x-deprecated": true }
+   * @example { "x-optional-field": null }
+   */
+  [K in `x-${string}`]: unknown;
 };

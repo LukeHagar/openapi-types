@@ -79,102 +79,102 @@ import type { XMLObject } from "../xml";
  * ```
  */
 export interface FileSchema extends Extension {
-	/**
-	 * The type of the schema. Must be "file" for file schemas.
-	 *
-	 * This property is required and must be set to "file" to indicate
-	 * that this schema represents file data. This is a Swagger 2.0 specific
-	 * type that extends JSON Schema.
-	 *
-	 * @example "file"
-	 */
-	type: "file";
+  /**
+   * The type of the schema. Must be "file" for file schemas.
+   *
+   * This property is required and must be set to "file" to indicate
+   * that this schema represents file data. This is a Swagger 2.0 specific
+   * type that extends JSON Schema.
+   *
+   * @example "file"
+   */
+  type: "file";
 
-	/**
-	 * The extending format for the previously mentioned type.
-	 * See Swagger 2.0 Data Type Formats for further details.
-	 *
-	 * Formats provide additional semantic information about the data type,
-	 * enabling more precise validation and better tooling support. Swagger 2.0
-	 * defines several standard formats, but custom formats are also allowed.
-	 *
-	 * @see {@link https://swagger.io/specification/v2/#dataTypeFormat | Swagger 2.0 Data Type Formats}
-	 *
-	 * @example "int32"
-	 * @example "date"
-	 * @example "email"
-	 * @example "uuid"
-	 */
-	format?: string;
+  /**
+   * The extending format for the previously mentioned type.
+   * See Swagger 2.0 Data Type Formats for further details.
+   *
+   * Formats provide additional semantic information about the data type,
+   * enabling more precise validation and better tooling support. Swagger 2.0
+   * defines several standard formats, but custom formats are also allowed.
+   *
+   * @see {@link https://swagger.io/specification/v2/#dataTypeFormat | Swagger 2.0 Data Type Formats}
+   *
+   * @example "int32"
+   * @example "date"
+   * @example "email"
+   * @example "uuid"
+   */
+  format?: string;
 
-	/**
-	 * A short description of the schema. GFM syntax can be used for rich text representation.
-	 *
-	 * This description should provide clear information about what the schema
-	 * represents and how it should be used. It's commonly displayed in API
-	 * documentation and code generation tools.
-	 *
-	 * @example "A user object containing basic information"
-	 * @example "Email address in RFC 5322 format"
-	 */
-	description?: string;
+  /**
+   * A short description of the schema. GFM syntax can be used for rich text representation.
+   *
+   * This description should provide clear information about what the schema
+   * represents and how it should be used. It's commonly displayed in API
+   * documentation and code generation tools.
+   *
+   * @example "A user object containing basic information"
+   * @example "Email address in RFC 5322 format"
+   */
+  description?: string;
 
-	/**
-	 * A short title for the schema.
-	 *
-	 * The title provides a human-readable name for the schema, often used
-	 * in documentation and UI displays. It should be concise but descriptive.
-	 *
-	 * @example "User"
-	 * @example "Pet"
-	 * @example "Order"
-	 */
-	title?: string;
+  /**
+   * A short title for the schema.
+   *
+   * The title provides a human-readable name for the schema, often used
+   * in documentation and UI displays. It should be concise but descriptive.
+   *
+   * @example "User"
+   * @example "Pet"
+   * @example "Order"
+   */
+  title?: string;
 
-	/**
-	 * Declares the value of the schema that the server will use if none is provided.
-	 * Unlike JSON Schema, the value MUST conform to the defined type for the Schema Object.
-	 *
-	 * This is a Swagger 2.0 specific requirement that differs from JSON Schema.
-	 * The default value must be valid according to the schema's type and constraints.
-	 *
-	 * @example "defaultValue"
-	 * @example 10
-	 * @example { name: "John", age: 30 }
-	 * @example ["item1", "item2"]
-	 */
-	default?: unknown;
+  /**
+   * Declares the value of the schema that the server will use if none is provided.
+   * Unlike JSON Schema, the value MUST conform to the defined type for the Schema Object.
+   *
+   * This is a Swagger 2.0 specific requirement that differs from JSON Schema.
+   * The default value must be valid according to the schema's type and constraints.
+   *
+   * @example "defaultValue"
+   * @example 10
+   * @example { name: "John", age: 30 }
+   * @example ["item1", "item2"]
+   */
+  default?: unknown;
 
-	/**
-	 * An instance validates successfully against this keyword if its value is equal to one of the elements in this keyword's array value.
-	 *
-	 * @see {@link https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.5.1 | JSON Schema Validation - enum}
-	 *
-	 * @example ["option1", "option2", "option3"]
-	 * @example ["red", "green", "blue"]
-	 * @example [1, 2, 3, 4, 5]
-	 */
-	enum?: unknown[];
+  /**
+   * An instance validates successfully against this keyword if its value is equal to one of the elements in this keyword's array value.
+   *
+   * @see {@link https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.5.1 | JSON Schema Validation - enum}
+   *
+   * @example ["option1", "option2", "option3"]
+   * @example ["red", "green", "blue"]
+   * @example [1, 2, 3, 4, 5]
+   */
+  enum?: unknown[];
 
-	/**
-	 * A free-form property to include an example of an instance for this schema.
-	 *
-	 * Examples help developers understand how to use the schema and what kind
-	 * of data is expected. They are commonly used by documentation generators
-	 * and API testing tools.
-	 *
-	 * @example { name: "Puma", id: 1 }
-	 * @example "example string value"
-	 * @example 42
-	 * @example ["item1", "item2"]
-	 */
-	example?: unknown;
+  /**
+   * A free-form property to include an example of an instance for this schema.
+   *
+   * Examples help developers understand how to use the schema and what kind
+   * of data is expected. They are commonly used by documentation generators
+   * and API testing tools.
+   *
+   * @example { name: "Puma", id: 1 }
+   * @example "example string value"
+   * @example 42
+   * @example ["item1", "item2"]
+   */
+  example?: unknown;
 
-	/**
-	 * XML representation metadata for the schema.
-	 * Allows for fine-tuned XML model definitions.
-	 *
-	 * @example { name: "fileData", attribute: false }
-	 */
-	xml?: XMLObject;
+  /**
+   * XML representation metadata for the schema.
+   * Allows for fine-tuned XML model definitions.
+   *
+   * @example { name: "fileData", attribute: false }
+   */
+  xml?: XMLObject;
 }

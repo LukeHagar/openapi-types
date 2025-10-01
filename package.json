@@ -35,6 +35,8 @@
     "dev": "bun run --watch index.ts",
     "lint": "biome check .",
     "lint:fix": "biome check --write .",
+    "format": "prettier --check .",
+    "format:fix": "prettier --write .",
     "test:version": "node scripts/test-version-comparison.js",
     "schemas:clean": "rm -rf schemas/",
     "schemas:validate": "echo 'Schema validation not yet implemented'"
@@ -44,6 +46,7 @@
     "@biomejs/biome": "^2.2.4",
     "@types/bun": "^1.2.23",
     "ajv": "^8.17.1",
+    "prettier": "^3.6.2",
     "rimraf": "^6.0.1",
     "ts-json-schema-generator": "^2.4.0",
     "tsd": "^0.33.0",

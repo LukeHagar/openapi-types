@@ -81,87 +81,87 @@ import type { XML } from "../xml";
  * ```
  */
 export interface BooleanSchema extends Extension {
-	/**
-	 * The type of the schema. Must be "boolean" for boolean schemas.
-	 *
-	 * @example "boolean"
-	 */
-	type: "boolean";
+  /**
+   * The type of the schema. Must be "boolean" for boolean schemas.
+   *
+   * @example "boolean"
+   */
+  type: "boolean";
 
-	/**
-	 * A short title for the schema.
-	 *
-	 * @example "Is Active"
-	 * @example "Enabled"
-	 */
-	title?: string;
+  /**
+   * A short title for the schema.
+   *
+   * @example "Is Active"
+   * @example "Enabled"
+   */
+  title?: string;
 
-	/**
-	 * A short description of the schema. CommonMark syntax MAY be used for rich text representation.
-	 *
-	 * @example "Whether the user is active"
-	 * @example "Feature enabled status"
-	 */
-	description?: string;
+  /**
+   * A short description of the schema. CommonMark syntax MAY be used for rich text representation.
+   *
+   * @example "Whether the user is active"
+   * @example "Feature enabled status"
+   */
+  description?: string;
 
-	/**
-	 * The default value for the schema.
-	 *
-	 * @example true
-	 * @example false
-	 */
-	default?: boolean;
+  /**
+   * The default value for the schema.
+   *
+   * @example true
+   * @example false
+   */
+  default?: boolean;
 
-	/**
-	 * Example value for the schema.
-	 *
-	 * @example true
-	 * @example false
-	 */
-	example?: boolean;
+  /**
+   * Example value for the schema.
+   *
+   * @example true
+   * @example false
+   */
+  example?: boolean;
 
-	/**
-	 * Enumeration of valid boolean values.
-	 *
-	 * @example [true, false]
-	 */
-	enum?: boolean[];
+  /**
+   * Enumeration of valid boolean values.
+   *
+   * @example [true, false]
+   */
+  enum?: boolean[];
 
-	/**
-	 * Whether the property is read-only. Default value is false.
-	 *
-	 * @default false
-	 * @example true
-	 */
-	readOnly?: boolean;
+  /**
+   * Whether the property is read-only. Default value is false.
+   *
+   * @default false
+   * @example true
+   */
+  readOnly?: boolean;
 
-	/**
-	 * Whether the property is write-only. Default value is false.
-	 *
-	 * @default false
-	 * @example true
-	 */
-	writeOnly?: boolean;
+  /**
+   * Whether the property is write-only. Default value is false.
+   *
+   * @default false
+   * @example true
+   */
+  writeOnly?: boolean;
 
-	/**
-	 * XML representation metadata for the schema.
-	 *
-	 * @example { name: "isActive", attribute: true }
-	 */
-	xml?: XML;
+  /**
+   * XML representation metadata for the schema.
+   *
+   * @example { name: "isActive", attribute: true }
+   */
+  xml?: XML;
 
-	/**
-	 * Additional external documentation for the schema.
-	 *
-	 * @example { description: "Find out more about this field", url: "https://example.com/docs" }
-	 */
-	externalDocs?: ExternalDocumentation;
+  /**
+   * Additional external documentation for the schema.
+   *
+   * @example { description: "Find out more about this field", url: "https://example.com/docs" }
+   */
+  externalDocs?: ExternalDocumentation;
 
-	/**
-	 * Whether the schema is deprecated. Default value is false.
-	 *
-	 * @default false
-	 * @example true
-	 */
-	deprecated?: boolean;
+  /**
+   * Whether the schema is deprecated. Default value is false.
+   *
+   * @default false
+   * @example true
+   */
+  deprecated?: boolean;
 }

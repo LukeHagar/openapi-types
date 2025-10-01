@@ -1,68 +1,195 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "type": "object",
-  "properties": {
-    "type": {
-      "type": "string",
-      "enum": ["apiKey", "http", "oauth2", "openIdConnect"],
-      "description": "The type of the security scheme. This field is required.\n* | Version | Reference | |---|-----| | 3.0.4   |  {@link  https://spec.openapis.org/oas/v3.0.4#security-scheme-object  OpenAPI 3.0.4 Security Scheme Object - type }  | | 3.0.3   |  {@link  https://spec.openapis.org/oas/v3.0.3#security-scheme-object  OpenAPI 3.0.3 Security Scheme Object - type }  | | 3.0.2   |  {@link  https://spec.openapis.org/oas/v3.0.2#security-scheme-object  OpenAPI 3.0.2 Security Scheme Object - type }  | | 3.0.1   |  {@link  https://spec.openapis.org/oas/v3.0.1#security-scheme-object  OpenAPI 3.0.1 Security Scheme Object - type }  | | 3.0.0   |  {@link  https://spec.openapis.org/oas/v3.0.0#security-scheme-object  OpenAPI 3.0.0 Security Scheme Object - type }  |",
-      "markdownDescription": "The type of the security scheme. This field is required.\n*\n| Version | Reference |\n|---|-----|\n| 3.0.4   |  {@link  https://spec.openapis.org/oas/v3.0.4#security-scheme-object  OpenAPI 3.0.4 Security Scheme Object - type }  |\n| 3.0.3   |  {@link  https://spec.openapis.org/oas/v3.0.3#security-scheme-object  OpenAPI 3.0.3 Security Scheme Object - type }  |\n| 3.0.2   |  {@link  https://spec.openapis.org/oas/v3.0.2#security-scheme-object  OpenAPI 3.0.2 Security Scheme Object - type }  |\n| 3.0.1   |  {@link  https://spec.openapis.org/oas/v3.0.1#security-scheme-object  OpenAPI 3.0.1 Security Scheme Object - type }  |\n| 3.0.0   |  {@link  https://spec.openapis.org/oas/v3.0.0#security-scheme-object  OpenAPI 3.0.0 Security Scheme Object - type }  |",
-      "examples": ["apiKey", "http", "oauth2", "openIdConnect"]
-    },
-    "description": {
-      "type": "string",
-      "description": "A short description for security scheme. CommonMark syntax MAY be used for rich text representation.\n* | Version | Reference | |---|-----| | 3.0.4   |  {@link  https://spec.openapis.org/oas/v3.0.4#security-scheme-object  OpenAPI 3.0.4 Security Scheme Object - description }  | | 3.0.3   |  {@link  https://spec.openapis.org/oas/v3.0.3#security-scheme-object  OpenAPI 3.0.3 Security Scheme Object - description }  | | 3.0.2   |  {@link  https://spec.openapis.org/oas/v3.0.2#security-scheme-object  OpenAPI 3.0.2 Security Scheme Object - description }  | | 3.0.1   |  {@link  https://spec.openapis.org/oas/v3.0.1#security-scheme-object  OpenAPI 3.0.1 Security Scheme Object - description }  | | 3.0.0   |  {@link  https://spec.openapis.org/oas/v3.0.0#security-scheme-object  OpenAPI 3.0.0 Security Scheme Object - description }  |",
-      "markdownDescription": "A short description for security scheme. CommonMark syntax MAY be used for rich text representation.\n*\n| Version | Reference |\n|---|-----|\n| 3.0.4   |  {@link  https://spec.openapis.org/oas/v3.0.4#security-scheme-object  OpenAPI 3.0.4 Security Scheme Object - description }  |\n| 3.0.3   |  {@link  https://spec.openapis.org/oas/v3.0.3#security-scheme-object  OpenAPI 3.0.3 Security Scheme Object - description }  |\n| 3.0.2   |  {@link  https://spec.openapis.org/oas/v3.0.2#security-scheme-object  OpenAPI 3.0.2 Security Scheme Object - description }  |\n| 3.0.1   |  {@link  https://spec.openapis.org/oas/v3.0.1#security-scheme-object  OpenAPI 3.0.1 Security Scheme Object - description }  |\n| 3.0.0   |  {@link  https://spec.openapis.org/oas/v3.0.0#security-scheme-object  OpenAPI 3.0.0 Security Scheme Object - description }  |",
-      "examples": ["API key authentication", "OAuth 2.0 authentication"]
-    },
-    "name": {
-      "type": "string",
-      "description": "The name of the header, query or cookie parameter to be used.\n* | Version | Reference | |---|-----| | 3.0.4   |  {@link  https://spec.openapis.org/oas/v3.0.4#security-scheme-object  OpenAPI 3.0.4 Security Scheme Object - name }  | | 3.0.3   |  {@link  https://spec.openapis.org/oas/v3.0.3#security-scheme-object  OpenAPI 3.0.3 Security Scheme Object - name }  | | 3.0.2   |  {@link  https://spec.openapis.org/oas/v3.0.2#security-scheme-object  OpenAPI 3.0.2 Security Scheme Object - name }  | | 3.0.1   |  {@link  https://spec.openapis.org/oas/v3.0.1#security-scheme-object  OpenAPI 3.0.1 Security Scheme Object - name }  | | 3.0.0   |  {@link  https://spec.openapis.org/oas/v3.0.0#security-scheme-object  OpenAPI 3.0.0 Security Scheme Object - name }  |",
-      "markdownDescription": "The name of the header, query or cookie parameter to be used.\n*\n| Version | Reference |\n|---|-----|\n| 3.0.4   |  {@link  https://spec.openapis.org/oas/v3.0.4#security-scheme-object  OpenAPI 3.0.4 Security Scheme Object - name }  |\n| 3.0.3   |  {@link  https://spec.openapis.org/oas/v3.0.3#security-scheme-object  OpenAPI 3.0.3 Security Scheme Object - name }  |\n| 3.0.2   |  {@link  https://spec.openapis.org/oas/v3.0.2#security-scheme-object  OpenAPI 3.0.2 Security Scheme Object - name }  |\n| 3.0.1   |  {@link  https://spec.openapis.org/oas/v3.0.1#security-scheme-object  OpenAPI 3.0.1 Security Scheme Object - name }  |\n| 3.0.0   |  {@link  https://spec.openapis.org/oas/v3.0.0#security-scheme-object  OpenAPI 3.0.0 Security Scheme Object - name }  |",
-      "examples": ["X-API-Key", "Authorization"]
-    },
-    "in": {
-      "type": "string",
-      "enum": ["query", "header", "cookie"],
-      "description": "The location of the API key. Valid values are \"query\", \"header\" or \"cookie\".\n* | Version | Reference | |---|-----| | 3.0.4   |  {@link  https://spec.openapis.org/oas/v3.0.4#security-scheme-object  OpenAPI 3.0.4 Security Scheme Object - in }  | | 3.0.3   |  {@link  https://spec.openapis.org/oas/v3.0.3#security-scheme-object  OpenAPI 3.0.3 Security Scheme Object - in }  | | 3.0.2   |  {@link  https://spec.openapis.org/oas/v3.0.2#security-scheme-object  OpenAPI 3.0.2 Security Scheme Object - in }  | | 3.0.1   |  {@link  https://spec.openapis.org/oas/v3.0.1#security-scheme-object  OpenAPI 3.0.1 Security Scheme Object - in }  | | 3.0.0   |  {@link  https://spec.openapis.org/oas/v3.0.0#security-scheme-object  OpenAPI 3.0.0 Security Scheme Object - in }  |",
-      "markdownDescription": "The location of the API key. Valid values are \"query\", \"header\" or \"cookie\".\n*\n| Version | Reference |\n|---|-----|\n| 3.0.4   |  {@link  https://spec.openapis.org/oas/v3.0.4#security-scheme-object  OpenAPI 3.0.4 Security Scheme Object - in }  |\n| 3.0.3   |  {@link  https://spec.openapis.org/oas/v3.0.3#security-scheme-object  OpenAPI 3.0.3 Security Scheme Object - in }  |\n| 3.0.2   |  {@link  https://spec.openapis.org/oas/v3.0.2#security-scheme-object  OpenAPI 3.0.2 Security Scheme Object - in }  |\n| 3.0.1   |  {@link  https://spec.openapis.org/oas/v3.0.1#security-scheme-object  OpenAPI 3.0.1 Security Scheme Object - in }  |\n| 3.0.0   |  {@link  https://spec.openapis.org/oas/v3.0.0#security-scheme-object  OpenAPI 3.0.0 Security Scheme Object - in }  |",
-      "examples": ["query", "header", "cookie"]
-    },
-    "scheme": {
-      "type": "string",
-      "description": "The name of the HTTP Authorization scheme to be used in the Authorization header.\n* | Version | Reference | |---|-----| | 3.0.4   |  {@link  https://spec.openapis.org/oas/v3.0.4#security-scheme-object  OpenAPI 3.0.4 Security Scheme Object - scheme }  | | 3.0.3   |  {@link  https://spec.openapis.org/oas/v3.0.3#security-scheme-object  OpenAPI 3.0.3 Security Scheme Object - scheme }  | | 3.0.2   |  {@link  https://spec.openapis.org/oas/v3.0.2#security-scheme-object  OpenAPI 3.0.2 Security Scheme Object - scheme }  | | 3.0.1   |  {@link  https://spec.openapis.org/oas/v3.0.1#security-scheme-object  OpenAPI 3.0.1 Security Scheme Object - scheme }  | | 3.0.0   |  {@link  https://spec.openapis.org/oas/v3.0.0#security-scheme-object  OpenAPI 3.0.0 Security Scheme Object - scheme }  |",
-      "markdownDescription": "The name of the HTTP Authorization scheme to be used in the Authorization header.\n*\n| Version | Reference |\n|---|-----|\n| 3.0.4   |  {@link  https://spec.openapis.org/oas/v3.0.4#security-scheme-object  OpenAPI 3.0.4 Security Scheme Object - scheme }  |\n| 3.0.3   |  {@link  https://spec.openapis.org/oas/v3.0.3#security-scheme-object  OpenAPI 3.0.3 Security Scheme Object - scheme }  |\n| 3.0.2   |  {@link  https://spec.openapis.org/oas/v3.0.2#security-scheme-object  OpenAPI 3.0.2 Security Scheme Object - scheme }  |\n| 3.0.1   |  {@link  https://spec.openapis.org/oas/v3.0.1#security-scheme-object  OpenAPI 3.0.1 Security Scheme Object - scheme }  |\n| 3.0.0   |  {@link  https://spec.openapis.org/oas/v3.0.0#security-scheme-object  OpenAPI 3.0.0 Security Scheme Object - scheme }  |",
-      "examples": ["bearer", "basic"]
-    },
-    "bearerFormat": {
-      "type": "string",
-      "description": "A hint to the client to identify how the bearer token is formatted.\n* | Version | Reference | |---|-----| | 3.0.4   |  {@link  https://spec.openapis.org/oas/v3.0.4#security-scheme-object  OpenAPI 3.0.4 Security Scheme Object - bearerFormat }  | | 3.0.3   |  {@link  https://spec.openapis.org/oas/v3.0.3#security-scheme-object  OpenAPI 3.0.3 Security Scheme Object - bearerFormat }  | | 3.0.2   |  {@link  https://spec.openapis.org/oas/v3.0.2#security-scheme-object  OpenAPI 3.0.2 Security Scheme Object - bearerFormat }  | | 3.0.1   |  {@link  https://spec.openapis.org/oas/v3.0.1#security-scheme-object  OpenAPI 3.0.1 Security Scheme Object - bearerFormat }  | | 3.0.0   |  {@link  https://spec.openapis.org/oas/v3.0.0#security-scheme-object  OpenAPI 3.0.0 Security Scheme Object - bearerFormat }  |",
-      "markdownDescription": "A hint to the client to identify how the bearer token is formatted.\n*\n| Version | Reference |\n|---|-----|\n| 3.0.4   |  {@link  https://spec.openapis.org/oas/v3.0.4#security-scheme-object  OpenAPI 3.0.4 Security Scheme Object - bearerFormat }  |\n| 3.0.3   |  {@link  https://spec.openapis.org/oas/v3.0.3#security-scheme-object  OpenAPI 3.0.3 Security Scheme Object - bearerFormat }  |\n| 3.0.2   |  {@link  https://spec.openapis.org/oas/v3.0.2#security-scheme-object  OpenAPI 3.0.2 Security Scheme Object - bearerFormat }  |\n| 3.0.1   |  {@link  https://spec.openapis.org/oas/v3.0.1#security-scheme-object  OpenAPI 3.0.1 Security Scheme Object - bearerFormat }  |\n| 3.0.0   |  {@link  https://spec.openapis.org/oas/v3.0.0#security-scheme-object  OpenAPI 3.0.0 Security Scheme Object - bearerFormat }  |",
-      "examples": ["JWT", "Bearer"]
-    },
-    "flows": {
-      "$ref": "#/definitions/OAuthFlows",
-      "description": "An object containing configuration information for the flow types supported.\n* | Version | Reference | |---|-----| | 3.0.4   |  {@link  https://spec.openapis.org/oas/v3.0.4#security-scheme-object  OpenAPI 3.0.4 Security Scheme Object - flows }  | | 3.0.3   |  {@link  https://spec.openapis.org/oas/v3.0.3#security-scheme-object  OpenAPI 3.0.3 Security Scheme Object - flows }  | | 3.0.2   |  {@link  https://spec.openapis.org/oas/v3.0.2#security-scheme-object  OpenAPI 3.0.2 Security Scheme Object - flows }  | | 3.0.1   |  {@link  https://spec.openapis.org/oas/v3.0.1#security-scheme-object  OpenAPI 3.0.1 Security Scheme Object - flows }  | | 3.0.0   |  {@link  https://spec.openapis.org/oas/v3.0.0#security-scheme-object  OpenAPI 3.0.0 Security Scheme Object - flows }  |",
-      "markdownDescription": "An object containing configuration information for the flow types supported.\n*\n| Version | Reference |\n|---|-----|\n| 3.0.4   |  {@link  https://spec.openapis.org/oas/v3.0.4#security-scheme-object  OpenAPI 3.0.4 Security Scheme Object - flows }  |\n| 3.0.3   |  {@link  https://spec.openapis.org/oas/v3.0.3#security-scheme-object  OpenAPI 3.0.3 Security Scheme Object - flows }  |\n| 3.0.2   |  {@link  https://spec.openapis.org/oas/v3.0.2#security-scheme-object  OpenAPI 3.0.2 Security Scheme Object - flows }  |\n| 3.0.1   |  {@link  https://spec.openapis.org/oas/v3.0.1#security-scheme-object  OpenAPI 3.0.1 Security Scheme Object - flows }  |\n| 3.0.0   |  {@link  https://spec.openapis.org/oas/v3.0.0#security-scheme-object  OpenAPI 3.0.0 Security Scheme Object - flows }  |",
-      "examples": [
-        {
-          "authorizationCode": {
-            "authorizationUrl": "https://example.com/oauth/authorize",
-            "tokenUrl": "https://example.com/oauth/token"
-          }
+  "anyOf": [
+    {
+      "type": "object",
+      "properties": {
+        "$ref": {
+          "type": "string",
+          "description": "Allows for an external definition of this path item. The referenced structure MUST be in the format of a Path Item Object.\n* | Version | Reference | |---|-----| | 3.0.4   |  {@link  https://spec.openapis.org/oas/v3.0.4#path-item-object  OpenAPI 3.0.4 Path Item Object - $ref }  | | 3.0.3   |  {@link  https://spec.openapis.org/oas/v3.0.3#path-item-object  OpenAPI 3.0.3 Path Item Object - $ref }  | | 3.0.2   |  {@link  https://spec.openapis.org/oas/v3.0.2#path-item-object  OpenAPI 3.0.2 Path Item Object - $ref }  | | 3.0.1   |  {@link  https://spec.openapis.org/oas/v3.0.1#path-item-object  OpenAPI 3.0.1 Path Item Object - $ref }  | | 3.0.0   |  {@link  https://spec.openapis.org/oas/v3.0.0#path-item-object  OpenAPI 3.0.0 Path Item Object - $ref }  |",
+          "markdownDescription": "Allows for an external definition of this path item. The referenced structure\nMUST be in the format of a Path Item Object.\n*\n| Version | Reference |\n|---|-----|\n| 3.0.4   |  {@link  https://spec.openapis.org/oas/v3.0.4#path-item-object  OpenAPI 3.0.4 Path Item Object - $ref }  |\n| 3.0.3   |  {@link  https://spec.openapis.org/oas/v3.0.3#path-item-object  OpenAPI 3.0.3 Path Item Object - $ref }  |\n| 3.0.2   |  {@link  https://spec.openapis.org/oas/v3.0.2#path-item-object  OpenAPI 3.0.2 Path Item Object - $ref }  |\n| 3.0.1   |  {@link  https://spec.openapis.org/oas/v3.0.1#path-item-object  OpenAPI 3.0.1 Path Item Object - $ref }  |\n| 3.0.0   |  {@link  https://spec.openapis.org/oas/v3.0.0#path-item-object  OpenAPI 3.0.0 Path Item Object - $ref }  |"
+        },
+        "summary": {
+          "type": "string",
+          "description": "An optional, string summary, intended to apply to all operations in this path.\n* | Version | Reference | |---|-----| | 3.0.4   |  {@link  https://spec.openapis.org/oas/v3.0.4#path-item-object  OpenAPI 3.0.4 Path Item Object - summary }  | | 3.0.3   |  {@link  https://spec.openapis.org/oas/v3.0.3#path-item-object  OpenAPI 3.0.3 Path Item Object - summary }  | | 3.0.2   |  {@link  https://spec.openapis.org/oas/v3.0.2#path-item-object  OpenAPI 3.0.2 Path Item Object - summary }  | | 3.0.1   |  {@link  https://spec.openapis.org/oas/v3.0.1#path-item-object  OpenAPI 3.0.1 Path Item Object - summary }  | | 3.0.0   |  {@link  https://spec.openapis.org/oas/v3.0.0#path-item-object  OpenAPI 3.0.0 Path Item Object - summary }  |",
+          "markdownDescription": "An optional, string summary, intended to apply to all operations in this path.\n*\n| Version | Reference |\n|---|-----|\n| 3.0.4   |  {@link  https://spec.openapis.org/oas/v3.0.4#path-item-object  OpenAPI 3.0.4 Path Item Object - summary }  |\n| 3.0.3   |  {@link  https://spec.openapis.org/oas/v3.0.3#path-item-object  OpenAPI 3.0.3 Path Item Object - summary }  |\n| 3.0.2   |  {@link  https://spec.openapis.org/oas/v3.0.2#path-item-object  OpenAPI 3.0.2 Path Item Object - summary }  |\n| 3.0.1   |  {@link  https://spec.openapis.org/oas/v3.0.1#path-item-object  OpenAPI 3.0.1 Path Item Object - summary }  |\n| 3.0.0   |  {@link  https://spec.openapis.org/oas/v3.0.0#path-item-object  OpenAPI 3.0.0 Path Item Object - summary }  |",
+          "examples": ["User management operations"]
+        },
+        "description": {
+          "type": "string",
+          "description": "An optional, string description, intended to apply to all operations in this path. CommonMark syntax MAY be used for rich text representation.\n* | Version | Reference | |---|-----| | 3.0.4   |  {@link  https://spec.openapis.org/oas/v3.0.4#path-item-object  OpenAPI 3.0.4 Path Item Object - description }  | | 3.0.3   |  {@link  https://spec.openapis.org/oas/v3.0.3#path-item-object  OpenAPI 3.0.3 Path Item Object - description }  | | 3.0.2   |  {@link  https://spec.openapis.org/oas/v3.0.2#path-item-object  OpenAPI 3.0.2 Path Item Object - description }  | | 3.0.1   |  {@link  https://spec.openapis.org/oas/v3.0.1#path-item-object  OpenAPI 3.0.1 Path Item Object - description }  | | 3.0.0   |  {@link  https://spec.openapis.org/oas/v3.0.0#path-item-object  OpenAPI 3.0.0 Path Item Object - description }  |",
+          "markdownDescription": "An optional, string description, intended to apply to all operations in this path.\nCommonMark syntax MAY be used for rich text representation.\n*\n| Version | Reference |\n|---|-----|\n| 3.0.4   |  {@link  https://spec.openapis.org/oas/v3.0.4#path-item-object  OpenAPI 3.0.4 Path Item Object - description }  |\n| 3.0.3   |  {@link  https://spec.openapis.org/oas/v3.0.3#path-item-object  OpenAPI 3.0.3 Path Item Object - description }  |\n| 3.0.2   |  {@link  https://spec.openapis.org/oas/v3.0.2#path-item-object  OpenAPI 3.0.2 Path Item Object - description }  |\n| 3.0.1   |  {@link  https://spec.openapis.org/oas/v3.0.1#path-item-object  OpenAPI 3.0.1 Path Item Object - description }  |\n| 3.0.0   |  {@link  https://spec.openapis.org/oas/v3.0.0#path-item-object  OpenAPI 3.0.0 Path Item Object - description }  |",
+          "examples": ["Operations for managing users in the system"]
+        },
+        "get": {
+          "$ref": "#/definitions/Operation",
+          "description": "A definition of a GET operation on this path.\n* | Version | Reference | |---|-----| | 3.0.4   |  {@link  https://spec.openapis.org/oas/v3.0.4#path-item-object  OpenAPI 3.0.4 Path Item Object - get }  | | 3.0.3   |  {@link  https://spec.openapis.org/oas/v3.0.3#path-item-object  OpenAPI 3.0.3 Path Item Object - get }  | | 3.0.2   |  {@link  https://spec.openapis.org/oas/v3.0.2#path-item-object  OpenAPI 3.0.2 Path Item Object - get }  | | 3.0.1   |  {@link  https://spec.openapis.org/oas/v3.0.1#path-item-object  OpenAPI 3.0.1 Path Item Object - get }  | | 3.0.0   |  {@link  https://spec.openapis.org/oas/v3.0.0#path-item-object  OpenAPI 3.0.0 Path Item Object - get }  |",
+          "markdownDescription": "A definition of a GET operation on this path.\n*\n| Version | Reference |\n|---|-----|\n| 3.0.4   |  {@link  https://spec.openapis.org/oas/v3.0.4#path-item-object  OpenAPI 3.0.4 Path Item Object - get }  |\n| 3.0.3   |  {@link  https://spec.openapis.org/oas/v3.0.3#path-item-object  OpenAPI 3.0.3 Path Item Object - get }  |\n| 3.0.2   |  {@link  https://spec.openapis.org/oas/v3.0.2#path-item-object  OpenAPI 3.0.2 Path Item Object - get }  |\n| 3.0.1   |  {@link  https://spec.openapis.org/oas/v3.0.1#path-item-object  OpenAPI 3.0.1 Path Item Object - get }  |\n| 3.0.0   |  {@link  https://spec.openapis.org/oas/v3.0.0#path-item-object  OpenAPI 3.0.0 Path Item Object - get }  |",
+          "examples": [
+            {
+              "summary": "Get users",
+              "responses": {
+                "200": {
+                  "description": "Success"
+                }
+              }
+            }
+          ]
+        },
+        "put": {
+          "$ref": "#/definitions/Operation",
+          "description": "A definition of a PUT operation on this path.\n* | Version | Reference | |---|-----| | 3.0.4   |  {@link  https://spec.openapis.org/oas/v3.0.4#path-item-object  OpenAPI 3.0.4 Path Item Object - put }  | | 3.0.3   |  {@link  https://spec.openapis.org/oas/v3.0.3#path-item-object  OpenAPI 3.0.3 Path Item Object - put }  | | 3.0.2   |  {@link  https://spec.openapis.org/oas/v3.0.2#path-item-object  OpenAPI 3.0.2 Path Item Object - put }  | | 3.0.1   |  {@link  https://spec.openapis.org/oas/v3.0.1#path-item-object  OpenAPI 3.0.1 Path Item Object - put }  | | 3.0.0   |  {@link  https://spec.openapis.org/oas/v3.0.0#path-item-object  OpenAPI 3.0.0 Path Item Object - put }  |",
+          "markdownDescription": "A definition of a PUT operation on this path.\n*\n| Version | Reference |\n|---|-----|\n| 3.0.4   |  {@link  https://spec.openapis.org/oas/v3.0.4#path-item-object  OpenAPI 3.0.4 Path Item Object - put }  |\n| 3.0.3   |  {@link  https://spec.openapis.org/oas/v3.0.3#path-item-object  OpenAPI 3.0.3 Path Item Object - put }  |\n| 3.0.2   |  {@link  https://spec.openapis.org/oas/v3.0.2#path-item-object  OpenAPI 3.0.2 Path Item Object - put }  |\n| 3.0.1   |  {@link  https://spec.openapis.org/oas/v3.0.1#path-item-object  OpenAPI 3.0.1 Path Item Object - put }  |\n| 3.0.0   |  {@link  https://spec.openapis.org/oas/v3.0.0#path-item-object  OpenAPI 3.0.0 Path Item Object - put }  |",
+          "examples": [
+            {
+              "summary": "Update user",
+              "responses": {
+                "200": {
+                  "description": "Success"
+                }
+              }
+            }
+          ]
+        },
+        "post": {
+          "$ref": "#/definitions/Operation",
+          "description": "A definition of a POST operation on this path.\n* | Version | Reference | |---|-----| | 3.0.4   |  {@link  https://spec.openapis.org/oas/v3.0.4#path-item-object  OpenAPI 3.0.4 Path Item Object - post }  | | 3.0.3   |  {@link  https://spec.openapis.org/oas/v3.0.3#path-item-object  OpenAPI 3.0.3 Path Item Object - post }  | | 3.0.2   |  {@link  https://spec.openapis.org/oas/v3.0.2#path-item-object  OpenAPI 3.0.2 Path Item Object - post }  | | 3.0.1   |  {@link  https://spec.openapis.org/oas/v3.0.1#path-item-object  OpenAPI 3.0.1 Path Item Object - post }  | | 3.0.0   |  {@link  https://spec.openapis.org/oas/v3.0.0#path-item-object  OpenAPI 3.0.0 Path Item Object - post }  |",
+          "markdownDescription": "A definition of a POST operation on this path.\n*\n| Version | Reference |\n|---|-----|\n| 3.0.4   |  {@link  https://spec.openapis.org/oas/v3.0.4#path-item-object  OpenAPI 3.0.4 Path Item Object - post }  |\n| 3.0.3   |  {@link  https://spec.openapis.org/oas/v3.0.3#path-item-object  OpenAPI 3.0.3 Path Item Object - post }  |\n| 3.0.2   |  {@link  https://spec.openapis.org/oas/v3.0.2#path-item-object  OpenAPI 3.0.2 Path Item Object - post }  |\n| 3.0.1   |  {@link  https://spec.openapis.org/oas/v3.0.1#path-item-object  OpenAPI 3.0.1 Path Item Object - post }  |\n| 3.0.0   |  {@link  https://spec.openapis.org/oas/v3.0.0#path-item-object  OpenAPI 3.0.0 Path Item Object - post }  |",
+          "examples": [
+            {
+              "summary": "Create user",
+              "responses": {
+                "201": {
+                  "description": "Created"
+                }
+              }
+            }
+          ]
+        },
+        "delete": {
+          "$ref": "#/definitions/Operation",
+          "description": "A definition of a DELETE operation on this path.\n* | Version | Reference | |---|-----| | 3.0.4   |  {@link  https://spec.openapis.org/oas/v3.0.4#path-item-object  OpenAPI 3.0.4 Path Item Object - delete }  | | 3.0.3   |  {@link  https://spec.openapis.org/oas/v3.0.3#path-item-object  OpenAPI 3.0.3 Path Item Object - delete }  | | 3.0.2   |  {@link  https://spec.openapis.org/oas/v3.0.2#path-item-object  OpenAPI 3.0.2 Path Item Object - delete }  | | 3.0.1   |  {@link  https://spec.openapis.org/oas/v3.0.1#path-item-object  OpenAPI 3.0.1 Path Item Object - delete }  | | 3.0.0   |  {@link  https://spec.openapis.org/oas/v3.0.0#path-item-object  OpenAPI 3.0.0 Path Item Object - delete }  |",
+          "markdownDescription": "A definition of a DELETE operation on this path.\n*\n| Version | Reference |\n|---|-----|\n| 3.0.4   |  {@link  https://spec.openapis.org/oas/v3.0.4#path-item-object  OpenAPI 3.0.4 Path Item Object - delete }  |\n| 3.0.3   |  {@link  https://spec.openapis.org/oas/v3.0.3#path-item-object  OpenAPI 3.0.3 Path Item Object - delete }  |\n| 3.0.2   |  {@link  https://spec.openapis.org/oas/v3.0.2#path-item-object  OpenAPI 3.0.2 Path Item Object - delete }  |\n| 3.0.1   |  {@link  https://spec.openapis.org/oas/v3.0.1#path-item-object  OpenAPI 3.0.1 Path Item Object - delete }  |\n| 3.0.0   |  {@link  https://spec.openapis.org/oas/v3.0.0#path-item-object  OpenAPI 3.0.0 Path Item Object - delete }  |",
+          "examples": [
+            {
+              "summary": "Delete user",
+              "responses": {
+                "204": {
+                  "description": "No Content"
+                }
+              }
+            }
+          ]
+        },
+        "options": {
+          "$ref": "#/definitions/Operation",
+          "description": "A definition of an OPTIONS operation on this path.\n* | Version | Reference | |---|-----| | 3.0.4   |  {@link  https://spec.openapis.org/oas/v3.0.4#path-item-object  OpenAPI 3.0.4 Path Item Object - options }  | | 3.0.3   |  {@link  https://spec.openapis.org/oas/v3.0.3#path-item-object  OpenAPI 3.0.3 Path Item Object - options }  | | 3.0.2   |  {@link  https://spec.openapis.org/oas/v3.0.2#path-item-object  OpenAPI 3.0.2 Path Item Object - options }  | | 3.0.1   |  {@link  https://spec.openapis.org/oas/v3.0.1#path-item-object  OpenAPI 3.0.1 Path Item Object - options }  | | 3.0.0   |  {@link  https://spec.openapis.org/oas/v3.0.0#path-item-object  OpenAPI 3.0.0 Path Item Object - options }  |",
+          "markdownDescription": "A definition of an OPTIONS operation on this path.\n*\n| Version | Reference |\n|---|-----|\n| 3.0.4   |  {@link  https://spec.openapis.org/oas/v3.0.4#path-item-object  OpenAPI 3.0.4 Path Item Object - options }  |\n| 3.0.3   |  {@link  https://spec.openapis.org/oas/v3.0.3#path-item-object  OpenAPI 3.0.3 Path Item Object - options }  |\n| 3.0.2   |  {@link  https://spec.openapis.org/oas/v3.0.2#path-item-object  OpenAPI 3.0.2 Path Item Object - options }  |\n| 3.0.1   |  {@link  https://spec.openapis.org/oas/v3.0.1#path-item-object  OpenAPI 3.0.1 Path Item Object - options }  |\n| 3.0.0   |  {@link  https://spec.openapis.org/oas/v3.0.0#path-item-object  OpenAPI 3.0.0 Path Item Object - options }  |",
+          "examples": [
+            {
+              "summary": "Get options",
+              "responses": {
+                "200": {
+                  "description": "Options"
+                }
+              }
+            }
+          ]
+        },
+        "head": {
+          "$ref": "#/definitions/Operation",
+          "description": "A definition of a HEAD operation on this path.\n* | Version | Reference | |---|-----| | 3.0.4   |  {@link  https://spec.openapis.org/oas/v3.0.4#path-item-object  OpenAPI 3.0.4 Path Item Object - head }  | | 3.0.3   |  {@link  https://spec.openapis.org/oas/v3.0.3#path-item-object  OpenAPI 3.0.3 Path Item Object - head }  | | 3.0.2   |  {@link  https://spec.openapis.org/oas/v3.0.2#path-item-object  OpenAPI 3.0.2 Path Item Object - head }  | | 3.0.1   |  {@link  https://spec.openapis.org/oas/v3.0.1#path-item-object  OpenAPI 3.0.1 Path Item Object - head }  | | 3.0.0   |  {@link  https://spec.openapis.org/oas/v3.0.0#path-item-object  OpenAPI 3.0.0 Path Item Object - head }  |",
+          "markdownDescription": "A definition of a HEAD operation on this path.\n*\n| Version | Reference |\n|---|-----|\n| 3.0.4   |  {@link  https://spec.openapis.org/oas/v3.0.4#path-item-object  OpenAPI 3.0.4 Path Item Object - head }  |\n| 3.0.3   |  {@link  https://spec.openapis.org/oas/v3.0.3#path-item-object  OpenAPI 3.0.3 Path Item Object - head }  |\n| 3.0.2   |  {@link  https://spec.openapis.org/oas/v3.0.2#path-item-object  OpenAPI 3.0.2 Path Item Object - head }  |\n| 3.0.1   |  {@link  https://spec.openapis.org/oas/v3.0.1#path-item-object  OpenAPI 3.0.1 Path Item Object - head }  |\n| 3.0.0   |  {@link  https://spec.openapis.org/oas/v3.0.0#path-item-object  OpenAPI 3.0.0 Path Item Object - head }  |",
+          "examples": [
+            {
+              "summary": "Check if resource exists",
+              "responses": {
+                "200": {
+                  "description": "Exists"
+                }
+              }
+            }
+          ]
+        },
+        "patch": {
+          "$ref": "#/definitions/Operation",
+          "description": "A definition of a PATCH operation on this path.\n* | Version | Reference | |---|-----| | 3.0.4   |  {@link  https://spec.openapis.org/oas/v3.0.4#path-item-object  OpenAPI 3.0.4 Path Item Object - patch }  | | 3.0.3   |  {@link  https://spec.openapis.org/oas/v3.0.3#path-item-object  OpenAPI 3.0.3 Path Item Object - patch }  | | 3.0.2   |  {@link  https://spec.openapis.org/oas/v3.0.2#path-item-object  OpenAPI 3.0.2 Path Item Object - patch }  | | 3.0.1   |  {@link  https://spec.openapis.org/oas/v3.0.1#path-item-object  OpenAPI 3.0.1 Path Item Object - patch }  | | 3.0.0   |  {@link  https://spec.openapis.org/oas/v3.0.0#path-item-object  OpenAPI 3.0.0 Path Item Object - patch }  |",
+          "markdownDescription": "A definition of a PATCH operation on this path.\n*\n| Version | Reference |\n|---|-----|\n| 3.0.4   |  {@link  https://spec.openapis.org/oas/v3.0.4#path-item-object  OpenAPI 3.0.4 Path Item Object - patch }  |\n| 3.0.3   |  {@link  https://spec.openapis.org/oas/v3.0.3#path-item-object  OpenAPI 3.0.3 Path Item Object - patch }  |\n| 3.0.2   |  {@link  https://spec.openapis.org/oas/v3.0.2#path-item-object  OpenAPI 3.0.2 Path Item Object - patch }  |\n| 3.0.1   |  {@link  https://spec.openapis.org/oas/v3.0.1#path-item-object  OpenAPI 3.0.1 Path Item Object - patch }  |\n| 3.0.0   |  {@link  https://spec.openapis.org/oas/v3.0.0#path-item-object  OpenAPI 3.0.0 Path Item Object - patch }  |",
+          "examples": [
+            {
+              "summary": "Partially update user",
+              "responses": {
+                "200": {
+                  "description": "Success"
+                }
+              }
+            }
+          ]
+        },
+        "trace": {
+          "$ref": "#/definitions/Operation",
+          "description": "A definition of a TRACE operation on this path.\n* | Version | Reference | |---|-----| | 3.0.4   |  {@link  https://spec.openapis.org/oas/v3.0.4#path-item-object  OpenAPI 3.0.4 Path Item Object - trace }  | | 3.0.3   |  {@link  https://spec.openapis.org/oas/v3.0.3#path-item-object  OpenAPI 3.0.3 Path Item Object - trace }  | | 3.0.2   |  {@link  https://spec.openapis.org/oas/v3.0.2#path-item-object  OpenAPI 3.0.2 Path Item Object - trace }  | | 3.0.1   |  {@link  https://spec.openapis.org/oas/v3.0.1#path-item-object  OpenAPI 3.0.1 Path Item Object - trace }  | | 3.0.0   |  {@link  https://spec.openapis.org/oas/v3.0.0#path-item-object  OpenAPI 3.0.0 Path Item Object - trace }  |",
+          "markdownDescription": "A definition of a TRACE operation on this path.\n*\n| Version | Reference |\n|---|-----|\n| 3.0.4   |  {@link  https://spec.openapis.org/oas/v3.0.4#path-item-object  OpenAPI 3.0.4 Path Item Object - trace }  |\n| 3.0.3   |  {@link  https://spec.openapis.org/oas/v3.0.3#path-item-object  OpenAPI 3.0.3 Path Item Object - trace }  |\n| 3.0.2   |  {@link  https://spec.openapis.org/oas/v3.0.2#path-item-object  OpenAPI 3.0.2 Path Item Object - trace }  |\n| 3.0.1   |  {@link  https://spec.openapis.org/oas/v3.0.1#path-item-object  OpenAPI 3.0.1 Path Item Object - trace }  |\n| 3.0.0   |  {@link  https://spec.openapis.org/oas/v3.0.0#path-item-object  OpenAPI 3.0.0 Path Item Object - trace }  |",
+          "examples": [
+            {
+              "summary": "Trace request",
+              "responses": {
+                "200": {
+                  "description": "Success"
+                }
+              }
+            }
+          ]
+        },
+        "servers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Server"
+          },
+          "description": "An alternative server array to service all operations in this path.\n* | Version | Reference | |---|-----| | 3.0.4   |  {@link  https://spec.openapis.org/oas/v3.0.4#path-item-object  OpenAPI 3.0.4 Path Item Object - servers }  | | 3.0.3   |  {@link  https://spec.openapis.org/oas/v3.0.3#path-item-object  OpenAPI 3.0.3 Path Item Object - servers }  | | 3.0.2   |  {@link  https://spec.openapis.org/oas/v3.0.2#path-item-object  OpenAPI 3.0.2 Path Item Object - servers }  | | 3.0.1   |  {@link  https://spec.openapis.org/oas/v3.0.1#path-item-object  OpenAPI 3.0.1 Path Item Object - servers }  | | 3.0.0   |  {@link  https://spec.openapis.org/oas/v3.0.0#path-item-object  OpenAPI 3.0.0 Path Item Object - servers }  |",
+          "markdownDescription": "An alternative server array to service all operations in this path.\n*\n| Version | Reference |\n|---|-----|\n| 3.0.4   |  {@link  https://spec.openapis.org/oas/v3.0.4#path-item-object  OpenAPI 3.0.4 Path Item Object - servers }  |\n| 3.0.3   |  {@link  https://spec.openapis.org/oas/v3.0.3#path-item-object  OpenAPI 3.0.3 Path Item Object - servers }  |\n| 3.0.2   |  {@link  https://spec.openapis.org/oas/v3.0.2#path-item-object  OpenAPI 3.0.2 Path Item Object - servers }  |\n| 3.0.1   |  {@link  https://spec.openapis.org/oas/v3.0.1#path-item-object  OpenAPI 3.0.1 Path Item Object - servers }  |\n| 3.0.0   |  {@link  https://spec.openapis.org/oas/v3.0.0#path-item-object  OpenAPI 3.0.0 Path Item Object - servers }  |",
+          "examples": [
+            [
+              {
+                "url": "https://api.example.com/v1"
+              }
+            ]
+          ]
+        },
+        "parameters": {
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "$ref": "#/definitions/Parameter"
+              },
+              {
+                "$ref": "#/definitions/Reference"
+              }
+            ]
+          },
+          "description": "A list of parameters that are applicable for all the operations described under this path. These parameters can be overridden at the operation level, but cannot be removed there. The list MUST NOT include duplicated parameters. A unique parameter is defined by a combination of a name and location.\n* | Version | Reference | |---|-----| | 3.0.4   |  {@link  https://spec.openapis.org/oas/v3.0.4#path-item-object  OpenAPI 3.0.4 Path Item Object - parameters }  | | 3.0.3   |  {@link  https://spec.openapis.org/oas/v3.0.3#path-item-object  OpenAPI 3.0.3 Path Item Object - parameters }  | | 3.0.2   |  {@link  https://spec.openapis.org/oas/v3.0.2#path-item-object  OpenAPI 3.0.2 Path Item Object - parameters }  | | 3.0.1   |  {@link  https://spec.openapis.org/oas/v3.0.1#path-item-object  OpenAPI 3.0.1 Path Item Object - parameters }  | | 3.0.0   |  {@link  https://spec.openapis.org/oas/v3.0.0#path-item-object  OpenAPI 3.0.0 Path Item Object - parameters }  |",
+          "markdownDescription": "A list of parameters that are applicable for all the operations described\nunder this path. These parameters can be overridden at the operation level,\nbut cannot be removed there. The list MUST NOT include duplicated parameters.\nA unique parameter is defined by a combination of a name and location.\n*\n| Version | Reference |\n|---|-----|\n| 3.0.4   |  {@link  https://spec.openapis.org/oas/v3.0.4#path-item-object  OpenAPI 3.0.4 Path Item Object - parameters }  |\n| 3.0.3   |  {@link  https://spec.openapis.org/oas/v3.0.3#path-item-object  OpenAPI 3.0.3 Path Item Object - parameters }  |\n| 3.0.2   |  {@link  https://spec.openapis.org/oas/v3.0.2#path-item-object  OpenAPI 3.0.2 Path Item Object - parameters }  |\n| 3.0.1   |  {@link  https://spec.openapis.org/oas/v3.0.1#path-item-object  OpenAPI 3.0.1 Path Item Object - parameters }  |\n| 3.0.0   |  {@link  https://spec.openapis.org/oas/v3.0.0#path-item-object  OpenAPI 3.0.0 Path Item Object - parameters }  |",
+          "examples": [
+            [
+              {
+                "name": "limit",
+                "in": "query",
+                "schema": {
+                  "type": "integer"
+                }
+              }
+            ]
+          ]
         }
-      ]
+      }
     },
-    "openIdConnectUrl": {
-      "type": "string",
-      "description": "OpenId Connect URL to discover OAuth2 configuration values.\n* | Version | Reference | |---|-----| | 3.0.4   |  {@link  https://spec.openapis.org/oas/v3.0.4#security-scheme-object  OpenAPI 3.0.4 Security Scheme Object - openIdConnectUrl }  | | 3.0.3   |  {@link  https://spec.openapis.org/oas/v3.0.3#security-scheme-object  OpenAPI 3.0.3 Security Scheme Object - openIdConnectUrl }  | | 3.0.2   |  {@link  https://spec.openapis.org/oas/v3.0.2#security-scheme-object  OpenAPI 3.0.2 Security Scheme Object - openIdConnectUrl }  | | 3.0.1   |  {@link  https://spec.openapis.org/oas/v3.0.1#security-scheme-object  OpenAPI 3.0.1 Security Scheme Object - openIdConnectUrl }  | | 3.0.0   |  {@link  https://spec.openapis.org/oas/v3.0.0#security-scheme-object  OpenAPI 3.0.0 Security Scheme Object - openIdConnectUrl }  |",
-      "markdownDescription": "OpenId Connect URL to discover OAuth2 configuration values.\n*\n| Version | Reference |\n|---|-----|\n| 3.0.4   |  {@link  https://spec.openapis.org/oas/v3.0.4#security-scheme-object  OpenAPI 3.0.4 Security Scheme Object - openIdConnectUrl }  |\n| 3.0.3   |  {@link  https://spec.openapis.org/oas/v3.0.3#security-scheme-object  OpenAPI 3.0.3 Security Scheme Object - openIdConnectUrl }  |\n| 3.0.2   |  {@link  https://spec.openapis.org/oas/v3.0.2#security-scheme-object  OpenAPI 3.0.2 Security Scheme Object - openIdConnectUrl }  |\n| 3.0.1   |  {@link  https://spec.openapis.org/oas/v3.0.1#security-scheme-object  OpenAPI 3.0.1 Security Scheme Object - openIdConnectUrl }  |\n| 3.0.0   |  {@link  https://spec.openapis.org/oas/v3.0.0#security-scheme-object  OpenAPI 3.0.0 Security Scheme Object - openIdConnectUrl }  |",
-      "examples": ["https://example.com/.well-known/openid_configuration"]
+    {
+      "$ref": "#/definitions/Reference"
     }
-  },
-  "required": ["type"],
-  "description": "----- Security Scheme Object\n-----\n\nDefines a security scheme that can be used by the operations. Supported schemes are HTTP authentication, an API key (either as a header or as a query parameter), OAuth2's common flows (implicit, password, application and access code) as defined in RFC6749, and OpenID Connect Discovery.\n\nThe Security Scheme Object defines a security scheme that can be used by the operations. It supports various authentication methods including HTTP authentication, API keys, OAuth2 flows, and OpenID Connect Discovery.\n\n| Version | Reference | |---|-----| | 3.0.4   |  {@link  https://spec.openapis.org/oas/v3.0.4#security-scheme-object OpenAPI 3.0.4 Security Scheme }  | | 3.0.3   |  {@link  https://spec.openapis.org/oas/v3.0.3#security-scheme-object OpenAPI 3.0.3 Security Scheme }  | | 3.0.2   |  {@link  https://spec.openapis.org/oas/v3.0.2#security-scheme-object OpenAPI 3.0.2 Security Scheme }  | | 3.0.1   |  {@link  https://spec.openapis.org/oas/v3.0.1#security-scheme-object OpenAPI 3.0.1 Security Scheme }  | | 3.0.0   |  {@link  https://spec.openapis.org/oas/v3.0.0#security-scheme-object OpenAPI 3.0.0 Security Scheme }  |\n\n----- Fields\n-----",
-  "markdownDescription": "-----\nSecurity Scheme Object\n-----\n\nDefines a security scheme that can be used by the operations.\nSupported schemes are HTTP authentication, an API key (either as a header or as a query parameter),\nOAuth2's common flows (implicit, password, application and access code) as defined in RFC6749,\nand OpenID Connect Discovery.\n\nThe Security Scheme Object defines a security scheme that can be used by the operations.\nIt supports various authentication methods including HTTP authentication, API keys,\nOAuth2 flows, and OpenID Connect Discovery.\n\n| Version | Reference |\n|---|-----|\n| 3.0.4   |  {@link  https://spec.openapis.org/oas/v3.0.4#security-scheme-object OpenAPI 3.0.4 Security Scheme }  |\n| 3.0.3   |  {@link  https://spec.openapis.org/oas/v3.0.3#security-scheme-object OpenAPI 3.0.3 Security Scheme }  |\n| 3.0.2   |  {@link  https://spec.openapis.org/oas/v3.0.2#security-scheme-object OpenAPI 3.0.2 Security Scheme }  |\n| 3.0.1   |  {@link  https://spec.openapis.org/oas/v3.0.1#security-scheme-object OpenAPI 3.0.1 Security Scheme }  |\n| 3.0.0   |  {@link  https://spec.openapis.org/oas/v3.0.0#security-scheme-object OpenAPI 3.0.0 Security Scheme }  |\n\n-----\nFields\n-----",
+  ],
+  "description": "----- Path Item Object\n-----\n\nDescribes the operations available on a single path. A Path Item MAY be empty, due to ACL constraints.\n\nThe Path Item Object describes the operations available on a single path. It can contain a summary and description that apply to all operations on the path, as well as individual operation definitions for each HTTP method.\n\n| Version | Reference | |---|-----| | 3.0.4   |  {@link  https://spec.openapis.org/oas/v3.0.4#path-item-object OpenAPI 3.0.4 Path Item }  | | 3.0.3   |  {@link  https://spec.openapis.org/oas/v3.0.3#path-item-object OpenAPI 3.0.3 Path Item }  | | 3.0.2   |  {@link  https://spec.openapis.org/oas/v3.0.2#path-item-object OpenAPI 3.0.2 Path Item }  | | 3.0.1   |  {@link  https://spec.openapis.org/oas/v3.0.1#path-item-object OpenAPI 3.0.1 Path Item }  | | 3.0.0   |  {@link  https://spec.openapis.org/oas/v3.0.0#path-item-object OpenAPI 3.0.0 Path Item }  |\n\n----- Fields\n-----",
+  "markdownDescription": "-----\nPath Item Object\n-----\n\nDescribes the operations available on a single path.\nA Path Item MAY be empty, due to ACL constraints.\n\nThe Path Item Object describes the operations available on a single path. It can\ncontain a summary and description that apply to all operations on the path, as well\nas individual operation definitions for each HTTP method.\n\n| Version | Reference |\n|---|-----|\n| 3.0.4   |  {@link  https://spec.openapis.org/oas/v3.0.4#path-item-object OpenAPI 3.0.4 Path Item }  |\n| 3.0.3   |  {@link  https://spec.openapis.org/oas/v3.0.3#path-item-object OpenAPI 3.0.3 Path Item }  |\n| 3.0.2   |  {@link  https://spec.openapis.org/oas/v3.0.2#path-item-object OpenAPI 3.0.2 Path Item }  |\n| 3.0.1   |  {@link  https://spec.openapis.org/oas/v3.0.1#path-item-object OpenAPI 3.0.1 Path Item }  |\n| 3.0.0   |  {@link  https://spec.openapis.org/oas/v3.0.0#path-item-object OpenAPI 3.0.0 Path Item }  |\n\n-----\nFields\n-----",
   "definitions": {
     "Specification": {
       "type": "object",

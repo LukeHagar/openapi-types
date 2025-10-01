@@ -24,14 +24,14 @@ export type { Components } from "./components";
  * @see {@link https://spec.openapis.org/oas/v3.1.1#data-type-object | OpenAPI 3.1.1 Data Type Object}
  */
 export type {
-	ArraySchema,
-	BooleanSchema,
-	CompositionSchema,
-	IntegerSchema,
-	NumberSchema,
-	ObjectSchema,
-	ReferenceSchema,
-	StringSchema,
+  ArraySchema,
+  BooleanSchema,
+  CompositionSchema,
+  IntegerSchema,
+  NumberSchema,
+  ObjectSchema,
+  ReferenceSchema,
+  StringSchema,
 } from "./data-types";
 /**
  * Core extension and reference types.
@@ -67,18 +67,18 @@ export type { Contact, Info, License } from "./info";
  * @see {@link https://spec.openapis.org/oas/v3.1.1#callback-object | OpenAPI 3.1.1 Callback Object}
  */
 export type {
-	Callback,
-	Encoding,
-	Example,
-	Header,
-	Link,
-	MediaType,
-	Operation,
-	Parameter,
-	PathItem,
-	Paths,
-	RequestBody,
-	Response,
+  Callback,
+  Encoding,
+  Example,
+  Header,
+  Link,
+  MediaType,
+  Operation,
+  Parameter,
+  PathItem,
+  Paths,
+  RequestBody,
+  Response,
 } from "./paths";
 export type { Reference } from "./references";
 
@@ -97,12 +97,7 @@ export type { Discriminator, Schema } from "./schema";
  * @see {@link https://spec.openapis.org/oas/v3.1.1#oauth-flow-object | OpenAPI 3.1.1 OAuth Flow Object}
  * @see {@link https://spec.openapis.org/oas/v3.1.1#security-requirement-object | OpenAPI 3.1.1 Security Requirement Object}
  */
-export type {
-	OAuthFlow,
-	OAuthFlows,
-	SecurityRequirement,
-	SecurityScheme,
-} from "./security";
+export type { OAuthFlow, OAuthFlows, SecurityRequirement, SecurityScheme } from "./security";
 /**
  * Server configuration types.
  *

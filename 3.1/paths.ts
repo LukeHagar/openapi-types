@@ -106,79 +106,79 @@ export type Paths = Record<string, PathItem | Reference>;
  * ```
  */
 export interface PathItem extends Extension {
-	/**
-	 * An optional, string summary, intended to apply to all operations in this path.
-	 *
-	 * @example "Pet operations"
-	 * @example "User management"
-	 */
-	summary?: string;
+  /**
+   * An optional, string summary, intended to apply to all operations in this path.
+   *
+   * @example "Pet operations"
+   * @example "User management"
+   */
+  summary?: string;
 
-	/**
-	 * An optional, string description, intended to apply to all operations in this path.
-	 * CommonMark syntax MAY be used for rich text representation.
-	 *
-	 * @example "Operations related to pet management"
-	 * @example "All user-related operations"
-	 */
-	description?: string;
+  /**
+   * An optional, string description, intended to apply to all operations in this path.
+   * CommonMark syntax MAY be used for rich text representation.
+   *
+   * @example "Operations related to pet management"
+   * @example "All user-related operations"
+   */
+  description?: string;
 
-	/**
-	 * A definition of a GET operation on this path.
-	 */
-	get?: Operation;
+  /**
+   * A definition of a GET operation on this path.
+   */
+  get?: Operation;
 
-	/**
-	 * A definition of a PUT operation on this path.
-	 */
-	put?: Operation;
+  /**
+   * A definition of a PUT operation on this path.
+   */
+  put?: Operation;
 
-	/**
-	 * A definition of a POST operation on this path.
-	 */
-	post?: Operation;
+  /**
+   * A definition of a POST operation on this path.
+   */
+  post?: Operation;
 
-	/**
-	 * A definition of a DELETE operation on this path.
-	 */
-	delete?: Operation;
+  /**
+   * A definition of a DELETE operation on this path.
+   */
+  delete?: Operation;
 
-	/**
-	 * A definition of an OPTIONS operation on this path.
-	 */
-	options?: Operation;
+  /**
+   * A definition of an OPTIONS operation on this path.
+   */
+  options?: Operation;
 
-	/**
-	 * A definition of a HEAD operation on this path.
-	 */
-	head?: Operation;
+  /**
+   * A definition of a HEAD operation on this path.
+   */
+  head?: Operation;
 
-	/**
-	 * A definition of a PATCH operation on this path.
-	 */
-	patch?: Operation;
+  /**
+   * A definition of a PATCH operation on this path.
+   */
+  patch?: Operation;
 
-	/**
-	 * A definition of a TRACE operation on this path.
-	 */
-	trace?: Operation;
+  /**
+   * A definition of a TRACE operation on this path.
+   */
+  trace?: Operation;
 
-	/**
-	 * An alternative server array to service all operations in this path.
-	 *
-	 * @example [{ url: "https://api.example.com/v1" }]
-	 */
-	servers?: Server[];
+  /**
+   * An alternative server array to service all operations in this path.
+   *
+   * @example [{ url: "https://api.example.com/v1" }]
+   */
+  servers?: Server[];
 
-	/**
-	 * A list of parameters that are applicable for all the operations described under
-	 * this path. These parameters can be overridden at the operation level, but cannot
-	 * be removed there. The list MUST NOT include duplicated parameters. A unique
-	 * parameter is defined by a combination of a name and location.
-	 *
-	 * @example [{ name: "id", in: "path", required: true, schema: { type: "string" } }]
-	 */
-	parameters?: (Parameter | Reference)[];
+  /**
+   * A list of parameters that are applicable for all the operations described under
+   * this path. These parameters can be overridden at the operation level, but cannot
+   * be removed there. The list MUST NOT include duplicated parameters. A unique
+   * parameter is defined by a combination of a name and location.
+   *
+   * @example [{ name: "id", in: "path", required: true, schema: { type: "string" } }]
+   */
+  parameters?: (Parameter | Reference)[];
 }
 
 /**
@@ -231,112 +231,112 @@ export interface PathItem extends Extension {
  * ```
  */
 export interface Operation extends Extension {
-	/**
-	 * A list of tags for API documentation control. Tags can be used for logical
-	 * grouping of operations by resources or any other qualifier.
-	 *
-	 * @example ["pets", "list"]
-	 * @example ["users", "authentication"]
-	 */
-	tags?: string[];
+  /**
+   * A list of tags for API documentation control. Tags can be used for logical
+   * grouping of operations by resources or any other qualifier.
+   *
+   * @example ["pets", "list"]
+   * @example ["users", "authentication"]
+   */
+  tags?: string[];
 
-	/**
-	 * A short summary of what the operation does.
-	 *
-	 * @example "List all pets"
-	 * @example "Create a new user"
-	 */
-	summary?: string;
+  /**
+   * A short summary of what the operation does.
+   *
+   * @example "List all pets"
+   * @example "Create a new user"
+   */
+  summary?: string;
 
-	/**
-	 * A verbose explanation of the operation behavior. CommonMark syntax MAY be used
-	 * for rich text representation.
-	 *
-	 * @example "Returns all pets from the system that the user has access to"
-	 * @example "Creates a new user account with the provided information"
-	 */
-	description?: string;
+  /**
+   * A verbose explanation of the operation behavior. CommonMark syntax MAY be used
+   * for rich text representation.
+   *
+   * @example "Returns all pets from the system that the user has access to"
+   * @example "Creates a new user account with the provided information"
+   */
+  description?: string;
 
-	/**
-	 * Additional external documentation for this operation.
-	 *
-	 * @example { description: "Find out more about pet operations", url: "https://example.com/docs/pets" }
-	 */
-	externalDocs?: ExternalDocumentation;
+  /**
+   * Additional external documentation for this operation.
+   *
+   * @example { description: "Find out more about pet operations", url: "https://example.com/docs/pets" }
+   */
+  externalDocs?: ExternalDocumentation;
 
-	/**
-	 * Unique string used to identify the operation. The id MUST be unique among all
-	 * operations described in the API. The operationId value is case-sensitive.
-	 *
-	 * @example "listPets"
-	 * @example "createUser"
-	 */
-	operationId?: string;
+  /**
+   * Unique string used to identify the operation. The id MUST be unique among all
+   * operations described in the API. The operationId value is case-sensitive.
+   *
+   * @example "listPets"
+   * @example "createUser"
+   */
+  operationId?: string;
 
-	/**
-	 * A list of parameters that are applicable for this operation. If a parameter
-	 * is already defined at the Path Item, the new definition will override it but
-	 * can never remove it. The list MUST NOT include duplicated parameters.
-	 *
-	 * @example [{ name: "limit", in: "query", schema: { type: "integer" } }]
-	 */
-	parameters?: (Parameter | Reference)[];
+  /**
+   * A list of parameters that are applicable for this operation. If a parameter
+   * is already defined at the Path Item, the new definition will override it but
+   * can never remove it. The list MUST NOT include duplicated parameters.
+   *
+   * @example [{ name: "limit", in: "query", schema: { type: "integer" } }]
+   */
+  parameters?: (Parameter | Reference)[];
 
-	/**
-	 * The request body applicable for this operation. The requestBody is only supported
-	 * in HTTP methods where the HTTP 1.1 specification RFC7231 has explicitly defined
-	 * semantics for request bodies.
-	 *
-	 * @example { description: "Pet to add to the store", content: { "application/json": { schema: { $ref: "#/components/schemas/Pet" } } } }
-	 */
-	requestBody?: RequestBody | Reference;
+  /**
+   * The request body applicable for this operation. The requestBody is only supported
+   * in HTTP methods where the HTTP 1.1 specification RFC7231 has explicitly defined
+   * semantics for request bodies.
+   *
+   * @example { description: "Pet to add to the store", content: { "application/json": { schema: { $ref: "#/components/schemas/Pet" } } } }
+   */
+  requestBody?: RequestBody | Reference;
 
-	/**
-	 * The list of possible responses as they are returned from executing this operation.
-	 * This field is required.
-	 *
-	 * @example { "200": { description: "A list of pets" }, "default": { description: "Unexpected error" } }
-	 */
-	responses: ResponsesMap;
+  /**
+   * The list of possible responses as they are returned from executing this operation.
+   * This field is required.
+   *
+   * @example { "200": { description: "A list of pets" }, "default": { description: "Unexpected error" } }
+   */
+  responses: ResponsesMap;
 
-	/**
-	 * A map of possible out-of band callbacks related to the parent operation. The key
-	 * is a unique identifier for the Callback Object. Each value in the map is a
-	 * Callback Object that describes a request that may be initiated by the API
-	 * provider and the expected responses.
-	 *
-	 * @example { "myCallback": { "{$request.body#/callbackUrl}": { post: { requestBody: { description: "Callback payload" } } } } }
-	 */
-	callbacks?: Record<string, Callback | Reference>;
+  /**
+   * A map of possible out-of band callbacks related to the parent operation. The key
+   * is a unique identifier for the Callback Object. Each value in the map is a
+   * Callback Object that describes a request that may be initiated by the API
+   * provider and the expected responses.
+   *
+   * @example { "myCallback": { "{$request.body#/callbackUrl}": { post: { requestBody: { description: "Callback payload" } } } } }
+   */
+  callbacks?: Record<string, Callback | Reference>;
 
-	/**
-	 * Declares this operation to be deprecated. Consumers SHOULD refrain from using
-	 * the declared operation. Default value is false.
-	 *
-	 * @example true
-	 * @example false
-	 * @default false
-	 */
-	deprecated?: boolean;
+  /**
+   * Declares this operation to be deprecated. Consumers SHOULD refrain from using
+   * the declared operation. Default value is false.
+   *
+   * @example true
+   * @example false
+   * @default false
+   */
+  deprecated?: boolean;
 
-	/**
-	 * A declaration of which security mechanisms can be used for this operation.
-	 * The list of values includes alternative security requirement objects that can
-	 * be used. Only one of the security requirement objects need to be satisfied
-	 * to authorize a request.
-	 *
-	 * @example [{ "petstore_auth": ["write:pets", "read:pets"] }]
-	 */
-	security?: SecurityRequirement[];
+  /**
+   * A declaration of which security mechanisms can be used for this operation.
+   * The list of values includes alternative security requirement objects that can
+   * be used. Only one of the security requirement objects need to be satisfied
+   * to authorize a request.
+   *
+   * @example [{ "petstore_auth": ["write:pets", "read:pets"] }]
+   */
+  security?: SecurityRequirement[];
 
-	/**
-	 * An alternative server array to service this operation. If an alternative
-	 * server object is specified at the Path Item Object level, it will be
-	 * overridden by this value.
-	 *
-	 * @example [{ url: "https://api.example.com/v1" }]
-	 */
-	servers?: Server[];
+  /**
+   * An alternative server array to service this operation. If an alternative
+   * server object is specified at the Path Item Object level, it will be
+   * overridden by this value.
+   *
+   * @example [{ url: "https://api.example.com/v1" }]
+   */
+  servers?: Server[];
 }
 
 /**
@@ -391,42 +391,42 @@ export interface Operation extends Extension {
  * ```
  */
 export interface Example extends Extension {
-	/**
-	 * Short description for the example.
-	 *
-	 * @example "A user example"
-	 * @example "Error response example"
-	 */
-	summary?: string;
+  /**
+   * Short description for the example.
+   *
+   * @example "A user example"
+   * @example "Error response example"
+   */
+  summary?: string;
 
-	/**
-	 * Long description for the example. CommonMark syntax MAY be used for rich text representation.
-	 *
-	 * @example "This example shows a typical user object with all required fields"
-	 * @example "This example demonstrates an error response when validation fails"
-	 */
-	description?: string;
+  /**
+   * Long description for the example. CommonMark syntax MAY be used for rich text representation.
+   *
+   * @example "This example shows a typical user object with all required fields"
+   * @example "This example demonstrates an error response when validation fails"
+   */
+  description?: string;
 
-	/**
-	 * Embedded literal example. The value field and externalValue field are mutually exclusive.
-	 * To represent examples of media types that cannot naturally represented in JSON or YAML,
-	 * use a string value to contain the example, escaping where necessary.
-	 *
-	 * @example { id: 1, name: "John Doe" }
-	 * @example "example string"
-	 * @example 42
-	 */
-	value?: unknown;
+  /**
+   * Embedded literal example. The value field and externalValue field are mutually exclusive.
+   * To represent examples of media types that cannot naturally represented in JSON or YAML,
+   * use a string value to contain the example, escaping where necessary.
+   *
+   * @example { id: 1, name: "John Doe" }
+   * @example "example string"
+   * @example 42
+   */
+  value?: unknown;
 
-	/**
-	 * A URI that points to the literal example. This provides the capability to reference
-	 * examples that cannot easily be included in JSON or YAML documents. The value field
-	 * and externalValue field are mutually exclusive.
-	 *
-	 * @example "https://example.com/examples/user-example.json"
-	 * @example "https://example.com/examples/error-example.xml"
-	 */
-	externalValue?: string;
+  /**
+   * A URI that points to the literal example. This provides the capability to reference
+   * examples that cannot easily be included in JSON or YAML documents. The value field
+   * and externalValue field are mutually exclusive.
+   *
+   * @example "https://example.com/examples/user-example.json"
+   * @example "https://example.com/examples/error-example.xml"
+   */
+  externalValue?: string;
 }
 
 /**
@@ -491,137 +491,137 @@ export interface Example extends Extension {
  * ```
  */
 export interface Parameter extends Extension {
-	/**
-	 * The name of the parameter. Parameter names are case sensitive.
-	 *
-	 * @example "userId"
-	 * @example "limit"
-	 * @example "X-API-Key"
-	 */
-	name: string;
+  /**
+   * The name of the parameter. Parameter names are case sensitive.
+   *
+   * @example "userId"
+   * @example "limit"
+   * @example "X-API-Key"
+   */
+  name: string;
 
-	/**
-	 * The location of the parameter. Possible values are "query", "header", "path" or "cookie".
-	 *
-	 * @example "query"
-	 * @example "path"
-	 * @example "header"
-	 * @example "cookie"
-	 */
-	in: "query" | "header" | "path" | "cookie";
+  /**
+   * The location of the parameter. Possible values are "query", "header", "path" or "cookie".
+   *
+   * @example "query"
+   * @example "path"
+   * @example "header"
+   * @example "cookie"
+   */
+  in: "query" | "header" | "path" | "cookie";
 
-	/**
-	 * A brief description of the parameter. This could contain examples of use.
-	 * CommonMark syntax MAY be used for rich text representation.
-	 *
-	 * @example "The user ID to retrieve"
-	 * @example "Maximum number of items to return"
-	 */
-	description?: string;
+  /**
+   * A brief description of the parameter. This could contain examples of use.
+   * CommonMark syntax MAY be used for rich text representation.
+   *
+   * @example "The user ID to retrieve"
+   * @example "Maximum number of items to return"
+   */
+  description?: string;
 
-	/**
-	 * Determines whether this parameter is mandatory. If the parameter location is "path",
-	 * this property is REQUIRED and its value MUST be true. Otherwise, the property MAY be
-	 * included and its default value is false.
-	 *
-	 * @example true
-	 * @example false
-	 */
-	required?: boolean;
+  /**
+   * Determines whether this parameter is mandatory. If the parameter location is "path",
+   * this property is REQUIRED and its value MUST be true. Otherwise, the property MAY be
+   * included and its default value is false.
+   *
+   * @example true
+   * @example false
+   */
+  required?: boolean;
 
-	/**
-	 * Specifies that a parameter is deprecated and SHOULD be transitioned out of usage.
-	 * Default value is false.
-	 *
-	 * @example true
-	 * @example false
-	 */
-	deprecated?: boolean;
+  /**
+   * Specifies that a parameter is deprecated and SHOULD be transitioned out of usage.
+   * Default value is false.
+   *
+   * @example true
+   * @example false
+   */
+  deprecated?: boolean;
 
-	/**
-	 * Sets the ability to pass empty-valued parameters. This is valid only for query
-	 * parameters and allows sending a parameter with an empty value. Default value is false.
-	 *
-	 * @example true
-	 * @example false
-	 */
-	allowEmptyValue?: boolean;
+  /**
+   * Sets the ability to pass empty-valued parameters. This is valid only for query
+   * parameters and allows sending a parameter with an empty value. Default value is false.
+   *
+   * @example true
+   * @example false
+   */
+  allowEmptyValue?: boolean;
 
-	/**
-	 * Describes how the parameter value will be serialized depending on the type of the
-	 * parameter value. Default values (based on value of in): for query - form; for path - simple;
-	 * for header - simple; for cookie - form.
-	 *
-	 * @example "simple"
-	 * @example "form"
-	 * @example "matrix"
-	 * @example "label"
-	 * @example "spaceDelimited"
-	 * @example "pipeDelimited"
-	 * @example "deepObject"
-	 */
-	style?: string;
+  /**
+   * Describes how the parameter value will be serialized depending on the type of the
+   * parameter value. Default values (based on value of in): for query - form; for path - simple;
+   * for header - simple; for cookie - form.
+   *
+   * @example "simple"
+   * @example "form"
+   * @example "matrix"
+   * @example "label"
+   * @example "spaceDelimited"
+   * @example "pipeDelimited"
+   * @example "deepObject"
+   */
+  style?: string;
 
-	/**
-	 * When this is true, parameter values of type array or object generate separate parameters
-	 * for each value of the array or key-value pair of the map. For other types of parameters
-	 * this property has no effect. When style is form, the default value is true. For all other
-	 * styles, the default value is false.
-	 *
-	 * @example true
-	 * @example false
-	 */
-	explode?: boolean;
+  /**
+   * When this is true, parameter values of type array or object generate separate parameters
+   * for each value of the array or key-value pair of the map. For other types of parameters
+   * this property has no effect. When style is form, the default value is true. For all other
+   * styles, the default value is false.
+   *
+   * @example true
+   * @example false
+   */
+  explode?: boolean;
 
-	/**
-	 * Determines whether the parameter value SHOULD allow reserved characters, as defined by
-	 * RFC3986 :/?#[]@!$&'()*+,;= to be included without percent-encoding. This property only
-	 * applies to parameters with an in value of query. The default value is false.
-	 *
-	 * @example true
-	 * @example false
-	 */
-	allowReserved?: boolean;
+  /**
+   * Determines whether the parameter value SHOULD allow reserved characters, as defined by
+   * RFC3986 :/?#[]@!$&'()*+,;= to be included without percent-encoding. This property only
+   * applies to parameters with an in value of query. The default value is false.
+   *
+   * @example true
+   * @example false
+   */
+  allowReserved?: boolean;
 
-	/**
-	 * The schema defining the type used for the parameter. This field is mutually exclusive
-	 * with the content field.
-	 *
-	 * @example { type: "string" }
-	 * @example { type: "integer", minimum: 1 }
-	 */
-	schema?: Schema;
+  /**
+   * The schema defining the type used for the parameter. This field is mutually exclusive
+   * with the content field.
+   *
+   * @example { type: "string" }
+   * @example { type: "integer", minimum: 1 }
+   */
+  schema?: Schema;
 
-	/**
-	 * Example of the parameter's potential value. The example SHOULD match the specified
-	 * schema and encoding properties if present. The example field is mutually exclusive
-	 * of the examples field. Furthermore, if referencing a schema that contains an example,
-	 * the example value SHALL override the example provided by the schema.
-	 *
-	 * @example "example value"
-	 * @example 42
-	 * @example { id: 1, name: "John" }
-	 */
-	example?: unknown;
+  /**
+   * Example of the parameter's potential value. The example SHOULD match the specified
+   * schema and encoding properties if present. The example field is mutually exclusive
+   * of the examples field. Furthermore, if referencing a schema that contains an example,
+   * the example value SHALL override the example provided by the schema.
+   *
+   * @example "example value"
+   * @example 42
+   * @example { id: 1, name: "John" }
+   */
+  example?: unknown;
 
-	/**
-	 * Examples of the parameter's potential value. Each example SHOULD contain a value in
-	 * the correct format as specified in the parameter encoding. The examples field is
-	 * mutually exclusive of the example field. Furthermore, if referencing a schema that
-	 * contains an example, the examples value SHALL override the example provided by the schema.
-	 *
-	 * @example { "user1": { summary: "A user example", value: { id: 1, name: "John" } } }
-	 */
-	examples?: Record<string, Example | Reference>;
+  /**
+   * Examples of the parameter's potential value. Each example SHOULD contain a value in
+   * the correct format as specified in the parameter encoding. The examples field is
+   * mutually exclusive of the example field. Furthermore, if referencing a schema that
+   * contains an example, the examples value SHALL override the example provided by the schema.
+   *
+   * @example { "user1": { summary: "A user example", value: { id: 1, name: "John" } } }
+   */
+  examples?: Record<string, Example | Reference>;
 
-	/**
-	 * A map containing the representations for the parameter. The key is the media type
-	 * and the value describes it. The map MUST only contain one entry. This field is
-	 * mutually exclusive with the schema field.
-	 *
-	 * @example { "application/json": { schema: { type: "string" } } }
-	 */
-	content?: Record<string, MediaType>;
+  /**
+   * A map containing the representations for the parameter. The key is the media type
+   * and the value describes it. The map MUST only contain one entry. This field is
+   * mutually exclusive with the schema field.
+   *
+   * @example { "application/json": { schema: { type: "string" } } }
+   */
+  content?: Record<string, MediaType>;
 }
 
 /**
@@ -685,32 +685,32 @@ export interface Parameter extends Extension {
  * ```
  */
 export interface RequestBody extends Extension {
-	/**
-	 * A brief description of the request body. This could contain examples of use.
-	 * CommonMark syntax MAY be used for rich text representation.
-	 *
-	 * @example "User data to create"
-	 * @example "File upload with metadata"
-	 */
-	description?: string;
+  /**
+   * A brief description of the request body. This could contain examples of use.
+   * CommonMark syntax MAY be used for rich text representation.
+   *
+   * @example "User data to create"
+   * @example "File upload with metadata"
+   */
+  description?: string;
 
-	/**
-	 * The content of the request body. The key is a media type or media type range and
-	 * the value describes it. For request bodies that are sent using multipart/form-data,
-	 * the encoding property is used to describe the encoding of the request body.
-	 *
-	 * @example { "application/json": { schema: { $ref: "#/components/schemas/User" } } }
-	 * @example { "multipart/form-data": { schema: { type: "object", properties: { file: { type: "string", format: "binary" } } } } }
-	 */
-	content: Record<string, MediaType>;
+  /**
+   * The content of the request body. The key is a media type or media type range and
+   * the value describes it. For request bodies that are sent using multipart/form-data,
+   * the encoding property is used to describe the encoding of the request body.
+   *
+   * @example { "application/json": { schema: { $ref: "#/components/schemas/User" } } }
+   * @example { "multipart/form-data": { schema: { type: "object", properties: { file: { type: "string", format: "binary" } } } } }
+   */
+  content: Record<string, MediaType>;
 
-	/**
-	 * Determines if the request body is required in the request. Defaults to false.
-	 *
-	 * @example true
-	 * @example false
-	 */
-	required?: boolean;
+  /**
+   * Determines if the request body is required in the request. Defaults to false.
+   *
+   * @example true
+   * @example false
+   */
+  required?: boolean;
 }
 
 /**
@@ -774,42 +774,42 @@ export interface RequestBody extends Extension {
  * ```
  */
 export interface Response extends Extension {
-	/**
-	 * A short description of the response. CommonMark syntax MAY be used for rich text representation.
-	 * This field is required.
-	 *
-	 * @example "A list of users"
-	 * @example "User created successfully"
-	 * @example "Bad request - validation failed"
-	 */
-	description: string;
+  /**
+   * A short description of the response. CommonMark syntax MAY be used for rich text representation.
+   * This field is required.
+   *
+   * @example "A list of users"
+   * @example "User created successfully"
+   * @example "Bad request - validation failed"
+   */
+  description: string;
 
-	/**
-	 * Maps a header name to its definition. RFC7230 states header names are case insensitive.
-	 * If a response header is defined with the name "Content-Type", it SHALL be ignored.
-	 *
-	 * @example { "X-RateLimit-Limit": { description: "Rate limit per hour", schema: { type: "integer" } } }
-	 */
-	headers?: Record<string, Header | Reference>;
+  /**
+   * Maps a header name to its definition. RFC7230 states header names are case insensitive.
+   * If a response header is defined with the name "Content-Type", it SHALL be ignored.
+   *
+   * @example { "X-RateLimit-Limit": { description: "Rate limit per hour", schema: { type: "integer" } } }
+   */
+  headers?: Record<string, Header | Reference>;
 
-	/**
-	 * A map containing descriptions of potential response payloads. The key is a media type
-	 * or media type range and the value describes it. For responses that match multiple keys,
-	 * only the most specific key is applicable. e.g. text/plain overrides text/*
-	 *
-	 * @example { "application/json": { schema: { $ref: "#/components/schemas/User" } } }
-	 * @example { "application/json": { schema: { type: "array", items: { $ref: "#/components/schemas/User" } } } }
-	 */
-	content?: Record<string, MediaType>;
+  /**
+   * A map containing descriptions of potential response payloads. The key is a media type
+   * or media type range and the value describes it. For responses that match multiple keys,
+   * only the most specific key is applicable. e.g. text/plain overrides text/*
+   *
+   * @example { "application/json": { schema: { $ref: "#/components/schemas/User" } } }
+   * @example { "application/json": { schema: { type: "array", items: { $ref: "#/components/schemas/User" } } } }
+   */
+  content?: Record<string, MediaType>;
 
-	/**
-	 * A map of operations links that can be followed from the response. The key of the map
-	 * is a short name for the link, following the naming constraints of the names for
-	 * Component Objects.
-	 *
-	 * @example { "GetUser": { operationId: "getUserById", parameters: { userId: "$response.body#/id" } } }
-	 */
-	links?: Record<string, Link | Reference>;
+  /**
+   * A map of operations links that can be followed from the response. The key of the map
+   * is a short name for the link, following the naming constraints of the names for
+   * Component Objects.
+   *
+   * @example { "GetUser": { operationId: "getUserById", parameters: { userId: "$response.body#/id" } } }
+   */
+  links?: Record<string, Link | Reference>;
 }
 
 /**
@@ -874,106 +874,106 @@ export interface Response extends Extension {
  * ```
  */
 export interface Header extends Extension {
-	/**
-	 * A brief description of the header. This could contain examples of use.
-	 * CommonMark syntax MAY be used for rich text representation.
-	 *
-	 * @example "Rate limit per hour"
-	 * @example "Custom authentication token"
-	 */
-	description?: string;
+  /**
+   * A brief description of the header. This could contain examples of use.
+   * CommonMark syntax MAY be used for rich text representation.
+   *
+   * @example "Rate limit per hour"
+   * @example "Custom authentication token"
+   */
+  description?: string;
 
-	/**
-	 * Determines whether this header is mandatory. The property MAY be included and its
-	 * default value is false.
-	 *
-	 * @example true
-	 * @example false
-	 */
-	required?: boolean;
+  /**
+   * Determines whether this header is mandatory. The property MAY be included and its
+   * default value is false.
+   *
+   * @example true
+   * @example false
+   */
+  required?: boolean;
 
-	/**
-	 * Specifies that a header is deprecated and SHOULD be transitioned out of usage.
-	 * Default value is false.
-	 *
-	 * @example true
-	 * @example false
-	 */
-	deprecated?: boolean;
+  /**
+   * Specifies that a header is deprecated and SHOULD be transitioned out of usage.
+   * Default value is false.
+   *
+   * @example true
+   * @example false
+   */
+  deprecated?: boolean;
 
-	/**
-	 * Sets the ability to pass empty-valued headers. This is valid only for headers
-	 * and allows sending a header with an empty value. Default value is false.
-	 *
-	 * @example true
-	 * @example false
-	 */
-	allowEmptyValue?: boolean;
+  /**
+   * Sets the ability to pass empty-valued headers. This is valid only for headers
+   * and allows sending a header with an empty value. Default value is false.
+   *
+   * @example true
+   * @example false
+   */
+  allowEmptyValue?: boolean;
 
-	/**
-	 * Describes how the header value will be serialized. The default value is "simple".
-	 *
-	 * @example "simple"
-	 * @example "form"
-	 */
-	style?: string;
+  /**
+   * Describes how the header value will be serialized. The default value is "simple".
+   *
+   * @example "simple"
+   * @example "form"
+   */
+  style?: string;
 
-	/**
-	 * When this is true, header values of type array or object generate separate headers
-	 * for each value of the array or key-value pair of the map. For other types of headers
-	 * this property has no effect. When style is form, the default value is true. For all other
-	 * styles, the default value is false.
-	 *
-	 * @example true
-	 * @example false
-	 */
-	explode?: boolean;
+  /**
+   * When this is true, header values of type array or object generate separate headers
+   * for each value of the array or key-value pair of the map. For other types of headers
+   * this property has no effect. When style is form, the default value is true. For all other
+   * styles, the default value is false.
+   *
+   * @example true
+   * @example false
+   */
+  explode?: boolean;
 
-	/**
-	 * Determines whether the header value SHOULD allow reserved characters, as defined by
-	 * RFC3986 :/?#[]@!$&'()*+,;= to be included without percent-encoding. The default value is false.
-	 *
-	 * @example true
-	 * @example false
-	 */
-	allowReserved?: boolean;
+  /**
+   * Determines whether the header value SHOULD allow reserved characters, as defined by
+   * RFC3986 :/?#[]@!$&'()*+,;= to be included without percent-encoding. The default value is false.
+   *
+   * @example true
+   * @example false
+   */
+  allowReserved?: boolean;
 
-	/**
-	 * The schema defining the type used for the header. This field is mutually exclusive
-	 * with the content field.
-	 *
-	 * @example { type: "string" }
-	 * @example { type: "integer", minimum: 0 }
-	 */
-	schema?: Schema;
+  /**
+   * The schema defining the type used for the header. This field is mutually exclusive
+   * with the content field.
+   *
+   * @example { type: "string" }
+   * @example { type: "integer", minimum: 0 }
+   */
+  schema?: Schema;
 
-	/**
-	 * Example of the header's potential value. The example SHOULD match the specified
-	 * schema and encoding properties if present. The example field is mutually exclusive
-	 * of the examples field.
-	 *
-	 * @example "example value"
-	 * @example 42
-	 */
-	example?: unknown;
+  /**
+   * Example of the header's potential value. The example SHOULD match the specified
+   * schema and encoding properties if present. The example field is mutually exclusive
+   * of the examples field.
+   *
+   * @example "example value"
+   * @example 42
+   */
+  example?: unknown;
 
-	/**
-	 * Examples of the header's potential value. Each example SHOULD contain a value in
-	 * the correct format as specified in the header encoding. The examples field is
-	 * mutually exclusive of the example field.
-	 *
-	 * @example { "header1": { summary: "A header example", value: "example value" } }
-	 */
-	examples?: Record<string, Example | Reference>;
+  /**
+   * Examples of the header's potential value. Each example SHOULD contain a value in
+   * the correct format as specified in the header encoding. The examples field is
+   * mutually exclusive of the example field.
+   *
+   * @example { "header1": { summary: "A header example", value: "example value" } }
+   */
+  examples?: Record<string, Example | Reference>;
 
-	/**
-	 * A map containing the representations for the header. The key is the media type
-	 * and the value describes it. The map MUST only contain one entry. This field is
-	 * mutually exclusive with the schema field.
-	 *
-	 * @example { "application/json": { schema: { type: "string" } } }
-	 */
-	content?: Record<string, MediaType>;
+  /**
+   * A map containing the representations for the header. The key is the media type
+   * and the value describes it. The map MUST only contain one entry. This field is
+   * mutually exclusive with the schema field.
+   *
+   * @example { "application/json": { schema: { type: "string" } } }
+   */
+  content?: Record<string, MediaType>;
 }
 
 /**
@@ -1032,44 +1032,44 @@ export interface Header extends Extension {
  * ```
  */
 export interface MediaType extends Extension {
-	/**
-	 * The schema defining the content of the request, response, or parameter.
-	 *
-	 * @example { $ref: "#/components/schemas/User" }
-	 * @example { type: "array", items: { type: "string" } }
-	 */
-	schema?: Schema;
+  /**
+   * The schema defining the content of the request, response, or parameter.
+   *
+   * @example { $ref: "#/components/schemas/User" }
+   * @example { type: "array", items: { type: "string" } }
+   */
+  schema?: Schema;
 
-	/**
-	 * Example of the media type. The example SHOULD match the specified schema and encoding
-	 * properties if present. The example field is mutually exclusive of the examples field.
-	 * Furthermore, if referencing a schema that contains an example, the example value
-	 * SHALL override the example provided by the schema.
-	 *
-	 * @example { id: 1, name: "John Doe" }
-	 * @example "example string"
-	 * @example 42
-	 */
-	example?: unknown;
+  /**
+   * Example of the media type. The example SHOULD match the specified schema and encoding
+   * properties if present. The example field is mutually exclusive of the examples field.
+   * Furthermore, if referencing a schema that contains an example, the example value
+   * SHALL override the example provided by the schema.
+   *
+   * @example { id: 1, name: "John Doe" }
+   * @example "example string"
+   * @example 42
+   */
+  example?: unknown;
 
-	/**
-	 * Examples of the media type. Each example SHOULD contain a value in the correct format
-	 * as specified in the media type encoding. The examples field is mutually exclusive
-	 * of the example field. Furthermore, if referencing a schema that contains an example,
-	 * the examples value SHALL override the example provided by the schema.
-	 *
-	 * @example { "user1": { summary: "A user example", value: { id: 1, name: "John" } } }
-	 */
-	examples?: Record<string, Example | Reference>;
+  /**
+   * Examples of the media type. Each example SHOULD contain a value in the correct format
+   * as specified in the media type encoding. The examples field is mutually exclusive
+   * of the example field. Furthermore, if referencing a schema that contains an example,
+   * the examples value SHALL override the example provided by the schema.
+   *
+   * @example { "user1": { summary: "A user example", value: { id: 1, name: "John" } } }
+   */
+  examples?: Record<string, Example | Reference>;
 
-	/**
-	 * A map between a property name and its encoding information. The key, being the property
-	 * name, MUST exist in the schema as a property. The encoding object SHALL only apply to
-	 * requestBody objects when the media type is multipart or application/x-www-form-urlencoded.
-	 *
-	 * @example { "file": { contentType: "image/png" }, "description": { contentType: "text/plain" } }
-	 */
-	encoding?: Record<string, Encoding>;
+  /**
+   * A map between a property name and its encoding information. The key, being the property
+   * name, MUST exist in the schema as a property. The encoding object SHALL only apply to
+   * requestBody objects when the media type is multipart or application/x-www-form-urlencoded.
+   *
+   * @example { "file": { contentType: "image/png" }, "description": { contentType: "text/plain" } }
+   */
+  encoding?: Record<string, Encoding>;
 }
 
 /**
@@ -1124,65 +1124,65 @@ export interface MediaType extends Extension {
  * ```
  */
 export interface Encoding extends Extension {
-	/**
-	 * The Content-Type for encoding a specific property. Default value depends on the
-	 * property type: for string with format being binary – application/octet-stream;
-	 * for other primitive types – text/plain; for object – application/json;
-	 * for array – the default is determined based on the inner type.
-	 *
-	 * @example "image/png"
-	 * @example "application/json"
-	 * @example "text/plain"
-	 */
-	contentType?: string;
+  /**
+   * The Content-Type for encoding a specific property. Default value depends on the
+   * property type: for string with format being binary – application/octet-stream;
+   * for other primitive types – text/plain; for object – application/json;
+   * for array – the default is determined based on the inner type.
+   *
+   * @example "image/png"
+   * @example "application/json"
+   * @example "text/plain"
+   */
+  contentType?: string;
 
-	/**
-	 * A map allowing additional information to be provided as headers, for example
-	 * Content-Disposition. Content-Type is described separately and SHALL be ignored
-	 * in this section. This property SHALL be ignored if the request body media type
-	 * is not a multipart.
-	 *
-	 * @example { "Content-Disposition": { description: "File attachment", schema: { type: "string" } } }
-	 */
-	headers?: Record<string, Header | Reference>;
+  /**
+   * A map allowing additional information to be provided as headers, for example
+   * Content-Disposition. Content-Type is described separately and SHALL be ignored
+   * in this section. This property SHALL be ignored if the request body media type
+   * is not a multipart.
+   *
+   * @example { "Content-Disposition": { description: "File attachment", schema: { type: "string" } } }
+   */
+  headers?: Record<string, Header | Reference>;
 
-	/**
-	 * Describes how a specific property value will be serialized depending on its type.
-	 * See Parameter Object for details on the style property. The behavior follows the
-	 * same values as query parameters, including default values. This property SHALL be
-	 * ignored if the request body media type is not application/x-www-form-urlencoded
-	 * or multipart/form-data.
-	 *
-	 * @example "form"
-	 * @example "spaceDelimited"
-	 * @example "pipeDelimited"
-	 * @example "deepObject"
-	 */
-	style?: string;
+  /**
+   * Describes how a specific property value will be serialized depending on its type.
+   * See Parameter Object for details on the style property. The behavior follows the
+   * same values as query parameters, including default values. This property SHALL be
+   * ignored if the request body media type is not application/x-www-form-urlencoded
+   * or multipart/form-data.
+   *
+   * @example "form"
+   * @example "spaceDelimited"
+   * @example "pipeDelimited"
+   * @example "deepObject"
+   */
+  style?: string;
 
-	/**
-	 * When this is true, property values of type array or object generate separate
-	 * parameters for each value of the array or key-value pair of the map. For other
-	 * types of properties this property has no effect. When style is form, the default
-	 * value is true. For all other styles, the default value is false. This property
-	 * SHALL be ignored if the request body media type is not application/x-www-form-urlencoded
-	 * or multipart/form-data.
-	 *
-	 * @example true
-	 * @example false
-	 */
-	explode?: boolean;
+  /**
+   * When this is true, property values of type array or object generate separate
+   * parameters for each value of the array or key-value pair of the map. For other
+   * types of properties this property has no effect. When style is form, the default
+   * value is true. For all other styles, the default value is false. This property
+   * SHALL be ignored if the request body media type is not application/x-www-form-urlencoded
+   * or multipart/form-data.
+   *
+   * @example true
+   * @example false
+   */
+  explode?: boolean;
 
-	/**
-	 * Determines whether the parameter value SHOULD allow reserved characters, as defined
-	 * by RFC3986 :/?#[]@!$&'()*+,;= to be included without percent-encoding. The default
-	 * value is false. This property SHALL be ignored if the request body media type is
-	 * not application/x-www-form-urlencoded.
-	 *
-	 * @example true
-	 * @example false
-	 */
-	allowReserved?: boolean;
+  /**
+   * Determines whether the parameter value SHOULD allow reserved characters, as defined
+   * by RFC3986 :/?#[]@!$&'()*+,;= to be included without percent-encoding. The default
+   * value is false. This property SHALL be ignored if the request body media type is
+   * not application/x-www-form-urlencoded.
+   *
+   * @example true
+   * @example false
+   */
+  allowReserved?: boolean;
 }
 
 /**
@@ -1240,59 +1240,59 @@ export interface Encoding extends Extension {
  * ```
  */
 export interface Link extends Extension {
-	/**
-	 * A relative or absolute reference to an OAS operation. This field is mutually exclusive
-	 * of the operationId field, and MUST point to an Operation Object. Relative operationRef
-	 * values MAY be used to locate an existing Operation Object in the OpenAPI definition.
-	 *
-	 * @example "#/paths/~1users~1{userId}/get"
-	 * @example "https://example.com/openapi.json#/paths/~1users~1{userId}/get"
-	 */
-	operationRef?: string;
+  /**
+   * A relative or absolute reference to an OAS operation. This field is mutually exclusive
+   * of the operationId field, and MUST point to an Operation Object. Relative operationRef
+   * values MAY be used to locate an existing Operation Object in the OpenAPI definition.
+   *
+   * @example "#/paths/~1users~1{userId}/get"
+   * @example "https://example.com/openapi.json#/paths/~1users~1{userId}/get"
+   */
+  operationRef?: string;
 
-	/**
-	 * The name of an existing, resolvable OAS operation, as defined with a unique operationId.
-	 * This field is mutually exclusive of the operationRef field.
-	 *
-	 * @example "getUserById"
-	 * @example "createUser"
-	 */
-	operationId?: string;
+  /**
+   * The name of an existing, resolvable OAS operation, as defined with a unique operationId.
+   * This field is mutually exclusive of the operationRef field.
+   *
+   * @example "getUserById"
+   * @example "createUser"
+   */
+  operationId?: string;
 
-	/**
-	 * A map representing parameters to pass to an operation as specified with operationId
-	 * or identified via operationRef. The key is the parameter name to be used, whereas
-	 * the value can be a constant or an expression to be evaluated and passed to the linked
-	 * operation. The parameter name can be qualified using the parameter location [{in}.]{name}
-	 * for operations that use the same parameter name in different locations (e.g. path.id).
-	 *
-	 * @example { "userId": "$response.body#/id" }
-	 * @example { "path.id": "$response.body#/id", "query.limit": 10 }
-	 */
-	parameters?: Record<string, unknown>;
+  /**
+   * A map representing parameters to pass to an operation as specified with operationId
+   * or identified via operationRef. The key is the parameter name to be used, whereas
+   * the value can be a constant or an expression to be evaluated and passed to the linked
+   * operation. The parameter name can be qualified using the parameter location [{in}.]{name}
+   * for operations that use the same parameter name in different locations (e.g. path.id).
+   *
+   * @example { "userId": "$response.body#/id" }
+   * @example { "path.id": "$response.body#/id", "query.limit": 10 }
+   */
+  parameters?: Record<string, unknown>;
 
-	/**
-	 * A literal value or expression to use as a request body when calling the target operation.
-	 *
-	 * @example { "name": "John Doe", "email": "john@example.com" }
-	 * @example "$request.body"
-	 */
-	requestBody?: unknown;
+  /**
+   * A literal value or expression to use as a request body when calling the target operation.
+   *
+   * @example { "name": "John Doe", "email": "john@example.com" }
+   * @example "$request.body"
+   */
+  requestBody?: unknown;
 
-	/**
-	 * A description of the link. CommonMark syntax MAY be used for rich text representation.
-	 *
-	 * @example "Get the user by ID"
-	 * @example "Create a new user with the provided data"
-	 */
-	description?: string;
+  /**
+   * A description of the link. CommonMark syntax MAY be used for rich text representation.
+   *
+   * @example "Get the user by ID"
+   * @example "Create a new user with the provided data"
+   */
+  description?: string;
 
-	/**
-	 * A server object to be used by the target operation.
-	 *
-	 * @example { url: "https://api.example.com/v1" }
-	 */
-	server?: Server;
+  /**
+   * A server object to be used by the target operation.
+   *
+   * @example { url: "https://api.example.com/v1" }
+   */
+  server?: Server;
 }
 
 /**
@@ -1364,14 +1364,14 @@ export interface Link extends Extension {
  * ```
  */
 export interface Callback {
-	/**
-	 * A runtime expression that identifies a URL to use for the callback operation.
-	 * The expression is evaluated at runtime and MUST resolve to a URL. The value
-	 * is a Path Item Object that describes the callback operations.
-	 *
-	 * @example "{$request.body#/callbackUrl}"
-	 * @example "{$request.body#/webhookUrl}"
-	 * @example "{$request.body#/notificationUrl}"
-	 */
-	[expression: string]: PathItem | Reference;
+  /**
+   * A runtime expression that identifies a URL to use for the callback operation.
+   * The expression is evaluated at runtime and MUST resolve to a URL. The value
+   * is a Path Item Object that describes the callback operations.
+   *
+   * @example "{$request.body#/callbackUrl}"
+   * @example "{$request.body#/webhookUrl}"
+   * @example "{$request.body#/notificationUrl}"
+   */
+  [expression: string]: PathItem | Reference;
 }

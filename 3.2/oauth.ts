@@ -64,45 +64,45 @@ import type { Extension } from "./extensions";
  * ```
  */
 export interface OAuthFlow extends Extension {
-	/**
-	 * The authorization URL to be used for this flow.
-	 * This MUST be in the form of a URL.
-	 *
-	 * Example: `"https://example.com/oauth/authorize"`
-	 */
-	authorizationUrl?: string;
+  /**
+   * The authorization URL to be used for this flow.
+   * This MUST be in the form of a URL.
+   *
+   * Example: `"https://example.com/oauth/authorize"`
+   */
+  authorizationUrl?: string;
 
-	/**
-	 * The token URL to be used for this flow.
-	 * This MUST be in the form of a URL.
-	 *
-	 * Example: `"https://example.com/oauth/token"`
-	 */
-	tokenUrl?: string;
+  /**
+   * The token URL to be used for this flow.
+   * This MUST be in the form of a URL.
+   *
+   * Example: `"https://example.com/oauth/token"`
+   */
+  tokenUrl?: string;
 
-	/**
-	 * The URL to be used for obtaining refresh tokens.
-	 * This MUST be in the form of a URL.
-	 *
-	 * Example: `"https://example.com/oauth/refresh"`
-	 */
-	refreshUrl?: string;
+  /**
+   * The URL to be used for obtaining refresh tokens.
+   * This MUST be in the form of a URL.
+   *
+   * Example: `"https://example.com/oauth/refresh"`
+   */
+  refreshUrl?: string;
 
-	/**
-	 * A map between the scope name and a short description for it.
-	 * The map MAY be empty.
-	 *
-	 * Example: `{ "read": "Read access to user data", "write": "Write access to user data" }`
-	 */
-	scopes: Record<string, string>;
+  /**
+   * A map between the scope name and a short description for it.
+   * The map MAY be empty.
+   *
+   * Example: `{ "read": "Read access to user data", "write": "Write access to user data" }`
+   */
+  scopes: Record<string, string>;
 
-	/**
-	 * The URL to be used for OAuth 2.0 metadata.
-	 * This MUST be in the form of a URL.
-	 *
-	 * Example: `"https://example.com/.well-known/oauth-authorization-server"`
-	 */
-	oauth2MetadataUrl?: string;
+  /**
+   * The URL to be used for OAuth 2.0 metadata.
+   * This MUST be in the form of a URL.
+   *
+   * Example: `"https://example.com/.well-known/oauth-authorization-server"`
+   */
+  oauth2MetadataUrl?: string;
 }
 
 /**
@@ -181,43 +181,43 @@ export interface OAuthFlow extends Extension {
  * ```
  */
 export interface OAuthFlows extends Extension {
-	/**
-	 * Configuration for the OAuth Implicit flow.
-	 * This flow is deprecated in OAuth 2.1.
-	 *
-	 * Example: `{ authorizationUrl: "https://example.com/oauth/authorize", scopes: { "read": "Read access" } }`
-	 */
-	implicit?: OAuthFlow;
+  /**
+   * Configuration for the OAuth Implicit flow.
+   * This flow is deprecated in OAuth 2.1.
+   *
+   * Example: `{ authorizationUrl: "https://example.com/oauth/authorize", scopes: { "read": "Read access" } }`
+   */
+  implicit?: OAuthFlow;
 
-	/**
-	 * Configuration for the OAuth Resource Owner Password flow.
-	 * This flow is deprecated in OAuth 2.1.
-	 *
-	 * Example: `{ tokenUrl: "https://example.com/oauth/token", scopes: { "read": "Read access" } }`
-	 */
-	password?: OAuthFlow;
+  /**
+   * Configuration for the OAuth Resource Owner Password flow.
+   * This flow is deprecated in OAuth 2.1.
+   *
+   * Example: `{ tokenUrl: "https://example.com/oauth/token", scopes: { "read": "Read access" } }`
+   */
+  password?: OAuthFlow;
 
-	/**
-	 * Configuration for the OAuth Client Credentials flow.
-	 * This flow is suitable for machine-to-machine authentication.
-	 *
-	 * Example: `{ tokenUrl: "https://example.com/oauth/token", scopes: { "api": "Full API access" } }`
-	 */
-	clientCredentials?: OAuthFlow;
+  /**
+   * Configuration for the OAuth Client Credentials flow.
+   * This flow is suitable for machine-to-machine authentication.
+   *
+   * Example: `{ tokenUrl: "https://example.com/oauth/token", scopes: { "api": "Full API access" } }`
+   */
+  clientCredentials?: OAuthFlow;
 
-	/**
-	 * Configuration for the OAuth Authorization Code flow.
-	 * This is the recommended flow for web applications.
-	 *
-	 * Example: `{ authorizationUrl: "https://example.com/oauth/authorize", tokenUrl: "https://example.com/oauth/token", scopes: { "read": "Read access" } }`
-	 */
-	authorizationCode?: OAuthFlow;
+  /**
+   * Configuration for the OAuth Authorization Code flow.
+   * This is the recommended flow for web applications.
+   *
+   * Example: `{ authorizationUrl: "https://example.com/oauth/authorize", tokenUrl: "https://example.com/oauth/token", scopes: { "read": "Read access" } }`
+   */
+  authorizationCode?: OAuthFlow;
 
-	/**
-	 * Configuration for the OAuth Device Authorization flow.
-	 * This flow is suitable for devices with limited input capabilities.
-	 *
-	 * Example: `{ deviceCodeUrl: "https://example.com/oauth/device", tokenUrl: "https://example.com/oauth/token", scopes: { "read": "Read access" } }`
-	 */
-	deviceAuthorization?: OAuthFlow;
+  /**
+   * Configuration for the OAuth Device Authorization flow.
+   * This flow is suitable for devices with limited input capabilities.
+   *
+   * Example: `{ deviceCodeUrl: "https://example.com/oauth/device", tokenUrl: "https://example.com/oauth/token", scopes: { "read": "Read access" } }`
+   */
+  deviceAuthorization?: OAuthFlow;
 }

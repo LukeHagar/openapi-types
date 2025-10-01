@@ -14,9 +14,7 @@ const ajv = new Ajv({
   strict: false,
 });
 
-const schema: JSONSchemaType<Specification> = JSON.parse(
-  JSON.stringify(schemas.specification)
-);
+const schema: JSONSchemaType<Specification> = JSON.parse(JSON.stringify(schemas.specification));
 
 // validate is a type guard for Specification - type is inferred from schema type
 const validate = ajv.compile(schema);
@@ -33,9 +31,7 @@ describe("OpenAPI 3.1 Schema Validation", () => {
     describe(name, () => {
       it("should be a valid OpenAPI 3.1 specification", () => {
         if (skipValidation) {
-          console.log(
-            `Skipping validation for ${name} (intentionally incomplete example)`
-          );
+          console.log(`Skipping validation for ${name} (intentionally incomplete example)`);
           expect(true).toBe(true); // Pass the test
           return;
         }
@@ -76,7 +72,7 @@ describe("OpenAPI 3.1 Schema Validation", () => {
       it("should have valid servers array when present", () => {
         if (spec.servers) {
           expect(Array.isArray(spec.servers)).toBe(true);
-          spec.servers.forEach((server) => {
+          spec.servers.forEach(server => {
             expect(server.url).toBeDefined();
             expect(typeof server.url).toBe("string");
           });
@@ -102,7 +98,7 @@ describe("OpenAPI 3.1 Schema Validation", () => {
         return { name, isValid, errors: validate.errors };
       });
 
-      const failedSpecs = results.filter((result) => !result.isValid);
+      const failedSpecs = results.filter(result => !result.isValid);
 
       if (failedSpecs.length > 0) {
         console.error("Failed specifications:");
@@ -119,7 +115,7 @@ describe("OpenAPI 3.1 Schema Validation", () => {
       const uniqueVersions = [...new Set(versions)];
 
       expect(uniqueVersions.length).toBeGreaterThan(0);
-      uniqueVersions.forEach((version) => {
+      uniqueVersions.forEach(version => {
         expect(version).toMatch(/^3\.1\.\d+$/);
       });
     });
@@ -127,7 +123,7 @@ describe("OpenAPI 3.1 Schema Validation", () => {
     it("should have valid server URLs when present", () => {
       specsToTest.forEach(({ name, spec }) => {
         if (spec.servers) {
-          spec.servers.forEach((server) => {
+          spec.servers.forEach(server => {
             // Server URL should be a valid URL format
             expect(server.url).toMatch(/^https?:\/\/|^\/|^\{/);
           });
@@ -138,10 +134,10 @@ describe("OpenAPI 3.1 Schema Validation", () => {
     it("should have valid server variables when present", () => {
       specsToTest.forEach(({ name, spec }) => {
         if (spec.servers) {
-          spec.servers.forEach((server) => {
+          spec.servers.forEach(server => {
             if (server.variables) {
               expect(typeof server.variables).toBe("object");
-              Object.values(server.variables).forEach((variable) => {
+              Object.values(server.variables).forEach(variable => {
                 expect(variable).toHaveProperty("default");
               });
             }
@@ -154,7 +150,7 @@ describe("OpenAPI 3.1 Schema Validation", () => {
       specsToTest.forEach(({ name, spec }) => {
         if (spec.tags) {
           expect(Array.isArray(spec.tags)).toBe(true);
-          spec.tags.forEach((tag) => {
+          spec.tags.forEach(tag => {
             expect(tag.name).toBeDefined();
             expect(typeof tag.name).toBe("string");
           });
@@ -166,13 +162,11 @@ describe("OpenAPI 3.1 Schema Validation", () => {
       specsToTest.forEach(({ name, spec }) => {
         if (spec.components?.securitySchemes) {
           expect(typeof spec.components.securitySchemes).toBe("object");
-          Object.values(spec.components.securitySchemes).forEach((scheme) => {
+          Object.values(spec.components.securitySchemes).forEach(scheme => {
             // Type guard to check if it's not a Reference
             if (!("$ref" in scheme)) {
               expect(scheme.type).toBeDefined();
-              expect(["apiKey", "http", "oauth2", "openIdConnect"]).toContain(
-                scheme.type
-              );
+              expect(["apiKey", "http", "oauth2", "openIdConnect"]).toContain(scheme.type);
             }
           });
         }
@@ -182,7 +176,7 @@ describe("OpenAPI 3.1 Schema Validation", () => {
     it("should have valid webhook operations when present", () => {
       specsToTest.forEach(({ name, spec }) => {
         if (spec.webhooks) {
-          Object.values(spec.webhooks).forEach((webhook) => {
+          Object.values(spec.webhooks).forEach(webhook => {
             // Type guard to check if it's not a Reference
             if (!("$ref" in webhook)) {
               expect(webhook).toHaveProperty("post");
@@ -196,15 +190,11 @@ describe("OpenAPI 3.1 Schema Validation", () => {
     it("should have valid OAuth2 flows when present", () => {
       specsToTest.forEach(({ name, spec }) => {
         if (spec.components?.securitySchemes) {
-          Object.values(spec.components.securitySchemes).forEach((scheme) => {
+          Object.values(spec.components.securitySchemes).forEach(scheme => {
             // Type guard to check if it's not a Reference
-            if (
-              !("$ref" in scheme) &&
-              scheme.type === "oauth2" &&
-              scheme.flows
-            ) {
+            if (!("$ref" in scheme) && scheme.type === "oauth2" && scheme.flows) {
               expect(typeof scheme.flows).toBe("object");
-              Object.values(scheme.flows).forEach((flow) => {
+              Object.values(scheme.flows).forEach(flow => {
                 expect(flow).toHaveProperty("scopes");
                 expect(typeof flow.scopes).toBe("object");
               });
@@ -236,18 +226,16 @@ describe("OpenAPI 3.1 Schema Validation", () => {
 
         // Check for specific error about openapi version
         const hasOpenApiVersionError = validate.errors?.some(
-          (error) =>
+          error =>
             error.instancePath === "/openapi" &&
             (error.message?.includes("must be equal to constant") ||
-              error.message?.includes(
-                "must be equal to one of the allowed values"
-              ) ||
+              error.message?.includes("must be equal to one of the allowed values") ||
               error.message?.includes("must match pattern"))
         );
         expect(hasOpenApiVersionError).toBe(true);
 
         // Verify error structure when validation fails
-        validate.errors?.forEach((error) => {
+        validate.errors?.forEach(error => {
           expect(error).toHaveProperty("keyword");
           expect(error).toHaveProperty("message");
         });
@@ -268,14 +256,11 @@ describe("OpenAPI 3.1 Schema Validation", () => {
       expect(validate.errors).toBeDefined();
 
       // Print actual errors for debugging
-      console.log(
-        "Missing required fields validation errors:",
-        validate.errors
-      );
+      console.log("Missing required fields validation errors:", validate.errors);
 
       // Check for specific required field error
       const hasRequiredError = validate.errors?.some(
-        (error) =>
+        error =>
           error.keyword === "required" &&
           error.instancePath === "" &&
           error.message?.includes("must have required property 'info'")
@@ -600,7 +585,7 @@ describe("OpenAPI 3.1 Schema Validation", () => {
         expect(validate.errors).toBeDefined();
         expect(validate.errors?.length).toBeGreaterThan(0);
         // Verify error structure when validation fails
-        validate.errors?.forEach((error) => {
+        validate.errors?.forEach(error => {
           expect(error).toHaveProperty("keyword");
           expect(error).toHaveProperty("message");
         });
@@ -637,7 +622,7 @@ describe("OpenAPI 3.1 Schema Validation", () => {
         expect(validate.errors).toBeDefined();
         expect(validate.errors?.length).toBeGreaterThan(0);
         // Verify error structure when validation fails
-        validate.errors?.forEach((error) => {
+        validate.errors?.forEach(error => {
           expect(error).toHaveProperty("keyword");
           expect(error).toHaveProperty("message");
         });
@@ -747,7 +732,7 @@ describe("OpenAPI 3.1 Schema Validation", () => {
         expect(validate.errors).toBeDefined();
         expect(validate.errors?.length).toBeGreaterThan(0);
         // Verify error structure when validation fails
-        validate.errors?.forEach((error) => {
+        validate.errors?.forEach(error => {
           expect(error).toHaveProperty("keyword");
           expect(error).toHaveProperty("message");
         });
@@ -806,7 +791,7 @@ describe("OpenAPI 3.1 Schema Validation", () => {
         expect(validate.errors).toBeDefined();
         expect(validate.errors?.length).toBeGreaterThan(0);
         // Verify error structure when validation fails
-        validate.errors?.forEach((error) => {
+        validate.errors?.forEach(error => {
           expect(error).toHaveProperty("keyword");
           expect(error).toHaveProperty("message");
         });
@@ -848,7 +833,7 @@ describe("OpenAPI 3.1 Schema Validation", () => {
         expect(validate.errors).toBeDefined();
         expect(validate.errors?.length).toBeGreaterThan(0);
         // Verify error structure when validation fails
-        validate.errors?.forEach((error) => {
+        validate.errors?.forEach(error => {
           expect(error).toHaveProperty("keyword");
           expect(error).toHaveProperty("message");
         });
@@ -876,7 +861,7 @@ describe("OpenAPI 3.1 Schema Validation", () => {
         expect(validate.errors).toBeDefined();
         expect(validate.errors?.length).toBeGreaterThan(0);
         // Verify error structure when validation fails
-        validate.errors?.forEach((error) => {
+        validate.errors?.forEach(error => {
           expect(error).toHaveProperty("keyword");
           expect(error).toHaveProperty("message");
         });
@@ -905,7 +890,7 @@ describe("OpenAPI 3.1 Schema Validation", () => {
         expect(validate.errors).toBeDefined();
         expect(validate.errors?.length).toBeGreaterThan(0);
         // Verify error structure when validation fails
-        validate.errors?.forEach((error) => {
+        validate.errors?.forEach(error => {
           expect(error).toHaveProperty("keyword");
           expect(error).toHaveProperty("message");
         });
@@ -946,7 +931,7 @@ describe("OpenAPI 3.1 Schema Validation", () => {
         expect(validate.errors).toBeDefined();
         expect(validate.errors?.length).toBeGreaterThan(0);
         // Verify error structure when validation fails
-        validate.errors?.forEach((error) => {
+        validate.errors?.forEach(error => {
           expect(error).toHaveProperty("keyword");
           expect(error).toHaveProperty("message");
         });
@@ -976,7 +961,7 @@ describe("OpenAPI 3.1 Schema Validation", () => {
         expect(validate.errors).toBeDefined();
         expect(validate.errors?.length).toBeGreaterThan(0);
         // Verify error structure when validation fails
-        validate.errors?.forEach((error) => {
+        validate.errors?.forEach(error => {
           expect(error).toHaveProperty("keyword");
           expect(error).toHaveProperty("message");
         });
@@ -1021,17 +1006,14 @@ describe("OpenAPI 3.1 Schema Validation", () => {
       expect(validate.errors).toBeDefined();
 
       // Print actual errors for debugging
-      console.log(
-        "Detailed error messages validation errors:",
-        validate.errors
-      );
+      console.log("Detailed error messages validation errors:", validate.errors);
 
       // Check that error messages are descriptive
       const errors = validate.errors || [];
       expect(errors.length).toBeGreaterThan(0);
 
       // Verify error structure
-      errors.forEach((error) => {
+      errors.forEach(error => {
         expect(error).toHaveProperty("keyword");
         expect(error).toHaveProperty("message");
         // AJV uses 'instancePath' instead of 'dataPath' in newer versions
@@ -1040,7 +1022,7 @@ describe("OpenAPI 3.1 Schema Validation", () => {
 
       // Check for specific missing version error
       const hasVersionError = validate.errors?.some(
-        (error) =>
+        error =>
           error.keyword === "required" &&
           error.instancePath === "/info" &&
           error.message?.includes("must have required property 'version'")

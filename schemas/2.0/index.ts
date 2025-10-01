@@ -28,4 +28,3 @@ export const schemas = {
   schema,
   pathitem,
 } as const;
-

@@ -18,8 +18,7 @@ type OpenEnum<T extends string> = T | (string & { __openEnum?: never });
  * @see {@link https://spdx.org/licenses/ | SPDX License List}
  * @see {@link https://www.npmjs.com/package/spdx-license-list | spdx-license-list NPM Package}
  */
-export type KnownLicenseNames =
-	(typeof spdxLicenseList)[keyof typeof spdxLicenseList]["name"];
+export type KnownLicenseNames = (typeof spdxLicenseList)[keyof typeof spdxLicenseList]["name"];
 
 /**
  * Known license SPDX Identifiers.
@@ -40,13 +39,13 @@ export type KnownLicenseIdentifiers = keyof typeof spdxLicenseList;
  * @see {@link https://www.npmjs.com/package/spdx-license-list | spdx-license-list NPM Package}
  */
 export type KnownLicenseURLs = {
-	[K in keyof typeof spdxLicenseList]: (typeof spdxLicenseList)[K] extends {
-		url: infer U;
-	}
-		? U extends string
-			? U
-			: never
-		: never;
+  [K in keyof typeof spdxLicenseList]: (typeof spdxLicenseList)[K] extends {
+    url: infer U;
+  }
+    ? U extends string
+      ? U
+      : never
+    : never;
 }[keyof typeof spdxLicenseList];
 
 /**

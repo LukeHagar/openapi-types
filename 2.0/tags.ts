@@ -88,46 +88,46 @@ import type { ExternalDocumentation } from "./externalDocs";
  * ```
  */
 export interface Tag extends Extension {
-	/**
-	 * The name of the tag. This field is required and MUST be unique.
-	 *
-	 * The tag name is used to reference this tag in Operation objects and
-	 * must be unique within the entire specification. It should be descriptive
-	 * and follow a consistent naming convention.
-	 *
-	 * @see {@link https://swagger.io/specification/v2/#tag-object | Swagger 2.0 Specification - name}
-	 *
-	 * @example "users"
-	 * @example "pets"
-	 * @example "authentication"
-	 * @example "reports"
-	 */
-	name: string;
+  /**
+   * The name of the tag. This field is required and MUST be unique.
+   *
+   * The tag name is used to reference this tag in Operation objects and
+   * must be unique within the entire specification. It should be descriptive
+   * and follow a consistent naming convention.
+   *
+   * @see {@link https://swagger.io/specification/v2/#tag-object | Swagger 2.0 Specification - name}
+   *
+   * @example "users"
+   * @example "pets"
+   * @example "authentication"
+   * @example "reports"
+   */
+  name: string;
 
-	/**
-	 * A short description for the tag. GFM syntax can be used for rich text representation.
-	 *
-	 * This description provides context about what operations belong to this tag
-	 * and helps developers understand the purpose and scope of the tag.
-	 *
-	 * @see {@link https://swagger.io/specification/v2/#tag-object | Swagger 2.0 Specification - description}
-	 *
-	 * @example "User management operations"
-	 * @example "Pet store operations including CRUD operations for pets"
-	 * @example "Authentication and authorization operations"
-	 */
-	description?: string;
+  /**
+   * A short description for the tag. GFM syntax can be used for rich text representation.
+   *
+   * This description provides context about what operations belong to this tag
+   * and helps developers understand the purpose and scope of the tag.
+   *
+   * @see {@link https://swagger.io/specification/v2/#tag-object | Swagger 2.0 Specification - description}
+   *
+   * @example "User management operations"
+   * @example "Pet store operations including CRUD operations for pets"
+   * @example "Authentication and authorization operations"
+   */
+  description?: string;
 
-	/**
-	 * Additional external documentation for this tag.
-	 *
-	 * This allows for more detailed documentation about the tag and its
-	 * associated operations to be provided via external resources.
-	 *
-	 * @see {@link https://swagger.io/specification/v2/#tag-object | Swagger 2.0 Specification - externalDocs}
-	 *
-	 * @example { description: "Find out more about user management", url: "https://example.com/docs/users" }
-	 * @example { description: "Pet management API documentation", url: "https://petstore.example.com/docs" }
-	 */
-	externalDocs?: ExternalDocumentation;
+  /**
+   * Additional external documentation for this tag.
+   *
+   * This allows for more detailed documentation about the tag and its
+   * associated operations to be provided via external resources.
+   *
+   * @see {@link https://swagger.io/specification/v2/#tag-object | Swagger 2.0 Specification - externalDocs}
+   *
+   * @example { description: "Find out more about user management", url: "https://example.com/docs/users" }
+   * @example { description: "Pet management API documentation", url: "https://petstore.example.com/docs" }
+   */
+  externalDocs?: ExternalDocumentation;
 }

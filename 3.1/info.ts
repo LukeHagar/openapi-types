@@ -62,59 +62,59 @@ import type { Extension } from "./extensions";
  * ```
  */
 export interface Info extends Extension {
-	/**
-	 * The title of the API. This field is required.
-	 *
-	 * @example "Pet Store API"
-	 * @example "User Management API"
-	 */
-	title: string;
+  /**
+   * The title of the API. This field is required.
+   *
+   * @example "Pet Store API"
+   * @example "User Management API"
+   */
+  title: string;
 
-	/**
-	 * A short summary of the API.
-	 *
-	 * @example "A sample API that uses a petstore as an example"
-	 * @example "API for managing users and their data"
-	 */
-	summary?: string;
+  /**
+   * A short summary of the API.
+   *
+   * @example "A sample API that uses a petstore as an example"
+   * @example "API for managing users and their data"
+   */
+  summary?: string;
 
-	/**
-	 * A description of the API. CommonMark syntax MAY be used for rich text representation.
-	 *
-	 * @example "This is a sample server Petstore server."
-	 * @example "This API provides endpoints for user management, authentication, and data operations."
-	 */
-	description?: string;
+  /**
+   * A description of the API. CommonMark syntax MAY be used for rich text representation.
+   *
+   * @example "This is a sample server Petstore server."
+   * @example "This API provides endpoints for user management, authentication, and data operations."
+   */
+  description?: string;
 
-	/**
-	 * A URL to the Terms of Service for the API. MUST be in the format of a URL.
-	 *
-	 * @example "http://example.com/terms/"
-	 * @example "https://www.example.com/terms-of-service"
-	 */
-	termsOfService?: string;
+  /**
+   * A URL to the Terms of Service for the API. MUST be in the format of a URL.
+   *
+   * @example "http://example.com/terms/"
+   * @example "https://www.example.com/terms-of-service"
+   */
+  termsOfService?: string;
 
-	/**
-	 * The contact information for the exposed API.
-	 *
-	 * @example { name: "API Support", email: "support@example.com" }
-	 */
-	contact?: Contact;
+  /**
+   * The contact information for the exposed API.
+   *
+   * @example { name: "API Support", email: "support@example.com" }
+   */
+  contact?: Contact;
 
-	/**
-	 * The license information for the exposed API.
-	 *
-	 * @example { name: "Apache 2.0", url: "https://www.apache.org/licenses/LICENSE-2.0.html" }
-	 */
-	license?: License;
+  /**
+   * The license information for the exposed API.
+   *
+   * @example { name: "Apache 2.0", url: "https://www.apache.org/licenses/LICENSE-2.0.html" }
+   */
+  license?: License;
 
-	/**
-	 * The version of the OpenAPI document. This field is required.
-	 *
-	 * @example "1.0.0"
-	 * @example "2.1.3"
-	 */
-	version: string;
+  /**
+   * The version of the OpenAPI document. This field is required.
+   *
+   * @example "1.0.0"
+   * @example "2.1.3"
+   */
+  version: string;
 }
 
 /**
@@ -163,29 +163,29 @@ export interface Info extends Extension {
  * ```
  */
 export interface Contact extends Extension {
-	/**
-	 * The identifying name of the contact person/organization.
-	 *
-	 * @example "API Support"
-	 * @example "Development Team"
-	 */
-	name?: string;
+  /**
+   * The identifying name of the contact person/organization.
+   *
+   * @example "API Support"
+   * @example "Development Team"
+   */
+  name?: string;
 
-	/**
-	 * The URL pointing to the contact information. MUST be in the format of a URL.
-	 *
-	 * @example "http://www.example.com/support"
-	 * @example "https://example.com/contact"
-	 */
-	url?: string;
+  /**
+   * The URL pointing to the contact information. MUST be in the format of a URL.
+   *
+   * @example "http://www.example.com/support"
+   * @example "https://example.com/contact"
+   */
+  url?: string;
 
-	/**
-	 * The email address of the contact person/organization. MUST be in the format of an email address.
-	 *
-	 * @example "support@example.com"
-	 * @example "dev@example.com"
-	 */
-	email?: string;
+  /**
+   * The email address of the contact person/organization. MUST be in the format of an email address.
+   *
+   * @example "support@example.com"
+   * @example "dev@example.com"
+   */
+  email?: string;
 }
 
 /**
@@ -233,31 +233,31 @@ export interface Contact extends Extension {
  * ```
  */
 export interface License extends Extension {
-	/**
-	 * The license name used for the API. This field is required.
-	 *
-	 * @example "Apache 2.0"
-	 * @example "MIT"
-	 * @example "GPL-3.0"
-	 */
-	name: string;
+  /**
+   * The license name used for the API. This field is required.
+   *
+   * @example "Apache 2.0"
+   * @example "MIT"
+   * @example "GPL-3.0"
+   */
+  name: string;
 
-	/**
-	 * An SPDX license expression for the API. The `identifier` field is mutually
-	 * exclusive of the `url` field.
-	 *
-	 * @example "Apache-2.0"
-	 * @example "MIT"
-	 * @example "GPL-3.0"
-	 */
-	identifier?: string;
+  /**
+   * An SPDX license expression for the API. The `identifier` field is mutually
+   * exclusive of the `url` field.
+   *
+   * @example "Apache-2.0"
+   * @example "MIT"
+   * @example "GPL-3.0"
+   */
+  identifier?: string;
 
-	/**
-	 * A URL to the license used for the API. MUST be in the format of a URL.
-	 * The `url` field is mutually exclusive of the `identifier` field.
-	 *
-	 * @example "https://www.apache.org/licenses/LICENSE-2.0.html"
-	 * @example "https://opensource.org/licenses/MIT"
-	 */
-	url?: string;
+  /**
+   * A URL to the license used for the API. MUST be in the format of a URL.
+   * The `url` field is mutually exclusive of the `identifier` field.
+   *
+   * @example "https://www.apache.org/licenses/LICENSE-2.0.html"
+   * @example "https://opensource.org/licenses/MIT"
+   */
+  url?: string;
 }

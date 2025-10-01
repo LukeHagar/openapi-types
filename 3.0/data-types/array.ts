@@ -89,121 +89,121 @@ import type { XML } from "../xml";
  * ```
  */
 export interface ArraySchema extends Extension {
-	/**
-	 * The type of the schema. Must be "array" for array schemas.
-	 *
-	 * @example "array"
-	 */
-	type: "array";
+  /**
+   * The type of the schema. Must be "array" for array schemas.
+   *
+   * @example "array"
+   */
+  type: "array";
 
-	/**
-	 * A short title for the schema.
-	 *
-	 * @example "Tags"
-	 * @example "User List"
-	 */
-	title?: string;
+  /**
+   * A short title for the schema.
+   *
+   * @example "Tags"
+   * @example "User List"
+   */
+  title?: string;
 
-	/**
-	 * A short description of the schema. CommonMark syntax MAY be used for rich text representation.
-	 *
-	 * @example "Array of tag strings"
-	 * @example "List of user objects"
-	 */
-	description?: string;
+  /**
+   * A short description of the schema. CommonMark syntax MAY be used for rich text representation.
+   *
+   * @example "Array of tag strings"
+   * @example "List of user objects"
+   */
+  description?: string;
 
-	/**
-	 * The default value for the schema.
-	 *
-	 * @example ["tag1", "tag2"]
-	 * @example []
-	 */
-	default?: unknown[];
+  /**
+   * The default value for the schema.
+   *
+   * @example ["tag1", "tag2"]
+   * @example []
+   */
+  default?: unknown[];
 
-	/**
-	 * Example value for the schema.
-	 *
-	 * @example ["example1", "example2"]
-	 * @example [1, 2, 3]
-	 */
-	example?: unknown[];
+  /**
+   * Example value for the schema.
+   *
+   * @example ["example1", "example2"]
+   * @example [1, 2, 3]
+   */
+  example?: unknown[];
 
-	/**
-	 * Enumeration of valid array values.
-	 *
-	 * @example [["a", "b"], ["c", "d"]]
-	 * @example [[1, 2], [3, 4]]
-	 */
-	enum?: unknown[][];
+  /**
+   * Enumeration of valid array values.
+   *
+   * @example [["a", "b"], ["c", "d"]]
+   * @example [[1, 2], [3, 4]]
+   */
+  enum?: unknown[][];
 
-	/**
-	 * Whether the property is read-only. Default value is false.
-	 *
-	 * @default false
-	 * @example true
-	 */
-	readOnly?: boolean;
+  /**
+   * Whether the property is read-only. Default value is false.
+   *
+   * @default false
+   * @example true
+   */
+  readOnly?: boolean;
 
-	/**
-	 * Whether the property is write-only. Default value is false.
-	 *
-	 * @default false
-	 * @example true
-	 */
-	writeOnly?: boolean;
+  /**
+   * Whether the property is write-only. Default value is false.
+   *
+   * @default false
+   * @example true
+   */
+  writeOnly?: boolean;
 
-	/**
-	 * XML representation metadata for the schema.
-	 *
-	 * @example { name: "tags", wrapped: true }
-	 */
-	xml?: XML;
+  /**
+   * XML representation metadata for the schema.
+   *
+   * @example { name: "tags", wrapped: true }
+   */
+  xml?: XML;
 
-	/**
-	 * Additional external documentation for the schema.
-	 *
-	 * @example { description: "Find out more about this field", url: "https://example.com/docs" }
-	 */
-	externalDocs?: ExternalDocumentation;
+  /**
+   * Additional external documentation for the schema.
+   *
+   * @example { description: "Find out more about this field", url: "https://example.com/docs" }
+   */
+  externalDocs?: ExternalDocumentation;
 
-	/**
-	 * Whether the schema is deprecated. Default value is false.
-	 *
-	 * @default false
-	 * @example true
-	 */
-	deprecated?: boolean;
+  /**
+   * Whether the schema is deprecated. Default value is false.
+   *
+   * @default false
+   * @example true
+   */
+  deprecated?: boolean;
 
-	// Array-specific validation constraints
-	/**
-	 * Schema for the items in the array. This field is required for array schemas.
-	 *
-	 * @example { type: "string" }
-	 * @example { $ref: "#/components/schemas/User" }
-	 */
-	items?: Schema;
+  // Array-specific validation constraints
+  /**
+   * Schema for the items in the array. This field is required for array schemas.
+   *
+   * @example { type: "string" }
+   * @example { $ref: "#/components/schemas/User" }
+   */
+  items?: Schema;
 
-	/**
-	 * Maximum number of items in the array. The value MUST be a non-negative integer.
-	 *
-	 * @example 10
-	 * @example 100
-	 */
-	maxItems?: number;
+  /**
+   * Maximum number of items in the array. The value MUST be a non-negative integer.
+   *
+   * @example 10
+   * @example 100
+   */
+  maxItems?: number;
 
-	/**
-	 * Minimum number of items in the array. The value MUST be a non-negative integer.
-	 *
-	 * @example 1
-	 * @example 0
-	 */
-	minItems?: number;
+  /**
+   * Minimum number of items in the array. The value MUST be a non-negative integer.
+   *
+   * @example 1
+   * @example 0
+   */
+  minItems?: number;
 
-	/**
-	 * Whether all items in the array must be unique. Default value is false.
-	 *
-	 * @default false
-	 * @example true
-	 */
-	uniqueItems?: boolean;
+  /**
+   * Whether all items in the array must be unique. Default value is false.
+   *
+   * @default false
+   * @example true
+   */
+  uniqueItems?: boolean;
 }

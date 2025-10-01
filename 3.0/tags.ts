@@ -58,54 +58,54 @@ import type { ExternalDocumentation } from "./externalDocs";
  * ```
  */
 export interface Tag extends Extension {
-	/**
-	 * The name of the tag. This field is required.
-	 * *
-	 * | Version | Reference |
-	 * |---|-----|
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#tag-object  | OpenAPI 3.0.4 Tag Object - name} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#tag-object  | OpenAPI 3.0.3 Tag Object - name} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#tag-object  | OpenAPI 3.0.2 Tag Object - name} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#tag-object  | OpenAPI 3.0.1 Tag Object - name} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#tag-object  | OpenAPI 3.0.0 Tag Object - name} |
-	 * @property `name` - Required The name of the tag
-	 *
-	 * @example "users"
-	 * @example "pets"
-	 * @example "authentication"
-	 */
-	name: string;
+  /**
+   * The name of the tag. This field is required.
+   * *
+   * | Version | Reference |
+   * |---|-----|
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#tag-object  | OpenAPI 3.0.4 Tag Object - name} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#tag-object  | OpenAPI 3.0.3 Tag Object - name} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#tag-object  | OpenAPI 3.0.2 Tag Object - name} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#tag-object  | OpenAPI 3.0.1 Tag Object - name} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#tag-object  | OpenAPI 3.0.0 Tag Object - name} |
+   * @property `name` - Required The name of the tag
+   *
+   * @example "users"
+   * @example "pets"
+   * @example "authentication"
+   */
+  name: string;
 
-	/**
-	 * A short description for the tag. CommonMark syntax MAY be used for rich text representation.
-	 * *
-	 * | Version | Reference |
-	 * |---|-----|
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#tag-object  | OpenAPI 3.0.4 Tag Object - description} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#tag-object  | OpenAPI 3.0.3 Tag Object - description} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#tag-object  | OpenAPI 3.0.2 Tag Object - description} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#tag-object  | OpenAPI 3.0.1 Tag Object - description} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#tag-object  | OpenAPI 3.0.0 Tag Object - description} |
-	 * @property `description` - Optional A short description for the tag
-	 *
-	 * @example "User management operations"
-	 * @example "Pet store operations"
-	 */
-	description?: string;
+  /**
+   * A short description for the tag. CommonMark syntax MAY be used for rich text representation.
+   * *
+   * | Version | Reference |
+   * |---|-----|
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#tag-object  | OpenAPI 3.0.4 Tag Object - description} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#tag-object  | OpenAPI 3.0.3 Tag Object - description} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#tag-object  | OpenAPI 3.0.2 Tag Object - description} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#tag-object  | OpenAPI 3.0.1 Tag Object - description} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#tag-object  | OpenAPI 3.0.0 Tag Object - description} |
+   * @property `description` - Optional A short description for the tag
+   *
+   * @example "User management operations"
+   * @example "Pet store operations"
+   */
+  description?: string;
 
-	/**
-	 * Additional external documentation for this tag.
-	 * *
-	 * | Version | Reference |
-	 * |---|-----|
-	 * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#tag-object  | OpenAPI 3.0.4 Tag Object - externalDocs} |
-	 * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#tag-object  | OpenAPI 3.0.3 Tag Object - externalDocs} |
-	 * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#tag-object  | OpenAPI 3.0.2 Tag Object - externalDocs} |
-	 * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#tag-object  | OpenAPI 3.0.1 Tag Object - externalDocs} |
-	 * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#tag-object  | OpenAPI 3.0.0 Tag Object - externalDocs} |
-	 * @property `externalDocs` - Optional Additional external documentation for this tag
-	 *
-	 * @example { description: "Find out more about user management", url: "https://example.com/docs/users" }
-	 */
-	externalDocs?: ExternalDocumentation;
+  /**
+   * Additional external documentation for this tag.
+   * *
+   * | Version | Reference |
+   * |---|-----|
+   * | 3.0.4   | {@link https://spec.openapis.org/oas/v3.0.4#tag-object  | OpenAPI 3.0.4 Tag Object - externalDocs} |
+   * | 3.0.3   | {@link https://spec.openapis.org/oas/v3.0.3#tag-object  | OpenAPI 3.0.3 Tag Object - externalDocs} |
+   * | 3.0.2   | {@link https://spec.openapis.org/oas/v3.0.2#tag-object  | OpenAPI 3.0.2 Tag Object - externalDocs} |
+   * | 3.0.1   | {@link https://spec.openapis.org/oas/v3.0.1#tag-object  | OpenAPI 3.0.1 Tag Object - externalDocs} |
+   * | 3.0.0   | {@link https://spec.openapis.org/oas/v3.0.0#tag-object  | OpenAPI 3.0.0 Tag Object - externalDocs} |
+   * @property `externalDocs` - Optional Additional external documentation for this tag
+   *
+   * @example { description: "Find out more about user management", url: "https://example.com/docs/users" }
+   */
+  externalDocs?: ExternalDocumentation;
 }

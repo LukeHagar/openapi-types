@@ -82,24 +82,24 @@ import type { Extension } from "./extensions";
  * ```
  */
 export interface BaseReference {
-	/**
-	 * The reference string. This field is required.
-	 *
-	 * The reference string follows JSON Pointer syntax and can reference:
-	 * - Definitions within the same document using "#/definitions/Name"
-	 * - Parameters within the same document using "#/parameters/Name"
-	 * - Responses within the same document using "#/responses/Name"
-	 * - External files using relative or absolute URLs
-	 * - Specific parts of external files using fragment identifiers
-	 *
-	 * @example "#/definitions/Pet"
-	 * @example "#/parameters/skipParam"
-	 * @example "#/responses/NotFound"
-	 * @example "Pet.json"
-	 * @example "definitions.json#/Pet"
-	 * @example "https://api.example.com/schemas/User.json"
-	 */
-	$ref: string;
+  /**
+   * The reference string. This field is required.
+   *
+   * The reference string follows JSON Pointer syntax and can reference:
+   * - Definitions within the same document using "#/definitions/Name"
+   * - Parameters within the same document using "#/parameters/Name"
+   * - Responses within the same document using "#/responses/Name"
+   * - External files using relative or absolute URLs
+   * - Specific parts of external files using fragment identifiers
+   *
+   * @example "#/definitions/Pet"
+   * @example "#/parameters/skipParam"
+   * @example "#/responses/NotFound"
+   * @example "Pet.json"
+   * @example "definitions.json#/Pet"
+   * @example "https://api.example.com/schemas/User.json"
+   */
+  $ref: string;
 }
 
 /**

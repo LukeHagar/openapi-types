@@ -51,13 +51,13 @@
  * ```
  */
 export interface Extension {
-	/**
-	 * Specification Extensions allow adding custom properties to OpenAPI objects.
-	 * All extension properties must start with `x-` and can contain any valid JSON value.
-	 *
-	 * @example "x-custom-property"
-	 * @example "x-internal-id"
-	 * @example "x-codegen-settings"
-	 */
-	[key: `x-${string}`]: unknown;
+  /**
+   * Specification Extensions allow adding custom properties to OpenAPI objects.
+   * All extension properties must start with `x-` and can contain any valid JSON value.
+   *
+   * @example "x-custom-property"
+   * @example "x-internal-id"
+   * @example "x-codegen-settings"
+   */
+  [key: `x-${string}`]: unknown;
 }

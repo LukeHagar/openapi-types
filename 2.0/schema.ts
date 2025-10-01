@@ -1,11 +1,11 @@
 import type {
-	ArraySchema,
-	BooleanSchema,
-	FileSchema,
-	IntegerSchema,
-	NumberSchema,
-	ObjectSchema,
-	StringSchema,
+  ArraySchema,
+  BooleanSchema,
+  FileSchema,
+  IntegerSchema,
+  NumberSchema,
+  ObjectSchema,
+  StringSchema,
 } from "./data-types";
 import type { BaseReference } from "./references";
 import type { XMLObject } from "./xml";
@@ -149,14 +149,14 @@ import type { XMLObject } from "./xml";
  * ```
  */
 export type Schema =
-	| StringSchema
-	| NumberSchema
-	| IntegerSchema
-	| BooleanSchema
-	| FileSchema
-	| ArraySchema
-	| ObjectSchema
-	| BaseReference;
+  | StringSchema
+  | NumberSchema
+  | IntegerSchema
+  | BooleanSchema
+  | FileSchema
+  | ArraySchema
+  | ObjectSchema
+  | BaseReference;
 
 /**
  * -----

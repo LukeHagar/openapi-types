@@ -119,91 +119,91 @@ import type { Webhooks } from "./webhooks";
  * ```
  */
 export interface Specification extends Extension {
-	/**
-	 * This string MUST be the version number of the OpenAPI Specification that the
-	 * OpenAPI document uses. The `openapi` field SHOULD be used by tooling to interpret
-	 * the OpenAPI document. This is not related to the API `info.version` string.
-	 * This field is required.
-	 *
-	 * @example "3.1.0"
-	 * @example "3.1.1"
-	 */
-	openapi: string;
+  /**
+   * This string MUST be the version number of the OpenAPI Specification that the
+   * OpenAPI document uses. The `openapi` field SHOULD be used by tooling to interpret
+   * the OpenAPI document. This is not related to the API `info.version` string.
+   * This field is required.
+   *
+   * @example "3.1.0"
+   * @example "3.1.1"
+   */
+  openapi: string;
 
-	/**
-	 * Provides metadata about the API. The metadata MAY be used by tooling as required.
-	 * This field is required.
-	 *
-	 * @example { title: "Pet Store API", version: "1.0.0" }
-	 */
-	info: Info;
+  /**
+   * Provides metadata about the API. The metadata MAY be used by tooling as required.
+   * This field is required.
+   *
+   * @example { title: "Pet Store API", version: "1.0.0" }
+   */
+  info: Info;
 
-	/**
-	 * The default value for the `$schema` keyword within Schema Objects contained
-	 * within this OAS document. This MUST be in the form of a URI.
-	 *
-	 * @example "https://json-schema.org/draft/2020-12/schema"
-	 */
-	jsonSchemaDialect?: string;
+  /**
+   * The default value for the `$schema` keyword within Schema Objects contained
+   * within this OAS document. This MUST be in the form of a URI.
+   *
+   * @example "https://json-schema.org/draft/2020-12/schema"
+   */
+  jsonSchemaDialect?: string;
 
-	/**
-	 * An array of Server Objects, which provide connectivity information to a target
-	 * server. If the `servers` property is not provided, or is an empty array, the
-	 * default value would be a Server Object with a `url` value of `/`.
-	 *
-	 * @example [{ url: "https://api.example.com/v1", description: "The production API server" }]
-	 */
-	servers?: Server[];
+  /**
+   * An array of Server Objects, which provide connectivity information to a target
+   * server. If the `servers` property is not provided, or is an empty array, the
+   * default value would be a Server Object with a `url` value of `/`.
+   *
+   * @example [{ url: "https://api.example.com/v1", description: "The production API server" }]
+   */
+  servers?: Server[];
 
-	/**
-	 * The available paths and operations for the API.
-	 *
-	 * @example { "/pets": { "get": { "summary": "List all pets", "responses": { "200": { "description": "A list of pets" } } } } }
-	 */
-	paths?: Paths;
+  /**
+   * The available paths and operations for the API.
+   *
+   * @example { "/pets": { "get": { "summary": "List all pets", "responses": { "200": { "description": "A list of pets" } } } } }
+   */
+  paths?: Paths;
 
-	/**
-	 * The incoming webhooks that MAY be received as part of this API and that the
-	 * API consumer MAY choose to implement. Closely related to the `callbacks` feature,
-	 * this section describes requests initiated other than by an API call, for example
-	 * by an out of band registration.
-	 *
-	 * @example { "newPet": { "post": { "requestBody": { "description": "Information about a new pet" } } } }
-	 */
-	webhooks?: Webhooks;
+  /**
+   * The incoming webhooks that MAY be received as part of this API and that the
+   * API consumer MAY choose to implement. Closely related to the `callbacks` feature,
+   * this section describes requests initiated other than by an API call, for example
+   * by an out of band registration.
+   *
+   * @example { "newPet": { "post": { "requestBody": { "description": "Information about a new pet" } } } }
+   */
+  webhooks?: Webhooks;
 
-	/**
-	 * An element to hold various schemas for the document.
-	 *
-	 * @example { schemas: { Pet: { type: "object", properties: { id: { type: "integer" } } } } }
-	 */
-	components?: Components;
+  /**
+   * An element to hold various schemas for the document.
+   *
+   * @example { schemas: { Pet: { type: "object", properties: { id: { type: "integer" } } } } }
+   */
+  components?: Components;
 
-	/**
-	 * A declaration of which security mechanisms can be used across the API. The list
-	 * of values includes alternative security requirement objects that can be used.
-	 * Only one of the security requirement objects need to be satisfied to authorize
-	 * a request. Individual operations can override this definition.
-	 *
-	 * @example [{ "api_key": [] }]
-	 */
-	security?: SecurityRequirement[];
+  /**
+   * A declaration of which security mechanisms can be used across the API. The list
+   * of values includes alternative security requirement objects that can be used.
+   * Only one of the security requirement objects need to be satisfied to authorize
+   * a request. Individual operations can override this definition.
+   *
+   * @example [{ "api_key": [] }]
+   */
+  security?: SecurityRequirement[];
 
-	/**
-	 * A list of tags used by the document with additional metadata. The order of the
-	 * tags can be used to reflect on their order by the parsing tools. Not all tags
-	 * that are used by the Operation Object must be declared. The tags that are not
-	 * declared MAY be organized randomly or based on the tools' logic. Each tag name
-	 * in the list MUST be unique.
-	 *
-	 * @example [{ name: "pets", description: "Pet store operations" }]
-	 */
-	tags?: Tag[];
+  /**
+   * A list of tags used by the document with additional metadata. The order of the
+   * tags can be used to reflect on their order by the parsing tools. Not all tags
+   * that are used by the Operation Object must be declared. The tags that are not
+   * declared MAY be organized randomly or based on the tools' logic. Each tag name
+   * in the list MUST be unique.
+   *
+   * @example [{ name: "pets", description: "Pet store operations" }]
+   */
+  tags?: Tag[];
 
-	/**
-	 * Additional external documentation.
-	 *
-	 * @example { description: "Find out more about our API", url: "https://example.com/docs" }
-	 */
-	externalDocs?: ExternalDocumentation;
+  /**
+   * Additional external documentation.
+   *
+   * @example { description: "Find out more about our API", url: "https://example.com/docs" }
+   */
+  externalDocs?: ExternalDocumentation;
 }

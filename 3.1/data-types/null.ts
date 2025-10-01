@@ -57,52 +57,52 @@ import type { Extension } from "../extensions";
  * ```
  */
 export interface NullSchema extends Extension {
-	/**
-	 * The type identifier for null schemas. This field is required.
-	 *
-	 * @example "null"
-	 */
-	type: "null";
+  /**
+   * The type identifier for null schemas. This field is required.
+   *
+   * @example "null"
+   */
+  type: "null";
 
-	/**
-	 * A short title for the schema.
-	 *
-	 * @example "Null Value"
-	 */
-	title?: string;
+  /**
+   * A short title for the schema.
+   *
+   * @example "Null Value"
+   */
+  title?: string;
 
-	/**
-	 * A description of the schema. CommonMark syntax MAY be used for rich text representation.
-	 *
-	 * @example "Represents a null value"
-	 */
-	description?: string;
+  /**
+   * A description of the schema. CommonMark syntax MAY be used for rich text representation.
+   *
+   * @example "Represents a null value"
+   */
+  description?: string;
 
-	/**
-	 * The default value for the schema.
-	 *
-	 * @example null
-	 */
-	default?: null;
+  /**
+   * The default value for the schema.
+   *
+   * @example null
+   */
+  default?: null;
 
-	/**
-	 * An array of example values.
-	 *
-	 * @example [null]
-	 */
-	examples?: null[];
+  /**
+   * An array of example values.
+   *
+   * @example [null]
+   */
+  examples?: null[];
 
-	/**
-	 * An enumeration of allowed values. For null schemas, this should contain only null.
-	 *
-	 * @example [null]
-	 */
-	enum?: null[];
+  /**
+   * An enumeration of allowed values. For null schemas, this should contain only null.
+   *
+   * @example [null]
+   */
+  enum?: null[];
 
-	/**
-	 * A constant allowed value. For null schemas, this should be null.
-	 *
-	 * @example null
-	 */
-	const?: null;
+  /**
+   * A constant allowed value. For null schemas, this should be null.
+   *
+   * @example null
+   */
+  const?: null;
 }

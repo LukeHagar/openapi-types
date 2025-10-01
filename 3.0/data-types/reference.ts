@@ -61,20 +61,20 @@ import type { Extension } from "../extensions";
  * ```
  */
 export interface ReferenceSchema extends Extension {
-	/**
-	 * The reference string. MUST be a valid JSON Reference.
-	 *
-	 * @example "#/components/schemas/User"
-	 * @example "#/components/responses/NotFound"
-	 * @example "#/components/parameters/LimitParam"
-	 */
-	$ref: string;
+  /**
+   * The reference string. MUST be a valid JSON Reference.
+   *
+   * @example "#/components/schemas/User"
+   * @example "#/components/responses/NotFound"
+   * @example "#/components/parameters/LimitParam"
+   */
+  $ref: string;
 
-	/**
-	 * A short description of the referenced schema. CommonMark syntax MAY be used for rich text representation.
-	 *
-	 * @example "A reference to the User schema"
-	 * @example "Pet object definition"
-	 */
-	description?: string;
+  /**
+   * A short description of the referenced schema. CommonMark syntax MAY be used for rich text representation.
+   *
+   * @example "A reference to the User schema"
+   * @example "Pet object definition"
+   */
+  description?: string;
 }
