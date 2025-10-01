@@ -18,8 +18,8 @@ import { schemas as schemas3_2 } from "./3.2";
 
 // Export all schemas in a single object organized by version
 export const allSchemas = {
-	"2.0": schemas2_0,
-	"3.0": schemas3_0,
-	"3.1": schemas3_1,
-	"3.2": schemas3_2,
+  "2.0": schemas2_0,
+  "3.0": schemas3_0,
+  "3.1": schemas3_1,
+  "3.2": schemas3_2,
 } as const;

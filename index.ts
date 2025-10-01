@@ -33,3 +33,4 @@ export * as OpenAPI2 from "./2.0";
 export * as OpenAPI3 from "./3.0";
 export * as OpenAPI3_1 from "./3.1";
 export * as OpenAPI3_2 from "./3.2";
+export * as schemas from "./schemas";

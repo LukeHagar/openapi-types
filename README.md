@@ -2,17 +2,7 @@
 
 Comprehensive TypeScript definitions for all OpenAPI specification versions with detailed JSDoc documentation and version-specific implementations.
 
-## 🏗️ Architecture
-
-This library provides **comprehensive TypeScript type definitions** for all OpenAPI specification versions with:
-
-- **Version-specific implementations** - Each OpenAPI version has its own dedicated folder with complete type definitions
-- **Modular organization** - Types are organized by OpenAPI object (e.g., `info.ts`, `paths.ts`, `schema.ts`)
-- **Comprehensive JSDoc** - Every type includes detailed documentation with links to official specifications
-- **Type safety** - Strict typing that follows OpenAPI specifications exactly
-- **Discriminated unions** - Advanced TypeScript patterns for schema definitions
-
-## 📦 Installation
+## Installation
 
 ```bash
 npm install oas-types
@@ -22,7 +12,17 @@ yarn add oas-types
 bun add oas-types
 ```
 
-## 🏗️ Build Process
+## Architecture
+
+This library provides comprehensive TypeScript type definitions for all OpenAPI specification versions with:
+
+- **Version-specific implementations** - Each OpenAPI version has its own dedicated folder with complete type definitions
+- **Modular organization** - Types are organized by OpenAPI object (e.g., `info.ts`, `paths.ts`, `schema.ts`)
+- **Comprehensive JSDoc** - Every type includes detailed documentation with links to official specifications
+- **Type safety** - Strict typing that follows OpenAPI specifications exactly
+- **Discriminated unions** - Advanced TypeScript patterns for schema definitions
+
+## Build Process
 
 This package includes a comprehensive build system that generates JSON schemas from the TypeScript definitions:
 
@@ -51,7 +51,7 @@ The build process creates JSON schemas for:
 import { schemas } from 'oas-types/schemas/3.0';
 
 // Import all schemas
-import { allSchemas, getSchemasForVersion } from 'oas-types/schemas';
+import { allSchemas } from 'oas-types/schemas';
 
 // Use with JSON Schema validators
 import Ajv from 'ajv';
@@ -59,14 +59,21 @@ const ajv = new Ajv();
 const validator = ajv.compile(schemas.specification);
 ```
 
-For detailed build information, see [BUILD.md](./BUILD.md).
-
-## 🚀 Usage
+## Usage
 
 ### Import Version-Specific Types
 
 ```typescript
-// OpenAPI 3.1.x (latest)
+// OpenAPI 3.2.0 (latest)
+import { 
+  Specification, 
+  Info, 
+  Paths, 
+  Schema,
+  Components 
+} from 'oas-types/3.2';
+
+// OpenAPI 3.1.x
 import { 
   Specification, 
   Info, 
@@ -104,113 +111,83 @@ import { Schema, StringSchema, ObjectSchema } from 'oas-types/3.1/schema';
 import { SecurityScheme, OAuthFlows } from 'oas-types/3.1/security';
 ```
 
-### Import Schema Data Types (OpenAPI 3.1.x)
+### Import Schema Data Types
 
 ```typescript
-// Import specific schema types for OpenAPI 3.1.x
+// Import specific schema types for any version
 import { 
-  String, 
-  Number, 
-  Integer, 
-  Boolean,
-  Array, 
-  Object,
-  Composition,
-  Reference 
+  StringSchema, 
+  NumberSchema, 
+  IntegerSchema, 
+  BooleanSchema,
+  ArraySchema, 
+  ObjectSchema,
+  CompositionSchema,
+  ReferenceSchema 
 } from 'oas-types/3.1/data-types';
 ```
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 openapi-types/
-├── 2.0.0/                       # Swagger 2.0 types
+├── 2.0/                         # Swagger 2.0 types
 │   ├── data-types/              # Schema data types
-│   │   ├── string.ts            # String schema
-│   │   ├── number.ts            # Number schema
-│   │   ├── integer.ts           # Integer schema
-│   │   ├── boolean.ts           # Boolean schema
-│   │   ├── array.ts             # Array schema
-│   │   ├── object.ts            # Object schema
-│   │   ├── composition.ts       # Composition schemas
-│   │   ├── reference.ts         # Reference schema
-│   │   └── index.ts             # Data type exports
 │   ├── info.ts                  # Info Object
 │   ├── paths.ts                 # Paths and Operations
 │   ├── schema.ts                # Schema definitions
 │   ├── security.ts              # Security schemes
 │   ├── spec.ts                  # Main Swagger object
-│   ├── extensions.ts            # Specification extensions
-│   ├── externalDocs.ts          # External documentation
-│   ├── references.ts            # Reference objects
-│   ├── tags.ts                  # Tag objects
-│   ├── xml.ts                   # XML objects
-│   ├── example.ts               # Example objects
-│   ├── 2.0.md                   # Version documentation
 │   └── index.ts                 # Version exports
 │
-├── 3.0.x/                       # OpenAPI 3.0.x types
+├── 3.0/                         # OpenAPI 3.0.x types
 │   ├── data-types/              # Schema data types
-│   │   ├── string.ts            # String schema
-│   │   ├── number.ts            # Number schema
-│   │   ├── integer.ts           # Integer schema
-│   │   ├── boolean.ts           # Boolean schema
-│   │   ├── array.ts             # Array schema
-│   │   ├── object.ts            # Object schema
-│   │   ├── composition.ts       # Composition schemas
-│   │   ├── reference.ts         # Reference schema
-│   │   └── index.ts             # Data type exports
 │   ├── info.ts                  # Info Object
 │   ├── paths.ts                 # Paths and Operations
 │   ├── schema.ts                # Schema definitions
 │   ├── security.ts              # Security schemes
 │   ├── spec.ts                  # Main OpenAPI object
 │   ├── components.ts            # Components object
-│   ├── extensions.ts            # Specification extensions
-│   ├── externalDocs.ts          # External documentation
-│   ├── references.ts            # Reference objects
 │   ├── servers.ts               # Server objects
-│   ├── tags.ts                  # Tag objects
-│   ├── xml.ts                   # XML objects
 │   └── index.ts                 # Version exports
 │
-├── 3.1.x/                       # OpenAPI 3.1.x types
+├── 3.1/                         # OpenAPI 3.1.x types
 │   ├── data-types/              # Individual schema types
-│   │   ├── string.ts            # String schema
-│   │   ├── number.ts            # Number schema
-│   │   ├── integer.ts           # Integer schema
-│   │   ├── boolean.ts           # Boolean schema
-│   │   ├── array.ts             # Array schema
-│   │   ├── object.ts            # Object schema
-│   │   ├── composition.ts       # Composition schemas
-│   │   ├── reference.ts         # Reference schema
-│   │   └── index.ts             # Data type exports
 │   ├── info.ts                  # Info Object
 │   ├── paths.ts                 # Paths and Operations
 │   ├── schema.ts                # Main Schema union type
 │   ├── security.ts              # Security schemes
 │   ├── spec.ts                  # Main OpenAPI object
 │   ├── components.ts            # Components object
-│   ├── extensions.ts            # Specification extensions
-│   ├── externalDocs.ts          # External documentation
-│   ├── references.ts            # Reference objects
 │   ├── servers.ts               # Server objects
-│   ├── tags.ts                  # Tag objects
-│   ├── xml.ts                   # XML objects
-│   ├── 3.1.0.md                 # OpenAPI 3.1.0 documentation
-│   ├── 3.1.1.md                 # OpenAPI 3.1.1 documentation
+│   ├── webhooks.ts              # Webhook definitions
 │   └── index.ts                 # Version exports
 │
-├── 3.2.0/                       # OpenAPI 3.2.0 types (in development)
-│   ├── 3.2.0.md                 # Version documentation
-│   └── index.ts                 # Placeholder exports (not yet implemented)
+├── 3.2/                         # OpenAPI 3.2.0 types
+│   ├── data-types/              # Schema data types
+│   ├── info.ts                  # Info Object
+│   ├── paths.ts                 # Paths and Operations
+│   ├── schema.ts                # Schema definitions
+│   ├── security.ts              # Security schemes
+│   ├── spec.ts                  # Main OpenAPI object
+│   ├── components.ts            # Components object
+│   ├── servers.ts               # Server objects
+│   ├── webhooks.ts              # Webhook definitions
+│   ├── oauth.ts                 # OAuth flow definitions
+│   └── index.ts                 # Version exports
+│
+├── schemas/                     # Generated JSON schemas
+│   ├── 2.0/                     # Swagger 2.0 schemas
+│   ├── 3.0/                     # OpenAPI 3.0 schemas
+│   ├── 3.1/                     # OpenAPI 3.1 schemas
+│   └── 3.2/                     # OpenAPI 3.2 schemas
 │
 ├── License.ts                   # SPDX license definitions
 ├── SPDXLicenseList.ts           # Complete SPDX license list
 └── index.ts                     # Main entry point
 ```
 
-## 🎯 Philosophy
+## Philosophy
 
 ### Version-Specific Implementations
 Each OpenAPI version has its own complete implementation that accurately reflects the specification for that version. This ensures:
@@ -231,14 +208,14 @@ Every type includes:
 - **Usage examples** showing practical implementations
 - **Property documentation** with example values and constraints
 
-## 📋 Supported Versions
+## Supported Versions
 
 - **Swagger 2.0** (OpenAPI Specification v2.0) - Complete implementation
 - **OpenAPI 3.0.x** - Complete implementation with all 3.0.x variants
 - **OpenAPI 3.1.x** - Complete implementation with JSON Schema 2020-12 alignment
-- **OpenAPI 3.2.0** - In development (not yet available for import)
+- **OpenAPI 3.2.0** - Complete implementation
 
-## 🔧 Examples
+## Examples
 
 ### Basic OpenAPI 3.1.x Usage
 
@@ -394,7 +371,7 @@ const oauth2Auth: SecurityScheme = {
 };
 ```
 
-## 🧪 Type Safety Features
+## Type Safety Features
 
 - **Strict typing** - All types follow OpenAPI specifications exactly
 - **Version awareness** - Type-safe version-specific features
@@ -402,7 +379,7 @@ const oauth2Auth: SecurityScheme = {
 - **Comprehensive validation** - Property constraints and validation rules
 - **JSDoc documentation** - Complete documentation with spec links
 
-## 📚 Documentation
+## Documentation
 
 Each type includes comprehensive JSDoc documentation with:
 - **Official specification links** for each OpenAPI version
@@ -411,7 +388,12 @@ Each type includes comprehensive JSDoc documentation with:
 - **Version compatibility notes** where applicable
 - **Mutual exclusion rules** for conflicting properties
 
-## 🔗 Key Features
+## Key Features
+
+### OpenAPI 3.2.0 Specific Features
+- **Latest OpenAPI specification** - Full support for OpenAPI 3.2.0 features
+- **Enhanced OAuth flows** - Support for all OAuth 2.0 flow types
+- **Advanced webhook support** - Comprehensive webhook definitions
 
 ### OpenAPI 3.1.x Specific Features
 - **JSON Schema 2020-12 alignment** - Full support for latest JSON Schema features
@@ -429,7 +411,7 @@ Each type includes comprehensive JSDoc documentation with:
 - **Security definitions** - Support for security schemes
 - **Response definitions** - Support for reusable response definitions
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Please ensure that:
 - All types follow the OpenAPI specification exactly
@@ -437,11 +419,11 @@ Contributions are welcome! Please ensure that:
 - Version compatibility is maintained
 - Tests are added for new features
 
-## 📄 License
+## License
 
 MIT License - see LICENSE file for details.
 
-## 🔗 Links
+## Links
 
 - [OpenAPI Specification](https://spec.openapis.org/)
 - [Swagger Specification](https://swagger.io/specification/)
